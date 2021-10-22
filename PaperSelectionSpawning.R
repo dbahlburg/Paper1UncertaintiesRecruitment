@@ -8,6 +8,10 @@
 #allows for full reproducability.
 
 #load the tidyverse with stringr-package (useful for working with text data in R)
+#The package "here" allows us to use "relative file paths" in this script. This way
+#the script should work on everyone's computer when the script is run within its 
+#respctive R-project ("here" uses the location of the R-Project as a starting point
+#for all following file paths)
 library(tidyverse)
 library(here)
 library(openxlsx)
