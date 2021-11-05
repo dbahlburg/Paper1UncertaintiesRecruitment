@@ -19,7 +19,7 @@ library(openxlsx)
 #-------------------------------------------------------------------------------------#
 #Load and combine the query results from the web of science (each exported file is restricted to 1000 lines so
 #I had to split the results into three separate files)
-#The query can be found under https://www.webofscience.com/wos/woscc/summary/40aec0f2-39dd-4539-b9e1-1cd5ed57f459-0e7cbc8a/relevance/1
+#The query can be found under https://www.webofscience.com/wos/woscc/summary/690b1d80-b6e7-4779-ae0a-fdcc6ecd4d39-0eef4810/relevance/1
 #The original dataset consists of 67 variables, many of which we do not need here
 #therefore, only the most relevant ones (authors, title, journal, abstract, date) are kept to have a tidier dataset
 wosOverwinterResults <- read_delim(here('queryResults','wosOverwinter1.txt'), 
