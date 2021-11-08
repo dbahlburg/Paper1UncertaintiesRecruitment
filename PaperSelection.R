@@ -195,7 +195,8 @@ literatureList <- spawningResultsFiltered %>%
   bind_rows(.,developmentResultsFiltered) %>% 
   bind_rows(.,winterResultsFiltered) %>% 
   bind_rows(.,autumnResultsFiltered) %>% 
-  distinct(title, .keep_all = T)
+  distinct(title, .keep_all = T) %>% 
+  arrange(topic, -mustWordsIncluded, -canWordsIncluded)
 
 
 
