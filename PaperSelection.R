@@ -42,7 +42,7 @@ spawningResults <- wosSpawningResults %>%
 #The title or abstract must include "Euphausia superba" OR "Antarctic krill"
 #AND at least one of the following words: 
 mustWords <- c('euphausia superba|antarctic krill')
-canWords <- c('spawning|fecundity|egg|egg production|vitellogenesis')
+canWords <- c('spawning|fecundity|egg|vitellogenesis')
 
 #To avoid string detection problems, all characters are converted to lower case (function "tolower")
 spawningResults <- spawningResults %>% 
@@ -82,7 +82,7 @@ winterResults <- wosWinterResults %>%
 #Define selection criteria:
 #The title or abstract must include "Euphausia superba" OR "Antarctic krill"
 #AND at least one of the following words: 
-canWordsWinter <- c('overwinter|winter|sea ice')
+canWordsWinter <- c('winter|sea ice')
 
 #Filter the results according to the criteria above
 #Also: remove duplicates that have been found in scopus and web of science
