@@ -8,15 +8,22 @@
 # their disadvantage are their cryptic names and there differing spatial extends
 # which leads to visual over- and underrepresentation of certain regions.
 
-#Load dependencies
+# Load dependencies
 library(tidyverse)
 library(geosphere)
 library(rgdal)
 library(here)
 
-#load world map and fao-areas
+# load world map and fao-areas
 world <- map_data("world")
 faoAreas <- fortify(readOGR(here('infographicsGroup','inputData','FAO_Areas_ShapefilesWGS84','asd-shapefile-WGS84.shp')))
+
+# assign dummy value to fao-area (this could be the number of studies)
+numberOfStudiesFAO <- faoAreas %>% 
+  distinct(group) %>% 
+  mutate(numberOfStudies = round(runif(n = 19, min = 1, max = 12)))
+faoAreas <- faoAreas %>% 
+  left_join(., numberOfStudiesFAO, by = 'group')
 
 # Given the long/lat coordinates of an origin (x) and a radius (radius) in km,
 # returns the coordinates of 360 points on the circle of center x and radius radius km.
@@ -57,8 +64,12 @@ oceanColour <- expand_grid(lat = seq(-86,60, length.out = 20),
 faoAreasPlot <- ggplot() +
   geom_tile(data = oceanColour, aes(x = long, y = lat), fill = '#fcfcfc',
             colour = '#fcfcfc')+
-  geom_polygon(data = faoAreas, aes(x = long, y = lat, group = group),
-               colour = '#2b2b2b', fill = '#f5be8e', size = 0.15) +
+  geom_polygon(data = faoAreas, aes(x = long, y = lat, 
+                                    group = group, 
+                                    fill = numberOfStudies,
+                                    colour = numberOfStudies),
+               size = 0.15) +
+  scale_fill_gradient(low = '#c9c9c9',high = '#6ca85d') +
   geom_segment(aes(y = rep(30, times = length(xLines)), yend = rep(-90, times = length(xLines)), 
                    x = xLines, xend = xLines), 
                size = 0.5,
@@ -70,7 +81,6 @@ faoAreasPlot <- ggplot() +
   geom_polygon(data = world, aes(long, lat,group=group), 
                fill="#949494",color= '#bababa', size = 0.01) +
   coord_map("ortho",orientation = c(-110, 10, 0)) +
-  #geom_path(data = SOFronts, aes(x = longitude, y = latitude)) +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = 'transparent', colour = NA),
