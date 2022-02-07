@@ -6,7 +6,8 @@
 # As an alternative, it could be useful to map the studies onto the FAO-areas
 # which are used for active resource management in the Southern Ocean. However,
 # their disadvantage are their cryptic names and there differing spatial extends
-# which leads to visual over- and underrepresentation of certain regions.
+# which leads to visual over- and underrepresentation of certain regions (violation
+# of "proportional ink" convention).
 
 # Load dependencies
 library(tidyverse)
