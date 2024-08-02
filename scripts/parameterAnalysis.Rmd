@@ -1,0 +1,796 @@
+---
+title: "ICED Workshop Paper 1"
+author: "Dominik Bahlburg"
+date: "2023-05-23"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+    code_folding: show
+  pdf_document: default
+  word_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In this document, we document the analysis and processing of the parameter classification table for the 1st paper of the ICED workshop on krill modelling.
+
+*Dominik Bahlburg, Alexis Bahl*
+
+### Comparison parameter classification
+
+```{r libraries, message = F, warning = F}
+# load libraries
+library(tidyverse)
+library(openxlsx)
+library(scico)
+library(knitr)
+```
+
+```{r data1, message = F, warning = F, results='asis'} 
+# import classification data
+classificationAlexis <- read.xlsx('~/github/ICEDPaper1/data/Paper1Parameters.xlsx', sheet = 7) %>% 
+  mutate(parameterID = row_number()) %>% 
+  select(parameterID, alexisMechanism = AB_applicable.mechanism, informationCategory) %>% #, alexisCategory = 20
+  mutate(mechanismID = str_split(alexisMechanism, pattern = ',')) %>% 
+  unnest(mechanismID) %>%
+  mutate(mechanismID = str_replace_all(mechanismID, " ", ""),
+         classifier = 'alexis') %>% 
+  select(-alexisMechanism) 
+  
+classificationDominik <- read.xlsx('~/github/ICEDPaper1/data/Paper1Parameters.xlsx', sheet = 8) %>% 
+  mutate(parameterID = row_number()) %>% 
+  select(parameterID, dominikMechanism = DB_applicable.mechanism, informationCategory) %>% #, dominikCategory = 23
+  mutate(mechanismID = str_split(dominikMechanism, pattern = ',')) %>% 
+  unnest(mechanismID) %>%
+  mutate(mechanismID = str_replace_all(mechanismID, " ", ""),
+         mechanismID = ifelse(mechanismID == '-', NA, mechanismID),
+         classifier = 'dominik') %>% 
+  select(-dominikMechanism)
+
+# import table which contains information about the parameter IDs
+mechanismMeta <- read.xlsx('~/github/ICEDPaper1/data/ICEDPaper1_ModelParams.xlsx') %>% 
+  rename(submechanism = `sub-mechanism`)
+
+# bind additional info to parameter classification table
+parameterClasses <- bind_rows(classificationAlexis, classificationDominik) %>% 
+  left_join(., mechanismMeta) %>% 
+  mutate(informationCategory = ifelse(informationCategory == '-' | 
+                                        informationCategory == ' ',
+                                      NA, informationCategory))
+# print head of table
+kable(parameterClasses[1:10,], caption = 'Parameter classification table')
+```
+
+The new table has the following structure: 
+
+**Column 1:** parameter ID, the ID of the parameter that was extracted from the literature and needs to be classified. The ID corresponds to the row number in the parameter dataset. 
+
+**Column 2**: mechanism ID, the ID of the model mechanism(s) that were assigned to the respective parameter. Some parameters had multiple mechanisms assigned to, which is 
+
+**Column 3**: classifier, the person who classified the respective parameter
+
+**Column 4**: sub-mechanism, the sub-model that the assigned mechanism relates to
+
+**Column 5**: type, type of the mechanism that was assigned to the respective parameter
+
+**Column 6**: name, name of the mechanism that was assigned to the respective parameter
+
+**Column 7**: enviro_vars, environmental variable that relates to the respective mechanism
+
+Before we start "mapping the data landscape", we first compare the differences in how Alexis and Dominik assigned mechanisms to the parameters to check for consistency and robustness of the dataset.
+
+
+---
+---
+
+```{r data2, message = F, warning = F, results='asis', fig.dim = c(12,9)}
+# first let's check the differences how each parameter was assigned by Dominik and Alexis
+# In the following, the abundance of each mechanismID is counted and then Dominik's count is subtracted from Alexis' count. Positive deviances mean that a mechanismID was more frequently assigned by Alexis and vice versa
+parDifferences <- parameterClasses %>% 
+  group_by(mechanismID, submechanism, classifier) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  complete(mechanismID, classifier, fill = list(value = 0)) %>% 
+  group_by(mechanismID) %>% 
+  mutate(count = ifelse(is.na(count), 0, count),
+         countDiff = count - lead(count)) %>% 
+  filter(!is.na(countDiff))
+
+parDifferences %>% 
+  filter(!is.na(mechanismID)) %>% 
+  ggplot(.,aes(x = countDiff, y = fct_reorder(mechanismID, desc(countDiff)))) +
+  geom_col(aes(fill = countDiff)) +
+  scale_fill_scico(palette = 'vikO', midpoint = 0) +
+  facet_wrap(~submechanism, scales = 'free_y') +
+  labs(x = 'count difference', y = 'mechanism ID') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'none')
+```
+
+---
+
+I am afraid that these kind of comparisons are quite useless as it is very difficult to extract anything meaningful from them. It is visible that there are clear differences for several parameters but it is impossible to interpret these differences in a useful manner. I suggest that it will be more useful to conduct a full analysis, as we would do it anyways, but using Alexis' and Dominik's classifications. If we find meaningful changes in the conclusions that both datasets would lead to, we need to discuss how to treat these differences. If these differences in conclusions are not meaningful, it will be easy to move on.
+
+### Characterizing the dataset and comparing Alexis and Dominik
+
+At first, we will provide a brief overview of the dataset.
+Some stats:
+The dataset contains **2883** data points from **233** different studies. Each datapoint was manually and independently assigned to parameters from the conceptual models that it relates to. This way, we can characterize the quantity and quality of data that is available for parameterizing the different model processes of the four sub-models.
+
+```{r char1, warning = F, message = F}
+# create overview for available data for all submodels (highest hierarchy)
+parameterClasses %>% 
+  #filter(!is.na(submechanism)) %>% 
+  group_by(submechanism, classifier, informationCategory) %>% 
+  summarize(count = n()) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(submechanism, count), fill = informationCategory)) +
+  geom_col(alpha = 0.85) +
+  facet_wrap(~classifier) +
+  labs(x = 'number of datapoints', y = 'submodel', fill = 'information category') +
+  scale_fill_manual(values = c('#ff8730','#4aba8d','#4a7bba','#9264e3'), na.value = '#545454') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+```
+
+---
+
+* an approximately similar number of datapoints (~1700) could not be assigned to a respective submodel by both, Alexis and Dominik
+
+* the number of datapoints assigned to each of the four submechanism/submodels is quali- and quantitatively different between Alexis' and Dominik's datasets:
+  + in Dominik's data, *spawning* is the submodel that most datapoints were assigned to, followed by *egg and larval development*, *overwintering* and *mortality*
+  + in Alexis' data, *egg and larval development* is the submodel that most datapoints were assigned to, followed by *spawning*, *overwintering* and *mortality*
+  + Alexis assigned more submodels to each parameter compared to Dominik (Alexis: **2587** assignments, Dominik: **2158** assignments)
+  
+* the distribution of information categories within each submodel differs between Alexis and Dominik
+  + "correlation" is the least frequently assigned information category in Dominik's and Alexis' data but it is slightly more frequent in Alexis' data
+  + in contrast to Alexis, Dominik used two additional information categories: "validation" and "parameter, validation". "validation" was assigned to datapoints that did not necessarily relate to a model parameter but that could be used to validate the output of a submodel (for example observed krill abundances etc.). "parameter, validation" was used when a datapoint could act as both, a model parameter or validation data (e.g. growth rates)
+
+---
+
+---
+
+#### Summary of comparison that follows below
+
+The following plot provides a summary of the more detailed comparison of parameter classifications done by Alexis and Dominik. In each submodel (mortality, overwintering, egg and larval development, spawning), the parameters can be grouped into those related or not related to environmental variables. Within those related to environmental variables, each parameter relates to a number of environmental variables. In the more detailed analysis below, I compared the distribution of datapoints assigned to each of the parameter groups and assigned a score of agreement between the assignments done by Alexis and Dominik.
+
+The agreement score was "weak", when Dominik and Alexis assigned datapoints very differently to a group of parameters within each submode. The agreement score was "general", when the number of datapoints that Dominik and Alexis assigned to the respective parameters differed but showed the same qualitative pattern. The agreement score was "good", when Alexis and Dominik assigned similar numbers of datapoints to each parameter group within a submodel.
+
+```{r summary, warning=F, message=F}
+comparisonSummary <- tibble(submodel = 'mortality',
+                            parameterGroup = c('adults','embryo','larvae'),
+                            agreement = c('general','general','weak')) %>% 
+  bind_rows(., tibble(submodel = 'egg and larval development',
+                      parameterGroup = c('non environmental', 'ascent after hatching','growth','maintenance moulting','maintenance respiration','sinking'),
+                      agreement = c('weak','good','general','good','weak','weak'))) %>% 
+  bind_rows(., tibble(submodel = 'overwintering',
+                      parameterGroup = c('non environmental','assimilation','ingestion','maintenance excretion','maintenance moulting','maintenance respiration'),
+                      agreement = c('general','weak','general','general','weak','general'))) %>% 
+  bind_rows(., tibble(submodel = 'spawning',
+                      parameterGroup = c('non environmental','assimilation','ingestion','maintenance excretion','maintenance moulting','maintenance respiration','spawning'),
+                      agreement = c('good','weak','weak','general','good','weak','weak')))
+
+comparisonSummary %>% 
+  group_by(submodel) %>% 
+  mutate(count = n()) %>% 
+  ungroup() %>% 
+  group_by(submodel, agreement) %>% 
+  reframe(proportion = n()/count) %>% 
+  distinct(submodel, agreement, proportion) %>% 
+  mutate(agreement = factor(agreement, levels = c('weak','general','good'))) %>% 
+  ggplot(.,aes(y = submodel, x = proportion, fill = agreement)) +
+  geom_col() +
+  scale_fill_manual(values = c('#f25430','#f2c830','#1baee3')) +
+  labs(x = 'proportion', y = 'submodel', title = 'Agreement between parameter assignments \n done by Dominik and Alexis') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+
+```
+
+---
+
+Most comparisons resulted in ***weak*** or ***general*** agreement between Alexis' and Dominik's datapoint-parameter-assignments. Only in the spawning- and egg and larval development-submodels ***good agreement*** could be achieved in some comparisons.
+
+The detailed comparison follows:
+
+---
+
+#### Mortality
+
+Mortality appears to be the mechanism that the fewest data points relate to. This is generally not surprising as it also contains fewer parameters than the other submodels, however not to the degree reflected in the scarcity of data.
+
+```{r mortaliy, message=F, warning=F, fig.dim = c(5,6)}
+# overview available mortality data
+mortalityData <- parameterClasses %>% 
+  filter(submechanism == 'mortality') %>% 
+  group_by(classifier, enviro_vars, informationCategory) %>% 
+  summarize(count = n()) %>% 
+  rowwise() %>% 
+  mutate(stage = tail(unlist(str_split(enviro_vars, '_')), n=1),
+         mortalitySource = paste(head(unlist(str_split(enviro_vars, '_')), -1), collapse = ' '))
+
+mortalityData %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(mortalitySource, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(stage~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+* **adults: *general agreement***
+  + except for some strong differences in adult *starvation mortality* (Dominik assigned many datapoints), relatively few datapoints were assigned to the remaining parameters by Dominik and Alexis
+
+* **embryo: *general agreement***
+  + Dominik did not assign any datapoints to embryo mortality
+  + Alexis assigned a low number of datapoints to each of the parameters
+
+* **larvae: *weak agreement***
+  + Dominik assigned a high number of datapoints to larval *starvation mortality*, in contrast to Alexis
+  + Alexis assigned comparatively many parameters to larval *temperature* and *natural mortality*, in contrast to Dominik
+  + Dominik assigned a higher number of datapoints to *other mortality*
+
+---
+
+---
+
+#### Egg and larval development
+
+```{r egg_larv1, message=F, warning=F, fig.dim = c(5,3)}
+# overview of mechanisms that do not relate to environmental mechanisms
+eggLarvalData <- parameterClasses %>% 
+  right_join(., mechanismMeta) %>% 
+  filter(submechanism == 'egg_larval') %>% 
+  group_by(classifier, name, enviro_vars, informationCategory) %>% 
+  summarize(count = n()) %>% 
+  ungroup() 
+
+eggLarvalData %>% 
+  filter(is.na(enviro_vars)) %>% 
+  filter(!is.na(classifier)) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(name, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+***weak agreement***
+
+* Alexis assigned many more datapoints to larval reserves and tissues compared to Dominik
+* the number of datapoints assigned to vertical position, embryo density and diameter are similar between Dominik and Alexis
+
+---
+
+---
+
+```{r egg_larv2, message=F, warning=F, fig.dim = c(7,9)}
+# overview of mechanisms that relate to environmental conditions
+eggLarvalData %>% 
+  filter(!is.na(enviro_vars)) %>% 
+  filter(!is.na(classifier)) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(enviro_vars, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(name~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+* **ascent after hatching: *good agreement*** 
+  + both Dominik and Alexis assigned almost no datapoints to *ascent after hatching*
+  
+* **growth: *general agreement*** 
+  + both Dominik and Alexis assigned many datapoints to *time* and *temperature* and very few to none to *water density* and *bottom depth*
+  
+* **maintenance moulting: *good agreement*** 
+  + both Dominik and Alexis assigned datapoints to *time* and Dominik assigned a few datapoints to *temperature*
+  
+* **maintenance respiration: *weak agreement*** 
+  + Dominik and Alexis assigned many datapoints to *temperature*
+  + Dominik assigned more datapoints to *time*
+  + Alexis assigned more datapoints to *water density* and *bottom depth*
+  
+* **sinking: *weak agreement*** 
+  + Dominik assigned most datapoints to *time* and almost none to the other environmental parameters
+  + Alexis also assigned most datapoints to *time* but also a good number to *bottom depth* and a few to *temperature* and *water density*
+
+---
+
+---
+
+#### Overwintering
+
+```{r winter1, message=F, warning=F, fig.dim = c(5,3)}
+# overview of mechanisms that do not relate to environmental mechanisms
+winterData <- parameterClasses %>% 
+  right_join(., mechanismMeta) %>% 
+  filter(submechanism == 'overwintering') %>% 
+  group_by(classifier, name, enviro_vars, informationCategory) %>% 
+  summarize(count = n()) %>% 
+  ungroup() 
+
+winterData %>% 
+  filter(is.na(enviro_vars)) %>% 
+  filter(!is.na(classifier)) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(name, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+***general agreement***
+
+* Dominik and Alexis both assigned the highest number of datapoints to *lipid reserves*, followed by approximately equal numbers of datapoints to *protein reserves* and *carbon reserves*
+* In total, Alexis assigned more datapoints to each of the parameters than Dominik (3x as many in case of lipid reserves)
+
+---
+
+---
+
+```{r winter2, message=F, warning=F, fig.dim = c(7,9)}
+# overview of mechanisms that relate to environmental conditions
+winterData %>% 
+  filter(!is.na(enviro_vars)) %>% 
+  filter(!is.na(classifier)) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(enviro_vars, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(name~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+* **assimilation: *weak agreement***
+  + Alexis assigned most datapoints to *ice algae* of which all were classified as correlations
+  + overall Dominik assigned more datapoints to this group of parameters with high proportions to *POC*, *heterotrophic carbon* and *ice algae*
+  + the datapoints Dominik assigned to these parameters are classified as correlations, parameters and parameter/validation
+  
+* **ingestion: *general agreement***
+  + Alexis and Dominik assigned many datapoints to this group of parameters
+  + the distribution of datapoints assigned to each environmental variable is comparable with the exception of *heterotrophic carbon*, to which Dominik comparatively more datapoints
+
+* **maintenance excretion: *general agreement***
+  + Dominik and Alexis assigned few datapoints to this group of parameters
+  + Alexis assigned a low number to each of the environmental variables whereas Dominik did not assign any
+
+* **maintenance moulting: *weak agreement***
+  + Dominik did not assign any datapoints to this group of parameters
+  + Alexis assigned several datapoints to this group of parameters with *ice algae* being the most frequently corresponding environmental variable
+  
+* **maintenance respiration: *general agreement***
+  + there is general agreement in that many datapoints were assigned to this group of parameters by Dominik and Alexis
+  + *POC* and *photoperiod* were the corresponding environmental variables to which Dominik and Alexis assigned roughly equal numbers of data points, with *ice algae* coming in second (although Alexis assigned more datapoints).
+  + Alexis assigned datapoints to *sea ice concentration*, *detritus* in contrast to Dominik (except for a low number in *sea ice concentration*)
+  
+---
+
+---
+
+#### Spawning
+
+```{r spawning1, message=F, warning=F, fig.dim = c(5,3)}
+# overview of mechanisms that do not relate to environmental mechanisms
+spawningData <- parameterClasses %>% 
+  right_join(., mechanismMeta) %>% 
+  filter(submechanism == 'spawning') %>% 
+  group_by(classifier, name, enviro_vars, informationCategory) %>% 
+  summarize(count = n()) %>% 
+  ungroup() 
+
+spawningData %>% 
+  filter(is.na(enviro_vars)) %>% 
+  filter(!is.na(classifier)) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(name, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+***good agreement***
+
+* except for *gonads size*, the distribution of datapoints assigned to the five parameters not related to environmental conditions is similar for Alexis and Dominik 
+* Dominik assigned more parameters to *gonads size* compared to Alexis
+* many of the datapoints were classified as parameter/validation by Dominik, a category not used by Alexis
+
+---
+
+---
+
+```{r spawning2, message=F, warning=F, fig.dim = c(7,9)}
+# overview of mechanisms that relate to environmental conditions
+spawningData %>% 
+  filter(!is.na(enviro_vars)) %>% 
+  filter(!is.na(classifier)) %>% 
+  ggplot(.,aes(x = count, y = fct_reorder(enviro_vars, desc(count)), fill = informationCategory)) +
+  geom_col() +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  facet_grid(name~classifier) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top'))
+
+```
+
+---
+
+* **assimilation: *weak agreement***
+  + Dominik assigned many more datapoints to this group of parameters
+
+* **ingestion: *weak agreement***
+  + Dominik assigned the highest number of datapoints to *photoperiod* and *temperature* whereas Alexis assigned most datapoints to *fatty acid composition food*, a parameter that Dominik did not assign any parameters to (same applies for *distance to shelf*)
+  
+* **maintenance excretion: *general agreement***
+  + Dominik and Alexis agree that few datapoints relate to this group of parameters
+  + Dominik assigned comparatively more datapoints to *photoperiod* and *temperature*
+
+* **maintenance moulting: *good agreement***
+  + Dominik and Alexis agree that few datapoints relate to this group of parameters
+
+* **maintenance respiration: *weak agreement***
+  + Dominik assigned many more datapoints to this group of parameters than Alexis
+  + Dominik assigned the highest number of datapoints to *temperature* followed by *photoperiod* and *chlorophyll*/*POC*
+  + Alexis assigned the highest number of datapoints to *fatty acid composition food*, which Dominik did not assign any data points to
+  + many datapoints that Dominik assigned to this group of parameters were classified as parameter/validation
+  
+* **spawning: *weak agreement***
+  + Alexis assigned roughly equal numbers of datapoints to each of the environmental variables (~20, respectively)
+  + Dominik only assigned meaningful numbers of datapoints to *photoperiod* and *temperature*, of which each was classified as parameter/validation
+  + Alexis classified most datapoints related to this group of parameters as correlation
+
+---
+---
+
+## Conclusion:
+
+There are strong differences between Alexis and Dominiks' classifications. One of the main reasons is that Dominik introduced a new information category mid-way and inconsistencies, e.g. in how Dominik classified the same parameters at the beginning and end of the classification process.
+Dominik went over the entire dataset and removed these inconsistencies to create a more robust parameter classification. This will be the dataset used for the analysis
+
+Let's redo the analysis...
+
+```{r analysisRedone1, message = F, warning = F}
+# import the new dataset
+parameterClassification <- read_csv('~/github/ICEDPaper1/data/parameterClassifications20231109.csv') %>% 
+  mutate(parameterID = row_number()) %>% 
+  select(parameterID, dominikMechanism = 21, informationCategory = 22) %>% 
+  mutate(mechanismID = str_split(dominikMechanism, pattern = ',')) %>% 
+  unnest(mechanismID) %>%
+  mutate(mechanismID = str_replace_all(mechanismID, " ", ""),
+         mechanismID = ifelse(mechanismID == '-', NA, mechanismID),
+         classifier = 'dominik') %>% 
+  select(-dominikMechanism)
+
+# bind additional info to parameter classification table
+parameterClassification <- parameterClassification %>% 
+  left_join(., mechanismMeta) %>% 
+  mutate(informationCategory = ifelse(informationCategory == '-' | 
+                                        informationCategory == ' ',
+                                      NA, informationCategory),
+         informationCategory = ifelse(is.na(informationCategory), 'not assigned', informationCategory),
+         informationCategory = factor(informationCategory, levels = c('not assigned','validation','correlation',
+                                                                      'parameter, validation','parameter')),
+         submechanism = ifelse(is.na(submechanism), 'not assigned', 
+                               ifelse(submechanism == 'egg_larval', 'egg and larval development', submechanism)),
+         submechanism = factor(submechanism, levels = c('not assigned','spawning','egg and larval development','overwintering','mortality'))) 
+
+colourKey <- tibble(informationCategory = c('not assigned','validation','correlation','parameter, validation','parameter'),
+                    label = c('not assigned','validation','correlation','parameter, validation','parameter'),
+                    colour = c('#5e5e5e',scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[2:5]))
+
+parameterClassification <- parameterClassification %>% 
+  left_join(., colourKey) %>% 
+  mutate(colour = factor(colour, levels = c('#5e5e5e',scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[2:5])))
+
+# Overview of the dataset
+parameterClassification %>% 
+  group_by(submechanism, informationCategory, colour) %>% 
+  summarize(count = n()) %>% 
+  ggplot(.,aes(x = count, y = submechanism, fill = colour)) +
+  geom_col(alpha = 0.85) +
+  labs(x = 'number of datapoints', y = 'conceptual model', fill = 'information category') +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  #scale_fill_manual(values = c('#5e5e5e',scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[2:5])) +
+  #scale_fill_manual(values = scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA),
+         axis.text = element_text(size = 20),
+         axis.title = element_text(size = 20),
+         legend.text = element_text(size = 20),
+         legend.title = element_text(size = 20)) +
+  guides(fill = guide_legend(title.position = 'top', ncol = 3))
+
+ggsave('~/github/ICEDPaper1/plots/Figure3.png', width = 12, height = 6)
+
+# calculate proportions
+parameterClassification %>% 
+  mutate(nSamples = n()) %>% 
+  group_by(submechanism) %>% 
+  summarize(proportion = n()/nSamples) %>% 
+  distinct(submechanism, proportion)
+
+# let's also produce a timeline of the seasonal distribution of the extracted studies
+read_csv('~/github/ICEDPaper1/data/parameterClassifications20231109.csv') %>% 
+  select(title = 2, season = 5) %>% 
+  distinct(title, season) %>% 
+  mutate(season = ifelse(season == 'year around', 'summer, fall, winter, spring', season),
+         seasonSingle = strsplit(season, '\\,|;|-')) %>% 
+  unnest(seasonSingle) %>% 
+  mutate(seasonSingle = str_replace_all(seasonSingle, pattern = ' ', replacement = ''),
+         seasonSingle = ifelse(seasonSingle %in% c('autum','autumn'), 'fall', seasonSingle)) %>% 
+  filter(!is.na(seasonSingle)) %>% 
+  group_by(seasonSingle) %>% 
+  summarize(count = n()) %>% 
+  mutate(seasonSingle = factor(seasonSingle, levels = c('spring','summer','fall','winter'))) %>% 
+  ggplot(.,aes(x = seasonSingle, y = count, fill = seasonSingle)) +
+  geom_col(width = 0.8) +
+  labs(x = '', y = 'number of studies') +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  scale_fill_manual(values = scico(4, palette = 'lapaz', begin = 0.1, end = 0.8, direction = -1)) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e', linewidth = 1.5),
+        legend.position = 'none',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 35),
+        axis.title = element_text(size = 35))
+ggsave('~/github/ICEDPaper1/plots/Figure2b.png', width = 10, height = 10)
+
+# Plots for spawning
+# overview of mechanisms that do not relate to environmental mechanisms
+spawningData <- parameterClassification %>% 
+  left_join(., mechanismMeta) %>% 
+  filter(submechanism == 'spawning') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  mutate(label = str_replace_all(name, pattern = ' ', replacement = ''),
+         label = str_replace_all(label, pattern = '_', replacement = ' '),
+         label = str_replace(label, pattern = ' ', replacement = '\n'))
+
+spawningData %>% 
+  filter(is.na(enviro_vars)) %>% 
+  ggplot(.,aes(x = count, y = label, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top')) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e', linewidth = 1.5),
+        legend.position = 'none',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 28),
+        axis.title = element_text(size = 28))
+ggsave('~/github/ICEDPaper1/plots/Figure3b.png', width = 12, height = 10)
+
+# visualize env-dependent sub-units
+envLabels <- spawningData %>% 
+  distinct(enviro_vars) %>% 
+  mutate(envLabel = c('POC','chla','FA','photo','temp',NA))
+
+spawningData %>% 
+  left_join(., envLabels) %>% 
+  filter(!is.na(enviro_vars)) %>% 
+  ggplot(.,aes(x = count, y = envLabel, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  facet_wrap(~label, ncol = 1) +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 20),
+        strip.text = element_text(size = 20),
+        axis.title = element_text(size = 20),
+        legend.text = element_text(size = 20),
+        legend.title = element_text(size = 20)) +
+  guides(fill = guide_legend(title.position = 'top', ncol = 1))
+
+ggsave('~/github/ICEDPaper1/plots/Figure3c.png', width = 6, height = 15)
+```
+
+Now create the same plots for egg and larval development
+
+```{r eggLarval, message = F, warning = F}
+# egg and larval development data point assignments
+eggLarval <- parameterClassification %>% 
+  left_join(., mechanismMeta) %>% 
+  filter(submechanism == 'egg and larval development') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  mutate(label = str_replace_all(name, pattern = ' ', replacement = ''),
+         label = str_replace_all(label, pattern = '_', replacement = ' '),
+         label = str_replace(label, pattern = ' ', replacement = '\n'))
+
+eggLarval %>% 
+  filter(is.na(enviro_vars)) %>% 
+  ggplot(.,aes(x = count, y = label, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top')) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e', linewidth = 1.5),
+        legend.position = 'none',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 28),
+        axis.title = element_text(size = 28))
+ggsave('~/github/ICEDPaper1/plots/Figure5b.png', width = 12, height = 10)
+
+# visualize env-dependent sub-units
+envLabels <- eggLarval %>% 
+  distinct(enviro_vars) %>% 
+  mutate(envLabel = c('temp','time',NA,'water density'))
+
+legendLabel <- unique(eggLarval$informationCategory)
+eggLarval %>% 
+  left_join(., envLabels) %>% 
+  filter(!is.na(enviro_vars)) %>% 
+  ggplot(.,aes(x = count, y = envLabel, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = legendLabel, guide = 'legend') +
+  facet_wrap(~label, ncol = 1) +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 22),
+        strip.text = element_text(size = 22),
+        axis.title = element_text(size = 22),
+        legend.text = element_text(size = 22),
+        legend.title = element_text(size = 22)) +
+  guides(fill = guide_legend(title.position = 'top', ncol = 3))
+
+# ggsave('~/github/ICEDPaper1/plots/Figure5c.pdf', width = 6, height = 16)
+ggsave('~/github/ICEDPaper1/plots/Figure5c.png', width = 7.5, height = 14)
+```
+
+Repeat for the overwintering model
+
+
+```{r overwintering, message = F, warning = F}
+overwintering <- parameterClassification %>% 
+  left_join(., mechanismMeta) %>% 
+  filter(submechanism == 'overwintering') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  mutate(label = str_replace_all(name, pattern = ' ', replacement = ''),
+         label = str_replace_all(label, pattern = '_', replacement = ' '),
+         label = str_replace(label, pattern = ' ', replacement = '\n'))
+
+overwintering %>% 
+  filter(is.na(enviro_vars)) %>% 
+  ggplot(.,aes(x = count, y = label, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top')) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e', linewidth = 1.5),
+        legend.position = 'none',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 28),
+        axis.title = element_text(size = 28))
+ggsave('~/github/ICEDPaper1/plots/Figure6b.png', width = 12, height = 8)
+
+# visualize env-dependent sub-units
+envLabels <- overwintering %>% 
+  distinct(enviro_vars) %>% 
+  mutate(envLabel = c('POC','het carbon','ice algae','detritus','photoperiod','sea ice', NA))
+
+overwintering %>% 
+  left_join(., envLabels) %>% 
+  filter(!is.na(enviro_vars)) %>% 
+  ggplot(.,aes(x = count, y = envLabel, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  facet_wrap(~label, ncol = 1) +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'none',
+        strip.background = element_rect(fill = NA),
+        axis.text = element_text(size = 22),
+        strip.text = element_text(size = 22),
+        axis.title = element_text(size = 22),
+        legend.text = element_text(size = 22),
+        plot.margin = unit(c(0.4, 0.4, 0.4, 0.4), 'cm'),
+        legend.title = element_text(size = 22)) +
+  guides(fill = guide_legend(title.position = 'top', ncol = 3))
+
+#ggsave('~/github/ICEDPaper1/plots/Figure6c.pdf', width = 6, height = 16)
+ggsave('~/github/ICEDPaper1/plots/Figure6c.png', width = 6.5, height = 14)
+```
+
+and finally mortality factors...
+
+```{r mortality, message = F, warning = F}
+mortality <- parameterClassification %>% 
+  left_join(., mechanismMeta) %>% 
+  filter(submechanism == 'mortality') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>% 
+  summarize(count = n()) %>% 
+  ungroup() %>% 
+  rowwise() %>% 
+  mutate(stage = tail(unlist(str_split(enviro_vars, '_')), n = 1),
+         mortFactor = paste(head(unlist(str_split(enviro_vars, '_')),-1), collapse = ' '))
+
+mortality %>% 
+  ggplot(.,aes(x = count, y = mortFactor, fill = colour)) +
+  geom_col() +
+  scale_fill_identity(labels = c('not assigned','validation','correlation','parameter, validation','parameter'), guide = 'legend') +
+  facet_wrap(~stage) +
+  labs(x = 'number of datapoints', y = '', fill = 'information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  guides(fill = guide_legend(title.position = 'top')) +
+  scale_x_continuous(limits = c(0,40)) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e', linewidth = 1.5),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA),
+        strip.text = element_text(size = 28),
+        axis.text = element_text(size = 28),
+        axis.title = element_text(size = 28),
+        legend.text = element_text(size = 28),
+        plot.margin = unit(c(0.4, 0.4, 0.4, 0.4), 'cm'),
+        legend.title = element_text(size = 28))
+ggsave('~/github/ICEDPaper1/plots/Figure7.png', width = 12, height = 6)
+```
+
+
+
+
+
+
+
