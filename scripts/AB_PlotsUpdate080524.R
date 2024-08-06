@@ -40,10 +40,6 @@ colourKey <- tibble(informationCategory = c('correlation', 'parameter', 'validat
                     label = informationCategory,
                     colour = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e'))
 
-parameterClassification <- parameterClassification %>% 
-  left_join(., colourKey) %>% 
-  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e')))
-
 # Overview of the dataset
 data_counts <- parameterClassification |>
   group_by(submechanism, informationCategory) |>
