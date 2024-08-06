@@ -12,7 +12,7 @@ mechanismMeta <- read.xlsx('/Users/alexisbahl/Documents/Github/Paper1Uncertainti
   rename(submechanism = `sub-mechanism`)
 
 # import the new dataset
-parameterClassification_raw <- read_csv('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/parameterClassifications20231109.csv') |> 
+parameterClassification_raw <- read_csv('data/parameterClassifications20240805.csv') |> 
   #read_csv('~/github/ICEDPaper1/data/parameterClassifications20231109.csv') %>% 
   mutate(parameterID = row_number()) %>% 
   select(parameterID, dominikMechanism = 21, informationCategory = 22) %>% 
@@ -45,14 +45,18 @@ parameterClassification <- parameterClassification %>%
   mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e')))
 
 # Overview of the dataset
-data_counts <- parameterClassification %>% 
-  group_by(submechanism, informationCategory, colour) %>% 
-  summarize(count = n(), .groups = "keep") %>% 
+data_counts <- parameterClassification |>
+  group_by(submechanism, informationCategory) |>
+  summarize(count = n(), .groups = "keep") |>
   ungroup() |> 
-  group_by(submechanism) %>% 
+  complete(submechanism, informationCategory) |>
+  mutate(count = ifelse(is.na(count), 0, count)) |>
+  group_by(submechanism) |>
   mutate(tot = sum(count),
          proportion = count / tot * 100) |> # proportion of counts
-  ungroup() 
+  ungroup()  %>% 
+  left_join(., colourKey) %>% 
+  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e')))
 
 # table showcasing the total number of datapoints for each submechanism and informationcategory
 library(flextable)
@@ -84,13 +88,16 @@ table_counts
 
 # FIGURE 6 
 # create figure that features only spawning, egg and larval, and overwintering
-figure6_data <- data_counts |> as.data.frame() |>  filter(!submechanism %in% c('not assigned', 'mortality')) 
+figure6_data <- data_counts |> as.data.frame() |>  
+  complete(submechanism, informationCategory) %>% filter(!submechanism %in% c('not assigned', 'mortality')) 
+
 max_count <- max(figure6_data$count)
   
 figure6 <- figure6_data |> 
   ggplot(aes(x = count, y = submechanism, fill = colour)) +
   geom_col(position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
-  geom_text(aes(label = ifelse(proportion < 1, paste0(round(proportion, 1), "%"), paste0(round(proportion), "%"))), 
+  geom_text(data = filter(figure6_data, proportion>0),
+            aes(label = ifelse(proportion < 1, paste0(round(proportion, 1), "%"), paste0(round(proportion), "%"))), 
             position = position_dodge(width = 0.9), 
             hjust = -0.1, 
             size = 3.5) +
