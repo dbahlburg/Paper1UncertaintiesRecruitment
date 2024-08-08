@@ -13,18 +13,22 @@
 library(tidyverse)
 library(geosphere)
 library(rgdal)
+library(sf)
 library(here)
 
 # load world map and fao-areas
 world <- map_data("world")
-faoAreas <- fortify(readOGR(here('infographicsGroup','inputData','FAO_Areas_ShapefilesWGS84','asd-shapefile-WGS84.shp')))
+faoAreas <- fortify(read_sf(here('infographicsGroup','inputData','FAO_Areas_ShapefilesWGS84','asd-shapefile-WGS84.shp')))
+# rgdal packaged retired in 2023
+#faoAreas <- fortify(readOGR(here('infographicsGroup','inputData','FAO_Areas_ShapefilesWGS84','asd-shapefile-WGS84.shp')))
 
 # assign dummy value to fao-area (this could be the number of studies)
 numberOfStudiesFAO <- faoAreas %>% 
-  distinct(group) %>% 
+  distinct(Name) %>% 
   mutate(numberOfStudies = round(runif(n = 19, min = 1, max = 12)))
+
 faoAreas <- faoAreas %>% 
-  left_join(., numberOfStudiesFAO, by = 'group')
+  left_join(., numberOfStudiesFAO, by = 'Name')
 
 # Given the long/lat coordinates of an origin (x) and a radius (radius) in km,
 # returns the coordinates of 360 points on the circle of center x and radius radius km.
@@ -66,14 +70,14 @@ faoAreasPlot <- ggplot() +
   geom_tile(data = oceanColour, aes(x = long, y = lat), fill = '#fcfcfc',
             colour = '#fcfcfc')+
   geom_polygon(data = faoAreas, aes(x = long, y = lat, 
-                                    group = group, 
+                                    group = Name, 
                                     fill = numberOfStudies,
                                     colour = numberOfStudies),
                size = 0.15) +
   scale_fill_gradient(low = '#c9c9c9',high = '#6ca85d') +
   geom_segment(aes(y = rep(30, times = length(xLines)), yend = rep(-90, times = length(xLines)), 
                    x = xLines, xend = xLines), 
-               size = 0.5,
+               linewidth =0.5,
                colour = '#808080',
                alpha = 0.2,
                linetype = '82') +
