@@ -236,6 +236,18 @@ rm(fig2b)
 # Define new labels for the variables
 library(stringr)
 # Process spawningData with updated labels
+new_labels_spawn <- c("gonads_development" = 'gonads\ndevelopment',
+                      "gonads_size" = 'gonads\nsize',
+                      "tissue_reserves_carbs" = 'carb\nreserves',
+                      "tissue_reserves_proteins" = 'protein\nreserves',
+                      "tissue_reserves_lipids" = 'lipid\nreserves',
+                      "ingestion" = 'ingestion',
+                      "assimilation" = 'assimilation',
+                      "maintenance _respiration" = 'respiration',
+                      "maintenance _moulting" = 'moulting',
+                      "maintenance _excretion" = 'excretion',
+                      "spawning" = 'spawning')
+
 spawningData <- parameterClassification %>% 
   filter(submechanism == 'spawning') %>% 
   group_by(name, enviro_vars, informationCategory, colour) %>% 
@@ -246,6 +258,8 @@ spawningData <- parameterClassification %>%
          proportion = count / tot * 100) |> 
   mutate(label = factor(name, levels = names(new_labels_spawn), labels = new_labels_spawn)) |> 
   ungroup() 
+
+spawningData |> select(name, enviro_vars, count) |> group_by(name, enviro_vars) |> summarise(tot = sum(count))
 
 # subplot A - just state vars
 subplot_a <- spawningData |> 
@@ -373,7 +387,7 @@ new_labels_egg <- c("embryo_diameter" = 'embryo\ndiameter',
 
 # Process spawningData with updated labels
 eggLarval <- parameterClassification %>% 
-  left_join(., mechanismMeta) %>% 
+  #left_join(., mechanismMeta) %>% 
   filter(submechanism == 'egg and larval \ndevelopment') %>% 
   group_by(name, enviro_vars, informationCategory, colour) %>% 
   summarize(count = n()) %>% 
@@ -382,6 +396,9 @@ eggLarval <- parameterClassification %>%
   mutate(tot = sum(count),
          proportion = count / tot * 100) |> 
   mutate(label = factor(name, levels = names(new_labels_egg), labels = new_labels_egg))
+
+eggLarval |> select(name, count, informationCategory) |> group_by(informationCategory) |> summarise(tot = sum(count))
+eggLarval |> select(name, enviro_vars, count, informationCategory) |> group_by(informationCategory, enviro_vars) |> summarise(tot = sum(count)) |> drop_na()
 
 max_count_egg <- max(eggLarval$count)
 
@@ -492,6 +509,9 @@ overwintering <- parameterClassification %>%
          proportion = count / tot * 100) |> 
   mutate(label = factor(name, levels = names(new_labels_winter), labels = new_labels_winter))
 
+overwintering  |> select(name, count, informationCategory) |> group_by(informationCategory) |> summarise(tot = sum(count))
+overwintering |> select(name, enviro_vars, count, informationCategory) |> group_by(informationCategory, enviro_vars) |> summarise(tot = sum(count)) |> drop_na()
+
 max_count_winter <- max(overwintering$count)
 
 winter_figa <- overwintering %>% 
@@ -578,7 +598,7 @@ ggsave('~/github/ICEDPaper1/plots/Figure6c.png', width = 10, height = 7)
 # ------------------------------------------------------------------------------- #
 mortality <- parameterClassification %>% 
   left_join(., mechanismMeta) %>% 
-  filter(submechanism == 'mortality') %>% 
+  filter(name == 'mortality') %>% 
   group_by(name, enviro_vars, informationCategory, colour) %>% 
   summarize(count = n()) %>% 
   ungroup() %>% 
@@ -586,7 +606,11 @@ mortality <- parameterClassification %>%
   mutate(stage = tail(unlist(str_split(enviro_vars, '_')), n = 1),
          stage = factor(stage, levels = c('larvae','embryo','adults')),
          mortFactor = paste(head(unlist(str_split(enviro_vars, '_')),-1), collapse = ' '),
-         mortFactor = ifelse(mortFactor == 'other mortality','other natural mortality',mortFactor))
+         mortFactor = ifelse(mortFactor == 'other mortality','other natural mortality',mortFactor)) |> 
+  ungroup()
+
+mortality |> select(stage, mortFactor, count) |> group_by(stage) |> summarise(tot = sum(count))
+mortality |> select(stage, mortFactor, count) |> group_by(stage, mortFactor) |> summarise(tot = sum(count))
 
 mortality %>% 
   mutate(stage = factor(stage, levels = c('embryo','larvae','adults')),
