@@ -597,27 +597,50 @@ ggsave('~/github/ICEDPaper1/plots/Figure6c.png', width = 10, height = 7)
 # ------------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------------- #
 mortality <- parameterClassification %>% 
-  left_join(., mechanismMeta) %>% 
-  filter(name == 'mortality') %>% 
-  group_by(name, enviro_vars, informationCategory, colour) %>% 
-  summarize(count = n()) %>% 
-  ungroup() %>% 
+  left_join(., mechanismMeta) %>%
+  filter(submechanism == 'mortality') %>%   
   rowwise() %>% 
   mutate(stage = tail(unlist(str_split(enviro_vars, '_')), n = 1),
          stage = factor(stage, levels = c('larvae','embryo','adults')),
-         mortFactor = paste(head(unlist(str_split(enviro_vars, '_')),-1), collapse = ' '),
-         mortFactor = ifelse(mortFactor == 'other mortality','other natural mortality',mortFactor)) |> 
-  ungroup()
+         enviro_vars = paste(head(unlist(str_split(enviro_vars, '_')), -1), collapse = '_'),
+         enviro_vars = ifelse(grepl('other_mortality', enviro_vars), "natural mortality", enviro_vars),
+         mortFactor = ifelse(enviro_vars %in% c("parasitism", "predation", "starvation", "temperature", "fisheries"),
+                             enviro_vars,
+                             "natural mortality")) %>% 
+  ungroup() |> 
+  select(-submechanism, -parameterID, -classifier, -mechanismID, -type, -name, -enviro_vars, -label) |> 
+  group_by(stage, mortFactor, informationCategory) |> 
+  mutate(count = n()) |> 
+  ungroup() |> 
+  distinct() |> 
+  mutate(tot = sum(count)) |> 
+  group_by(stage) |> 
+  mutate(proportion = count/tot*100) |> 
+  ungroup() |> 
+  complete(stage, mortFactor = c("parasitism", "predation", "starvation", "temperature", "fisheries", "natural mortality"), 
+           informationCategory, colour, fill = list(tot = 0, count = 0, proportion = 0)) %>% 
+  distinct() |> 
+  mutate(mortFactor = ifelse(is.na(mortFactor), "natural mortality", mortFactor),
+         stage = factor(stage, levels = c('embryo','larvae','adults')),
+         mortFactor = factor(mortFactor, levels = c("natural mortality", "temperature", "starvation", "predation",
+                                                    "parasitism",  "fisheries"))) 
 
-mortality |> select(stage, mortFactor, count) |> group_by(stage) |> summarise(tot = sum(count))
-mortality |> select(stage, mortFactor, count) |> group_by(stage, mortFactor) |> summarise(tot = sum(count))
 
-mortality %>% 
-  mutate(stage = factor(stage, levels = c('embryo','larvae','adults')),
-         mortFactor = factor(mortFactor, c("other natural mortality", "natural mortality", "parasitism",         
-                        "predation", "starvation", "temperature"))) %>% 
-  ggplot(.,aes(x = count, y = mortFactor, fill = colour)) +
-  geom_col() +
+max_count_mort <- max(mortality$count, na.rm = TRUE)
+
+mort_fig <- mortality %>% 
+  ggplot(aes(x = count, y = mortFactor, fill = colour)) +
+  geom_col(position = position_dodge(), alpha = 1) +   # Need to reverse the column to match order of legend
+  geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, 
+            size = 4.3,
+            family = "Times New Roman") +
+  scale_x_continuous(expand = c(0, 0), 
+                     limits = c(0, max_count_mort+5),
+                     breaks = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), 
+                     labels = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)) +
+  scale_y_discrete(expand = c(0, 0)) +
   scale_fill_identity(labels = c('correlation', 'parameter', 'validation', 'parameter, validation', 'not assigned'), 
                       guide = guide_legend(
                         direction = "vertical",
@@ -626,16 +649,12 @@ mortality %>%
                         #reverse = TRUE,
                         title.hjust = 0.5)) +
   facet_wrap(~stage) +
-  labs(x = 'number of data points', y = '', fill = 'information category') +
-  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
-        legend.position = 'bottom',
-        strip.background = element_rect(fill = NA)) +
-  guides(fill = guide_legend(title.position = 'top')) +
-  scale_x_continuous(limits = c(0,40)) +
+  labs(x = '\n Number of data points', y = '\n Mortality drivers', fill = 'Information category') +
   theme_bw()+
   theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
-        legend.position = 'bottom',
-        plot.margin = unit(c(0.4, 0.4, 0.4, 0.4), 'cm'),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'),
+        panel.spacing = unit(1, "lines"),
+        legend.position = "bottom",
         legend.key.size = unit(0.4, "cm"),
         legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
         legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
@@ -643,11 +662,18 @@ mortality %>%
                                          linewidth = 0.3, linetype="solid",
                                          colour ="black"),
         strip.background = element_rect(fill = NA),
+        strip.text = element_text(size = 16, colour="black", family="Times New Roman"),
+        strip.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        strip.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
         axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
         axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
         axis.title.x = element_text(size = 16, colour="black", family="Times New Roman"),
-        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman")) 
-ggsave('~/github/ICEDPaper1/plots/Figure7.png', width = 15, height = 6)
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman"))
+mort_fig
+
+#ggsave('~/github/ICEDPaper1/plots/Figure7.png', width = 15, height = 6)
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure10.png',
+       plot = mort_fig, width = 12, height = 6, units="in", limitsize = TRUE, scale = 0.85, dpi = 300, bg = "white")
 
 
 
