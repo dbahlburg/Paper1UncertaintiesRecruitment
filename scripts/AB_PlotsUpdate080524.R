@@ -32,8 +32,8 @@ parameterClassification <- parameterClassification_raw %>%
          informationCategory = ifelse(is.na(informationCategory), 'not assigned', informationCategory),
          informationCategory = factor(informationCategory, levels = c('correlation', 'parameter', 'validation','parameter, validation', 'not assigned')),
          submechanism = ifelse(is.na(submechanism), 'not assigned', 
-                               ifelse(submechanism == 'egg_larval', 'egg and larval \ndevelopment', submechanism)),
-         submechanism = factor(submechanism, levels = c('not assigned','mortality','overwintering','egg and larval \ndevelopment', 'spawning')))
+                               ifelse(submechanism == 'egg_larval', 'egg and larval\n development', submechanism)),
+         submechanism = factor(submechanism, levels = c('not assigned','mortality','overwintering','egg and larval\n development', 'spawning')))
 
 # define parameter color classification
 colourKey <- tibble(informationCategory = c('correlation', 'parameter', 'validation','parameter, validation', 'not assigned'),
@@ -57,7 +57,9 @@ data_counts <- parameterClassification |>
          proportion = count / tot * 100) |> # proportion of counts
   ungroup()  %>% 
   left_join(., colourKey) %>% 
-  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e')))
+  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e'))) |> 
+  mutate(submechanism = str_replace(submechanism, 'egg', 'embryo'))
+
 
 # Define the order of categories
 colour_levels <- c('correlation', 'parameter', 'validation', 'parameter, validation', 'not assigned')
@@ -175,7 +177,7 @@ rm(max_count)
 ggsave('~/github/ICEDPaper1/plots/Figure3.png', plot = figure6, width = 12, height = 10, units="in", limitsize = TRUE, scale = 1.2, dpi = 300, bg = "white")
 
 ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure6.png',
-        plot = figure6, width = 11, height = 8,units="in", limitsize = TRUE, scale = 0.8, dpi = 300, bg = "white")
+        plot = figure6, width = 12, height = 8,units="in", limitsize = TRUE, scale = 0.8, dpi = 300, bg = "white")
 rm(figure6)
 
 #----------------------------------------------------
@@ -603,27 +605,28 @@ mortality <- parameterClassification %>%
   mutate(stage = tail(unlist(str_split(enviro_vars, '_')), n = 1),
          stage = factor(stage, levels = c('larvae','embryo','adults')),
          enviro_vars = paste(head(unlist(str_split(enviro_vars, '_')), -1), collapse = '_'),
-         enviro_vars = ifelse(grepl('other_mortality', enviro_vars), "natural mortality", enviro_vars),
+         enviro_vars = ifelse(grepl('other_mortality', enviro_vars), "other mortality", enviro_vars),
          mortFactor = ifelse(enviro_vars %in% c("parasitism", "predation", "starvation", "temperature", "fisheries"),
                              enviro_vars,
-                             "natural mortality")) %>% 
+                             "other mortality")) %>% 
   ungroup() |> 
   select(-submechanism, -parameterID, -classifier, -mechanismID, -type, -name, -enviro_vars, -label) |> 
   group_by(stage, mortFactor, informationCategory) |> 
   mutate(count = n()) |> 
   ungroup() |> 
   distinct() |> 
-  mutate(tot = sum(count)) |> 
   group_by(stage) |> 
-  mutate(proportion = count/tot*100) |> 
+  mutate(tot = sum(count)) |> 
+  mutate(proportion = (count / tot) * 100) |> 
   ungroup() |> 
-  complete(stage, mortFactor = c("parasitism", "predation", "starvation", "temperature", "fisheries", "natural mortality"), 
+  complete(stage, mortFactor = c("parasitism", "predation", "starvation", "temperature", "fisheries", "other mortality"), 
            informationCategory, colour, fill = list(tot = 0, count = 0, proportion = 0)) %>% 
   distinct() |> 
-  mutate(mortFactor = ifelse(is.na(mortFactor), "natural mortality", mortFactor),
+  mutate(mortFactor = ifelse(is.na(mortFactor), "other mortality", mortFactor),
          stage = factor(stage, levels = c('embryo','larvae','adults')),
-         mortFactor = factor(mortFactor, levels = c("natural mortality", "temperature", "starvation", "predation",
+         mortFactor = factor(mortFactor, levels = c("other mortality", "temperature", "starvation", "predation",
                                                     "parasitism",  "fisheries"))) 
+  #drop_na()
 
 
 max_count_mort <- max(mortality$count, na.rm = TRUE)
@@ -636,7 +639,7 @@ mort_fig <- mortality %>%
             hjust = -0.1, 
             size = 4.3,
             family = "Times New Roman") +
-  scale_x_continuous(expand = c(0, 0), 
+  scale_x_continuous(expand = c(0, 0+0.2), 
                      limits = c(0, max_count_mort+5),
                      breaks = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), 
                      labels = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)) +
@@ -673,7 +676,7 @@ mort_fig
 
 #ggsave('~/github/ICEDPaper1/plots/Figure7.png', width = 15, height = 6)
 ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure10.png',
-       plot = mort_fig, width = 12, height = 6, units="in", limitsize = TRUE, scale = 0.85, dpi = 300, bg = "white")
+       plot = mort_fig, width = 13, height = 6, units="in", limitsize = TRUE, scale = 0.85, dpi = 300, bg = "white")
 
 
 
