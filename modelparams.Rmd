@@ -1,0 +1,322 @@
+---
+title: "ModelParams"
+output: html_document
+date: "2024-01-12"
+---
+
+```{r setup, include=FALSE}
+library(readxl)
+library(dplyr)
+library(tidyverse)
+library(openxlsx)
+library(scico)
+library(flextable)
+library(janitor)
+library(scico)
+library(ggplot2)
+
+# import table which contains information about the parameter IDs
+mechanismMeta <- read.xlsx('ICEDPaper1_ModelParams.xlsx') %>%
+  rename(submechanism = `sub-mechanism`)
+
+# import the new dataset
+raw_parameterClassification <- read_csv('parameterClassifications20231109.csv') %>%
+  mutate(parameterID = row_number()) %>%
+  select(parameterID, dominikMechanism = 21, informationCategory = 22) %>%
+  mutate(mechanismID = str_split(dominikMechanism, pattern = ',')) %>%
+  unnest(mechanismID) %>%
+  mutate(mechanismID = str_replace_all(mechanismID, " ", ""),
+         mechanismID = ifelse(mechanismID == '-', NA, mechanismID),
+         classifier = 'dominik') %>%
+  select(-dominikMechanism)
+
+#rm(mechanismMeta)
+```
+
+
+```{r}
+# bind additional info to parameter classification table
+parameterClassification <- raw_parameterClassification |> 
+  left_join(mechanismMeta, by = join_by(mechanismID)) |> 
+  mutate(informationCategory = ifelse(informationCategory == '-' |
+                                        informationCategory == ' ',
+                                      NA, informationCategory),
+         informationCategory = ifelse(is.na(informationCategory), 'not assigned', informationCategory),
+         informationCategory = factor(informationCategory, levels = c('parameter', 'parameter, validation',
+                                                                      'correlation','validation','not assigned')),
+         submechanism = ifelse(is.na(submechanism), 'not assigned',
+                               ifelse(submechanism == 'egg_larval', 'egg and larval development', submechanism)),
+         submechanism = factor(submechanism, levels = c('not assigned','mortality','overwintering','egg and larval development', 'spawning')))
+
+# colourKey <- tibble(informationCategory = c('parameter', 'parameter, validation','correlation','validation','not assigned'),
+#                     label = informationCategory,
+#                     colour = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5E5E5E'))
+
+# parameterClassification <- parameterClassification %>%
+#   left_join(colourKey) %>%
+#   mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5E5E5E'))) 
+
+# set colors for plots
+unique_categories <- unique(parameterClassification$informationCategory)
+
+# Generate a color palette based on the number of unique categories
+palette <- scico(length(unique_categories), palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)
+
+# Create a named vector mapping each category to a color
+category_colors <- setNames(palette, unique_categories)
+
+desired_order <- c("spawning", "egg and larval development", "overwintering", "mortality", "not assigned")
+
+mortality <- parameterClassification %>%
+  filter(submechanism == 'mortality') %>%
+  group_by(name, enviro_vars, informationCategory) %>%
+  summarize(count = n()) %>%
+  ungroup() %>%
+  rowwise() %>%
+  mutate(
+    stage = tail(unlist(str_split(enviro_vars, '_')), n = 1),
+    stage = factor(stage, levels = c('larvae','embryo','adults')),
+    mortFactor = paste(head(unlist(str_split(enviro_vars, '_')),-1), collapse = ' '),
+    mortFactor = ifelse(mortFactor == 'other mortality', 'other natural mortality', mortFactor)) 
+
+# Create a full set of combinations for mortFactor, name, enviro_vars, informationCategory, and stage
+full_combinations <- mortality %>%
+  complete(mortFactor, name, enviro_vars, informationCategory, stage, fill = list(count = 0))
+
+# Merge the full set of combinations with the actual counts
+mortality_complete <- full_combinations %>%
+  left_join(mortality)
+
+#Manually add "fisheries" to the factor levels
+mortality_complete$mortFactor <- factor(mortality_complete$mortFactor, 
+                                        levels = c("other natural mortality", "natural mortality", 
+                                                   "fisheries", "parasitism", "predation", 
+                                                   "starvation", "temperature"))
+
+#rm(raw_parameterClassification, mortality, full_combinations, colourKey)
+```
+
+# stats
+```{r}
+# total number of distinct parameters for each sub-mechanism
+result <- parameterClassification %>%
+  dplyr::select(submechanism, informationCategory, type, name) |> 
+  group_by(submechanism, informationCategory, type, name) %>%
+  mutate(count = n()) %>%
+  ungroup() %>%
+  group_by(submechanism) |> 
+  mutate(tot = round(n(), 2)) %>%
+  ungroup() |> 
+  group_by(submechanism, type) |> 
+  mutate(total_type = round(n(), 2)) |> 
+  ungroup() |> 
+  mutate(final = round(n(), 2)) %>%
+  ungroup() |>
+  unique()
+print(result)
+
+result |> dplyr::select(submechanism, tot) |> distinct()
+#  submechanism                 tot
+#   <fct>                      <dbl>
+# 1 spawning                    1129
+# 2 overwintering                431
+# 3 not assigned                1451
+# 4 egg and larval development   789
+# 5 mortality                    111
+# total:                        3911
+
+fig1 <- parameterClassification %>%
+  dplyr::select(submechanism, informationCategory) |> 
+  group_by(submechanism, informationCategory) %>%
+  mutate(count = n()) %>%
+  ungroup(informationCategory) %>%
+  mutate(tot = round(n(), 2)) %>%
+  ungroup() |> 
+  distinct() |> 
+  mutate(submechanism = factor(submechanism, levels = desired_order, ordered = TRUE)) %>% 
+  ggplot(aes(x = count, y = informationCategory, fill = informationCategory)) +
+  geom_col() +
+  scale_fill_manual(values = category_colors, name = "Information Category",
+                      guide = guide_legend(
+                      direction = "horizontal",
+                      title.position = "top",
+                      title.hjust = 0.5
+                    )) +
+  scale_x_continuous(expand = expansion(add = c(0, 50))) +
+  labs(x = 'number of data points', y = '') +
+  #geom_text(aes(label = paste0(tot)), color = "black") +
+            #position = position_dodge2(preserve = "single", width = .9, padding = 0.1), 
+            #size = 5.5, fontface = "bold", hjust = -0.04, vjust = 0.5) +
+  facet_grid(~submechanism, scales = "free") +
+  theme(panel.background = element_rect(fill = NA, colour = '#2E2E2E', linewidth = 1.5),
+        legend.position = 'bottom',
+        plot.title = element_text(size = 14),
+        legend.title.align = 0.5,
+        legend.key.size = unit(0.35, "cm"),
+        legend.key.height = unit(0.8,"line"),
+        legend.spacing.x = unit(0.2, "cm"),
+        legend.spacing.y = unit(0.2, "cm"),
+        legend.text = element_text(size = 16),
+        legend.title = element_text(size = 16),
+        legend.background = element_rect(linewidth=0.5, linetype="solid",
+                                          colour ="black"),
+        panel.spacing.x = unit(1.2, "lines"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_rect(fill = NA),
+        strip.text = element_text(size = 16),
+        axis.text.x = element_text(size = 16, colour = "black"),
+        axis.title.x = element_text(size = 16, colour = "black"),
+        axis.title.y = element_text(size = 16, colour = "black"),
+        axis.text.y = element_text(size = 16, colour = "black"),
+        axis.text = element_text(size = 16),
+        axis.title = element_text(size = 18),
+        plot.margin = unit(c(0.1, 0.7, 0.1, 0.5), 'cm'))
+fig1
+```
+
+# spawning plot
+```{r}
+result |> filter(submechanism %in% c("spawning") & type %in% c("state_var")) |> 
+  dplyr::select(informationCategory, name, count) |> 
+  group_by(name) |> 
+  mutate(sum = sum(count)) |> 
+  unique()
+
+
+  group_by(type) |> mutate(total_type = sum(count))
+
+
+lbs <- c("correlation", "parameter", "validation", "parameter, validation",  "not assigned")
+
+spawning <- parameterClassification %>%
+  filter(submechanism == "spawning") |> 
+  dplyr::select(informationCategory, type, enviro_vars, name) |> 
+  group_by(informationCategory, type, name) %>%
+  mutate(count = n()) %>%
+  ungroup(informationCategory) %>%
+  mutate(tot = round(n(), 2)) %>%
+  ungroup() |> 
+  # mutate(final = round(n(), 2)) %>%
+  # ungroup() |> 
+  distinct() |> 
+  mutate(name = fct_recode(name,
+                             "tissue-reserves: lipids" = "tissue_reserves_lipids",
+                             "tissue-reserves: proteins" = "tissue_reserves_proteins",
+                             "tissue-reserves: carbohydrates" = "tissue_reserves_carbs",
+                            "maintenance: moulting"= "maintenance _moulting",
+                            "maintenance: respiration" = "maintenance _respiration",
+                            "maintenance: excretion" = "maintenance _excretion",
+                            "gonads: size" = "gonads_size",
+                            "gonads: development" = "gonads_development")) |> 
+  mutate(type = fct_recode(type,
+                             "state variable" = "state_var")) |> 
+  mutate(informationCategory = (factor(informationCategory, labels = lbs,  levels = lbs, ordered = TRUE))) |> 
+  mutate(informationCategory = fct_relevel(informationCategory, lbs))
+
+category_colors_reordered <- rev(category_colors[match(lbs, names(category_colors))])
+
+fig2 <- spawning |> 
+  ggplot(aes(x = count, y = name, label = rownames(tot))) +
+  geom_col(aes(fill = informationCategory), stat = 'identity') +
+  scale_x_continuous(breaks = c(0, 100, 200, 300, 400, 500, 600), expand = expansion(add = c(0, 50))) +
+  scale_fill_manual(values = category_colors, name = "Information Category", aesthetics = c("color", "fill"),
+                      guide = guide_legend(
+                      direction = "horizontal",
+                      title.position = "top",
+                      title.hjust = 0.5)) +
+  labs(
+    y = "Sub-unit",
+    x = "Number of data points",
+    title = "Spawning Data") +
+  #coord_flip() +
+  geom_label_repel(aes(label=rownames(tot)), show.legend = FALSE) +
+  #geom_text(aes(x = count, label = tot), vjust = -0.5, size = 4, color = "black") +  # Add geom_text with 'tot' column
+  # geom_text(aes(label = paste0(tot)), position = position_fill(vjust=1.5))+
+            #position = position_dodge2(preserve = "single", width = .9, padding = 0.1), 
+            #size = 5.5, fontface = "bold", hjust = -0.04, vjust = 0.5) +
+  ggthemes::theme_base() +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(size = 18L,
+    face = "bold",
+    hjust = 0.5)) +
+  facet_wrap(vars(type), scales = "free_y", nrow = 2L) +
+  theme(panel.background = element_rect(fill = NA, colour = '#2E2E2E', linewidth = 1.5),
+        legend.position = 'bottom',
+        plot.title = element_text(size = 14),
+        legend.title.align = 0.5,
+        legend.key.size = unit(0.35, "cm"),
+        legend.key.height = unit(0.8,"line"),
+        legend.spacing.x = unit(0.2, "cm"),
+        legend.spacing.y = unit(0.2, "cm"),
+        legend.text = element_text(size = 16),
+        legend.title = element_text(size = 16),
+        legend.background = element_rect(linewidth=0.5, linetype="solid",
+                                          colour ="black"),
+        panel.spacing.x = unit(1.2, "lines"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_rect(fill = NA),
+        strip.text = element_text(size = 16),
+        axis.text.x = element_text(size = 16, colour = "black"),
+        axis.title.x = element_text(size = 16, colour = "black"),
+        axis.title.y = element_text(size = 16, colour = "black"),
+        axis.text.y = element_text(size = 16, colour = "black"),
+        axis.text = element_text(size = 16),
+        axis.title = element_text(size = 18),
+        plot.margin = unit(c(0.1, 0.7, 0.1, 0.5), 'cm'))
+fig2
+```
+
+
+
+# mortality plot
+```{r}
+mort_plot <- mortality_complete |> 
+  mutate(stage = factor(stage, levels = c('embryo', 'larvae', 'adults'))) %>%
+  ggplot(aes(x = count, y = mortFactor, fill = colour)) +
+  geom_col() +
+  #geom_text(aes(label = count), position = position_stack(vjust = .5), size = 4, color = 'black') +
+  scale_x_continuous(limits = c(0, 40), expand = c(0, 0.3)) +
+  scale_y_discrete(drop = F) +
+  scale_fill_identity(drop = T, labels = c('parameter', 'parameter, validation','correlation','validation','not assigned'),
+                      name = "information category",
+                      guide = guide_legend(
+                      direction = "horizontal",
+                      title.position = "top",
+                        title.hjust = 0.5)) +
+  facet_wrap(~stage) +
+  labs(x = 'number of data points', y = '') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2E2E2E', linewidth = 1.5),
+        legend.position = 'bottom',
+        legend.text = element_text(size = 16),
+        legend.title = element_text(size = 16),
+        panel.spacing.x = unit(1.2, "lines"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_rect(fill = NA),
+        strip.text = element_text(size = 16),
+        axis.text.x = element_text(size = 16, colour = "black"),
+        axis.title.x = element_text(size = 16, colour = "black"),
+        axis.title.y = element_text(size = 16, colour = "black"),
+        axis.text.y = element_text(size = 16, colour = "black"),
+        axis.text = element_text(size = 16),
+        axis.title = element_text(size = 18),
+        plot.margin = unit(c(0.2, 0.4, 0.4, 0.2), 'cm'))
+mort_plot
+
+ggsave("Figure7.png", path = 'plots/Figure7.png', mort_plot, units="in", 
+       width = 15, height = 6,
+       limitsize = TRUE, scale = 0.75,
+         dpi = 400, bg = "white")
+
+tbl <- mortality_complete |> dplyr::select(-name, -enviro_vars, -colour) |> 
+  filter_all(all_vars(!. == 0)) %>%
+  unique() |> 
+  mutate(total = sum(count)) |> 
+  #group_by(mortFactor, informationCategory, stage) |> 
+  mutate(percent = (count/total*100)) 
+```
+
+

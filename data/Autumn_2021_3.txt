@@ -1,0 +1,2715 @@
+﻿FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU Heyen, S
+   Schneider, V
+   Hüppe, L
+   Meyer, B
+   Wilkes, H
+AF Heyen, Simone
+   Schneider, Vivien
+   Hueppe, Lukas
+   Meyer, Bettina
+   Wilkes, Heinz
+TI Variations of intact phospholipid compositions in the digestive system
+   of Antarctic krill, Euphausia superba, between summer and autumn
+SO PLOS ONE
+AB The biochemical composition of Antarctic krill, Euphausia superba, is largely determined by their feeding behaviour. As they supply energy for animals of a higher trophic level and are also commercialized for human consumption, the interest in research on the species is high. Lipids, especially phospholipids, make up a high proportion of dry weight in krill. Seasonal changes are well documented in the fingerprint of free fatty acids analysed after hydrolysis of phospholipids, but the underlying intact polar lipids are rarely considered. In this study, we evaluated the compositions of intact phospholipids (IPLs) in the stomach, digestive gland and hind gut of Antarctic krill caught in summer and autumn at the Antarctic Peninsula region. Using high-resolution mass spectrometry, the fatty acid composition of 179 intact phospholipids could be resolved. Most IPLs were phosphatidylcholines, followed by phosphatidylethanolamines. Several very long chain polyunsaturated fatty acids up to 38:8, which have not been reported in krill before, were identified. The composition shifted to higher molecular weight IPLs with a higher degree of unsaturation for summer samples, especially for samples of the digestive gland. The data supplied in this paper provides new insights into lipid dynamics between summer and autumn usually described by free fatty acid biomarkers.
+OI Hüppe, Lukas/0000-0002-7793-9046; Schneider, Vivien/0009-0007-1201-0942;
+   Heyen, Simone/0000-0002-9252-3516
+SN 1932-6203
+PD DEC 29
+PY 2023
+VL 18
+IS 12
+AR e0295677
+DI 10.1371/journal.pone.0295677
+UT WOS:001135936500037
+PM 38157351
+ER
+
+PT J
+AU Heyen, S
+   Töpker, V
+   Kopke, B
+   Cakic, N
+   Hueppe, L
+   Meyer, B
+   Wilkes, H
+AF Heyen, Simone
+   Toepker, Verena
+   Kopke, Bernd
+   Cakic, Nevenka
+   Hueppe, Lukas
+   Meyer, Bettina
+   Wilkes, Heinz
+TI Variations of the metabolome in the digestive system of Antarctic krill,
+   Euphausia superba, between summer and autumn
+SO PLOS ONE
+AB Rapid climate change threatens the relatively pristine environment of the Southern Ocean. The effects on biogeochemical cycles and their subsequent consequences for the organisms in this area are of significant interest. Antarctic krill, Euphausia superba, is the dominant species in the Antarctic ecosystem and a vital component of the Southern Ocean food web. Its metabolism is influenced by the feeding regime, which is governed by environmental conditions. However, little is yet known about the metabolome of Antarctic krill. Here, we investigated metabolite classes that can serve as tracers for documenting variations in the metabolic and biochemical status of krill. To this end, we utilised targeted metabolomics to analyse coenzyme A thioesters, amino acids, B vitamins, and respiratory quinones in the digestive system of Antarctic krill, sampled during two campaigns in the Antarctic summer and autumn. A significant proportion of the detected coenzyme A thioesters were associated with the beta-oxidation of fatty acids and, consequently, with lipid metabolism. Propionyl-CoA was particularly abundant in samples from the digestive gland, while malonyl- and succinyl-CoA were more prevalent in stomach and hindgut samples. 3-Hydroxy-3-methylglutaryl-CoA, an intermediate in the metabolism of branched amino acids and the biosynthesis of isoprenoids, occurred almost exclusively in the summer samples. Analyzing the free amino acids, very high levels of the non-proteinogenic amino acid sarcosine were found, which possibly serves as an osmolyte for the Antarctic krill and/or plays a role in its digestive process. Among the B vitamins, there were seasonal fluctuations, particularly in B1 and B5. The respiratory quinones exhibited more homogeneous patterns, with UQ10:10 as the dominant representative. These seasonal and organ-dependent variations in the composition of the different metabolite classes can serve as a reference point in future studies to better assess the influence of changing conditions in Antarctic waters.
+RI Meyer, Bettina/ABB-5311-2020
+OI Heyen, Simone/0000-0002-9252-3516
+EI 1932-6203
+PY 2025
+VL 20
+IS 7
+AR e0327747
+DI 10.1371/journal.pone.0327747
+UT WOS:001527011600006
+PM 40638642
+ER
+
+PT J
+AU Xue, M
+   Zhu, GP
+AF Xue, Mei
+   Zhu, Guoping
+TI Autumn trophic niche partitioning reduces interspecific competition
+   between co-existing Antarctic Krill (Euphausia superba) and
+   hyperiid amphipod (Themisto gaudichaudii)
+SO MARINE BIOLOGY
+AB As key species in Antarctic and sub-Antarctic ecosystems, Antarctic krill (Euphausia superba) and hyperiid amphipod (Themisto gaudichaudii) overlaps in distribution, and the overlapping level may further increase with global climate change, resulting in competitive feeding pressures between them. Combining fatty acid and stomach content microscopy, we investigated the autumn food composition and ecological niche of E. superba and T. gaudichaudii across the shelf, shelf slope, and oceanic region along the northern South Orkney Islands. The results suggested partial overlap in food resources of E. superba and T. gaudichaudii, yet their trophic niches were largely distinct. Euphausia superba was omnivorous detritus-preferring consumers, and the flexible feeding strategy helped to expand their trophic niche width. Adult T. gaudichaudii was carnivorous predator-preferred consumer, capable of consuming prey from different trophic levels. Variations in surface chlorophyll-a concentration and predation pressure drove E. superba to migrate to the seafloor of the shelf area for increased benthic feeding, or stay in the diatom-rich upper layers of the oceanic region. The utilization of distinct food resources facilitated trophic niche partitioning between the two species in autumn. The pelagic or benthic feeding preferences of E. superba and their degree of food competition with T. gaudichaudii appeared to be strongly correlated with surface chlorophyll-a level.
+RI Zhu, Guoping/D-1002-2010; Xue, Mei/OHT-9163-2025
+OI Zhu, Guoping/0000-0001-6081-7811; 
+SN 0025-3162
+EI 1432-1793
+PD JUN 25
+PY 2025
+VL 172
+IS 8
+AR 124
+DI 10.1007/s00227-025-04655-y
+UT WOS:001516596000001
+ER
+
+PT J
+AU Chen, Z
+   Liu, H
+   Zhu, GP
+AF Chen, Zhuang
+   Liu, Hui
+   Zhu, Guoping
+TI The effects of environmental variables on hotspots of Antarctic krill
+   (Euphausia superba) in the Bransfield Strait during autumn
+SO POLAR SCIENCE
+AB Antarctic krill (Euphausia superba), a typical aggregation species, is the keystone species in the Antarctic ecosystem and supports an important fishery in the Southern Ocean. The unique topographic conditions of this region provide an important habitat for krill, and it has therefore become a critical krill fishing ground. To investigate the factors affecting krill hotspot patterns in the central basin of the Bransfield Strait in autumn 2021, an area with a high level of krill biomass and a persistent fishing ground, we used Getis-Ord Gi* approach to perform a hotspot analysis of the spatial and temporal variability of krill distribution. From this analysis we examined the relationship between krill distribution in hotspot and coldspot areas and environment variables such as geospatial features and eddy kinetic energy. We found that environmental variables generally showed opposing trends for krill distribution at hot-and coldspot areas. Moreover, geospatial features, including the distance to 200m and 1000m isobaths and depth, may be the dominant factor determining krill habitat char-acteristics, and moderate levels of eddy kinetic energy were conducive to krill aggregation.
+RI Zhu, Guoping/D-1002-2010; Liu, Hui/ABB-2141-2021
+OI Zhu, Guoping/0000-0001-6081-7811; 
+SN 1873-9652
+EI 1876-4428
+PD SEP
+PY 2023
+VL 37
+AR 100948
+DI 10.1016/j.polar.2023.100948
+UT WOS:001150101000001
+ER
+
+PT J
+AU Hellessey, N
+   Ericson, JA
+   Nichols, PD
+   Kawaguchi, S
+   Nicol, S
+   Hoem, N
+   Virtue, P
+AF Hellessey, Nicole
+   Ericson, Jessica A.
+   Nichols, Peter D.
+   Kawaguchi, So
+   Nicol, Stephen
+   Hoem, Nils
+   Virtue, Patti
+TI Regional diet in Antarctic krill (Euphausia superba) as
+   determined by lipid, fatty acid, and sterol composition
+SO POLAR BIOLOGY
+AB Antarctic krill (Euphausia superba) are a circumpolar species with an omnivorous diet. Knowledge of krill diet within different regions will help predict how environmental change may impact local krill populations. Krill from the Atlantic, Indian, and Pacific sectors of the Southern Ocean were compared. The total lipid, lipid class, neutral lipid fraction fatty acid and sterol content and composition of whole krill, their digestive glands, and stomachs during the late-summer were examined. Indian sector krill had a distinctly different dietary lipid pattern to Atlantic and Pacific sector krill based on their fatty acid profiles (p < 0.001). Indian sector whole krill had higher phospholipids (55.0 +/- 8.9%, % total lipids) compared to Pacific (45.9 +/- 3.6%) and Atlantic sector whole krill (43.7 +/- 8.2%) but showed lower phospholipid levels in their digestive glands (29.4 +/- 8.5%, 52.5 +/- 5.7%, 52.5 +/- 5.9%, respectively). Indian sector krill had a more copepod and diatomaceous diet (higher levels of 16:1n-7c, 14:0 and 20:1 and 22:1 isomers), with less flagellate input (lower 18:4n-3, 21:5n-3 and 18:3n-6) than other regions. Krill from one site in the Indian sector had particularly high 22:6n-3 levels. Indian sector krill had lower cholesterol levels in their stomachs (52.5 +/- 14.1%, as % total sterols) than Pacific and Atlantic sector krill stomachs (62.8 +/- 1.9% and 60.9 +/- 4.9%, respectively). This study details the regional differences in late-summer krill diet by assessing the lipid, neutral lipid fraction fatty acid and sterol content and composition of different tissue types.
+RI ; Kawaguchi, So/N-1795-2017; Hellessey, Nicole/B-1695-2016; Nichols,
+   Peter/C-5128-2011; Ericson, Jessica/AAP-1976-2020
+OI Hoem, Nils/0000-0002-3124-8290; Hellessey, Nicole/0000-0002-3053-8720;
+   Ericson, Jessica/0000-0001-5220-8493
+SN 0722-4060
+EI 1432-2056
+PD JUN
+PY 2022
+VL 45
+IS 6
+BP 1077
+EP 1092
+DI 10.1007/s00300-022-03054-z
+EA JUN 2022
+UT WOS:000811945200001
+ER
+
+PT J
+AU Zhu, GP
+   Liu, JH
+AF Zhu, Guoping
+   Liu, Jinhui
+TI Total mercury accumulation in Antarctic krill (Euphausia
+   superba) in the northern Antarctic Peninsula during late autumn to
+   early winter
+SO ENVIRONMENTAL RESEARCH
+AB Antarctic krill (Euphausia superba) is a key species in the Antarctic marine ecosystem and also the largest fishery in terms of catch in the Southern Ocean. Bransfield Strait on the northern Antarctic Peninsula is a key fishing ground. Mercury is a globally recognized toxic element that can affect pelagic organisms through bioaccumulation and biomagnification. Understanding mercury dynamics in krill is crucial for understanding its impacts on Antarctic food webs and potential impacts on the uses of krill in the human food chain. However, the factors influencing Hg accumulation in krill remain unclear, especially in the autumn when there is a transition from an environment of abundant food to a period of lower abundance in winter. We therefore investigated the total mercury (THg) accumulation in krill using randomly collected samples (n = 60) from the krill fishery in the Bransfield Strait from 14 May to June 15, 2023. We further explored the potential drivers influencing THg accumulation in krill. The results indicated that THg levels in male krill (46.7 f 10.8 ng g-1) are comparable to those in females (40.0 f 7.8 ng g-1), and that krill THg levels in May (47.1 f 11.5 ng g-1) are significantly higher than in June (41.3 f 8.2 ng g-1), indicating seasonal variation in krill THg levels. Moreover, the THg concentration of krill showed a significant positive correlation with krill size, regardless of sex or month. Krill size and sex, slope, water mass at 100 m, and sea ice dynamics all affected THg accumulation. Briefly, the THg level decreased with the increases in seafloor slope, and krill accumulated higher level of THg in the open water compared to ice-covered regions, highlighting the importance of seafloor slope and sea ice dynamics in THg dynamics in krill.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0013-9351
+EI 1096-0953
+PD AUG 1
+PY 2025
+VL 278
+AR 121651
+DI 10.1016/j.envres.2025.121651
+EA APR 2025
+UT WOS:001479510200001
+PM 40258465
+ER
+
+PT J
+AU Wang, MY
+   Wu, SX
+   Ding, H
+   Wang, MY
+   Ma, JY
+   Xiao, J
+   Wang, B
+   Bao, ZM
+   Hu, JJ
+AF Wang, Mengya
+   Wu, Shaoxuan
+   Ding, Hui
+   Wang, Mingyi
+   Ma, Jiayi
+   Xiao, Jie
+   Wang, Bo
+   Bao, Zhenmin
+   Hu, Jingjie
+TI Dietary antarctic krill improves antioxidant capacity, immunity and
+   reduces lipid accumulation, insights from physiological and
+   transcriptomic analysis of Plectropomus leopardus
+SO BMC GENOMICS
+AB Background Due to its enormous biomass, Antarctic krill (Euphausia superba) plays a crucial role in the Antarctic Ocean ecosystem. In recent years, Antarctic krill has found extensive application in aquaculture, emerging as a sustainable source of aquafeed with ideal nutritional profiles. However, a comprehensive study focused on the detailed effects of dietary Antarctic krill on aquaculture animals, especially farmed marine fishes, is yet to be demonstrated. Results In this study, a comparative experiment was performed using juvenile P. leopardus, fed with diets supplemented with Antarctic krill (the krill group) or without Antarctic krill (the control group). Histological observation revealed that dietary Antarctic krill could reduce lipid accumulation in the liver while the intestine exhibited no obvious changes. Enzyme activity measurements demonstrated that dietary Antarctic krill had an inhibitory effect on oxidative stress in both the intestine and the liver. By comparative transcriptome analysis, a total of 1,597 and 1,161 differentially expressed genes (DEGs) were identified in the intestine and liver, respectively. Functional analysis of the DEGs showed multiple enriched terms significantly related to cholesterol metabolism, antioxidants, and immunity. Furthermore, the expression profiles of representative DEGs, such as dhcr7, apoa4, sc5d, and scarf1, were validated by qRT-PCR and fluorescence in situ hybridization. Finally, a comparative transcriptome analysis was performed to demonstrate the biased effects of dietary Antarctic krill and astaxanthin on the liver of P. leopardus. Conclusions Our study demonstrated that dietary Antarctic krill could reduce lipid accumulation in the liver of P. leopardus, enhance antioxidant capacities in both the intestine and liver, and exhibit molecular-level improvements in lipid metabolism, immunity, and antioxidants. It will contribute to understanding the protective effects of Antarctic krill in P. leopardus and provide insights into aquaculture nutritional strategies.
+RI Wang, Brian/HGA-9535-2022; zhang, jinsheng/GXF-8167-2022; Wang,
+   Mingyi/L-8370-2017
+SN 1471-2164
+PD FEB 26
+PY 2024
+VL 25
+IS 1
+AR 210
+DI 10.1186/s12864-024-10099-3
+UT WOS:001184639200004
+PM 38408914
+ER
+
+PT J
+AU Rowlands, E
+   Galloway, T
+   Cole, M
+   Lewis, C
+   Hacker, C
+   Peck, VL
+   Thorpe, S
+   Blackbird, S
+   Wolff, GA
+   Manno, C
+AF Rowlands, Emily
+   Galloway, Tamara
+   Cole, Matthew
+   Lewis, Ceri
+   Hacker, Christian
+   Peck, Victoria L.
+   Thorpe, Sally
+   Blackbird, Sabena
+   Wolff, George A.
+   Manno, Clara
+TI Scoping intergenerational effects of nanoplastic on the lipid reserves
+   of Antarctic krill embryos
+SO AQUATIC TOXICOLOGY
+AB Antarctic krill (Euphausia superba) plays a central role in the Antarctic marine food web and biogeochemical cycles and has been identified as a species that is potentially vulnerable to plastic pollution. While plastic pollution has been acknowledged as a potential threat to Southern Ocean marine ecosystems, the effect of nanoplastics (<1000 nm) is poorly understood. Deleterious impacts of nanoplastic are predicted to be higher than that of larger plastics, due to their small size which enables their permeation of cell membranes and potentially provokes toxicity. Here, we investigated the intergenerational impact of exposing Antarctic krill to nanoplastics. We focused on whether embryonic energy resources were affected when gravid female krill were exposed to nanoplastic by determining lipid and fatty acid compositions of embryos produced in incubation. Embryos were collected from females who had spawned under three different exposure treatments (control, nanoplastic, nanoplastic + algae). Embryos collected from each maternal treatment were incubated for a further 6 days under three nanoplastic exposure treatments (control, low concentration nanoplastic, and high concentration nanoplastic). Nanoplastic additions to seawater did not impact lipid metabolism (total lipid or fatty acid composition) across the maternal or direct embryo treatments, and no interactive effects were observed. The provision of a food source during maternal exposure to nanoplastic had a positive effect on key fatty acids identified as important during embryogenesis, including higher total polyunsaturated fatty acids (PUFA), eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA) when compared to the control and nanoplastic treatments. Whilst the short exposure time was ample for lipids from maternally digested algae to be incorporated into embryos, we discuss why the nanoplastic-fatty acid relationship may be more complex. Our study is the first to scope intergeneration effects of nanoplastic on Antarctic krill lipid and fatty acid reserves. From this, we suggest directions for future research including long term exposures, multi-stressor scenarios and exploring other critical energy reserves such as proteins.
+RI ; Galloway, Tamara/C-1662-2009; Rowlands, Emily/OSI-2488-2025; Wolff,
+   George/B-7982-2018; Cole, Matthew/KHZ-6806-2024
+OI Rowlands, Emily/0000-0001-8307-6008; Blackbird,
+   Sabena/0000-0003-0942-6836; Cole, Matthew/0000-0001-5910-1189
+SN 0166-445X
+EI 1879-1514
+PD AUG
+PY 2023
+VL 261
+AR 106591
+DI 10.1016/j.aquatox.2023.106591
+EA JUN 2023
+UT WOS:001020454900001
+PM 37329636
+ER
+
+PT J
+AU Zhang, HT
+   Zhu, GP
+   Liu, H
+   Swadling, KM
+AF Zhang, Haiting
+   Zhu, Guoping
+   Liu, Hui
+   Swadling, Kerrie M.
+TI Autumn food availability in Bransfield Strait for Antarctic krill
+   Euphausia superba and the relationship between body size and fatty acid
+   content
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Bransfield Strait is an important spawning, feeding and overwintering ground for Antarctic krill. Increases in both the biomass of krill and the ice-free extent of the strait make this area of great interest for krill fisheries. While krill are known to have access to food supplies beyond summer, lipid accumulation plays a pivotal role in their ability to survive the food-limited winter. Understanding the condition and dietary habits of krill during the pre-winter season is important for assessing how they respond to this period that is often characterized by short-lived phytoplankton blooms. For 5 consecutive autumns, from 2015 to 2019, krill obtained from the fishery in Bransfield Strait were used to assess their diet and to evaluate the roles of individual body condition and habitat features in shaping krill fatty acid profiles. Analysis of dietary fatty acids in krill indicated that they were generally in an active feeding condition in autumn, showing significant levels of essential fatty acids such as eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). Fatty acid biomarkers displayed substantial inter-annual variation, with satellite data suggesting that sea surface temperature could be a potential factor contributing to this variation. Additionally, we observed strong correlations between krill body size and most of the fatty acid contents. There were positive correlations between size, EPA and DHA as well as negative correlations between size and a carnivorous diet. These findings suggest that krill exhibit differentiated feeding abilities and lipid retention based on their size.
+RI ; Zhu, Guoping/D-1002-2010
+OI Zhang, Haiting/0000-0002-4938-0900; Zhu, Guoping/0000-0001-6081-7811
+SN 0171-8630
+EI 1616-1599
+PD MAR 7
+PY 2024
+VL 730
+BP 31
+EP 42
+DI 10.3354/meps14517
+UT WOS:001204485700007
+ER
+
+PT J
+AU Lv, YY
+   Sun, XS
+   Jia, H
+   Hao, RY
+   Jan, MZ
+   Xu, XB
+   Li, SJ
+   Dong, XP
+   Pan, JF
+AF Lv, Yinyin
+   Sun, Xiaosong
+   Jia, Hui
+   Hao, Ruoyi
+   Jan, Mraz
+   Xu, Xianbing
+   Li, Shengjie
+   Dong, Xiuping
+   Pan, Jinfeng
+TI Antarctic krill (Euphausia superba) oil high internal phase
+   emulsions improved the lipid quality and gel properties of surimi gel
+SO FOOD CHEMISTRY
+AB In the study, high internal phase emulsions (HIPEs) prepared from Antarctic krill oil (AKO) were added into surimi and the effects on gel properties, lipid quality and stability were investigated. It is found that HIPEs-added groups exhibited higher gel strength and lower cooking loss than Oil-added counterparts. HIPEs-added groups had higher proportion of capillary water, and microstructure of HIPEs-added gels showed fewer large voids and small size droplets. HIPEs-added groups also showed less pronounced myosin heavy chain band. HIPEs- and Oiladded gels showed > 3500 mg/kg EPA + DHA and 0.4-0.8 mg/kg astaxanthin, and most HIPEs-added groups had higher levels of them but lower TBARS values. Results suggest AKO-HIPEs could reduce the intervention by lipids on myosin crosslinking during gelation, and protect fatty acids and asxtanthin from oxidation due to oxygen-isolation led by their high accumulation. Thus, AKO-HIPEs can be applied to fortify ?-3 PUFA and maintain good gel properties in surimi product.
+RI ; xu, lxianbing/H-3406-2018; Mraz, Jan/F-7915-2015; Li,
+   Shengjie/IQR-5605-2023
+OI Pan, Jinfeng/0000-0001-6275-5773; Mraz, Jan/0000-0003-3545-1269; 
+SN 0308-8146
+EI 1873-7072
+PD OCT 15
+PY 2023
+VL 423
+AR 136352
+DI 10.1016/j.foodchem.2023.136352
+EA MAY 2023
+UT WOS:001002820900001
+PM 37182492
+ER
+
+PT J
+AU Zhang, MN
+   Xu, XJ
+   Chen, PJ
+   Wang, SL
+   Liu, CQ
+   Wang, N
+   Jin, JC
+AF Zhang, Mengna
+   Xu, Xuejiao
+   Chen, Pinjia
+   Wang, Shilei
+   Liu, Caiqin
+   Wang, Nan
+   Jin, Jianchang
+TI Exploring the lipid oxidation mechanisms of Antarctic krill oil
+   (Euphausia superba) during storage based on relationship between
+   lipidomics and volatilomics
+SO FOOD CHEMISTRY
+AB Antarctic krill oil (AKO) is known for its richness in unsaturated fatty acids, but its oxidative sensitivity hinders its utilization in functional foods. In this study, qualitative and quantitative analyses of lipids in AKO based on lipidomics were performed, and gas chromatography-ion mobility spectrometry was used for monitoring AKO flavor changes during storage. 1678 lipids were identified, belonging to 26 subclasses of AKO, with glycerophospholipids being the most abundant. Through a chemometrics analysis, 326 differentially abundant lipids and 30 characteristic volatile flavor substances with VIP > 1 and P < 0.05 were screened in AKO. 10 lipid molecules were considered as key precursor lipids for the oxidation of AKO, namely LPA 20:2, PA 16:1_20:5, PI-Cer 13:2;2O/16:2;O, PMeOH 12:0_22:6, CAR 20:1, DG 22:1_18:3, DGCC 8:0_17:0, LPA 17:0, MG 18:1, and TG 16:1_17:2_36:10, which were correlated with key aromatic compounds. This study provides a theoretical basis for understanding the oxidation mechanism during AKO storage.
+RI ; Zhang, Mengna/MAH-0900-2025
+OI wang, shilei/0000-0003-4522-8482; 
+SN 0308-8146
+EI 1873-7072
+PD AUG 1
+PY 2025
+VL 482
+AR 144227
+DI 10.1016/j.foodchem.2025.144227
+EA APR 2025
+UT WOS:001467868200001
+PM 40203700
+ER
+
+PT J
+AU Torrecillas, S
+   Montero, D
+   Carvalho, M
+   Benitez-Santana, T
+   Izquierdo, M
+AF Torrecillas, Silvia
+   Montero, Daniel
+   Carvalho, Marta
+   Benitez-Santana, Tibiabin
+   Izquierdo, Marisol
+TI Replacement of fish meal by Antarctic krill meal in diets for European
+   sea bass Dicentrarchus labrax: Growth performance, feed
+   utilization and liver lipid metabolism
+SO AQUACULTURE
+AB A sustainable growth of the aquaculture sector implies the use of sustainable novel raw materials as replacers of the traditional fishmeal (FM) and fish oil (FO) ingredients. This fact has led to the development of sustainable and functional diets as part of a management strategy to reduce the effects on fish growth performance and health derived from low FM/FO dietary contents. In this sense, Antarctic krill (Euphausia superba) is considered a potential candidate in dietary inclusions to potentiate fish growth and health status. In this study, European sea bass (Dicentrarchus labrax) were fed a practical diet with either a 15% fishmeal content (KM0; control diet) or the same diet substituted by 30% (KM5; 50 g KM/kg diet) or 50% (KM7.5; 75 g KM/kg diet) Antarctic krill meal (KM) for 12 weeks in triplicates. At the end of the feeding trial, growth performance, liver morphology, liver proximate composition, lipid classes and fatty acid profiles, as well as the expression of hepatic genes related with lipid metabolism were evaluated. Fish fed KM-based diets presented higher (p 0.05) final weight, protein and lipid efficiency ratios, specific growth rate (SGR) and improved feed conversion ratio (FCR), irrespective of the KM dietary level. Whole body and muscle proximate composition and fatty acid profiles were similar among dietary groups. Livers of European sea bass fed the experimental diets presented similar (p 0.05) biochemical composition and fatty acid profile. However, smaller hepatocellular area and lower grade of cytoplasm vacuolization as well as a better alignment around sinusoidal spaces were found. The analyses of liver lipid classes revealed a positive correlation between the level of dietary KM and the pigmented material such as astaxanthin and free fatty acid content, as well as a negative correlation with the cholesterol levels. The expression of hepatic genes studied demonstrated a downregulation of 3-hydroxy-3-methylglutaryl-coenzyme A reductase (hmgr) and delta-6-desaturase (fads2) expression levels in fish fed KM-based diets. Besides, gene expression levels of fatty acid binding protein 7 (fabp7) and lipoprotein lipase (lpl) were significantly correlated with KM dietary levels. Altogether, these results profile KM as a potential promoter of growth and liver health in European sea bass fed low fish meal and oil diets.
+RI Torrecillas, Silvia/HKN-6891-2023; Carvalho, Marta/W-3586-2017; montero,
+   daniel/O-7108-2015
+OI Torrecillas, Silvia/0000-0003-2823-9999; Carvalho,
+   Marta/0000-0002-2554-6101; Marisol, Izquierdo/0000-0003-4297-210X;
+   montero, daniel/0000-0002-4358-2157
+SN 0044-8486
+EI 1873-5622
+PD DEC 15
+PY 2021
+VL 545
+AR 737166
+DI 10.1016/j.aquaculture.2021.737166
+EA JUL 2021
+UT WOS:000691819600007
+ER
+
+PT J
+AU Lv, YY
+   Wang, XQ
+   Hao, RY
+   Zhang, XH
+   Xu, XB
+   Li, SJ
+   Dong, XP
+   Pan, JF
+AF Lv, Yinyin
+   Wang, Xiuqin
+   Hao, Ruoyi
+   Zhang, Xianhao
+   Xu, Xianbing
+   Li, Shengjie
+   Dong, Xiuping
+   Pan, Jinfeng
+TI The Effects of Cooking Methods on Gel Properties, Lipid Quality, and
+   Flavor of Surimi Gels Fortified with Antarctic Krill (Euphausia
+   superba) Oil as High Internal Phase Emulsions
+SO FOODS
+AB In this study, silver carp surimi products enriched with Antarctic krill oil high internal phase emulsions (AKO-HIPEs) were cooked using steaming (STE), microwave heating (MIC), and air-frying (AIR), respectively. The gel and flavor properties, lipid quality and stability were investigated. Compared to the MIC and AIR groups, the STE surimi gel added with HIPEs had better texture properties, exhibiting higher water-holding capacity and a more homogeneous structure, while the air-frying treatment resulted in visually brighter surimi products. The degree of lipid oxidation during cooking was in an order of STE < MIC < AIR as determined by electron paramagnetic resonance spectrometer and thiobarbituric acid reactive substances. HIPE-added surimi gels retained more nutrients and flavor when cooked by AIR compared to STE and MIC. Results imply that the texture properties and lipid stability of surimi products fortified with AKO-HIPEs were better than those of the oil group under any cooking method. In conclusion, surimi products added with AKO-HIPEs had better gel properties and retained more fatty acids and flavor than AKO-SO.
+RI xu, lxianbing/H-3406-2018; Li, Shengjie/IQR-5605-2023; zhang,
+   xianhao/KPB-5483-2024
+OI zhang, xianhao/0000-0003-4239-6069
+EI 2304-8158
+PD DEC
+PY 2024
+VL 13
+IS 24
+AR 4070
+DI 10.3390/foods13244070
+UT WOS:001385552100001
+PM 39767021
+ER
+
+PT J
+AU Wang, RY
+   Sun, X
+   Dong, GM
+   Guo, C
+   Yin, FW
+   Liu, HL
+   Song, L
+   Zhou, DY
+AF Wang, Ruiying
+   Sun, Xin
+   Dong, Guimei
+   Guo, Chao
+   Yin, Fawen
+   Liu, Huilin
+   Song, Liang
+   Zhou, Dayong
+TI Influence of lipid oxidation on the digestive efficiency of Antarctic
+   krill oil: insights from a simulated gastrointestinal digestion model
+SO FOOD & FUNCTION
+AB Lipid oxidation profoundly impacts its digestibility, a topic that has been predominantly investigated in triglyceride (TAG)-based dietary lipids. However, there is a dearth of similar research on lipids with diverse classes, such as Antarctic krill oil (AKO), which encompasses a spectrum of lipids including glycerides and phospholipids. This study aimed to elucidate the influence of lipid oxidation on the digestibility of AKO through a simulated gastrointestinal digestion (SGID) model. Post-SGID, AKO exhibited oxidative changes, evidenced by an escalation in peroxide value, conjugated diene value, thiobarbituric acid reactive substances and Schiff base formation. Concurrently, the digestibility of oxidized AKO was found to be inferior to that of fresh AKO, as indicated by a diminished hydrolysis degree of TAGs and phosphatidylcholine (PC), along with a reduced release of free fatty acids. Furthermore, co-digestion with tea polyphenol palmitate was observed to mitigate the oxidation of AKO and the digestion of PC during the SGID, while exerting no significant impact on TAG digestion. Notably, the emulsification capacity of oxidized AKO in a simulated intestinal fluid (without pancreatin and phospholipase A2) was also found to be inferior to that of its fresh counterpart. These findings suggest that lipid oxidation may adversely affect the emulsification capacity of AKO under simulated intestinal conditions, thereby leading to a decrement in digestibility.
+   Lipid oxidation inhibited Antarctic krill oil digestion, and co-digestion with tea polyphenol palmitate resisted sustained lipid oxidation during simulated gastrointestinal digestion.
+RI 刘, 慧琳/GWV-6504-2022; Song, Liang/KRP-3589-2024
+SN 2042-6496
+EI 2042-650X
+PD SEP 30
+PY 2024
+VL 15
+IS 19
+BP 10190
+EP 10199
+DI 10.1039/d4fo02659d
+EA SEP 2024
+UT WOS:001315974000001
+PM 39301706
+ER
+
+PT J
+AU Xie, D
+   Wang, TW
+   Yang, YY
+   Luo, JR
+   Zheng, LY
+   Zhang, Y
+   Ke, JW
+   Xie, LL
+   Jin, J
+AF Xie, Dan
+   Wang, Taiwei
+   Yang, Yunyun
+   Luo, Jingru
+   Zheng, Liyou
+   Zhang, Yu
+   Ke, Jiawei
+   Xie, Liangliang
+   Jin, Jun
+TI Exploring the effect of Antarctic krill oil composition on its oxidation
+   behavior based on three different lipid fractions
+SO EUROPEAN FOOD RESEARCH AND TECHNOLOGY
+AB In this study, Schaal oven test and OXITEST were used to analyze and compare the oxidation behavior of three lipid fractions with different compositions from Antarctic krill: LF-1, LF-2 and LF-3, which have decreasing astaxanthin and tocopherols levels but increasing phospholipids (PLs), eicosapentaenoic acid and docosahexaenoic acid contents. Thereby, the effect of lipid composition of Antarctic krill on (AKO) its oxidative behavior was investigated. The results showed that the conventional oxidation indexes, especially peroxide value and thiobarbituric acid-reactive substances, were not accurate to evaluate the oxidation degree of lipid components, and the changes of astaxanthin and tocopherols content also confirmed this conclusion. The changes in the contents of PLs, amino acids and pyrrole indicated that non-enzymatic browning was involved in the oxidation process of AKO. LF-3 showed the highest degree of non-enzymatic browning and the highest final pyrrole yield of 1.607 mmol/g. The results of OXITEST showed that LF-2 showed the strongest oxidative stability with an induction time of 7.77 h, which was related to the protective effect of astaxanthin and tocopherols, the moderate degree of non-enzymatic browning and the possible synergistic antioxidant effect between tocopherols and PLs. This study has guiding significance for us to think about what kind of lipid composition can show strong oxidative stability, and has a positive impact on the development of AKO products with good storage stability.
+RI Luo, Jingru/KGL-1127-2024; Zheng, Liyou/O-5384-2019
+SN 1438-2377
+EI 1438-2385
+PD AUG
+PY 2025
+VL 251
+IS 8
+BP 2343
+EP 2355
+DI 10.1007/s00217-025-04766-2
+EA MAY 2025
+UT WOS:001492822800001
+ER
+
+PT J
+AU Yang, JQ
+   Qi, Y
+   Zhu, BW
+   Lin, SY
+AF Yang, Jingqi
+   Qi, Yan
+   Zhu, Beiwei
+   Lin, Songyi
+TI A Novel Tetrapeptide Ala-Phe-Phe-Pro (AFFP) Derived from Antarctic Krill
+   Prevents Scopolamine-Induced Memory Disorder by Balancing Lipid
+   Metabolism of Mice Hippocampus
+SO NUTRIENTS
+AB Memory impairment is a serious problem with organismal aging and increased social pressure. The tetrapeptide Ala-Phe-Phe-Pro (AFFP) is a synthetic analogue of Antarctic krill derived from the memory-improving Antarctic krill peptide Ser-Ser-Asp-Ala-Phe-Phe-Pro-Phe-Arg (SSDAFFPFR) after digestion and absorption. The objective of this research was to assess the neuroprotective effects of AFFP by reducing oxidative stress and controlling lipid metabolism in the brains of mice with memory impairment caused by scopolamine. The 1H Nuclear magnetic resonance spectroscopy results showed that AFFP had three active hydrogen sites that could contribute to its antioxidant properties. The findings from in vivo tests demonstrated that AFFP greatly enhanced the mice's behavioral performance in the passive avoidance, novel object recognition, and eight-arm maze experiments. AFFP reduced oxidative stress by enhancing superoxide dismutase activity and malondialdehyde levels in mice serum, thereby decreasing reactive oxygen species level in the mice hippocampus. In addition, AFFP increased the unsaturated lipid content to balance the unsaturated lipid level against the neurotoxicity of the mice hippocampus. Our findings suggest that AFFP emerges as a potential dietary intervention for the prevention of memory impairment disorders.
+OI , Songyi/0000-0002-9204-948X
+EI 2072-6643
+PD APR
+PY 2024
+VL 16
+IS 7
+AR 1019
+DI 10.3390/nu16071019
+UT WOS:001200875900001
+PM 38613052
+ER
+
+PT J
+AU Xie, JQ
+   Tao, L
+   Wu, Q
+   Bian, ZH
+   Wang, MQ
+   Li, YM
+   Zhu, GP
+   Lin, T
+AF Xie, Jingqian
+   Tao, Ling
+   Wu, Qiang
+   Bian, Zhihe
+   Wang, Mengqiu
+   Li, Yingming
+   Zhu, Guoping
+   Lin, Tian
+TI Bioaccumulation of organochlorine pesticides in Antarctic krill
+   (Euphausia superba): Profile, influencing factors, and mechanisms
+SO JOURNAL OF HAZARDOUS MATERIALS
+AB Accumulation of organochlorine pesticides (OCPs) in Antarctic krill (Euphausia superba), a keystone species in the Southern Ocean, is potentially harmful to the Antarctic ecosystem and human health. In the current study, we collected E. superba specimens (including muscle and carapace tissues) from Bransfield Strait in northern Antarctic Peninsula and South Georgia to analyze the profile, influencing factors and mechanisms of OCPs bioaccumulation in them. Results indicated that the biological traits (813C, 815N and lipid contents) of krill were significantly affected by habitat. There may exist growth dilution of OCPs in Antarctic krill and no fresh OCPs input in Antarctica, except for endosulfan I. Based on lipid-normalized concentrations, no significant differences were observed between the two regions at most sampling sites. However, OCP levels showed tissue and sex dependence. Boosted regression trees (BRTs) and partial least squares structural equation models (PLS-SEMs) were built to better investigate the main factors affecting the bioaccumulation of OCPs. Lipid content, negatively correlated with OCP levels, was the main factor. In vitro silicon modeling indicated that CYP3A4 metabolism capacity in krill contributed to the OCP residues except for endosulfan I. The results of this study expand current knowledge of OCPs in Antarctic marine biota, as well as their influencing factors and potential mechanisms.
+RI Jingqian, Xie/ISB-2229-2023; Zhu, Guoping/D-1002-2010
+OI Wu, Qiang/0009-0007-8352-0720; Zhu, Guoping/0000-0001-6081-7811; 谢,
+   婧倩/0000-0003-4124-3570
+SN 0304-3894
+EI 1873-3336
+PD MAR 15
+PY 2022
+VL 426
+AR 128115
+DI 10.1016/j.jhazmat.2021.128115
+EA DEC 2021
+UT WOS:000752473200003
+PM 34959217
+ER
+
+PT J
+AU Xue, F
+   Zhu, GP
+AF Xue, Feng
+   Zhu, Guoping
+TI Shifts in food composition of Antarctic krill (Euphausia superba)
+   enhance coexistence with the pelagic tunicate (Salpa thompsoni)
+SO MARINE BIOLOGY
+AB Antarctic krill (Euphausia superba) is a keystone species in the Antarctic marine ecosystem. The pelagic tunicate (Salpa thompsoni) interacts with krill in diverse aspects, which imposes krill distribution and even survival, especially under the context of changing climate. Understanding the diet of both species during autumn-a season with shifting food composition and availability-is critically understudied. Therefore, this study aims to investigate the diet composition and trophic ecological niches of krill and salps in the Bransfield Strait during autumn in 2022 using stomach content, fatty acid (FA), and stable isotope analyses. Stomach content analysis revealed that krill primarily consumed copepods, while salps primarily consumed diatoms. FA analysis confirmed significant differences between the FA markers of diatoms and copepods for each species, aligning with stomach content analyses. Stable isotope analysis also indicated low overlap of trophic niches. By consuming more copepods, krill may reduce direct dietary competition with the less prevalent salps during autumn. Although the feeding strategy (active or passive) exerted by krill is warranted to further investigate, the differentiated feeding pattern occupied by two species promotes their coexistence.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0025-3162
+EI 1432-1793
+PD DEC 11
+PY 2024
+VL 172
+IS 1
+AR 14
+DI 10.1007/s00227-024-04553-9
+UT WOS:001375200400001
+ER
+
+PT J
+AU Pei, XC
+   Zeng, XB
+   Li, DY
+   Wang, XM
+   Yin, FW
+   Liu, HL
+   Zhou, DY
+AF Pei, Xue-Chen
+   Zeng, Xiang-Bo
+   Li, De-Yang
+   Wang, Xin-Miao
+   Yin, Fa-Wen
+   Liu, Hui-Lin
+   Zhou, Da-Yong
+TI The change rule of lipid oxidation and hydrolysis driven via water in
+   Antarctic krill oil: Based on association colloid formation
+SO FOOD CHEMISTRY
+AB The residual water and amphiphilic compounds such as phospholipids in bulk oil can form reverse micelles, which affect oxidative stability. In this study, the Antarctic krill oil (AKO) samples with different water contents were subjected to accelerated storage. During storage, AKO exhibited oxidative changes, manifested as increased POV, TBARS values, and volatile compound levels but decreased PUFA percentages. Meanwhile, AKO underwent hydrolysis, evidenced by decreased PC, PE, and TG contents but increased FFA contents. Moreover, the degree of lipid oxidation and hydrolysis is dose-dependent with water added. Cryogenic scanning electron microscopy imaging and micelle size distribution measurement proved the presence of reverse micelle, and their size and interfacial area improved with increased water contents. Correlation analysis suggested that lipid oxidation and hydrolysis positively correlated with the size and interfacial area of reverse micelle. Therefore, it is speculated that the oil-water interface may be the site of lipid oxidation and hydrolysis.
+RI 刘, 慧琳/GWV-6504-2022
+SN 0308-8146
+EI 1873-7072
+PD JAN 15
+PY 2025
+VL 463
+AR 141448
+DI 10.1016/j.foodchem.2024.141448
+EA SEP 2024
+PN 4
+UT WOS:001329167000001
+PM 39348769
+ER
+
+PT J
+AU Wang, XX
+   Ma, XY
+   Zhang, YT
+   Su, D
+   Liu, XF
+   Yu, Y
+   Miao, JK
+   Leng, KL
+AF Wang, Xixi
+   Ma, Xinyu
+   Zhang, Yating
+   Su, Dong
+   Liu, Xiaofang
+   Yu, Yuan
+   Miao, Junkui
+   Leng, Kailiang
+TI Mechanisms underlying astaxanthin alterations during on-site processing
+   of Antarctic krill (Euphausia superba)
+SO JOURNAL OF FOOD COMPOSITION AND ANALYSIS
+AB Astaxanthin is a crucial natural carotenoid present in Antarctic krill (Euphausia superba); however, there are no reports of possible compositional changes in Antarctic krill during on-site processing in Antarctica. In this study, Antarctic krill underwent serious color deterioration during cold storage, accompanied by an overall upward trend in its total carotenoids, thiobarbituric acid reactive substance (TBARS) value and lipid oxidation (LPO). The texture profile also changed significantly: softer texture, reduced elasticity, decreased chewiness and cohesiveness. Asta-C16:0, Asta-C18:1, Asta-C14:0, Asta-C20:5, Asta-C14:0/C14:0, Asta-C14:0/C16:0, Asta-C16:0/C16:0 and Asta-C16:0/C18:1 were found in astaxanthin monoesters and diesters. Overall, the arrangement of the contents of astaxanthin molecules in Antarctic krill was largely consistent with previous literatures. Additionally, Asta-C18:1/C18:4 was not detected in any of the samples, a discrepancy potentially linked to seasonal variations across studies. Transcriptome analysis revealed that differentially expressed genes (DEGs) related to protein hydrolysis and oxidative stress were identified through metabolic pathway enrichment analysis. Molecular docking suggested that pancreatic lipase likely plays a key role in astaxanthin degradation triggered by the strong autolysis environment of Antarctic krill. This research provides a basis for further avoiding the degradation and efficient utilization of astaxanthin in Antarctic krill during the processing and storage.
+RI ; liu, algae/JQW-1815-2023
+OI Su, Dong/0009-0006-6912-3473; Wang, Xixi/0000-0003-4633-2345; 
+SN 0889-1575
+EI 1096-0481
+PD MAY
+PY 2025
+VL 141
+AR 107339
+DI 10.1016/j.jfca.2025.107339
+EA FEB 2025
+UT WOS:001434224000001
+ER
+
+PT J
+AU Fu, JJ
+   Fu, DW
+   Zhang, GY
+   Zhang, ZH
+   Shao, ZW
+   Ma, ZH
+   Tang, Y
+   Zhou, DY
+   Song, L
+AF Fu, Jing-jing
+   Fu, Dong-wen
+   Zhang, Guang-yao
+   Zhang, Zhi-hui
+   Shao, Zhen-wen
+   Ma, Zhen-hua
+   Tang, Yue
+   Zhou, Da-yong
+   Song, Liang
+TI Oxidative stability and in vitro release behaviour of
+   microencapsulated Antarctic krill oil and fish oil: the effect of lipid
+   class composition
+SO INTERNATIONAL JOURNAL OF FOOD SCIENCE AND TECHNOLOGY
+AB Antarctic krill oil (AKO) and fish oil (FO) were microencapsulated by a pilot-scale spray dryer in this study. The effect of lipid class compositions on the encapsulation properties of the obtained microcapsules was investigated. The particle size distribution of both microcapsules ranged from 29.23 +/- 2.20 to 36.79 +/- 3.45 mu m, and the moisture content and water activity (a(w)) also indicated that both AKO and FO microcapsules were suitable for long-term storage. Interestingly, differences in lipid composition affected the microstructure of the microcapsules formed, thereby affecting their oxidative stability and digestive behaviour. Compared with FO microcapsules, the surface microstructure of PLs-enriched microcapsules (AKO microcapsules) was smoother, endowing it better oxidative stability and higher DHA (72.13 +/- 2.32% vs. 63.08 +/- 2.98%) and EPA (75.94 +/- 1.43% vs. 68.26 +/- 2.98%) bioaccessibility. These findings may have important implications for the development of microcapsules formulated with different lipid classes in the food industry.
+RI ; Song, Liang/KRP-3589-2024; Zhang, Guangyao/G-7364-2019; Ma,
+   Zhenhua/D-8817-2016; tang, yue/IAO-9657-2023
+OI Fu, Dong-wen/0000-0002-7575-6764; 
+SN 0950-5423
+EI 1365-2621
+PD DEC
+PY 2022
+VL 57
+IS 12
+BP 7634
+EP 7643
+DI 10.1111/ijfs.16099
+EA OCT 2022
+UT WOS:000866469200001
+ER
+
+PT J
+AU Lin, YW
+   Yin, WT
+   Li, YJ
+   Liu, GQ
+AF Lin, Yunwei
+   Yin, Wenting
+   Li, Yujie
+   Liu, Guoqin
+TI Influence of different solid lipids on the properties of a novel
+   nanostructured lipid carrier containing Antarctic krill oil
+SO INTERNATIONAL JOURNAL OF FOOD SCIENCE AND TECHNOLOGY
+AB This study aimed to investigate the effect of solid lipids (lauric acid (LAU), myristic acid (MYR), stearic acid (STE), glycerol monostearate (GMS), glycerol 1,3-distearate (GDS), glycerol tristearate (GTS), glycerol trimyristate (GTM) and glycerol trilaurate (GTL)) on the characteristics of novel nanostructured lipid carrier (NLC) containing Antarctic krill oil through ultrasound. The fatty acids (LAU, MYR, STE and GMS) were unsuitable solid lipid materials, as apparent stratification was quickly observed during the NLC preparation. NLCs were successfully prepared using GTS, GTM, GTL and GDS. The zeta potential of all NLCs exceeded -30 mV indicating good uniformity and stability. These NLCs appeared spherical or oval. Differential calorimetry and X-ray diffraction analysis revealed these NLCs formed imperfect crystals. As the carbon chain length of triglycerides increased from C-12 to C-18, the particle size of NLCs increased from 235.8 +/- 2.3 nm to 340.5 +/- 2.2 nm, the degree of recrystallisation increased from 39.06% to 49.99%, while the EPA encapsulation efficiency decreased from 88.72 +/- 0.47% to 72.86 +/- 1.06%. NLC prepared with GDS had the smallest particle size (112.4 +/- 0.4 nm), the lowest recrystallisation and the highest EPA encapsulation efficiency (>99%). GDS was the most suitable to prepare high encapsulate efficiency krill oil-loaded NLC.
+RI ; Luo, yujie/KGK-3881-2024
+OI Liu, Guoqin/0000-0001-9513-1115; 
+SN 0950-5423
+EI 1365-2621
+PD MAY
+PY 2022
+VL 57
+IS 5
+SI SI
+BP 2886
+EP 2895
+DI 10.1111/ijfs.15588
+EA FEB 2022
+UT WOS:000757328300001
+ER
+
+PT J
+AU Ni, L
+   Jiang, CJ
+   Guo, QY
+   Chi, H
+   Fan, CQ
+   Shi, JG
+   Lin, N
+   Liu, ZD
+   Chen, SJ
+AF Ni, Ling
+   Jiang, Chaojun
+   Guo, Quanyou
+   Chi, Hai
+   Fan, Chengqi
+   Shi, Jiangao
+   Lin, Na
+   Liu, Zhidong
+   Chen, Shengjun
+TI Metabolomics analysis of physicochemical properties associated with
+   freshness degradation in frozen Antarctic krill (Euphausia
+   superba)
+SO FOOD RESEARCH INTERNATIONAL
+AB This study aimed to determine the effect of different frozen temperatures during storage on the quality of Antarctic krill (Euphausia superba) and assess the change at the metabolite level via a combination of physicochemical property analysis, liquid chromatography-tandem mass spectrometry (LC-MS) based non-targeted metabolomics profiling. Regarding samples stored at -20 degrees C, the expressions of 7055 metabolites were elevated, while 2313 were downregulated. Lipids and lipid molecules had the highest proportion of differential metabolites. A total of 432 discriminatory metabolites with Kyoto Encyclopedia of Genes and Genomes (KEGG) IDs was obtained. We also observed that the concentrations of differential bitter free amino acids (FAAs) and oxidation products of arachidonic and linoleic acid increased. Moreover, as the storage temperature increased, the freshness, umami, and sweetness components were considerably reduced. Furthermore, results indicated that the color, pH and water-holding capacity (WHC) were potential indicators of quality deterioration, while inosinic acid was a probable biomarker for umami degradation of frozen Antarctic krill. In conclusion, this study demonstrates that storage at lower temperatures can be beneficial for maintaining the freshness of Antarctic krill from macro and micro perspectives.
+OI Chi, Hai/0000-0003-3072-511X
+SN 0963-9969
+EI 1873-7145
+PD MAY
+PY 2024
+VL 183
+AR 114190
+DI 10.1016/j.foodres.2024.114190
+EA MAR 2024
+UT WOS:001202393600001
+PM 38760127
+ER
+
+PT J
+AU Liu, Y
+   Li, YR
+   Yu, WW
+   Ma, YC
+   Cao, Y
+   Zhao, LC
+AF Liu, Yue
+   Li, Yinru
+   Yu, Wenwei
+   Ma, Yingchuan
+   Cao, Yong
+   Zhao, Lichao
+TI Extraction of high-quality Antarctic krill (Euphausia Superba)
+   oil using low-temperature continuous phase-transition extraction
+   equipment
+SO JOURNAL OF FOOD SCIENCE
+AB The aim of this study was to explore a processing method for efficient extraction of high-quality krill oil (KO) using a low-temperature continuous phase-transition extraction equipment (LCPE). The efficiency of lipid extraction and quality of KO and defatted krill meal (DKM) by LCPE were compared with those of supercritical CO2 and n-hexane extraction. Results showed that compared to other methods, extraction using LCPE had the highest lipid yield (21.72 +/- 0.34%), bioactive substances, and dimethyl sulfide (3.12 +/- 0.09 mg/kg), the lowest oxidative deterioration. Moreover, compared to other methods, DKM extracted by LCPE had the lowest fat (<2%), the highest protein (>60%), and the best oxidative stability. These benefits would ensure easier transportation and better long-term storage, allowing for its application on distant-ocean fishing vessels. Therefore, LCPE is a method that allows for efficient extraction of high-quality KO.
+RI Cao, Yong/CAG-6541-2022
+SN 0022-1147
+EI 1750-3841
+PD DEC
+PY 2024
+VL 89
+IS 12
+BP 9073
+EP 9087
+DI 10.1111/1750-3841.17508
+EA NOV 2024
+UT WOS:001385958200040
+PM 39556496
+ER
+
+PT J
+AU Möller, L
+   Vainstein, Y
+   Wöhlbrand, L
+   Dörries, M
+   Meyer, B
+   Sohn, K
+   Rabus, R
+AF Moeller, Lars
+   Vainstein, Yeheven
+   Woehlbrand, Lars
+   Doerries, Marvin
+   Meyer, Bettina
+   Sohn, Kai
+   Rabus, Ralf
+TI Transcriptome-proteome compendium of the Antarctic krill (Euphausia
+   superba): Metabolic potential and repertoire of hydrolytic enzymes
+SO PROTEOMICS
+AB The Antarctic krill (Euphausia superba Dana) is a keystone species in the Southern Ocean that uses an arsenal of hydrolases for biomacromolecule decomposition to effectively digest its omnivorous diet. The present study builds on a hybrid-assembled transcriptome (13,671 ORFs) combined with comprehensive proteome profiling. The analysis of individual krill compartments allowed detection of significantly more different proteins compared to that of the entire animal (1464 vs. 294 proteins). The nearby krill sampling stations in the Bransfield Strait (Antarctic Peninsula) yielded rather uniform proteome datasets. Proteins related to energy production and lipid degradation were particularly abundant in the abdomen, agreeing with the high energy demand of muscle tissue. A total of 378 different biomacromolecule hydrolysing enzymes were detected, including 250 proteases, 99 CAZymes, 14 nucleases and 15 lipases. The large repertoire in proteases is in accord with the protein-rich diet affiliated with E. superba's omnivorous lifestyle and complex biology. The richness in chitin-degrading enzymes allows not only digestion of zooplankton diet, but also the utilisation of the discharged exoskeleton after moulting.
+RI ; Meyer, Bettina/ABB-5311-2020
+OI Vainshtein, Yevhen/0000-0001-7944-8892; Meyer,
+   Bettina/0000-0001-6804-9896
+SN 1615-9853
+EI 1615-9861
+PD SEP
+PY 2022
+VL 22
+IS 18
+AR e2100404
+DI 10.1002/pmic.202100404
+EA JUL 2022
+UT WOS:000829907600001
+PM 35778945
+ER
+
+PT J
+AU Mildenberger, J
+   Bruheim, I
+   Solibakke, P
+   Atanassova, M
+AF Mildenberger, Jennifer
+   Bruheim, Inge
+   Solibakke, Per
+   Atanassova, Miroslava
+TI Development of a protein concentrate for human consumption by direct
+   enzymatic hydrolysis of antarctic krill (Euphausia
+   superba)
+SO LWT-FOOD SCIENCE AND TECHNOLOGY
+AB Krill protein concentrates could be part of human diets as high-quality food ingredients. We have focused on food-grade enzyme hydrolysis of Antarctic krill Euphausia superba, aiming at the production of well-defined protein, phospholipid, and shell fractions. Different enzyme combinations, concentrations, and reaction times of three commercial proteases have been tested for effects on protein yield and lipid content in the soluble protein fraction. The highest protein yield (10.1 g/100 g of the initial wet weight) was obtained in the highest enzyme concentration and longest reaction time treatment, however, associated with lower cost benefits. The lipid content in the protein fractions was not statistically different among treatments, ranging within 9.2-15.8 g/ 100 g wet weight. The protein fractions were screened for antioxidative capacity by ORAC and minimum stable astaxanthin content. Two of the protein concentrates were fractionated by size exclusion chromatography, to define their peptide profiles. 91% of the total peptides for the single enzyme treatment and 95% after combined enzyme treatment had predominant molecular weights below 1 kDa. The detection of crustacean tropomyosin was strongly reduced after enzymatic hydrolysis in all samples. As part of food safety assessment, all hydrolysates were well tolerated by human monocytes, having no impairing effect on their viability.
+RI ; Atanassova, Miroslava/AAE-4547-2020; Mildenberger,
+   Jennifer/OQJ-5468-2025
+OI Mildenberger, Jennifer/0000-0001-8371-3652; Atanassova,
+   Miroslava/0000-0001-7636-3084; Solibakke, Per/0000-0002-8070-5347; 
+SN 0023-6438
+EI 1096-1127
+PD JAN 1
+PY 2023
+VL 173
+AR 114254
+DI 10.1016/j.lwt.2022.114254
+EA DEC 2022
+UT WOS:000903521400003
+ER
+
+PT J
+AU Choi, JH
+   Park, SE
+   Kim, S
+AF Choi, Jun-Hui
+   Park, Se-Eun
+   Kim, Seung
+TI Antarctic Krill Euphausia superba Oil Supplementation Attenuates
+   Hypercholesterolemia, Fatty Liver, and Oxidative Stress in Diet-Induced
+   Obese Mice
+SO NUTRIENTS
+AB Background: Several Previous studies indicate that consuming krill oil may aid in reducing hypercholesterolemia and improving cholesterol metabolism. Therefore, our study was designed to investigate the effectiveness of Antarctic krill oil (Euphausia superba) (ESKO) in combating obesity and lowering fat/lipid/cholesterol levels. Methods: The study aimed to investigate the molecular docking model targeting 3-hydroxy-3-methylglutaryl-CoA reductase (HMGCR) using ESKO-derived eicosapentaenoic acid (EPA), docosahexaenoic acid (DHA), and astaxanthin. In this study, histological alterations in the liver of the obesity model (ICR male mouse), obesity-related or antioxidant markers in both liver and serum, the molecular mechanisms in HepG2 cells and liver tissue, and HMGCR activity were analyzed. Results: Our findings revealed that a high-fat diet (HFD) significantly led to increased oxidative stress, obesity-related indicators, and cardiovascular-associated risk indices. However, ESKO effectively mitigated HFD-induced oxidative stress, fat accumulation, and the suppression of low-density lipoprotein receptor (LDLR) or activation of related molecular pathways. This was achieved through improvements in metabolic parameters, including CD36/liver X receptor alpha (LXR alpha)/sterol regulatory element-binding protein 1c (SREBP1c), proprotein convertase subtilsin/kexin type 9 (PCSK-9), and HMGCR, ultimately ameliorating HFD-induced hypercholesterolemia and obesity. Conclusions: These beneficial findings indicate that ESKO might have significant potential for preventing and treating obesity-related disorders.
+RI Choi, Jun-Hui/AGS-2406-2022
+OI Choi, Jun-Hui/0000-0001-6725-381X; Kim, Seung/0000-0001-6249-8156
+EI 2072-6643
+PD NOV
+PY 2024
+VL 16
+IS 21
+AR 3614
+DI 10.3390/nu16213614
+UT WOS:001351763100001
+PM 39519447
+ER
+
+PT J
+AU Zhang, RX
+   Yu, D
+   Wang, P
+   Liu, YJ
+   Zheng, HF
+   Sun, LC
+   Zheng, J
+   Chi, H
+AF Zhang, Ruxin
+   Yu, Di
+   Wang, Peng
+   Liu, Yujun
+   Zheng, Hanfeng
+   Sun, Lechang
+   Zheng, Jie
+   Chi, Hai
+TI Effects of Hot-Air Drying Temperatures on Quality and Volatile Flavor
+   Components of Cooked Antarctic krill (Euphausia superba)
+SO FOODS
+AB Hot-air drying is a key step for Antarctic krill (Euphausia superba) onboard processing; however, few studies have explored the effects of different drying temperatures on the quality and flavor alternations of Antarctic krill. In this study, we investigated the effects of hot-air drying temperatures on the physicochemical properties and flavor of Antarctic krill. Sensory evaluation, as well as physical and chemical property tests, revealed that Antarctic krill treated with hot-air drying exhibited substantial changes in moisture status, lipid oxidation indices, and b* value. The sensory evaluation of Antarctic krill under high temperatures (120 degrees C and 150 degrees C) showed higher scores (8.45 +/- 0.05 and 8.58 +/- 0.22, respectively) on smells, whereas the color changes caused by high temperatures also resulted in lower overall sensory evaluation scores. The POV and TBARS values reached the highest at 26.63 +/- 0.28 mg/g and 1.45 +/- 0.19 mg/100 g, respectively. The b* value decreased significantly to 22.32 +/- 4.56 following 150 degrees C treatment. Furthermore, a total of 53 volatile compounds were identified by GC-IMS, and the results showed that aldehydes, alcohols, alkanes, ketones, pyrazines, and furans were the main flavor sources of Antarctic krill. At the same time, the GC-MS results showed that the thermal process had no significant effect on the nutrient content of Antarctic krill. The findings obtained in this study provide foundational information for future research on ship-borne processing and high-value utilization of Antarctic krill.
+OI Sun, Le-Chang/0000-0002-7083-1622; Zheng, Jie/0000-0001-5478-6027; Chi,
+   Hai/0000-0003-3072-511X
+EI 2304-8158
+PD MAR 31
+PY 2025
+VL 14
+IS 7
+AR 1221
+DI 10.3390/foods14071221
+UT WOS:001463800400001
+PM 40238377
+ER
+
+PT J
+AU Zhang, SY
+   Zhao, GX
+   Suo, SK
+   Wang, YM
+   Chi, CF
+   Wang, B
+AF Zhang, Shuang-Yi
+   Zhao, Guo-Xu
+   Suo, Shi-Kun
+   Wang, Yu-Mei
+   Chi, Chang-Feng
+   Wang, Bin
+TI Purification, Identification, Activity Evaluation, and Stability of
+   Antioxidant Peptides from Alcalase Hydrolysate of Antarctic Krill
+   (Euphausia superba) Proteins
+SO MARINE DRUGS
+AB For utilizing the largest source of marine proteins, Antarctic krill (Euphausia superba) proteins were defatted and hydrolyzed separately using pepsin, alcalase, papain, trypsin, and netrase, and alcalase hydrolysate (EPAH) showed the highest DPPH radical (DPPH center dot) and hydroxyl radical (HO center dot) scavenging activity among five hydrolysates. Using ultrafiltration and chromatography methods, fifteen antioxidant peptides were purified from EPAH and identified as Asn-Gln-Met (NQM), Trp-Phe-Pro-Met (WFPM), Gln-Asn-Pro-Thr (QNPT), Tyr-Met-Asn-Phe (YMNF), Ser-Gly-Pro-Ala (SGPA), Ser-Leu-Pro-Tyr (SLPY), Gln-Tyr-Pro-Pro-Met-Gln-Tyr (QYPPMQY), Glu-Tyr-Glu-Ala (EYEA), Asn-Trp-Asp-Asp-Met-Arg-Ile-Val-Ala-Val (NWDDMRIVAV), Trp-Asp-Asp-Met-Glu-Arg-Leu-Val-Met-Ile (WDDMERLVMI), Asn-Trp-Asp-Asp-Met-Glu-Pro-Ser-Phe (NWD-DMEPSF), Asn-Gly-Pro-Asp-Pro-Arg-Pro-Ser-Gln-Gln (NGPDPRPSQQ), Ala-Phe-Leu-Trp-Asn (AFLWA), Asn-Val-Pro-Asp-Met (NVPDM), and Thr-Phe-Pro-Ile-Tyr-Asp-Tyr-Pro-Gln (TFPIYDPQ), respectively, using a protein sequencer and ESI/MS. Among fifteen antioxidant peptides, SLPY, QYPPMQY and EYEA showed the highest scavenging activities on DPPH center dot (EC50 values of 1.18 +/- 0.036, 1.547 +/- 0.150, and 1.372 +/- 0.274 mg/mL, respectively), HO center dot (EC50 values of 0.826 +/- 0.027, 1.022 +/- 0.058, and 0.946 +/- 0.011 mg/mL, respectively), and superoxide anion radical (EC50 values of 0.789 +/- 0.079, 0.913 +/- 0.007, and 0.793 +/- 0.056 mg/mL, respectively). Moreover, SLPY, QYPPMQY and EYEA showed strong reducing power, protective capability against H2O2-damaged plasmid DNA, and lipid peroxidation inhibition ability. Furthermore, SLPY, QYPPMQY, and EYEA had high stability under temperatures lower than 80 degrees C, pH values ranged from 6-8, and simulated GI digestion for 180 min. The results showed that fifteen antioxidant peptides from alcalase hydrolysate of Antarctic krill proteins, especially SLPY, QYPPMQY and EYEA, might serve as effective antioxidant agents applied in food and health products.
+RI Wang, Bin/ADF-0628-2022
+OI Wang, Bin/0000-0002-2712-9045; chi, changfeng/0000-0003-0922-8602
+EI 1660-3397
+PD JUN
+PY 2021
+VL 19
+IS 6
+AR 347
+DI 10.3390/md19060347
+UT WOS:000666752800001
+PM 34204535
+ER
+
+PT J
+AU Yang, QY
+   Reid, K
+   Zhu, GP
+AF Yang, Qingyuan
+   Reid, Keith
+   Zhu, Guoping
+TI Biological-physical processes regulate autumn prey availability of spiny
+   icefish Chaenodraco wilsoni in the Bransfield Strait, Antarctic
+SO JOURNAL OF FISH BIOLOGY
+AB This study examines the adaptability of a Southern Ocean predator, which is dependent on Antarctic krill (Euphausia superba), to potential changes in food availability. Muscle fatty acids (FAs) of the spiny icefish Chaenodraco wilsoni collected from three areas in the Bransfield Strait (BS), northern Antarctic Peninsula during February-April 2016 give a good representation of their feeding variability. The compositions of 22:6n3 (DHA) and 20:5n3 (EPA) were both higher in the Transitional Zonal Water with Bellingshausen influence (TBW)-controlled C. wilsoni than in the Transitional Zonal Water with Weddell Sea influence (TWW)-controlled fish. This was positively correlated with photoadaptation and carbon sequestration in TBW-controlled phytoplankton. Results for the FAs 16:1n7, 16:0, DHA and EPA indicate the presence of dinoflagellates in all three areas, suggesting that during late summer and early fall, there is a seasonal phytoplankton succession, where small phytoplankton become dominant, in the BS. In addition, the compositions of some long-chain FAs (>20, such as 20:0, 20:1, 22:0 and 22:1n9) and n-ary sumation 18 indicated that the food chain based on flagellates and copepods was more apparent in TWW-controlled C. wilsoni, especially the effect of El Nino-Southern Oscillation (ENSO) on the variation of prey communities in TWW-controlled areas. FA markers such as SFA/(PUFA+MUFA), n-ary sumation 15 + n-ary sumation 17 and ARA were more pronounced in TWW-controlled C. wilsoni, indicating a more strongly carnivorous and benthic food source. In the TBW-TWW confluence, the complex hydrological structure, including the presence of a large number of mesoscale eddies, allows rich nutrients and krill larvae to remain in it, providing a rich food source for the C. wilsoni. Overall, the FA data of this study show that the diet of C. wilsoni varies in different marine environments, aiding their survivability at the face of climate change.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811; Yang, Qingyuan/0000-0002-8496-2295
+EI 1095-8649
+PD JUL
+PY 2022
+VL 101
+IS 1
+BP 289
+EP 301
+DI 10.1111/jfb.15120
+EA JUN 2022
+UT WOS:000811079600001
+PM 35633144
+ER
+
+PT J
+AU Yang, QY
+   Zhu, GP
+AF Yang, Qingyuan
+   Zhu, Guoping
+TI Biochemical tracers in spiny icefish (Chaenodraco wilsoni) as indicators
+   of variability in the diet of Antarctic krill (Euphausia superba) in a
+   highly dynamic environment
+SO JOURNAL OF MARINE SYSTEMS
+AB Spiny icefish (Chaenodraco wilsoni), a common high-Antarctic ichthyofauna icefish, exhibits variable feeding habits in regions around the Southern Ocean. In the Bransfield Strait (BS), C. wilsoni has received considerable attention as it preys predominantly on krill. Antarctic krill (Euphausia superba), the keystone species in the Southern Ocean, has a versatile feeding strategy, particularly in a highly dynamic environment. The central basin of the BS is a highly dynamic environment, providing an ideal place to explore the application of biochemical tracers in a specialist predator to reveal the diet of its prey. In this study, fatty acid and stable isotopic data demonstrated that the trophic niche of C. wilsoni expanded from late austral summer to early fall, which was primarily reflected in variability in the food availability of krill, i.e., herbivorous features were weakened, benthic-feeding features were strengthened, and omnivorous features showed no significant difference. A highly dynamic hydrography, coupled with an unusual diatom bloom in the BS during 2016, may have resulted in krill's prolonged filtering on diatoms in the water column, which was further reflected in the difference in biochemical tracers of C. wilsoni from late austral summer to early fall. The study demonstrated that biochemical tracers can be used to reflect the variability in the diet of prey, particularly in a highly dynamic environment.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0924-7963
+EI 1879-1573
+PD JAN
+PY 2024
+VL 241
+AR 103907
+DI 10.1016/j.jmarsys.2023.103907
+EA MAY 2023
+UT WOS:001013410600001
+ER
+
+PT J
+AU Tang, BJ
+   Zheng, HF
+   Wang, SJ
+   Qin, GJ
+   Huang, YQ
+   Wang, LM
+AF Tang, Baojun
+   Zheng, Hanfeng
+   Wang, Shuaijie
+   Qin, Ganjing
+   Huang, Yanqing
+   Wang, Lumin
+TI Effects of Antarctic Krill Euphausia superba Meal Inclusion on
+   Growth, Body Color, and Composition of Large Yellow Croaker
+   Larimichthys crocea
+SO NORTH AMERICAN JOURNAL OF AQUACULTURE
+AB The effects of Antarctic krill Euphausia superba meal inclusion in the diet of Large Yellow Croaker Larimichthys crocea were studied. Inclusion levels were 0.000, 4.125, 8.250, and 12.375% (control, KM4.125, KM8.250, and KM12.375, respectively), and groups of large-sized fish (average body weight = 190.6 g) received these diets for 99 d. No significant differences were found in body length, body weight, and specific growth rate compared with the control group, but the KM4.125 and KM8.250 groups had significantly increased condition factors and hepatosomatic indices. The KM8.250 fish showed a significant increase in redness values in the dorsal skin, while the KM12.375 fish presented significantly higher yellowness in the ventral skin and tail fin. Addition of krill meal exerted no significant effect on whole-body proximate composition. The KM8.250 group showed significantly higher lipid content and lower ash content, which differed from those of the KM12.375 group. Most of the amino acids in muscle and liver tissues remained unchanged compared to those in the control. The KM4.125 group showed significantly higher muscle proline, serine, and total functional amino acids, while the total amino acid content in KM12.375 fish significantly decreased. The results indicated that dietary inclusion of fish meal with up to 8.25% krill meal does not result in adverse effects on growth and body composition of large-sized Large Yellow Croaker; however, addition of krill meal could improve skin coloration in these fish.
+SN 1522-2055
+EI 1548-8454
+PD OCT
+PY 2021
+VL 83
+IS 4
+BP 255
+EP 266
+DI 10.1002/naaq.10185
+EA AUG 2021
+UT WOS:000689684400001
+ER
+
+PT J
+AU Chen, Z
+   Chen, XZ
+   Zhu, GP
+AF Chen, Zhuang
+   Chen, Xunzi
+   Zhu, Guoping
+TI Ecological niche and habitat use of Antarctic krill (Euphausia
+   superba) and the pelagic tunicate (Salpa thompsoni) under
+   future climate change: further overlap or separation?
+SO BIODIVERSITY AND CONSERVATION
+AB Antarctic krill (Euphausia superba) and salps (Salpa thompsoni) are vital and important macrozooplankton grazers in the Southern Ocean ecosystem. However, the impact of climate change on their habitats remains unclear, particularly regarding the potential spatial displacement of krill habitats due to the southward expansion of salps. Understanding the interactions between these two key species in the Southern Ocean ecosystem is therefore crucial. This study used ecological niche modeling to predict the austral summer and autumn habitat distribution and ecological niches of krill and salps during the period (1996-2015) and under future scenarios (2050s and 2100s). The results showed that krill are mainly distributed in shelf regions, while salps are more prevalent in open ocean areas farther north compared to krill, such as the Lazarev Sea. Additionally, some overlap in their distributions is observed in the Western Antarctic Peninsula, the Kerguelen Islands and the Ross Sea. Under future scenarios, both krill and salps are projected to experience a reduction in their high-potential habitats, with decreasing spatial and ecological overlap. This study emphasizes the significance of krill and salps interactions in the Southern Ocean ecosystem. The findings provide valuable information for the conservation and management of the Southern Ocean ecosystem.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0960-3115
+EI 1572-9710
+PD APR
+PY 2025
+VL 34
+IS 5
+BP 1771
+EP 1792
+DI 10.1007/s10531-025-03042-9
+EA FEB 2025
+UT WOS:001433432700001
+ER
+
+PT J
+AU Liu, Y
+   Zhu, GP
+AF Liu, Yu
+   Zhu, Guoping
+TI Reproductive strategy of Antarctic krill (Euphausia superba) in
+   the south Scotia Sea: revisiting the oocyte development and
+   morphological changes with multiple seasonal analysis
+SO JOURNAL OF OCEANOLOGY AND LIMNOLOGY
+AB Antarctic krill (Euphausia superba) is a keystone species in the Southern Ocean; however, seasonal variations in reproductive development for krill are complex and remains unknown. A histological investigation with observations of external secondary sex features of krill in the south Scotia Sea region was carried out using a multi-seasonal dataset for detail reproductive descriptions for this commercially important species. The monthly development of secondary sexual characteristics, the thelycum, as well as of oocytes over a period of two years were described. It was observed that krill have diverse reproductive development characteristics within the ovary, and that this function differently between the juvenile, sub-adult, and adult stages. During the summer, adult krill ovaries are large and ripe with oocytes rich in yolk ready for release in late summer. Post spawning, the ovaries resorb, fragment, and regress throughout the autumn and winter. During reproductive diapause period, krill focus on absorbing nutrients. Un-released eggs are reabsorbed by the ovary, the permanent germinal zone is active, and early oocytes begin to develop in preparation for the egg production phase. Krill that are about to spawn have an ovary that fills the space between the digestive gland and muscle. The ovarian development of krill is divided into 10 sexual developmental stages. As a part of this study, data on the carapace thickness with similar development patterns in krill size and carapace width, was investigated for the first time to help understand krill growth and development.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 2096-5508
+EI 2523-3521
+PD SEP
+PY 2025
+VL 43
+IS 5
+BP 1596
+EP 1608
+DI 10.1007/s00343-025-4135-z
+EA APR 2025
+UT WOS:001463304700001
+ER
+
+PT J
+AU Wang, XX
+   Ma, XY
+   Su, D
+   Zhang, YT
+   Miao, JK
+   Liu, XF
+   Yu, Y
+   Leng, KL
+AF Wang, Xixi
+   Ma, Xinyu
+   Su, Dong
+   Zhang, Yating
+   Miao, Junkui
+   Liu, Xiaofang
+   Yu, Yuan
+   Leng, Kailiang
+TI The effect of short-term storage on Antarctic krill (Euphausia superba)
+   quality: Insights into microbial characteristics, volatile flavor
+   compounds, trimethylamine oxide and its derivatives
+SO FOOD RESEARCH INTERNATIONAL
+AB Under suboptimal storage conditions, the conversion of trimethylamine oxide (TMAO) into undesirable metabolites seriously impairs the edible quality, safety, and market value of aquatic foods. This study aims to assess the microbiome variations related to spoilage and its relationship with volatile flavor compounds and TMAO metabolites in Antarctic krill simulated deck environment storage by bio-chemical examination and correlation analysis. Compared to storage at 4 degrees C and 0 degrees C, Antarctic krill stored at-20 degrees C maintained better freshness, with significant reductions in L*, a*, lipid oxidation, carotenoid degradation, texture deterioration, and excessive proteolysis. A total of 60 volatile compounds flavor were identified, of which 12 were identified as important flavor contributors with relative odor active value (ROAV) greater than 1. Bacterial diversity indicated that Proteobacteria, Actinobacteriota and Firmicutes were dominant bacterial phyla. According to Pearson correlation analysis, dominant bacterial genera may mediate changes in volatile compounds through amino acid and fatty acid metabolism. Concurrently, they synergistically drove quality deterioration during storage via multiple pathways, including altered nitrogenous compound metabolism, accelerated lipid oxidation, and induced pigment degradation. These findings offer critical insights into the relationships between quality indicators, volatile flavor compounds, TMAO/its derivatives and bacterial diversity, providing theoretical support for optimizing storage conditions to enhance the flavor and quality of Antarctic krill.
+RI liu, algae/JQW-1815-2023
+OI Wang, Xixi/0000-0003-4633-2345
+SN 0963-9969
+EI 1873-7145
+PD DEC
+PY 2025
+VL 222
+AR 117709
+DI 10.1016/j.foodres.2025.117709
+EA NOV 2025
+PN 1
+UT WOS:001612178500004
+PM 41267291
+ER
+
+PT J
+AU Wang, ZH
+   Chen, X
+   Hu, YY
+   Liu, ZQ
+   Li, JJ
+   Guo, XM
+   Zhou, DY
+   Zhu, BW
+AF Wang, Zonghan
+   Chen, Xuan
+   Hu, Yuanyuan
+   Liu, Zhengqi
+   Li, Jinjin
+   Guo, Xiaoming
+   Zhou, Dayong
+   Zhu, Beiwei
+TI Potential of Antarctic krill (Euphausia superba) protein
+   as a promising alternative resource for efficient production of surimi:
+   Application and future perspectives
+SO TRENDS IN FOOD SCIENCE & TECHNOLOGY
+AB Background: Antarctic krill (Euphausia superba) protein is known for its high nutritional value, yet its commercial applications have not got fully exploration. In this regard, surimi technology provides possibility to transform minced krill meat into high-value gel-type products. In recent years, the feasibility of Antarctic krill protein (AKP) as an alternative resource for surimi production have got growing attentions. Scope and approach: In this review, we evaluate nutritional value and extraction technologies, involving onboard pre-processing and further protein separation for AKP from the perspective of surimi application, and highlight the application status of AKP as complete or partial resource for surimi production as well as existing possible quality improvements strategies. Key findings and conclusions: Although AKP has shown gelling ability, it demonstrates poor gelation properties due to its unique thermo-aggregation behavior, which results in excessive hardness and water loss under heat stress. This feature could be attributed to the uniqueness of protein and lipid profile in AKP compared to conventional surimi raw materials. In this context, some additives, such as polysaccharides, amino acids, and proteins, has been shown to possess the ability to regulate the thermo-aggregation behavior of AKP, offering potential improvements strategies for AKP surimi production. However, molecular mechanisms on gelation process of AKP remain inadequately understood. Future research should track and deepen molecular action mechanisms underlying the gelation of AKP surimi, as well as concern technical innovations in onboard pretreatment, proteins extractions and surimi production to bridge the gap between lab and scale-up production.
+RI ; Hu, Yuan/AIE-1031-2022; Wang, Zonghan/ABH-5053-2020
+OI Liu, Zhengqi/0009-0007-1067-0496; 
+SN 0924-2244
+EI 1879-3053
+PD MAR
+PY 2025
+VL 157
+AR 104917
+DI 10.1016/j.tifs.2025.104917
+EA FEB 2025
+UT WOS:001429442600001
+ER
+
+PT J
+AU Bernard, KS
+   Steinke, KB
+   Fontana, JM
+AF Bernard, Kim S.
+   Steinke, Kirsten B.
+   Fontana, Julia M.
+TI Winter condition, physiology, and growth potential of juvenile Antarctic
+   krill
+SO FRONTIERS IN MARINE SCIENCE
+AB In recent years, substantial efforts have been made to understand the implications of climate change on Antarctic krill, Euphausia superba, because of their pivotal role in the Southern Ocean food web and in biogeochemical cycling. Winter is one of the least studied seasons in Antarctica and we have limited understanding about the strategies Antarctic krill use to survive the winter. In particular, data on the winter physiology and condition of juvenile Antarctic krill are severely lacking. From May to September (the austral autumn-winter) of 2019, we maintained juvenile Antarctic krill in large (1,330 L) aquarium tanks at Palmer Station, Antarctica and, at monthly time intervals, measured their physiology and condition. Each tank served as a "food environment scenario", representing possible food environments the krill may encounter during winter along the Western Antarctic Peninsula. We found that, unlike adults, juvenile krill maintain relatively high respiration rates through the winter and respond positively to increased food concentrations by increasing their ingestion rates. Unlike larval krill, juveniles use lipid stores accumulated during the summer and autumn to sustain themselves through periods of starvation in the winter. We used our empirically derived measurements of physiology and condition to estimate the energy budget and growth potential of juvenile krill during the winter. We found that, given their comparatively high respiration rates, small juvenile krill (20 mg dry weight) would need to encounter food at concentrations of similar to 0.15 mg C L-1 daily to avoid loss of body carbon. Without sufficient lipid reserves, this value increases to similar to 0.54 mg C L-1, daily. The health of juvenile krill in the wintertime is dependent on their ability to accumulate lipid stores in the summer and autumn and to find sufficient food during the winter. Changes in food availability to Antarctic krill throughout the year may become problematic to juvenile krill in the future. Understanding the variability in the winter energy budget of juvenile Antarctic krill will allow us to improve population models that make assumptions on seasonal growth patterns.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+EI 2296-7745
+PD SEP 23
+PY 2022
+VL 9
+AR 990853
+DI 10.3389/fmars.2022.990853
+UT WOS:000870274000001
+ER
+
+PT J
+AU Wang, XM
+   Zhou, DY
+   Liu, FJ
+   Wang, Q
+   Li, C
+   Guo, X
+   Tong, PY
+   Yin, FW
+   Liu, XY
+   Cao, J
+AF Wang, Xinmiao
+   Zhou, Dayong
+   Liu, Fujun
+   Wang, Qian
+   Li, Chuan
+   Guo, Xu
+   Tong, Peiyong
+   Yin, Fawen
+   Liu, Xiaoyang
+   Cao, Jun
+TI Distribution of different forms of metal ions in Antarctic krill
+   (Euphausia superba) oil: A mechanism of their pro-oxidant effects
+   relating to association colloids
+SO FOOD CHEMISTRY
+AB Due to the fact that association colloids were formed in krill oil, the oxidation mechanism of krill oil was more complicated. In this study, water-soluble ferrous sulfate (Fe2(SO4)3), oil-soluble ferrous fumarate (C54H99FeO6) and insoluble ferric oxide (Fe3O4) were added to krill oil and stored at 60 degrees C for accelerated oxidation. Peroxide value, thiobarbituric acid reactive substances and aldehyde content showed that Fe2(SO4)3 had a stronger prooxidative effect. This was caused by the fact that water-soluble Fe3+ was mainly accumulated in extremely high content at oil-water interface of association colloids. In contrast, oil-soluble C54H99FeO6 was mainly distributed in the oil phase. Lipidomic analysis revealed that, phospholipids were rapidly catalytically decomposed by water-soluble Fe3+ at the oil-water interface and produced lipid hydroperoxides and free radicals. Subsequently, the produced free radicals could enter the oil phase and set off a chain reaction of free radical formation, and then promote the oxidation of glycerides.
+SN 0308-8146
+EI 1873-7072
+PD APR 30
+PY 2025
+VL 472
+AR 142944
+DI 10.1016/j.foodchem.2025.142944
+EA JAN 2025
+UT WOS:001404817000001
+PM 39827554
+ER
+
+PT J
+AU Wang, ZW
+   Liu, FJ
+   Luo, Y
+   Zeng, XB
+   Pei, XC
+   Zhao, GH
+   Zhang, M
+   Zhou, DY
+   Yin, FW
+AF Wang, Ziwei
+   Liu, Fujun
+   Luo, Ying
+   Zeng, Xiangbo
+   Pei, Xuechen
+   Zhao, Guanhua
+   Zhang, Min
+   Zhou, Dayong
+   Yin, Fawen
+TI Effects of Tea Polyphenol and Its Combination with Other Antioxidants
+   Added during the Extraction Process on Oxidative Stability of Antarctic
+   Krill (Euphausia superba) Oil
+SO FOODS
+AB Antarctic krill (Euphausia superba) oil contains high levels of marine omega-3 long-chain polyunsaturated fatty acids (n-3 LC-PUFA), including eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). In industrial production, krill oil is usually extracted from krill meals by using ethanol as a solvent. Water in the krill meal can be easily extracted by using ethanol as an extraction solvent. During the extraction process, the EPA and DHA are more easily oxidized and degraded when water exists in the ethanol extract of krill oil. Based on the analysis of peroxide value (POV), thiobarbituric acid-reactive substances (TBARS), fatty acid composition, and lipid class composition, the present study indicated that the composite antioxidants (TP-TPP) consist of tea polyphenol (TP) and tea polyphenol palmitate (TPP) had an excellent antioxidant effect. By contrast, adding TP-TPP into ethanol solvent during the extraction process is more effective than adding TP-TPP into krill oil after the extraction process.
+RI wang, ziwei/HQY-9921-2023; zhang, min/IYI-9869-2023; Zhao,
+   Guan-Hua/AGL-8404-2022
+OI Zhao, Guan-Hua/0000-0002-9040-2622
+EI 2304-8158
+PD DEC
+PY 2022
+VL 11
+IS 23
+AR 3768
+DI 10.3390/foods11233768
+UT WOS:000896487400001
+PM 36496576
+ER
+
+PT J
+AU Primpke, S
+   Meyer, B
+   Falcou-Préfol, M
+   Schütte, W
+   Gerdts, G
+AF Primpke, Sebastian
+   Meyer, Bettina
+   Falcou-Prefol, Mathilde
+   Schuette, Wyona
+   Gerdts, Gunnar
+TI At second glance: The importance of strict quality control - A case
+   study on microplastic in the Southern Ocean key species Antarctic krill,
+   Euphausia superba
+SO SCIENCE OF THE TOTAL ENVIRONMENT
+AB The stomach content of 60 krill specimens from the Southern Ocean were analyzed for the presence of microplastic (MP), by testing different sample volumes, extraction approaches, and applying hyperspectral imaging Fourier-transform infrared spectroscopy (mu FTIR). Strict quality control was applied on the generated results. A high load of residual materials in pooled samples hampered the analysis and avoided a reliable determination of putative MP particles. Individual krill stomachs displayed reliable results, however, only after re -treating the samples with hydrogen peroxide. Before this treatment, lipid rich residues of krill resulted in false assignments of polymer categories and hence, false high MP particle numbers. Finally, MP was identified in 4 stomachs out of 60, with only one MP particle per stomach. Our study highlights the importance of strict quality control to verify results before coming to a final decision on MP contamination in the environment to aid the establishment of suitable internationally standardized protocols for sampling and analysis of MP in organisms including their habitats in Southern Ocean and worldwide.
+RI ; Falcou-Préfol, Mathilde/CAH-9365-2022; Primpke, Sebastian/Q-5606-2016;
+   Gerdts, Gunnar/R-7000-2016
+OI Schütte, Wyona/0000-0001-7370-3477; Falcou-Préfol,
+   Mathilde/0000-0003-1951-9913; 
+SN 0048-9697
+EI 1879-1026
+PD MAR 25
+PY 2024
+VL 918
+AR 170618
+DI 10.1016/j.scitotenv.2024.170618
+EA FEB 2024
+UT WOS:001184544200001
+PM 38325470
+ER
+
+PT J
+AU Wang, XM
+   Yin, FW
+   Liu, FJ
+   Wang, Q
+   Guo, X
+   Tong, PY
+   Liu, XY
+   Zhu, BW
+   Zhou, DY
+AF Wang, Xinmiao
+   Yin, Fawen
+   Liu, Fujun
+   Wang, Qian
+   Guo, Xu
+   Tong, Peiyong
+   Liu, Xiaoyang
+   Zhu, Beiwei
+   Zhou, Dayong
+TI Effects of ferrous ions partitioning at the oil-water interface on the
+   oxidative stability of Antarctic krill (Euphausia superba)
+   oil: Reverse micelles alter the physical location of ferrous ions
+SO FOOD CHEMISTRY
+AB This study investigates the role of ferrous ion partitioning in promoting lipid oxidation in Antarctic krill oil (AKO) containing reverse micelles. Cryogenic transmission electron microscopy and small-angle X-ray scattering confirmed the presence of reverse micelles in AKO. AKO with ferrous sulfate (FeSO4, water-soluble iron) and ferrous fumarate (C4H2FeO4, oil-soluble iron) were stored at 60 degrees C. Interestingly, compared with oil-soluble Fe2+, water-soluble Fe2+ significantly enhanced oxidation. Confocal laser scanning microscopy (CLSM) showed that water-soluble Fe2+ and lipid hydroperoxides (LOOHs) concentrated at the oil-water interface of reverse micelles, whereas ferrous fumarate was distributed in the oil phase. Meanwhile, water-soluble Fe2+ significantly promote the oxidation of phospholipids at the oil-water interface, leading to the formation of LOOHs and free radicals that entered the oil phase, triggering glyceride oxidation. Overall, this characterization of the spatial distribution and pro-oxidant effects of metal ions in AKO provides valuable insights into the development of novel antioxidant technologies.
+SN 0308-8146
+EI 1873-7072
+PD NOV 15
+PY 2025
+VL 492
+AR 145436
+DI 10.1016/j.foodchem.2025.145436
+EA JUL 2025
+PN 1
+UT WOS:001529476100001
+PM 40628074
+ER
+
+PT J
+AU Goncalves, R
+   Gesto, M
+   Teodósio, MA
+   Baptista, V
+   Navarro-Guillén, C
+   Lund, I
+AF Goncalves, Renata
+   Gesto, Manuel
+   Teodosio, Maria Alexandra
+   Baptista, Vania
+   Navarro-Guillen, Carmen
+   Lund, Ivar
+TI Replacement of Antarctic krill (Euphausia superba) by
+   extruded feeds with different proximate compositions: effects on growth,
+   nutritional condition and digestive capacity of juvenile European
+   lobsters (Homarus gammarus, L.)
+SO JOURNAL OF NUTRITIONAL SCIENCE
+AB Extruded feeds are widely used for major aquatic animal production, particularly for finfish. However, the transition from fresh/frozen to extruded/pelleted feeds remains a major obstacle to progressing sustainable farming of European lobster ( Homarus gammarus). The aim of the present study was to investigate the effects of using extruded feeds with different protein levels and lipid/carbohydrate ratios on growth, feed utilisation, nucleic acid derived indices (sRD) and digestive enzymatic activity of H. gammarus juveniles. Six extruded feeds were formulated to contain two protein levels (400 and 500 g/kg), with three lipid/carbohydrate ratios (LOW - 1:3; MEDium - 1:2; HIGH - 1:1). The extruded feeds were tested against Antarctic krill (Euphausia superba) used as control (CTRL). Overall, the CTRL and 500MED feed supported the highest growth and nutritional condition estimated by means of sRD, while the poorest results were observed for the 400HIGH and 400MED groups. The FCR was significantly lower in the CTRL than all extruded feeds, among which the most efficient, i.e., lower FCR, was the 500MED. The highest activity of trypsin and amylase in lobsters fed the 400MED and 400HIGH feeds points to the activation of a mechanism to maximise nutrients assimilation. The highest lipase activity observed for the 500LOW and 500MED groups indicates a higher capacity to metabolise and store lipids. Overall, the results suggest that the 500MED feed (500 g/kg protein, 237 g/kg carbohydrates and 119 g/kg lipids) is a suitable extruded feed candidate to replace Antarctic krill, commonly used to grow lobster juveniles.
+RI Gesto, Manuel/G-1032-2018; Baptista, Vânia/J-5362-2019; Teodosio,
+   Maria/B-5077-2013; Goncalves, Renata/ABR-0469-2022; Lund,
+   Ivar/W-4180-2019; Navarro-Guillén, Carmen/GON-7706-2022
+OI Gesto, Manuel/0000-0002-9136-7857; Baptista, Vânia/0000-0002-1428-3334;
+   Teodosio, Maria/0000-0002-0939-9885; Goncalves,
+   Renata/0000-0003-4163-9479; Lund, Ivar/0000-0003-2419-2185;
+   Navarro-Guillén, Carmen/0000-0001-5490-0328
+EI 2048-6790
+PD MAY 12
+PY 2021
+VL 10
+AR e36
+DI 10.1017/jns.2021.27
+UT WOS:000649335600001
+PM 35401973
+ER
+
+PT J
+AU Whyte, SK
+   Kaur, K
+   Colombo, SM
+   Tibbetts, SM
+   Brocca, G
+   Ghanei-Motlagh, R
+   Fajei, E
+   Soto-Davila, M
+   Fast, MD
+AF Whyte, S. K.
+   Kaur, K.
+   Colombo, S. M.
+   Tibbetts, S. M.
+   Brocca, G.
+   Ghanei-Motlagh, R.
+   Fajei, E.
+   Soto-Davila, M.
+   Fast, M. D.
+TI Effects of dietary inclusion of Antarctic krill (Euphausia
+   superba) meal in low fishmeal diets on Atlantic salmon
+   (Salmo salar L.) growth, nutrient utilization, fillet
+   quality, and wound healing capacity
+SO AQUACULTURE REPORTS
+AB Ecological and economic concerns of fishmeal and terrestrial crop contributions to protein and lipid in the diets of cultured fish have resulted in significant reductions over the last few decades, initiating investigations into alternative sources. Marine zooplankton, such as Antarctic krill possess high levels of protein, phospholipid, essential n-3 LC-PUFA (EPA and DHA) as well as carotenoids like astaxanthin. Salmon were fed experimental diets containing 0, 8 and 12 % Antarctic krill meal (KM) over a 25-week period and quantified various production characteristics of the fish as well as their responses to mechanical wounding. Atlantic salmon gained over 300 % of their initial body weight over the 25-week feeding period and their Condition Factor, FCR, PER, diet digestibility and whole-body composition of fish receiving the 8 and 12 % KM test diets did not significantly differ from the 0 % control diet. However, fish fed KM test diets were able to maintain the high performance of the control diet fed fish, but with up to 31 % lower plant proteins, 15 % less micronutrient additives, 14 % lower lipid supplements, and 4 % less synthetic astaxanthin due to KM meal. In addition, salmon fillets showed a significantly higher mean level of pigmentation (i.e., yellow and red colouration) in fish fed the 12 % KM meal diet, and gross imaging showed wounded skin from fish fed 12 % KM had significantly less variation in colouration/ appearance from unwounded skin, compared to control, which could be beneficial to the Atlantic salmon industry by reducing hyperpigmentation that often leads to costly downgrades for producers.
+RI Brocca, Ginevra/ABC-3160-2021
+OI Brocca, Ginevra/0000-0002-3531-1592
+SN 2352-5134
+PD SEP 15
+PY 2025
+VL 43
+AR 102853
+DI 10.1016/j.aqrep.2025.102853
+EA MAY 2025
+UT WOS:001497631100004
+ER
+
+PT J
+AU De Felice, A
+   Manini, E
+   Biagiotti, I
+   Leonori, I
+AF De Felice, Andrea
+   Manini, Elena
+   Biagiotti, Ilaria
+   Leonori, Iole
+TI Bioenergetics of Euphausia superba and Euphausia
+   crystallorophias in the Ross Sea
+SO DIVERSITY-BASEL
+AB Krill species are key organisms in the Antarctic food web. Biochemical composition in terms of lipids, proteins, carbohydrates, and fatty acids and its implications for spatial distribution were investigated in specimens of Euphausia superba and Euphausia crystallorophias collected in the Ross Sea and the adjacent Pacific region during an acoustic survey carried out within the framework of the 19th Italian National Program for Research in Antarctica (PNRA) Expedition, to gain insights into their trophic relationships and bioenergetic strategies. In both species, the body biochemical composition (wet) showed a predominance of proteins (62-86%), followed by lipids and carbohydrates, and, among identified lipid classes, the two species did not seem to differ much in fatty acid composition. Results showed the highest dissimilarity in biochemical composition between species relative to differences in latitude (24%) and to inshore/offshore haul (22%). Fatty acid analysis, and particularly PUFA/SFA and 18PUFA/16PUFA ratios, allowed identification of a more pronounced omnivorous kind of diet in E. crystallorophias relative to E. superba.
+RI Leonori, Iole/AAD-7901-2020; , Anea/L-9465-2014; Manini,
+   Elena/C-2032-2015; Biagiotti, Ilaria/C-8893-2014; De+Felice,
+   Andrea/AHA-1500-2022
+OI Leonori, Iole/0000-0001-7673-1684; , Anea/0000-0002-0051-2052; Manini,
+   Elena/0000-0002-8990-2929; Biagiotti, Ilaria/0000-0002-5395-6896; 
+EI 1424-2818
+PD APR
+PY 2023
+VL 15
+IS 4
+AR 480
+DI 10.3390/d15040480
+UT WOS:000977580900001
+ER
+
+PT J
+AU Zeng, XB
+   Yin, FW
+   Zhao, GH
+   Guo, C
+   Li, DY
+   Liu, HL
+   Qin, L
+   Shahidi, F
+   Zhou, DY
+AF Zeng, Xiang-Bo
+   Yin, Fa-Wen
+   Zhao, Guan-Hua
+   Guo, Chao
+   Li, De-Yang
+   Liu, Hui-Lin
+   Qin, Lei
+   Shahidi, Fereidoon
+   Zhou, Da-Yong
+TI Mechanism of color change in Antarctic krill oil during storage
+SO FOOD CHEMISTRY
+AB Antarctic krill oil (AKO) is reddish-orange in color but undergoes changes during storage. To investigate the color deterioration and potential mechanisms involved, the changes in color, endogenous components (astaxanthin, fatty acids, and phospholipids), and reaction products (aldehydes, alpha-dicarbonyl compounds, and pyrroles) of AKO upon storage were determined. Although the visual color of AKO tended to darken upon storage, the colorimetric analysis and ultraviolet-visible spectrum analysis both indicated a fading in red and yellow due to the oxidative degradation of astaxanthin. During storage of AKO, lipid oxidation led to the formation of carbonyl compounds such as aldehydes and alpha-dicarbonyls. In addition, phosphatidylethanolamines (PEs) exhibited a faster loss rate than phosphatidylcholines. Moreover, hydrophobic pyrroles, the Maillard-like reaction products associated with primary amine groups in PEs accumulated. Therefore, it is suggested that the Maillard-like reaction between PEs and carbonyl compounds formed by lipid oxidation contributed to color darkening of AKO during storage.
+RI Zhao, Guan-Hua/AGL-8404-2022; Qin, Lei/KKM-5010-2024; 刘,
+   慧琳/GWV-6504-2022
+OI Zhao, Guan-Hua/0000-0002-9040-2622; Qin, Lei/0000-0002-3902-3192; 
+SN 0308-8146
+EI 1873-7072
+PD JUN 30
+PY 2024
+VL 444
+AR 138583
+DI 10.1016/j.foodchem.2024.138583
+EA FEB 2024
+UT WOS:001179345100001
+PM 38309082
+ER
+
+PT J
+AU Guo, C
+   Zeng, XB
+   Yin, FW
+   Li, DY
+   Jin, ML
+   Zhu, BW
+   Zhou, DY
+AF Guo, Chao
+   Zeng, Xiang-Bo
+   Yin, Fa-Wen
+   Li, De-Yang
+   Jin, Meng-Ling
+   Zhu, Bei-Wei
+   Zhou, Da-Yong
+TI The influence and mechanism of the color of Antarctic krill meal on the
+   color of extracted Antarctic krill oil
+SO LWT-FOOD SCIENCE AND TECHNOLOGY
+AB The quality of Antarctic krill meal (AKM) influences the nutritional value and sensory attributes of Antarctic krill oil (AKO), especially color, which is critical for market acceptance. The impact of color deterioration of the stored AKM on the color of the extracted AKO was investigated. After 60 d-storage at room temperature, AKM shifted from reddish-orange to yellowish-brown due to lipid oxidation and Maillard/Maillard-like reaction. AKO extracted from the stored AKM showed lower redness value (a*, red-green chromaticity index) than directly stored AKO. This indicated drastic astaxanthin (ASTA) degradation in stored AKM, with only 2.91 % of initial ASTA extracted into AKO after 15 d and none after 30 d. A420 value in AKO extracted from stored AKM increased by 11.31 % (vs. 548.96 % in stored AKM), suggesting minimal brown substance transfer to AKO during extraction. These implied that the color deterioration of the stored AKM negatively influenced AKO color. In addition, after 60 d, L* (light-dark chromaticity index) in two tea polyphenol palmitate (TPP) + antioxidants of bamboo leaf (AOB)-treated AKM decreased by 7.36 %/3.92 % (vs. 7.75 % in con group). The a* and ASTA content in the AKO extracted from two TPP + AOB-treated AKM decreased by 59.43 %/46.20 % and 100 %/99.89 % (vs. 87.21 % and 100 % in con group). Obviously, spraying TPP + AOB before/after drying inhibited the yellowish-brown of stored AKM, and improved the redness value and ASTA content of AKO extracted from the stored AKM.
+SN 0023-6438
+EI 1096-1127
+PD JUL 15
+PY 2025
+VL 228
+AR 118096
+DI 10.1016/j.lwt.2025.118096
+EA JUN 2025
+UT WOS:001523093400003
+ER
+
+PT J
+AU Ichii, T
+   Igarashi, H
+   Mori, M
+   Mahapatra, K
+   Nishikawa, H
+   Okuda, T
+AF Ichii, Taro
+   Igarashi, Hiromichi
+   Mori, Mao
+   Mahapatra, Kedarnath
+   Nishikawa, Haruka
+   Okuda, Takehiro
+TI Impact of the climate regime shift around 2000 on recruitment of
+   Antarctic krill at the Antarctic Peninsula and South Georgia
+SO PROGRESS IN OCEANOGRAPHY
+AB We examined how the climate regime shift around 2000 affected Antarctic krill recruitment variability at the North Antarctic Peninsula (NAP) and South Georgia (SG) during the period of 1990s through to 2000s. We used sea surface temperature (SST) as a proxy of the monthly sea ice extent and related it to the recruitment index (proportion of 1-year-old krill) of each succeeding year for NAP and SG by examining the correlation of the time series before and after 2000. For NAP, recruitment index was negatively correlated with winter SST at NAP in the 1990s but with autumn SST in the 2000s, suggesting that good recruitment was supported by extensive winter sea-ice in the 1990s but by extensive autumn sea-ice in the 2000s. This was attributed to the regime shift featured by winter warming and autumn cooling after 2000. For SG, recruitment was negatively correlated with winter SST at NAP in the 1990s but positively correlated with autumn SST in the southern Scotia Sea (SSS) in the 2000s. According to particle tracking experiment from NAP to SG in relation to the sea-ice extent and position of SACCF (Southern Antarctic Circumpolar Current Front), less sea-ice extent in 2000s meant less larvae distributing as north as SACCF, resulting in much fewer larval being transported to SG. Hence, we hypothesized that the regime shift weakened the connection between NAP and SG, but instead SSS became the main driver of recruitment at SG. We presume the krill population demonstrated adaptability to the regime shift by offsetting the unfavorable winter condition with the favorable autumn condition at NAP and for SG, replacing the source of recruits with those closer to it.
+RI Ichii, Taro/LRU-2814-2024
+SN 0079-6611
+EI 1873-4472
+PD APR-MAY
+PY 2023
+VL 213
+AR 103020
+DI 10.1016/j.pocean.2023.103020
+EA MAR 2023
+UT WOS:000972514700001
+ER
+
+PT J
+AU Steinke, KB
+   Bernard, KS
+   Fontana, JM
+   Copeman, LA
+   Garcia, LM
+AF Steinke, Kirsten B.
+   Bernard, Kim S.
+   Fontana, Julia M.
+   Copeman, Louise A.
+   Garcia, Lani M.
+TI The energetic cost of early reproductive development in juvenile
+   Antarctic krill at the Western Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB The overwinter survival mechanisms of Antarctic krill, Euphausia superba, are poorly characterized, especially for juveniles. It has been suggested that juveniles adopt a mix of strategies characteristic of both larvae and adults. Like larvae, they may feed opportunistically throughout winter when food is available, and like adults they may be able to suppress their metabolism when food is scarce. In this study we look at the overwinter strategies of juvenile krill and how their reproductive development changes when energy input exceeds what is necessary for survival. We take a closer look at how the sexual maturation of juvenile krill progresses in response to different environmental conditions throughout the fall and winter. We exposed juvenile Antarctic krill to four different "food environment scenarios", supplementing them with various diets from May to September 2019 that were representative of environmental conditions that they may encounter in different regions of the Western Antarctic Peninsula during autumn and winter. Each month, we measured the physiology and condition of the krill, and assessed the reproductive development of females. We found that when female juvenile krill have greater energy reserves than what is needed to survive the winter, they will begin to sexually mature. Further, when there are sufficient levels of the fatty acids eicosapentaenoic acid (EPA), docosahexaenoic acid (DHA) and 16:4 (n-1), krill are likely to be in a more reproductive advanced stage. However, when lipids, EPA, DHA and 16:4 (n-1) are depleted throughout the winter, juvenile female krill lose their ability to develop reproductively. We also found that sexual development is an energy intensive process that requires high respiration rates in juvenile krill. Furthermore, when juvenile females expend energy maturing, their physiological condition declines. This trade-off between early reproductive development and condition in juvenile female krill has important implications for individual health and population fecundity. Gaining a better understanding of the mechanisms behind juvenile krill winter survival strategies and their consequences will allow us to predict how future change at the western Antarctic Peninsula may affect krill population dynamics, especially in light of a warming climate.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+EI 2296-7745
+PD DEC 9
+PY 2022
+VL 9
+AR 1009385
+DI 10.3389/fmars.2022.1009385
+UT WOS:000902904400001
+ER
+
+PT J
+AU Zheng, ZX
+   Zhu, K
+   Dai, ZY
+AF Zheng, Zhenxiao
+   Zhu, Kai
+   Dai, Zhiyuan
+TI Preparation of Antarctic Krill Oil Emulsion and Its Stability under
+   Catalase Treatment
+SO FOODS
+AB Making Antarctic krill oil into emulsion is a good way to utilize Antarctic krill, but proliferation of microorganisms cannot be ignored. H2O2 is widely used in the sterilization of liquid food since its decomposition products are environmentally friendly, although residual H2O2 should be removed for food safety. Adding catalase (CAT) is an effective means to do this. However, the enzyme activity center of CAT is the iron porphyrin group, which has the risk of accelerating lipid oxidation in the oil emulsion. Therefore, we hypothesized that CAT might not be suitable for the removal of H2O2 in Antarctic krill oil emulsion. In this paper, Antarctic krill oil emulsion was prepared, and then the effect of CAT on the emulsion was studied through visual observation, microscopic morphology observation, turbidity and stability, particle size, and zeta-potential; finally, the mechanism of CAT destroying the emulsion was explored from the perspective of lipid oxidation. The results showed that a stable Antarctic krill emulsion was prepared using Tween-80 as the emulsifier, with the oil concentration of 1% (v/v) and the ratio of surfactant to oil phase of 1:5 (v/v). The emulsion treated with CAT had undergone demulsification, stratification, and coagulation after 2 days of incubation, while the emulsion treated with superoxide dismutase (SOD) and bovine serum albumin (BSA) changed little. In addition, the thiobarbituric acid reactive substances (TBARS) value and the content of hydroxyl radicals in the CAT group increased significantly. The preliminary research results indicated that the effect of CAT on the emulsion related to the lipid oxidation caused by the iron porphyrin group at the center of the enzyme activity. All these results indicated that CAT was not suitable for the removal of residual H2O2 in Antarctic krill oil emulsion. Moreover, it is helpful to avoid the contact of Antarctic krill oil emulsion and CAT during the processing of the krill.
+EI 2304-8158
+PD NOV
+PY 2021
+VL 10
+IS 11
+AR 2797
+DI 10.3390/foods10112797
+UT WOS:000727855500001
+PM 34829078
+ER
+
+PT J
+AU Cavan, EL
+   Mackay, N
+   Hill, SL
+   Atkinson, A
+   Belcher, A
+   Visser, A
+AF Cavan, E. L.
+   Mackay, N.
+   Hill, S. L.
+   Atkinson, A.
+   Belcher, A.
+   Visser, A.
+TI Antarctic krill sequester similar amounts of carbon to key coastal blue
+   carbon habitats
+SO NATURE COMMUNICATIONS
+AB The carbon sequestration potential of open-ocean pelagic ecosystems is vastly under-reported compared to coastal vegetation 'blue carbon' systems. Here we show that just a single pelagic harvested species, Antarctic krill, sequesters a similar amount of carbon through its sinking faecal pellets as marshes, mangroves and seagrass. Due to their massive population biomass, fast-sinking faecal pellets and the modest depths that pellets need to reach to achieve sequestration (mean is 381 m), Antarctic krill faecal pellets sequester 20 MtC per productive season (spring to early Autumn). This is equates USD$ 4 - 46 billion depending on the price of carbon, with krill pellet carbon stored for at least 100 years and with some reaching as far as the North Pacific. Antarctic krill are being impacted by rapid polar climate change and an expanding fishery, thus krill populations and their habitat warrant protection to preserve this valuable carbon sink.
+   Antarctic krill are important facilitators of carbon sequestration, transferring as much carbon to the deep ocean through their faeces as is stored in seagrass beds and mangrove forests.
+RI ; Belcher, Anna/PAU-2909-2025; Visser, Ane/G-6317-2015; Hill,
+   Simeon/B-2307-2008; cavan, emma/AFY-2671-2022
+OI Mackay, Neill/0000-0002-9758-1096; Belcher, Anna/0000-0002-9583-5910;
+   Visser, Ane/0000-0002-1604-7263; Hill, Simeon/0000-0003-1441-8769;
+   cavan, emma/0000-0003-1099-6705
+EI 2041-1723
+PD SEP 8
+PY 2024
+VL 15
+IS 1
+AR 7842
+DI 10.1038/s41467-024-52135-6
+UT WOS:001306766300001
+PM 39244635
+ER
+
+PT J
+AU Sylvester, ZT
+   Veytia, D
+   Bahl, AA
+   Bahlburg, D
+   Benkort, D
+   Bestley, S
+   Cagdas, B
+   Cleary, AC
+   Constable, A
+   Corney, S
+   Fach, BA
+   Hellessey, N
+   Hill, SL
+   Johnston, NM
+   Labrousse, S
+   Merkel, B
+   Murphy, EJ
+   Subramaniam, RC
+   Thorpe, S
+   Raymond, B
+AF Sylvester, Zephyr T.
+   Veytia, Devi
+   Bahl, Alexis A.
+   Bahlburg, Dominik
+   Benkort, Deborah
+   Bestley, Sophie
+   Cagdas, Bulut
+   Cleary, Alison C.
+   Constable, Andrew
+   Corney, Stuart
+   Fach, Bettina A.
+   Hellessey, Nicole
+   Hill, Simeon L.
+   Johnston, Nadine M.
+   Labrousse, Sara
+   Merkel, Benjamin
+   Murphy, Eugene J.
+   Subramaniam, Roshni C.
+   Thorpe, Sally
+   Raymond, Ben
+TI Untangling the complexities of larval Antarctic krill overwintering
+   success under climate change
+SO ICES JOURNAL OF MARINE SCIENCE
+AB Antarctic krill (Euphausia superba) are integral to Southern Ocean pelagic ecosystems. Winters with extensive sea ice have been linked to high post-larval krill recruitment the following spring, suggesting that sea ice plays a critical role in larval overwinter survival. As the ocean warms and sea ice declines under climate change, understanding the mechanisms linking sea ice and krill recruitment is increasingly urgent. To address this, we developed a qualitative network model (QNM) that integrates evidence-based and hypothesized interactions to explore larval overwinter survival and growth under future climate scenarios in the southwest Atlantic sector. Our model highlights habitat-specific impacts, with substantial declines predicted for the North Antarctic Peninsula continental shelf due to reduced autumn primary productivity and warming. In contrast, survival may improve in open-ocean habitats under cooler scenarios that enhance sea-ice-associated processes, such as food availability and refuge. The inclusion of hypothesized mechanisms, such as sea-ice terraces providing refuge from predation, strengthened these conclusions and highlighted critical uncertainties, including the influence of glacial melt on food web dynamics. These findings demonstrate the value of QNMs in complementing quantitative approaches, offering a framework for identifying critical mechanisms, addressing knowledge gaps, and guiding future field and laboratory studies to improve predictions of krill responses to climate change.
+RI Bahl, Alexis/AAQ-6928-2021; Subramaniam, Roshni/ADZ-6878-2022; Simeon,
+   Hill/B-2307-2008; murphy, eugene/GZL-1620-2022; Bestley,
+   Sophie/AAN-2483-2021; Hellessey, Nicole/B-1695-2016; Fach,
+   Bettina/JCE-6687-2023
+OI Bahl, Alexis/0000-0002-8575-2679; Benkort, Déborah/0000-0002-0489-8191;
+   Hellessey, Nicole/0000-0002-3053-8720; Sylvester,
+   Zephyr/0000-0002-2057-3741; Fach, Bettina/0000-0003-4688-1918
+SN 1054-3139
+EI 1095-9289
+PD APR
+PY 2025
+VL 82
+IS 4
+AR fsaf049
+DI 10.1093/icesjms/fsaf049
+UT WOS:001469122800001
+ER
+
+PT J
+AU Zhao, YX
+   Wang, XL
+   Zhang, JC
+   Zhao, XY
+   Ying, YP
+   Zhu, JC
+   Fan, GZ
+   Xu, QC
+   Liu, L
+   Mu, XX
+AF Zhao, Yunxia
+   Wang, Xinliang
+   Zhang, Jichang
+   Zhao, Xianyong
+   Ying, Yiping
+   Zhu, Jiancheng
+   Fan, Gangzhou
+   Xu, Qingchang
+   Liu, Lu
+   Mu, Xiuxia
+TI Seasonal dynamics of an Antarctic krill resource hot spot in the
+   Bransfield Strait, Antarctica
+SO MARINE AND COASTAL FISHERIES
+AB Objective Antarctic krill Euphausia superba is an important species in the Southern Ocean ecosystem. Understanding the trends and variability of the krill biomass is critical for understanding the three-way interactions between resources, krill-dependent predators, and fisheries, particularly given the recent concentration of fishing activities in specific areas. The purpose of this study was to enhance our understanding of the seasonal dynamics and potential influence of environmental factors in a krill resource hot spot in the Bransfield Strait.Methods Based on acoustic data that were collected by krill fishing vessels during the 2012/2013 to 2021/2022 fishing seasons, this study used statistical bootstrapping to identify a perennial hot spot of krill at the Bransfield Strait. The data for catch per effort were also analyzed to corroborate the trends that were observed in the acoustic data. Additionally, a correlational analysis was conducted to determine the relation between the physical environment and krill density.Results The results suggested that krill biomass exhibited seasonal dynamic variation, characterized by substantial monthly increases from austral summer to autumn. The local scale of the krill biomass in the hot spot during autumn could be several times greater than that estimated from acoustic transect surveys for the entire Bransifield Strait stratum in summer. The data for catch per effort supported the trend of monthly variability. Krill were found to be concentrated mainly in sea areas with temperature ranges of -1 degrees C to 1.5 degrees C and flow velocities <0.05 m/s. The position of oceanic fronts and the properties of water masses strongly regulated the seasonal variation in krill density.Conclusions The study identified a perennial krill hot spot in the Bransfield Strait that is characterized by significant seasonal variation in biomass. The findings highlight the importance of specific environmental conditions in regulating krill density and suggest that understanding these dynamics is crucial for managing krill fisheries and protecting krill-dependent predators.
+RI Xu, Qingchang/GRX-6610-2022; Yunxia, Zhao/NAZ-3350-2025
+OI Yunxia, Zhao/0000-0003-4230-6799; wang, xinliang/0000-0002-9321-3069
+SN 1942-5120
+PD MAY
+PY 2025
+VL 17
+IS 3
+AR vtaf012
+DI 10.1093/mcfafs/vtaf012
+UT WOS:001518620900001
+ER
+
+PT J
+AU Xiang, XW
+   Zhou, XL
+   Wang, WJ
+   Zhou, YF
+   Zhou, XX
+   Deng, SG
+   Zheng, B
+   Wen, ZS
+AF Xiang, Xingwei
+   Zhou, Xiaoling
+   Wang, Wenjie
+   Zhou, Yufang
+   Zhou, Xuxia
+   Deng, Shanggui
+   Zheng, Bin
+   Wen, Zhengshun
+TI Effect of Antarctic krill phospholipid (KOPL) on high fat diet-induced
+   obesity in mice
+SO FOOD RESEARCH INTERNATIONAL
+AB Phospholipids are the main lipid components in Antarctic krill oil, and the combination of n-3 polyunsaturated fatty acids (n-3 PUFAs) shows multiple nutritional advantages. At present, the research about Antarctic krill phospholipid (KOPL) mainly focuses on the purification, and there are few reports on the anti-obesity effect. Thus, this study aimed at evaluating the effect of KOPL on the high-fat diet (HFD)-induced obesity mice. All the mice were divided into five groups, which were fed chow diet, HFD, and different doses of KOPL + HFD, respectively. The results showed that KOPL treatment could reduce the weight gain, fat accumulation, and liver tissue damage in HFD-induced mice. KOPL treatment could reduce the levels of serum lipid (TC, TG, L-LDL) and fasting blood glucose in HFD-induced mice, and the inflammatory cytokines (IL-1 beta and TNF-alpha) in serum. Further analysis showed that KOPL could promote the normal expression of lipid-synthesis-related genes and proteins, including sterol regulatory element-binding protein-1c (SREBP-1c), fatty acid synthetase (FAS), and peroxisome proliferator-activated receptor alpha (PPAR-alpha) in liver tissue. Besides, it inhibited the overexpression of inflammatory cytokine genes (IL-1 beta and TNF-alpha), but increased the expression of tight junction genes (ZO-1 and Occludin) in the colon tissue. Additionally, KOPL improved the decrease of diversity and imbalance of intestinal microbiota, which could contribute to its beneficial effects. In summary, the KOPL treatment improves the effects of HFD-induced obese mice by maintaining normal lipid levels, protecting the liver tissue, reducing inflammation response and intestinal damage, and regulating intestinal microbiota abnormalities. It refer to KOPL could be a promising dietary strategy for treating obesity and improving its related metabolic diseases.
+RI Zhou, Xuxia/ACS-0757-2022; Wang, Wenjie/KVZ-2127-2024
+OI Zhou, Xuxia/0000-0002-7059-839X; Wang, Wenjie/0000-0002-1914-4683
+SN 0963-9969
+EI 1873-7145
+PD OCT
+PY 2021
+VL 148
+AR 110456
+DI 10.1016/j.foodres.2021.110456
+EA JUL 2021
+UT WOS:000697718700001
+PM 34507719
+ER
+
+PT J
+AU Guo, C
+   Zeng, XB
+   Peng, B
+   Yin, FW
+   Liu, HL
+   Zhu, BW
+   Zhou, DY
+AF Guo, Chao
+   Zeng, Xiang-Bo
+   Peng, Bo
+   Yin, Fa-Wen
+   Liu, Hui-Lin
+   Zhu, Bei-Wei
+   Zhou, Da-Yong
+TI Study on mechanism behind browning of Antarctic krill upon hot air
+   drying and its control
+SO FOOD CHEMISTRY
+AB Cooked Antarctic krill (AK) was sprayed with antioxidants, followed by hot air drying (HAD) to produce AK meal (AKM). The antioxidants could alleviate color darkening, reduce oxidation of lipids and proteins, among which tea polyphenol palmitate (TPP) + antioxidant of bamboo leaf (AOB) exhibited the best effect on improving overall quality of AKM. The color indicator (L*) was negatively correlated with hydrophilic pyrrole, hydrophobic pyrrole and lipid oxidation indexes, suggesting that Maillard-like reaction and lipid oxidation contributed to the color darkening. Furthermore, AK oil (AKO) extracted from the AKM treated with TPP + AOB showed lower initial oxidation level and better storage stability (peroxide value (POV): from 1.84 to 7.20 mg CHP/g, thiobarbituric acid reactive substances (TBARs): from 0.62 to 0.97 ppm) compared to that from the control AKM (POV: from 2.31 to 7.64 mg CHP/g, TBARs: from 0.68 to 1.04 ppm).
+RI 刘, 慧琳/GWV-6504-2022
+SN 0308-8146
+EI 1873-7072
+PD JUN 15
+PY 2025
+VL 477
+AR 143500
+DI 10.1016/j.foodchem.2025.143500
+EA FEB 2025
+UT WOS:001434781500001
+PM 40010198
+ER
+
+PT J
+AU Yang, L
+   Zheng, Y
+   Zhang, SS
+   Wang, X
+   Guo, QY
+AF Yang, Liu
+   Zheng, Yao
+   Zhang, Shuaishuai
+   Wang, Xin
+   Guo, Quanyou
+TI Effects of boiling, centrifuging and drying methods on bioactive
+   compounds in Antarctic krill meal
+SO INTERNATIONAL JOURNAL OF FOOD SCIENCE AND TECHNOLOGY
+AB Boiling, centrifuging and various drying techniques (vacuum freeze-drying (VFD), vacuum drying (VD), hot-air drying (HAD) and microwave drying (MWD)) were assessed for their impact on bioactive compounds in Antarctic krill meal. A comparison between the raw and boiling groups revealed a significant degradation and isomerisation of astaxanthin, accompanied by a 1.25-fold and 1.32-fold increase in saturated (SFAs) and monounsaturated fatty acids (MUFAs), respectively. Drying was the primary factor responsible for the reduction in phospholipids, alpha-tocopherol and polyunsaturated fatty acid (PUFAs), in combination with the increase in thiobarbituric acid-reactive substances. For different drying methods, it was found that HAD induced severe lipid oxidation. In contrast, the VFD, VD and MWD improved lipid quality, reducing thiobarbituric acid-reactive substances (TBARS) by 13-22% and increasing phospholipids by 1.08-1.11 times compared to HAD. VD preserved higher levels of bioactive compounds. PLS-DA analysis identified 13-cis-astaxanthin, alpha-tocopherol and eleven fatty acids as key indicators for Antarctic krill meal.
+   A land-based simulation of the production of Antarctic krill meal was conducted, with the objective of determining the changes in bioactive compounds that occur during the manufacturing process. The key indicators were identified through the application of multivariate regression analysis. image
+RI Wang, Xin/LSL-0396-2024
+OI Zheng, Yao/0000-0003-0796-2184; yang, liu/0009-0002-0410-2824
+SN 0950-5423
+EI 1365-2621
+PD SEP
+PY 2024
+VL 59
+IS 9
+BP 6409
+EP 6420
+DI 10.1111/ijfs.17386
+EA JUL 2024
+UT WOS:001275961800001
+ER
+
+PT J
+AU Möller, L
+   Vainshtein, Y
+   Meyer, B
+   Neidhardt, J
+   Eren, AM
+   Sohn, K
+   Rabus, R
+AF Moeller, Lars
+   Vainshtein, Yevhen
+   Meyer, Bettina
+   Neidhardt, John
+   Eren, A. Murat
+   Sohn, Kai
+   Rabus, Ralf
+TI Rich microbial and depolymerising diversity in Antarctic krill gut
+SO MICROBIOLOGY SPECTRUM
+AB With almost a quadrillion individuals, the Antarctic krill processes five million tons of organic carbon every day during austral summer. This high carbon flux requires a broad range of hydrolytic enzymes to decompose the diverse food-derived biopolymers. While krill itself possesses numerous such enzymes, it is unclear, to what extent the endogenous microbiota contribute to the hydrolytic potential of the gut environment. Here we applied amplicon sequencing, shotgun metagenomics, cultivation, and physiological assays to characterize the krill gut microbiota. The broad bacterial diversity (273 families, 919 genera, and 2,309 species) also included a complex potentially anaerobic sub-community. Plate-based assays with 198 isolated pure cultures revealed widespread capacities to utilize lipids (e.g., tributyrin), followed by proteins (casein) and to a lesser extent by polysaccharides (e.g., alginate and chitin). While most isolates affiliated with the genera Pseudoalteromonas and Psychrobacter, also Rubritalea spp. (Verrucomicrobia) were observed. The krill gut microbiota growing on marine broth agar plates possess 13,012 predicted hydrolyses; 15-fold more than previously predicted from a transcriptome-proteome compendium of krill. Cultivation-independent and -dependent approaches indicated members of the families Flavobacteriaceae and Pseudoalteromonadaceae to dominate the capacities for lipid/protein hydrolysis and to provide a plethora of carbohydrate-active enzymes, sulfatases, and laminarin- or porphyrin-depolymerizing hydrolases. Notably, also the potential to hydrolyze plastics such as polyethylene terephthalate and polylactatide was observed, affiliating mostly with Moraxellaceae. Overall, this study shows extensive microbial diversity in the krill gut, and suggests that the microbiota likely play a significant role in the nutrient acquisition of the krill by enriching its hydrolytic enzyme repertoire.IMPORTANCEThe Antarctic krill (Euphausia superba) is a keystone species of the Antarctic marine food web, connecting the productivity of phyto- and zooplankton with the nutrition of the higher trophic levels. Accordingly, krill significantly contributes to biomass turnover, requiring the decomposition of seasonally varying plankton-derived biopolymers. This study highlights the likely role of the krill gut microbiota in this ecosystem function by revealing the great number of diverse hydrolases that microbes contribute to the krill gut environment. The here resolved repertoire of hydrolytic enzymes could contribute to the overall nutritional resilience of krill and to the general organic matter cycling under changing environmental conditions in the Antarctic sea water. Furthermore, the krill gut microbiome could serve as a valuable resource of cold-adapted hydrolytic enzymes for diverse biotechnological applications.
+   The Antarctic krill (Euphausia superba) is a keystone species of the Antarctic marine food web, connecting the productivity of phyto- and zooplankton with the nutrition of the higher trophic levels. Accordingly, krill significantly contributes to biomass turnover, requiring the decomposition of seasonally varying plankton-derived biopolymers. This study highlights the likely role of the krill gut microbiota in this ecosystem function by revealing the great number of diverse hydrolases that microbes contribute to the krill gut environment. The here resolved repertoire of hydrolytic enzymes could contribute to the overall nutritional resilience of krill and to the general organic matter cycling under changing environmental conditions in the Antarctic sea water. Furthermore, the krill gut microbiome could serve as a valuable resource of cold-adapted hydrolytic enzymes for diverse biotechnological applications.
+RI Meyer, Bettina/ABB-5311-2020; Eren, A Murat/J-3408-2014; Neidhardt,
+   John/J-4310-2017; Eren, A./J-3408-2014
+OI Meyer, Bettina/0000-0001-6804-9896; Eren, A Murat/0000-0001-9013-4827;
+   Neidhardt, John/0000-0002-9205-8394; Vainshtein,
+   Yevhen/0000-0001-7944-8892
+EI 2165-0497
+PD APR 2
+PY 2024
+VL 12
+IS 4
+DI 10.1128/spectrum.04035-23
+EA MAR 2024
+UT WOS:001182082900002
+PM 38466097
+ER
+
+PT J
+AU Yang, JQ
+   Zhu, BW
+   Lin, SY
+AF Yang, Jingqi
+   Zhu, Beiwei
+   Lin, Songyi
+TI Investigation of the Antarctic krill tripeptide Phe-Pro-Phe (FPF) for
+   its antioxidant properties and mechanism
+SO FOOD BIOSCIENCE
+AB Oxidative stress causes damage to cells and brain injury-associated disorders. The study aimed to investigate how the tripeptide Phe-Pro-Phe (FPF), derived from an antioxidant-rich Antarctic krill peptide Ser-Ser-Asp-Ala-PhePhe-Pro-Phe-Arg (SSDAFFPFR), could protect against oxidative stress caused by scopolamine. Utilizing mouse and cell models to induce oxidative stress injury with scopolamine, coupled with Fourier transform infrared (FTIR) microscopy, immunofluorescence, and mitochondrial function assays, the study demonstrated that FPF significantly reduced malondialdehyde (MDA) and reactive oxygen species (ROS) levels, as well as decreasing the expression level of the apoptotic protein Caspase-3, while also increasing superoxide dismutase (SOD) activity and unsaturated lipid levels. Furthermore, FPF significantly improved mitochondrial aerobic respiration oxygen consumption rate (OCR) and anaerobic glycolytic metabolism extracellular acidification rate (ECAR) in mouse hippocampal neuron (HT22) cells. The results indicated that FPF protected against scopolamine-induced oxidative stress by regulating anti-oxidative activity, enhancing Caspase-3 expression, increasing unsaturated lipid levels, and improving cellular energy metabolism.
+SN 2212-4292
+EI 2212-4306
+PD AUG
+PY 2024
+VL 60
+AR 104348
+DI 10.1016/j.fbio.2024.104348
+EA MAY 2024
+UT WOS:001243364900001
+ER
+
+PT J
+AU Johannessen, ED
+   Krafft, BA
+   Donovan, CR
+   Wiff, R
+   Caneco, B
+   Lowther, A
+AF Johannessen, Elling Deehr
+   Krafft, Bjorn A.
+   Donovan, Carl R.
+   Wiff, Rodrigo
+   Caneco, Bruno
+   Lowther, Andrew
+TI Sensitivity of the stock assessment for the Antarctic krill fishery to
+   time-varying natural and fishing mortality
+SO FISHERIES MANAGEMENT AND ECOLOGY
+AB The stock assessment model for the Antarctic krill fishery is a population model operating on daily timesteps, which permits modeling within-year patterns of some population dynamics. We explored the effects of including within-year patterns in natural and fishing mortality on catch limits of krill, by incorporating temporal presence of key predator species and contemporary temporal trends of the fishing fleet. We found that inclusion of within-year variation in natural and fishing mortalities increased catch limits. Fishing mortality had a greater effect than natural mortality despite differences in top-down predation on krill, and potentially increased catch limits by 24% compared to the baseline model. Additionally, the stock assessment model allowed a higher catch limit when fishing was during peak summer months than autumn. Number of days with active fishing was negatively related to precautionary catch limits. Future stock assessments should incorporate contemporary spatiotemporal fishing trends and consider implementing additional ecosystem components into the model.
+RI ; Lowther, Anew/T-2511-2019
+OI Roigues Caneco, Bruno Alexane/0009-0009-0124-7156; Wiff,
+   Roigo/0000-0001-7330-4206; Deehr Johannessen,
+   Elling/0000-0003-3515-5697; Lowther, Anew/0000-0003-4294-3157; Krafft,
+   Bjørn A/0000-0002-7432-3051; Donovan, Carl/0000-0002-1465-5193
+SN 0969-997X
+EI 1365-2400
+PD DEC
+PY 2024
+VL 31
+IS 6
+DI 10.1111/fme.12721
+EA JUN 2024
+UT WOS:001257204500001
+ER
+
+PT J
+AU Manno, C
+   Corsi, I
+   Rowlands, E
+   Bergami, E
+AF Manno, C.
+   Corsi, I.
+   Rowlands, E.
+   Bergami, E.
+TI Plastics counteract the ability of Antarctic krill to promote the blue
+   carbon pathway in the deep ocean
+SO MARINE POLLUTION BULLETIN
+AB The Antarctic krill (Euphausia superba) play a critical role in promoting the so-called "blue carbon pathway" by producing a large amount of fast-sinking faecal pellets (FPs) which facilitate the transport of CO2 through the water column. Here we assess how exposure to negatively (PS-COOH) and positively (PS-NH2) charged polystyrene nanoparticles, impacts degradation of krill FPs (i.e. change in peritrophic membrane state, Carbon concentration and Carbon/Nitrogen ratio). Our findings suggest that exposure of nanoplastics, particularly negatively charged particles, increases krill FP degradation. This can result in a potential loss of FP-sequestrated C of up to 27 %, equivalent to up 5.5 Mt. C per productive season (Spring-early Autumn). This study provides new insights into how increasing levels of plastic pollution could affect the natural capital provided by krill FPs. The effect of this emerging anthropogenic contaminant should be considered by international policies focused on climate change mitigation and adaptation.
+RI Bergami, Elisa/JFJ-1703-2023; Corsi, Ilaria/D-3795-2012; Rowlands,
+   Emily/OSI-2488-2025
+OI Bergami, Elisa/0000-0001-8149-9584; 
+SN 0025-326X
+EI 1879-3363
+PD DEC
+PY 2024
+VL 209
+AR 117238
+DI 10.1016/j.marpolbul.2024.117238
+EA NOV 2024
+PN B
+UT WOS:001354085700001
+PM 39515283
+ER
+
+PT J
+AU Luo, JR
+   Yang, YY
+   Wang, TW
+   Huang, ZX
+   Zhu, XP
+   Xie, LL
+   Li, YF
+   Ke, JW
+   Wang, XS
+   Jin, J
+   Guo, YB
+   Xie, D
+AF Luo, Jingru
+   Yang, Yunyun
+   Wang, Taiwei
+   Huang, Zhaoxian
+   Zhu, Xiping
+   Xie, Liangliang
+   Li, Yufeng
+   Ke, Jiawei
+   Wang, Xiaosan
+   Jin, Jun
+   Guo, Yubao
+   Xie, Dan
+TI Factors Influencing the Oxidative Stability of Antarctic Krill Oil and
+   Improvement Measures: a Review with Current Knowledge
+SO FOOD AND BIOPROCESS TECHNOLOGY
+AB Antarctic krill oil (AKO) has been considered as an alternative to marine fish oil due to its high level of n-3 polyunsaturated fatty acids (PUFAs). Also, it has the potential risk of oxidation. However, AKO shows a much more diverse lipid profile compared to traditional edible oil and is characterized of high contents of phospholipids associated with n-3 PUFA. This indicates the conventional free radical chain reaction cannot comprehensively explain the oxidation mechanisms of AKO because various side reactions may occur due to its complex composition and special n-3 PUFA form. However, current studies on AKO have been mostly focused on extraction techniques and physiological activities, but systematic studies on its oxidation are still lacking. This review firstly describes the roles of different lipid components on the oxidative stability of AKO and their possible mechanisms. Then, the main reaction pathways involved in the oxidation of AKO are summarized with the attempt to elucidate the oxidation mechanism in AKO. On this basis, some possible measures to reduce lipid oxidation of AKO are proposed from multiple perspectives. Also, some of the challenges in assessing the level of AKO oxidation and current measures are summarized. The discussion of this review can provide theoretical references for further study on the storage stability of AKO, which is in turn to improve the quality and healthy utilization of AKO.
+RI Li, Yufeng/KLD-2943-2024; Luo, Jingru/KGL-1127-2024; Jin,
+   Jun/U-4130-2019; Huang, Zhaoxian/AAM-5113-2021
+SN 1935-5130
+EI 1935-5149
+PD MAY
+PY 2025
+VL 18
+IS 5
+BP 4081
+EP 4100
+DI 10.1007/s11947-024-03658-9
+EA NOV 2024
+UT WOS:001353795000001
+ER
+
+PT J
+AU Gao, YH
+   Ding, ZS
+   Liu, YF
+   Xu, YJ
+AF Gao, Yuhang
+   Ding, Zhansheng
+   Liu, Yuanfa
+   Xu, Yong-Jiang
+TI Advances in encapsulation systems of Antarctic krill oil: From
+   extraction to encapsulation, and future direction
+SO COMPREHENSIVE REVIEWS IN FOOD SCIENCE AND FOOD SAFETY
+AB Antarctic krill oil (AKO) is highly sought after by consumers and the food industry due to its richness in a variety of nutrients and physiological activities. However, current extraction methods are not sufficient to better extract AKO and its nutrients, and AKO is susceptible to lipid oxidation during processing and storage, leading to nutrient loss and the formation of off-flavors and toxic compounds. The development of various extraction methods and encapsulation systems for AKO to improve oil yield, nutritional value, antioxidant capacity, and bioavailability has become a research hotspot. This review summarizes the research progress of AKO from extraction to encapsulation system construction. The AKO extraction mechanism, technical parameters, oil yield and composition of solvent extraction, aqueous enzymatic extraction, supercritical/subcritical extraction, and three-liquid-phase salting-out extraction system are described in detail. The principles, choice of emulsifier/wall materials, preparation methods, advantages and disadvantages of four common encapsulation systems for AKO, namely micro/nanoemulsions, microcapsules, liposomes and nanostructured lipid carriers, are summarized. These four encapsulation systems are characterized by high encapsulation efficiency, low production cost, high bioavailability and high antioxidant capacity. Depending on the unique advantages and conditions of different encapsulation methods, as well as consumer demand for health and nutrition, different products can be developed. However, existing AKO encapsulation systems lack relevant studies on digestive absorption and targeted release, and the single product category of commercially available products limits consumer choice. In conjunction with clinical studies of AKO encapsulation systems, the development of encapsulation systems for special populations should be a future research direction.
+RI Yuanfa, Liu/ABH-9944-2020; GAO, YUHANG/IAM-2032-2023; Xu,
+   Yongjiang/MHR-3290-2025
+SN 1541-4337
+PD APR 5
+PY 2024
+VL 23
+IS 3
+AR e13332
+DI 10.1111/1541-4337.13332
+UT WOS:001197134500001
+PM 38578167
+ER
+
+PT J
+AU Steinke, KB
+   Bernard, KS
+   Reiss, CS
+   Walsh, J
+   Correa, GM
+   Stammerjohn, SE
+AF Steinke, Kirsten B.
+   Bernard, Kim S.
+   Reiss, Christian S.
+   Walsh, Jennifer
+   Correa, Giancarlo M.
+   Stammerjohn, Sharon E.
+TI Factors impacting the timing of reproductive development in female
+   Antarctic krill at the northwestern Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB The northwestern Antarctic Peninsula is an important spawning, recruitment, and overwintering ground for Antarctic krill. The region is warming rapidly, and the current impacts of climate and environmental variability on the reproductive cycle of krill remain unclear. Here, we examine the reproductive stage of female krill in the austral winter from 2012 to 2016 in relation to climate and environmental data to assess what factors influence the timing of reproductive development. We observed significant interannual variability in the degree of maturation in female krill, ranging from 48% of female krill measured at a station in 2016 to a maximum of 94% of female krill measured at a station in 2014. On average, across all five years, three-quarters of the female krill sampled were in the stage known as previtellogenesis, the point at which the onset of sexual maturity begins. The preceding spring, summer, and autumn Southern Annular Mode and the Multivariate El Ni & ntilde;o Index explained most of the variance in the data and indicated a strong, preconditioning storm-related effect on environmental conditions leading up to winter, affecting krill maturation status at the end of the winter season. Results from our study can be used to improve krill population models that are necessary for the management of the krill fishery and for conservation at the northwestern Antarctic Peninsula.
+RI M Correa, Giancarlo/AEW-8260-2022; Bernard, Kim/J-2703-2013
+OI M Correa, Giancarlo/0000-0003-0682-1152; Bernard,
+   Kim/0000-0003-0509-2744
+EI 2296-7745
+PD JUL 1
+PY 2024
+VL 11
+AR 1383175
+DI 10.3389/fmars.2024.1383175
+UT WOS:001267398000001
+ER
+
+PT J
+AU Su, D
+   Ma, XY
+   Miao, JK
+   Liu, XF
+   Zhang, YT
+   Zhao, L
+   Leng, KL
+   Wang, XX
+   Yu, YQ
+AF Su, Dong
+   Ma, Xinyu
+   Miao, Junkui
+   Liu, Xiaofang
+   Zhang, Yating
+   Zhao, Ling
+   Leng, Kailiang
+   Wang, Xixi
+   Yu, Yueqin
+TI DNA enrichment using deep eutectic solvents for improved PCR detection
+   in Antarctic krill oil
+SO SEPARATION AND PURIFICATION TECHNOLOGY
+AB The commercialization of Antarctic krill oil raises concerns about product authenticity and adulteration. In this study, we developed a DNA-based authentication method for Antarctic krill oil. Species-specific PCR primers targeting a 157-bp fragment of the Euphausia superba 16S rRNA gene were designed, enabling high-specificity differentiation from Thunnus alalunga, Gadus ogac, and Salmo salar. The optimized PCR method achieved a detection sensitivity of 0.1 ng DNA/reaction. To address challenges in DNA extraction from complex lipid matrices, n-hexane and choline-based deep eutectic solvents (DES) were screened for their ability to separate interferents and enrich DNA. Among these, choline chloride-formic acid was selected as the optimal solvent due to its broader positive electrostatic potential (ESP) distribution (108.7 & Aring;(2), 56.0%). Post-PCR analysis successfully distinguished Antarctic krill oil from other edible oils. This work provides a robust tool for protecting high-value oils and advancing authenticity verification in related products.
+RI Ma, Xinyu/LXX-0408-2024; liu, algae/JQW-1815-2023
+OI Wang, Xixi/0000-0003-4633-2345; Su, Dong/0009-0006-6912-3473; 
+SN 1383-5866
+EI 1873-3794
+PD NOV 28
+PY 2025
+VL 374
+AR 133651
+DI 10.1016/j.seppur.2025.133651
+EA MAY 2025
+UT WOS:001500431900005
+ER
+
+PT J
+AU Yang, CY
+   Li, J
+   Wang, SM
+   Wang, YR
+   Jia, J
+   Wu, WF
+   Hu, JN
+   Zhao, Q
+AF Yang, Chunyu
+   Li, Jian
+   Wang, Shimiao
+   Wang, Yiran
+   Jia, Jiao
+   Wu, Wenfei
+   Hu, Jiangning
+   Zhao, Qi
+TI Determination of free fatty acids in Antarctic krill meals based on
+   matrix solid phase dispersion
+SO FOOD CHEMISTRY
+AB Amino-modified mesoporous silica was prepared by modifying mesoporous silica with 3-aminopropyltriethoxysilane and used as adsorbents in matrix solid-phase dispersion (MSPD) to analyze free fatty acids (FFAs) in krill meals for the first time. The adsorption-desorption experiments and Fourier-transform infrared spectroscopy showed amino-modified mesoporous silica with ordered mesoporous structure was successfully synthesized. The adsorption experiments including static and dynamic adsorption showed that absorption capacity of amino-modified mesoporous silica towards FFAs was better than that of aminated silicon microspheres at all concentrations. Under optimal extraction conditions, outstanding linearity (0.1-12000 nmol g(-1)), low LODs (0.05-1.25 nmol g(-1)), satisfactory recoveries (82.17-96.43%) and precisions (0.19-5.26%) were obtained. Moreover, the application of MSPD for FFAs analysis avoided complicated lipid extraction procedures and accomplished the homogenization, crushing, extraction and cleaning of the samples in one step. Consequently, this approach provides an alternative choice to the existing approach for analyzing FFAs in solid and semi-solid samples.
+SN 0308-8146
+EI 1873-7072
+PD AUG 1
+PY 2022
+VL 384
+AR 132620
+DI 10.1016/j.foodchem.2022.132620
+EA MAR 2022
+UT WOS:000777774100012
+PM 35413776
+ER
+
+PT J
+AU Teng, XN
+   Wang, SC
+   Zeb, L
+   Dong, YS
+   Xiu, ZL
+AF Teng, Xin-Nan
+   Wang, Shu-Chang
+   Zeb, Liaqat
+   Dong, Yue-Sheng
+   Xiu, Zhi-Long
+TI Two-Step Enzymolysis of Antarctic Krill for Simultaneous Preparation of
+   Value-Added Oil and Enzymolysate
+SO MARINE DRUGS
+AB Antarctic krill is a crucial marine resource containing plenty of high-valued nutrients. However, krill oil as a single product has been developed by the current solvent extraction with high cost. From the perspective of comprehensive utilization of Antarctic krill, this study proposed a novel two-step enzymolysis-assisted extraction in attempt to produce value-added oil and enzymolysate simultaneously. After two-step chitinase/protease hydrolysis, the lipid yield increased from 2.09% to 4.18%, reaching 112% of Soxhlet extraction. The method greatly improved the yields of main components while reducing the impurity content without further refining. After optimization, the oil contained 246.05 mg/g of phospholipid, 80.96 mg/g of free eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), and 0.82 mg/g of astaxanthin. The by-product enzymolysate was abundant in water-soluble proteins (34.35 mg/g), oligopeptides (13.92 mg/g), amino acids (34.24 mg/g), and carbohydrates (5.79 mg/g), which was a good source of functional nutrients. In addition, both oil and enzymolysate showed high antioxidant capacity. This novel method could simultaneously provide oil and enzymolysate amounting for 58.61% of dried krill.
+RI Zeb, Liaqat/AAZ-9953-2020; dong, yuesheng/ABA-7029-2020; TENG,
+   Xin-Nan/JMD-0656-2023
+OI Zeb, Liaqat/0000-0002-3657-5362; dong, yuesheng/0000-0001-5010-6426; 
+EI 1660-3397
+PD JAN
+PY 2023
+VL 21
+IS 1
+AR 47
+DI 10.3390/md21010047
+UT WOS:000915155000001
+PM 36662220
+ER
+
+PT J
+AU Bahlburg, D
+   Menze, S
+   Krafft, BA
+   Lowther, AD
+   Meyer, B
+AF Bahlburg, Dominik
+   Menze, Sebastian
+   Krafft, Bjorn A.
+   Lowther, Andy D.
+   Meyer, Bettina
+TI Mapping encounters between Antarctic krill fishing vessels and
+   air-breathing krill predators using acoustic data from the fishery
+SO PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF
+   AMERICA
+AB Antarctic krill is a keystone species in the Antarctic marine ecosystem and the target of a growing fishery. Given the ecological importance of krill, concerns have been raised about potential negative impacts of fishing on the Southern Ocean ecosystem. Resource-efficient approaches to fisheries monitoring are particularly valuable in this context due to the high costs associated with data collection in Antarctica. In this study, we trained a segmentation model (U-Net) to extract dives of air-breathing krill predators from more than 30,000 h of active acoustic data collected by three krill fishing vessels over six years. We were able to characterize the temporal and spatial dynamics of predator-vessel co-occurrences, which aligned well with the findings from more costly tracking studies. For example, we found that encounters with whales consistently peaked in autumn around the Antarctic Peninsula, when whales are building up fat reserves for their migration to breeding grounds. We also demonstrated that protection measures, introduced to protect breeding penguins at the Antarctic Peninsula, have simply shifted penguin-vessel encounters to the South Orkney Islands, where the affected colonies are not currently monitored. Our approach, results, and application example demonstrate how acoustic data from fishing vessels can provide important information to support fisheries management. As a by-product of fishing operations, these data are costeffective, offering unique temporal and spatial coverage and providing a useful basis for rapid, low-level assessments of the fishery's interaction with the wider ecosystem. This is particularly important given the unpredictable dynamics of krill fishery management decision-making.
+RI ; Meyer, Bettina/ABB-5311-2020
+OI Bahlburg, Dominik/0000-0003-0210-0649; Meyer,
+   Bettina/0000-0001-6804-9896
+SN 0027-8424
+EI 1091-6490
+PD JUN 24
+PY 2025
+VL 122
+IS 25
+AR e2417203122
+DI 10.1073/pnas.2417203122
+UT WOS:001521539000001
+PM 40523191
+ER
+
+PT J
+AU Li, Y
+   Yu, XN
+   Liu, R
+   Liu, XY
+   Yin, FW
+   Li, DY
+   Jiang, PF
+   Zhou, DY
+AF Li, Yang
+   Yu, Xuening
+   Liu, Rui
+   Liu, Xiaoyang
+   Yin, Fawen
+   Li, Deyang
+   Jiang, Pengfei
+   Zhou, Dayong
+TI Application of resveratrol on oxidative stability of protein-based
+   Antarctic krill oil high internal phase emulsion
+SO FOOD CHEMISTRY-X
+AB Antarctic krill oil (KO) is known for its poor oxidative stability, especially in emulsion systems. In this experiment, a complex of scallop water-soluble protein-resveratrol (SWPs-RES) was mixed with KO to create high internal phase emulsions (HIPEs) with varying RES ratios. The addition of RES led to noticeable conformational changes in SWPs, including fluorescence bursts, alterations in secondary structure, and modifications in binding motifs. The SWPs-RES complex (1:0.2) demonstrated the most effective free radical scavenging activities (HO: 38.61%, DPPH: 72.49%, ABTS: 85.66%), while the SWPs-RES complex (1:0.025) exhibited the highest emulsifying capacity. Furthermore, HIPEs containing the SWPs-RES complex (1:0.2) displayed improved rheological properties, physical stability, and enhanced oxidative stability against lipid oxidation during storage and simulated in vitro digestion. This study lays a scientific foundation for the utilization of scallop protein and Antarctic krill oil in the food industry.
+SN 2590-1575
+PD OCT 30
+PY 2024
+VL 23
+AR 101727
+DI 10.1016/j.fochx.2024.101727
+EA AUG 2024
+UT WOS:001298043500001
+PM 39253012
+ER
+
+PT J
+AU Perry, FA
+   Sailley, SF
+   Atkinson, A
+   Mayor, DJ
+   Lucas, CH
+   Tarling, GA
+AF Perry, F. A.
+   Sailley, S. F.
+   Atkinson, A.
+   Mayor, D. J.
+   Lucas, C. H.
+   Tarling, G. A.
+TI Seasonal and spatial patterns of adult Antarctic krill at the Antarctic
+   Peninsula: insights from a 41 year data analysis
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Locating the spawning grounds of Antarctic krill Euphausia superba is key to understanding their population dynamics and managing the commercial krill fishery. In the shelf waters of the Antarctic Peninsula where krill and their fishery are concentrated, a recent relaxation of fishing quotas has meant that locally successful spawning grounds could become increasingly targeted. This study revisits the existing paradigm that in summer, larger adult krill migrate away from these shelf-based fishing grounds, out towards oceanic waters to spawn off the shelf break (>1000 m). Our findings support a seasonal on-shelf division of adult krill, with smaller krill closer inshore. However, contrary to current understanding, our results suggest that 85% of the largest and most fecund >50 mm krill remain on-shelf during the summer spawning season. All adults (>30 mm) were strongly concentrated over the shelf throughout the whole spring-summer-autumn transition, with no evidence for any summer redistribution off-shelf. The Western Antarctic Peninsula (WAP) has strong on-shelf-off-shelf gradients in chlorophyll a and sea surface temperature, and based on generalised additive models, our study suggests that the high food requirement of adult krill, coupled with an oligotrophic off-shelf environment, contributes to the distribution of krill observed at the Antarctic Peninsula. The concentration of large, nutritious krill over the shelf throughout the season may be advantageous to land-based predators but raises concern for the management of fisheries that are becoming increasingly concentrated within the key adult krill habitat along the northern shelf of the WAP.
+RI Mayor, Daniel/HDN-8520-2022; Lucas, Cathy/N-1230-2013
+OI Tarling, Geraint/0000-0002-3753-5899; Lucas, Cathy/0000-0002-5929-7481
+SN 0171-8630
+EI 1616-1599
+PD JUL 24
+PY 2025
+VL 765
+BP 1
+EP 16
+DI 10.3354/meps14899
+UT WOS:001538021500004
+ER
+
+PT J
+AU Xie, D
+   He, FY
+   Wang, XS
+   Wang, XG
+   Jin, QZ
+   Jin, J
+AF Xie, Dan
+   He, Fangyuan
+   Wang, Xiaosan
+   Wang, Xingguo
+   Jin, Qingzhe
+   Jin, Jun
+TI Diverse Krill Lipid Fractions Differentially Reduce LPS-Induced
+   Inflammatory Markers in RAW264.7 Macrophages In Vitro
+SO FOODS
+AB Antarctic krill oil is an emerging marine lipid and expected to be a potential functional food due to its diverse nutrients, such as eicosapentaenoic acid (EPA), docosahexaenoic acid (DHA), phospholipids, astaxanthin and tocopherols. Although krill oil has been previously proved to have anti-inflammatory activity, there is little information about the relationship between its chemical compositions and anti-inflammatory activity. In this study, the RAW264.7 macrophages model was used to elucidate and compare the anti-inflammatory potential of different krill lipid fractions: KLF-A, KLF-H and KLF-E, which have increasing phospholipids, EPA and DHA contents but decreasing astaxanthin and tocopherols levels. Results showed that all the krill lipid fractions alleviated the inflammatory reaction by inhibition of production of nitric oxide (NO), release of tumor necrosis factor-alpha (TNF-alpha), interleukin (IL)-1 beta and IL-6 and gene expression of proinflammatory mediators including TNF-alpha, IL-1 beta, IL-6, cyclooxygenase-2 (COX-2) and inducible nitric oxide synthase (iNOS). In addition, KLF-E with the highest phospholipids, EPA and DHA contents showed the strongest inhibition effect on the LPS-induced proinflammatory mediator release and their gene expressions. The results would be helpful to provide powerful insights into the underlying anti-inflammatory mechanism of krill lipid and guiding the production of krill oil products with tailor-made anti-inflammatory activity.
+RI Jin, Jun/U-4130-2019
+OI Jin, Jun/0000-0002-6186-6882
+EI 2304-8158
+PD NOV
+PY 2021
+VL 10
+IS 11
+AR 2887
+DI 10.3390/foods10112887
+UT WOS:000725295100001
+PM 34829168
+ER
+
+PT J
+AU Zhang, HW
+   Zeng, XB
+   Xu, SJ
+   Yin, FW
+   Liu, HL
+   Qin, L
+   Zhou, DY
+AF Zhang, Hua-Wen
+   Zeng, Xiang-Bo
+   Xu, Shi-Jing
+   Yin, Fa-Wen
+   Liu, Hui-Lin
+   Qin, Lei
+   Zhou, Da-Yong
+TI Effects of metal ion removal from Antarctic krill oil on its qualities
+   and stabilities of colour and oxidation
+SO INTERNATIONAL JOURNAL OF FOOD SCIENCE AND TECHNOLOGY
+AB In order to better preserve phospholipids (PLs)-type polyunsaturated fatty acids (PUFAs) and astaxanthin (ASTA), Antarctic krill oil (AKO) undergoes only limited refining steps, which results in the presence of metal ions. This study aims to establish a metal ion removal method for AKO by using adsorbents and investigate the effects of the metal ion removal process on nutritional composition, oxidation state and colour of AKO, as well as the effects of metal oil removal of AKO on its nutrition composition, oxidation stability and colour stability upon accelerated storage. Among the three types of adsorbents including silica gel, diatomaceous earth, and attapulgite soil, the last one showed the best comprehensive removal effects. After optimising the removal conditions, attapulgite soil achieved the removal rates of 92.5%, 90.0%, and 86.4%, respectively, for iron ions, magnesium ions and calcium ions. Compared to the fresh AKO, the processed AKO had no significant differences in peroxide value (POV), thiobarbituric acid reactive substances (TBARS), and total oxidation value (TOTOX), as well as PUFA content and lipid class composition, indicating that the metal ion removal process would not cause significant lipid oxidation. Moreover, the processed AKO looks brighter and more transparent, and had higher detection values in L*, a*, and b* but lower UV-vis absorption at 295 nm (A295) and 420 nm (A420). This indicated that the metal ion removal process improved the colour quality. After accelerated storage at 60 degrees C for 8 days, the processed AKO sample had significantly lower values in POV, TBARS, and TOTOX, but significant higher PUFA content than the fresh AKO group. Moreover, the processed AKO sample had the higher values of L*, a*, and b*, as well as A470 and A495, but the lower values of A295 and A420. The above results indicate that the removal of metal ions significantly improved the stabilities of oxidation and colour of AKO.
+   Metal ion adsorbents were screened and a method applicable to metal ion removal from Antarctic krill oil (AKO) was established. Removing metal ions from AKO not only improves its oxidative stability but also maintains the colour better. image
+RI 刘, 慧琳/GWV-6504-2022; Qin, Lei/KKM-5010-2024
+OI Qin, Lei/0000-0002-3902-3192
+SN 0950-5423
+EI 1365-2621
+PD SEP
+PY 2024
+VL 59
+IS 9
+BP 6007
+EP 6016
+DI 10.1111/ijfs.17304
+EA JUL 2024
+UT WOS:001270901800001
+ER
+
+PT J
+AU Dong, XM
+   Suo, SK
+   Wang, YM
+   Zeng, YH
+   Chi, CF
+   Wang, B
+AF Dong, Xiao-Meng
+   Suo, Shi-Kun
+   Wang, Yu-Mei
+   Zeng, Yu-Hui
+   Chi, Chang-Feng
+   Wang, Bin
+TI High Fischer ratio oligopeptides from Antarctic krill: Ameliorating
+   function and mechanism to alcoholic liver injury through regulating
+   AMPK/Nrf2/ IκBα pathways
+SO JOURNAL OF FUNCTIONAL FOODS
+AB In this study, we devoted attention to the hepatoprotective functions of high Fischer ratio oligopeptides (HFOPs) from Antarctic krill (HFOPs-AK) on alcoholic liver injury of mice. The results indicated that HFOPs-AK significantly improved the pathological state of mice liver and kidney, reduced alanine aminotransferase (ALT) and aspartate transaminase (AST) activities, regulated lipid metabolism, and alleviated the burden on the liver. In addition, HFOPs-AK depicted anti-inflammatory and antioxidant effects by reducing tumor necrosis factor-alpha (TNF-alpha) and interleukin 6 (IL-6) contents and increasing superoxide dismutase (SOD) and catalase (CAT) activities to reduce malondialdehyde (MDA) level. The hepatoprotective mechanism of HFOPs-AK was further revealed by quantitative reverse transcription PCR (RT-qPCR) analysis, and the results proved that HFOPs-AK had the ability to stimulate the adenosine 5'-monophosphate-activated protein kinase (AMPK)/nuclearrespiratoty factor 2 (Nrf2)/inhibitor of NF-kappa B (I kappa B alpha) signaling pathways, thereby regulating the expression levels of downstream factors. The activation of these signaling pathways is essential for the regulation of lipid metabolism as well as anti-inflammatory and antioxidant functions. This finding offers a novel approach for the development of innovative hepatoprotective agents utilizing HFOPs-AK.
+RI Wang, Bin/ADF-0628-2022
+SN 1756-4646
+EI 2214-9414
+PD NOV
+PY 2024
+VL 122
+AR 106537
+DI 10.1016/j.jff.2024.106537
+EA OCT 2024
+UT WOS:001345207000001
+ER
+
+PT J
+AU Zhou, SQ
+   Zhang, RY
+   Qiu, ZH
+   Shi, YY
+   Zhu, SC
+   Wu, XG
+   Wang, XC
+   Zhang, L
+AF Zhou, Siqi
+   Zhang, Renyue
+   Qiu, Zehui
+   Shi, Yuyao
+   Zhu, Shaicheng
+   Wu, Xugan
+   Wang, Xichang
+   Zhang, Long
+TI Improvement of Physiological Metabolism and Flavor Quality of
+   Eriocheir sinensis Ovaries by Dietary Supplementation with
+   Antarctic Krill Meal
+SO FOODS
+AB This study investigated the effects of dietary Antarctic krill meal (AKM) on the physiological metabolism and flavor quality of adult Eriocheir sinensis ovaries during the postharvest temporary rearing. The AKM concentrations tested were 0% (including negative control group and positive control group), 2%, 4%, 6%, and 8%. The results indicate that the E. sinensis ovaries in 8% AKM group produced the highest levels of aroma compounds after thermal processing, including hexanal, heptanal, phenylacetaldehyde, 3-octanone, and 2-methylbutanoic acid ethyl ester. The 8% AKM and negative control group were analyzed by UPLC-MS/MS combined with the nontargeted and widely targeted metabolomics technique. The AKM altered the composition of aroma precursors by adjusting the metabolism of glycerophospholipid, linoleic acid, alpha-linolenic acid, and amino acid in ovaries. Moreover, lipids composed of polyunsaturated fatty acids (PUFAs) were significantly upregulated (p < 0.05). Dietary supplementation with 8% AKM had the best effect on improving the ovarian flavor quality of E. sinensis. During the postharvest temporary rearing, more aromatic precursors were produced by regulating physiological metabolism. The ovarian flavor was enhanced by lipid oxidation, Maillard reaction, and Strecker degradation during thermal processing.
+RI ; Zhu, Shaicheng/GYU-3901-2022; Zhang, Renyue/PMO-6514-2026
+OI 史, 羽瑶/0000-0001-5418-1722; 
+EI 2304-8158
+PD APR 8
+PY 2025
+VL 14
+IS 8
+AR 1287
+DI 10.3390/foods14081287
+UT WOS:001476471600001
+PM 40282689
+ER
+
+PT J
+AU Zeng, QH
+   Hu, D
+   Li, YF
+   Qi, P
+   Chen, L
+   Wang, RH
+   Zhao, Y
+   Wang, JJ
+AF Zeng, Qiaohui
+   Hu, Di
+   Li, Yufeng
+   Qi, Ping
+   Chen, Lu
+   Wang, Ronghan
+   Zhao, Yong
+   Wang, Jing Jing
+TI Conjugates of glycosylated antarctic krill proteins and curcumin:
+   Maintaining the storage quality of salmon fillets coupling with
+   photodynamic inactivation
+SO FOOD HYDROCOLLOIDS
+AB Antarctic krill proteins (AKP) were successfully glycosylated by inulin driven by ultrasound (300 W, 20 min) and pH shift (11.0) to prepare the conjugates of glycosylated AKP and curcumin. The preservation effects of the conjugates -mediated photodynamic inactivation (PDI) on the storage quality of salmon fillets were investigated. Results showed that the glycosylated AKP (AKP-pH11-U20) exhibited a significantly increased solubility, and a relatively small and loose morphology characterized by SEM, an unfolded and disorganized structure by FTIR and intrinsic fluorescence analysis, and a decreased surface hydrophobicity by bromophenol blue staining, and all these changes contributed to its reduced surface tension. On this basis, the glycosylated AKP efficiently loaded curcumin (323.4 mu g/mg) to form the conjugates, and the conjugates -mediated PDI greatly inhibited 99.8% bacterial cells and the migration of water, retarded the change of color and pH, suppressed the lipid oxidation and degradation during 4 degrees C storage for 7 days, compared to the conventional curcumin-mediated PDI. This study expands the application of new marine protein resources in preserving the quality of aquatic products.
+RI ; Li, Yufeng/KLD-2943-2024
+OI Wang, Jing Jing/0000-0002-1341-2034; 
+SN 0268-005X
+EI 1873-7137
+PD OCT
+PY 2024
+VL 155
+AR 110191
+DI 10.1016/j.foodhyd.2024.110191
+EA MAY 2024
+UT WOS:001264163700001
+ER
+
+PT J
+AU Fu, DW
+   Tian, Y
+   Wang, ZH
+   Li, JZ
+   Zhou, DY
+   Zhu, BW
+   Song, L
+AF Fu, Dong-wen
+   Tian, Ye
+   Wang, Zi-han
+   Li, Jin-zhe
+   Zhou, Da-yong
+   Zhu, Bei-wei
+   Song, Liang
+TI Development of an Antarctic krill oil based self-microemulsion drug
+   delivery system and its enhancement of bioaccessibility for curcumin
+SO FOOD BIOSCIENCE
+AB Self-microemulsion drug delivery systems (SMEDDS) have great potential for use in food applications, but their adoption has been limited due to the high proportion of non-edible surfactants. To address this limitation, we developed a novel surfactant-free SMEDDS by utilizing phospholipids (40.4%) and triglycerides (54.7%) from Antarctic krill oil (KO) as the intrinsic surfactant and oil phase, respectively, and incorporating glycerol as an edible co-surfactant. The formation mechanism of the KO-based SMEDDS and their potential to deliver curcumin were investigated. The results demonstrated that glycerol facilitated the formation of organogels by the phos-pholipids in krill oil, and homogenization effectively disrupted the organogels to form SMEDDS. The resulting microemulsion was stable under various conditions and significantly improved the bioaccessibility of curcumin in vitro, increasing it by 13.96-fold compared to curcumin powder. Our approach of using marine lipid-based SMEDDS provides insights into their formation and expands their application in foods that contain hydropho-bic active ingredients. This sustainable and potentially healthier option offers a promising solution for enhancing the bioavailability of active ingredients in food applications.
+RI Song, Liang/KRP-3589-2024
+OI Fu, Dong-wen/0000-0002-7575-6764
+SN 2212-4292
+EI 2212-4306
+PD JUN
+PY 2023
+VL 53
+AR 102762
+DI 10.1016/j.fbio.2023.102762
+EA MAY 2023
+UT WOS:001009848400001
+ER
+
+PT J
+AU Juáres, MA
+   Santos, MM
+   Perchivale, PJ
+   Sia, MGR
+   Sandler, R
+   Pereira, A
+   Blanco, G
+   Campana, GL
+   Moreira, E
+   Casaux, R
+   Libertelli, M
+AF Juares, Mariana A.
+   Santos, M. Mercedes
+   Perchivale, Pablo J.
+   Rozas Sia, Mauro G.
+   Sandler, Rosana
+   Pereira, Ariel
+   Blanco, Gabriel
+   Campana, Gabriela L.
+   Moreira, Eugenia
+   Casaux, Ricardo
+   Libertelli, Marcela
+TI The importance of Antarctic krill in the non-breeding and breeding diet
+   of gentoo penguins at a colony of the South Shetland Islands
+SO POLAR BIOLOGY
+AB Understanding predator-prey relationships is essential to monitor Antarctic marine ecosystem structure and function, assess changes in prey and predator abundances, and provide tools for effective conservation measures. Despite this, diet studies of Antarctic predators conducted with traditional methods are limited outside the breeding period mainly due to constraints associated with the life-history strategies of the predators and the sampling logistics and operability. At Stranger Point/Cabo Funes (25 de Mayo/King George Island), the diet composition of gentoo penguins (Pygoscelis papua) was characterized during four stages of the annual cycle (i.e. non-breeding and pre-breeding stages of 2022, and guard and cr & egrave;che stages of the 2022/2023 breeding season) by the analysis of stomach contents obtained by using the water-offloading technique. Antarctic krill (Euphausia superba) dominated the diet of gentoo penguins in terms of frequency of occurrence and percentage in mass, followed by fish and amphipods. However, the diet composition changed seasonally, with a decrease in the contribution of fish and amphipods as the year progressed. Furthermore, higher individual variability was observed outside the breeding period than during the chick-rearing period. Our results indicate that krill was an important fraction of the non-breeding and breeding diet. However, outside the breeding period, the mean krill size consumed was smaller and the proportion of juvenile krill was higher than that recorded in the chick-rearing period. Thus, sampling the diet of the gentoo penguin outside the breeding period could provide valuable information on the krill size composition during the austral autumn and winter.
+OI Rozas Sia, Mauro Gabriel/0009-0009-8681-792X; Santos, Maria
+   Mercedes/0009-0000-1175-2628; Perchivale, Pablo
+   José/0000-0002-4717-381X; Campana, Gabriela Laura/0000-0002-6507-2369;
+   Juáres, Mariana A/0000-0002-6763-0416; MOREIRA,
+   EUGENIA/0000-0002-3704-1696
+SN 0722-4060
+EI 1432-2056
+PD JUN 23
+PY 2025
+VL 48
+IS 3
+AR 83
+DI 10.1007/s00300-025-03402-9
+UT WOS:001513559900001
+ER
+
+PT J
+AU Tang, JW
+   Song, SX
+   Zhang, JW
+   Li, Y
+   Tao, L
+   Wu, Q
+   Zhao, YL
+   Yu, L
+AF Tang, Jiawei
+   Song, Shixin
+   Zhang, Jingwei
+   Li, Ye
+   Tao, Li
+   Wu, Qi
+   Zhao, Yilin
+   Yu, Lei
+TI Buckwheat protein as macromolecular emulsifier to stabilize antarctic
+   krill oil-loaded emulsion: Study on physicochemical properties,
+   microstructure, and functional properties
+SO JOURNAL OF CEREAL SCIENCE
+AB Buckwheat protein (BP) was studied in relation to oil phase volume fractions for the preparation of Antarctic krill oil (AKO) emulsions. The physicochemical properties and microstructure of BP-AKO emulsions were examined using zeta potential, droplet size, rheology, and laser confocal microscopy. The bioavailability of astaxanthin in AKO was assessed through in vitro digestion experiments. Among the emulsions tested, the BP-AKO (5-60%) emulsion, containing 5% protein and 60% oil phase, displayed the smallest particle size (1.86 mu m), highest absolute zeta potential value (47.88 mV), and greatest interfacial protein adsorption rate (89.00%), indicating superior stability. Oxidative stability experiments revealed that the BP-AKO (5-60%) emulsion exhibited the lowest production of lipid hydroperoxides and malondialdehyde, reflecting excellent oxidative stability. Furthermore, the highest release of free fatty acids from the BP-AKO (5-60%) emulsion occurred during in vitro digestion, peaking at 70.17% after 120 min. The bioavailability of astaxanthin also reached a maximum value of 50.37%. This study provides experimental support for the use of macromolecular cereal proteins as emulsifiers to stabilize Antarctic krill oil.
+RI Yu, Lei/KHU-3197-2024; Zhang, Jingwei/IXW-6327-2023; tang,
+   jiawei/JEP-7502-2023; Tao, Li/IYT-0729-2023
+OI Yu, Lei/0000-0002-6788-6120; Zhang, Jingwei/0009-0005-7958-302X; Tao,
+   Li/0000-0002-1529-5732
+SN 0733-5210
+EI 1095-9963
+PD NOV
+PY 2024
+VL 120
+AR 104027
+DI 10.1016/j.jcs.2024.104027
+EA SEP 2024
+UT WOS:001321666100001
+ER
+
+PT J
+AU Yang, L
+   Zheng, Y
+   Zhang, QT
+   Zhang, SS
+   Guo, QY
+   Wang, X
+AF Yang, Liu
+   Zheng, Yao
+   Zhang, Quantong
+   Zhang, Shuaishuai
+   Guo, Quanyou
+   Wang, Xin
+TI The impact of tea polyphenols on the oxidative stability in Antarctic
+   krill meal during storage: phenomena, substances, and potential
+   mechanism
+SO JOURNAL OF FOOD ENGINEERING
+AB Antarctic krill meal is susceptible to color deterioration and lipid oxidation during production and storage, leading to a significant decline in nutritional quality. This study focused on specific lipids in krill meal and demonstrated the protective efficacy of tea polyphenols (TP) on the primary bioactive constituents of Antarctic krill meal during storage. The results demonstrated that TP incorporation via dipping (TP-P) and mincing (TP-M) significantly stabilized redness values of krill meal. Regarding astaxanthin (ASTA) stability, the TP-P and TP-M groups exhibited even greater ASTA retention, with levels 2.02 and 2.34 times higher than those in the control group (CK). Moreover, the TBARS levels in the TP-P and TP-M groups were significantly lower, at 39 % and 34 % of those in the CK group. This reduction is attributed to the ability of TP to suppress increases in C14:0 and C16:0 levels while mitigating the decline in EPA and DHA levels during the storage period. Additionally, molecular docking suggests a potential mechanism by which TP enhances the oxidative stability of krill meal: the stabilization of ligand-receptor complexes, which inhibits the initiation of oxidation.
+RI Wang, Xin/LSL-0396-2024
+OI Wang, Xin/0000-0003-2320-2660
+SN 0260-8774
+EI 1873-5770
+PD FEB
+PY 2026
+VL 405
+AR 112781
+DI 10.1016/j.jfoodeng.2025.112781
+EA AUG 2025
+UT WOS:001563987600001
+ER
+
+PT J
+AU Yang, JQ
+   Zhong, LM
+   Chen, D
+   Zhu, BW
+   Lin, SY
+AF Yang, Jingqi
+   Zhong, Limin
+   Chen, Dong
+   Zhu, Beiwei
+   Lin, Songyi
+TI Elucidation of the memory-improving mechanism of Antarctic krill peptide
+   FPF targeting the hippocampus and protein regulation based on proteomics
+   technology
+SO FOOD BIOSCIENCE
+AB Memory deficits are a significant societal issue. The study sought to examine the specific distribution patterns and the regulatory proteins and pathway mechanisms of Antarctic krill tripeptide Phe-Pro-Phe (FPF) in mitigating scopolamine-induced memory deficits in mice. FPF significantly enhanced behavioral performance, elevated acetylcholine (ACh) levels and unsaturated lipid concentrations, while reducing acetylcholinesterase (AChE) activity and neuronal damage, as evaluated through behavioral studies, Nissl staining, and Fourier transform infrared imaging (FTIR). Additionally, it was shown that FPF might be directed towards the hippocampus. The tissue distribution was as follows: duodenum > jejunum > ileum > hippocampus > kidney, liver, heart, lung, and spleen, employing Liquid Chromatography-Tandem Mass Spectrometry (LC-MS/MS). Proteomics and immunofluorescence analyses indicated that FPF markedly elevated the expression levels of MT-ATP8, SST, and CCS proteins, optimized energy metabolism homeostasis, augmented neural signaling efficiency, and improved synaptic plasticity, thereby exerting a neuroprotective effect and mitigating scopolamine-induced memory deficits.
+RI zhong, limin/MYR-1253-2025
+SN 2212-4292
+EI 2212-4306
+PD NOV
+PY 2025
+VL 73
+AR 107755
+DI 10.1016/j.fbio.2025.107755
+EA OCT 2025
+UT WOS:001600302800003
+ER
+
+PT J
+AU Belonenko, TV
+   Travkin, VS
+   Kochnev, AV
+AF Belonenko, T. V.
+   Travkin, V. S.
+   Kochnev, A. V.
+TI Review of studies on the distribution of Antarctic krill accumulations
+   in the Scotia Sea and analysis of mesoscale dynamics of its habitat
+SO VESTNIK OF SAINT PETERSBURG UNIVERSITY EARTH SCIENCES
+AB This article studies the mesoscale dynamics of the waters of the Scotia Sea, located at the northern tip of the Southern Ocean on its border with the Southern Atlantic Ocean. The Scotia Sea is one of the most promising fishing areas where the industrial catch of Antarctic krill (Euphausia superba) is produced. Since the distribution of commercial krill accumulations is largely determined by oceanological conditions, this paper analyzes mesoscale vortex dynamics, frontal zones, and topography in the Scotia Sea, affecting the creation of favorable oceanological conditions for the formation of commercial krill accumulations. The study is conducted using satellite and model data. It is shown that the distribution of sea level according to the GLORYS12v1 reanalysis data in the Scotia Sea has a zonal character. In winter and spring, sea level anomalies are positive (up to 20 cm), and in summer and autumn, they are negative (up to -180 cm). In the northwestern part of the Scotia Sea, according to the data of the GLORYS12v1 reanalysis for 1993-2020, thermal frontal zones with high repeatability (>80 %) are distinguished. Dynamic frontal zones are also distinguished in the northwestern part of the water area and have a repeatability reaching 100 %. This area in the Scotia Sea is the most dynamically active: increased kinetic energy values are observed here. The increased dynamic activity in the northwestern part of the Scotia Sea, considered above by the average and average seasonal distributions of characteristics, is also confirmed in the synoptic range of periods. Spatial distributions of long-lived mesoscale vortices according to META 3.2 data for 1993-2021 show the localization areas of these vortices, with cyclones forming significantly more than anticyclones. Analysis of the trajectories of these vortices showed that the direction of their propagation is mainly eastern. The intense vortex dynamics in the Scotia Sea is also confirmed by reconstructed altimetric data for 1970-1992.
+RI Belonenko, Tatyana/K-2162-2013
+SN 2541-9668
+EI 2587-585X
+PY 2024
+VL 69
+IS 1
+BP 108
+EP 127
+DI 10.21638/spbu07.2024.106
+UT WOS:001343460200006
+ER
+
+PT J
+AU Xing, LH
+   Sun, WH
+   Sun, XJ
+   Tan, ZJ
+   Yao, L
+   Li, ZX
+   Qie, S
+   Wang, QY
+AF Xing, Lihong
+   Sun, Weihong
+   Sun, Xiaojie
+   Tan, Zhijun
+   Yao, Lin
+   Li, Zhaoxin
+   Qie, Shuo
+   Wang, Qingyan
+TI Development of a High-Performance Liquid Chromatography-Fluorescence
+   Method for Determination of Ethoxyquin and Its Dimer in Antarctic Krill
+   Powder
+SO JOURNAL OF SEPARATION SCIENCE
+AB Ethoxyquin (EQ) is a quinolone-based synthetic antioxidant that prevents lipid peroxidation and is added to consumer products and animal feeds as a preservative. Importantly, EQ is added to Antarctic krill products, and this can pose health hazards to consumers, and monitoring EQ levels in these products is an important means to ensure consumer safety. Thus, we established a method for the simultaneous analytical determination of EQ and its primary metabolite the ethoxyquin dimer (EQDM). The residual EQ and EQDM in Antarctic krill powder (AKP) were extracted with sodium carbonate solution and acetone and then extracted with n-hexane by liquid-liquid extraction. After purification by neutral alumina solid-phase extraction column and primary secondary amine, the analytes were determined by high-performance liquid chromatography (HPLC) with fluorescence detection. The calibration curves were linear in a range of 0.005-2 mu g/mL for EQ and 0.05-20 mu g/mL for EQDM with correlation coefficients >0.999. The recoveries ranged from 78.8% to 101% at three spiked levels. The intra- and inter-day relative standard deviations were <15%. The limits of detection were 3 and 30 <mu>g/kg, and the limits of quantification were 10 and 100 mu g/kg for EQ and EQDM, respectively. The proposed method was sensitive, accurate, easy to operate, and economical and is suitable for the determination of EQ and EQDM in AKP.
+SN 1615-9306
+EI 1615-9314
+PD SEP 17
+PY 2025
+VL 48
+IS 9
+AR e70269
+DI 10.1002/jssc.70269
+UT WOS:001574238400001
+PM 40960026
+ER
+
+PT J
+AU Yan, Y
+   Lin, Y
+   Gu, ZY
+   Lu, SY
+   Zhou, QL
+   Zhao, YF
+   Liu, B
+   Miao, LH
+AF Yan, Ying
+   Lin, Yan
+   Gu, Zhengyan
+   Lu, Siyue
+   Zhou, Qunlan
+   Zhao, Yongfeng
+   Liu, Bo
+   Miao, Linghong
+TI Dietary fishmeal substitution with Antarctic krill meal improves the
+   growth performance, lipid metabolism, and health status of oriental
+   river prawn (Macrobrachium nipponense)
+SO AQUACULTURE REPORTS
+AB Aims to assess the effects of dietary inclusion of Antarctic krill meal (KM), five experimental diets supplemented with graded levels of KM (0 %, FM; 5 %, KM5; 10 %, KM10; 15 %, KM15; 20 %, KM20; 0 %, 13.3 %, 26.7 %, 40.0 %, and 56.7 % replacement fishmeal levels, respectively), were prepared to feed oriental river prawn ( Macrobrachium nipponense ) (0.20 +/- 0.01 g) for 8 weeks. The results revealed significant improvements in weight gain rate (WGR), specific growth rate (SGR), feed conversion rate (FCR), and protein efficiency ratio (PER) at the inclusion of 5 %-20 % KM ( P < 0.05). In the KM10 and KM15 groups, the concentrations of hemolymph total protein (TP), albumin (ALB), triglycerides (TG), high -density lipoprotein (HDL), and hepatopancreatic glutathione (GSH) were observed to be significantly higher compared to the FM group ( P < 0.05). Conversely, the contents of hepatopancreatic malondialdehyde (MDA), total nitric oxide synthase (TNOS), and inducible nitric oxide synthase (iNOS) were significantly lower in the KM10 and KM15 groups compared to the FM group ( P < 0.05). The mRNA expression levels of dorsal protein ( dorsal ), heat shock protein 60 ( hsp60 ), and myeloid differentiation factor 88 ( myd88 ) in the hepatopancreas in the KM10 group exhibited the lowest level. Additionally, compared to the FM group, the expression levels of fatty acid synthase ( fas ) and acetyl CoA carboxylase ( acc ) were significantly upregulated ( P < 0.05), while the acyl CoA bindingprotein ( acbp ), carnitine palmitoyltransferase I ( cpt I ), and scavenger receptor B I ( sr -b I ) were significantly downregulated in the KM10 group ( P < 0.05). In addition, the results of histopathology sections showed that 5 - 15 % KM could improve the health status of hepatopancreas and was a safe alternative to fishmeal. Overall, the optimal KM inclusion level in feed was 12.96 % (substituting for 34.60 % fishmeal) based on the quadratic fitting curve calculations of WGR and SGR.
+RI ; Miao, Linghong/HLV-7382-2023
+OI , Ying Yan/0009-0004-5087-5988; 
+SN 2352-5134
+PD AUG
+PY 2024
+VL 37
+AR 102202
+DI 10.1016/j.aqrep.2024.102202
+EA JUN 2024
+UT WOS:001262131100001
+ER
+
+PT J
+AU Zhu, SC
+   Liu, WM
+   Li, EC
+   Qin, JG
+   Lu, Y
+   Wang, XJ
+   Wu, XG
+AF Zhu, Shaicheng
+   Liu, Wenming
+   Li, Erchao
+   Qin, Jianguang
+   Lu, Yi
+   Wang, Xinjun
+   Wu, Xugan
+TI Entropy weight-based optimization of Antarctic krill meal inclusion for
+   juvenile Chinese mitten crabs: Balancing growth performance, health,
+   feeding behavior and feed cost
+SO AQUACULTURE
+AB Developing cost-effective feeds that enhance palatability, growth, and overall health is crucial for the sustainable culture of Chinese mitten crabs (Eriocheir sinensis). Antarctic krill meal (AKM), rich in nutrients and feedpromoting substances, is a potential feed ingredient. This study evaluated the effects of AKM inclusion on juvenile Chinese mitten crabs based on feeding behavior, growth performance, feed utilization, nutrient deposition, and antioxidant and immune responses. Five diets with graded levels of AKM (0, 1.5 %, 3 %, 4.5 % and 6 %) were fed to juvenile crabs over two completed molting intervals. The results showed that: (1) AKM inclusion significantly increased the feeding intake rate and decreased the first eating and exploration time of juvenile crabs, with no significant differences observed in groups with 3 % or higher AKM content; (2) final body weight (FBW) and weight gain (WG) increased significantly, while the feed conversion rate (FCR) decreased significantly with increasing AKM level; (3) the crude lipid and ash contents in the body rose significantly with AKM inclusion; (4) AKM enhanced glutathione peroxidase activity and hemocyanin content, while hemolymph alkaline/acid phosphatase activities peaked at 3 % AKM; (5) under non-ionic ammonia stress, the survival rate was significantly higher in AKM-supplemented groups. In conclusion, based on a comprehensive evaluation using the entropy weight method, the optimal AKM inclusion level is 3 % for juvenile Chinese mitten crabs, enhancing feed palatability, growth, and health conditions.
+RI Zhu, Shaicheng/GYU-3901-2022
+SN 0044-8486
+EI 1873-5622
+PD SEP 30
+PY 2025
+VL 608
+AR 742729
+DI 10.1016/j.aquaculture.2025.742729
+EA MAY 2025
+UT WOS:001501633300002
+ER
+
+PT J
+AU Ambasankar, K
+   Dayal, JS
+   Vasagam, KPK
+   Sivaramakrishnan, T
+   Sandeep, KP
+   Panigrahi, A
+   Raja, RA
+   Burri, L
+   Vijayan, KK
+AF Ambasankar, K.
+   Dayal, J. Syama
+   Vasagam, K. P. Kumaraguru
+   Sivaramakrishnan, T.
+   Sandeep, K. P.
+   Panigrahi, A.
+   Raja, R. Ananda
+   Burri, Lena
+   Vijayan, K. K.
+TI Growth, fatty acid composition, immune-related gene expression,
+   histology and haematology indices of Penaeus vannamei fed graded levels
+   of Antarctic krill meal at two different fishmeal concentrations
+SO AQUACULTURE
+AB An eight-week feeding trial was conducted to investigate the effect of dietary krill meal inclusion in diets with moderate (12%) and low (6%) fishmeal concentrations for Penaeus vannamei. Inasmuch, eight iso-nitrogenous and isolipidic diets were formulated to contain 36% crude protein and 5.5% crude lipid. In the moderate fishmeal diets, krill meal was included at 0, 2, 4 and 6% (called FK12:0, FK12:2, FK12:4 and FK12:6, respectively), likewise in the low-fishmeal diets, krill meal was included at the same concentrations of 0-6% (called FK6:0, FK6:2, FK6:4 and FK6:6, respectively). Shrimp with a starting body weight of 0.55 +/- 0.02 g were stocked at 22 animals per tank of 350 l capacity and fed three times daily. Results revealed that dietary krill meal and fish meal inclusion levels significantly increased growth performance (P < 0.05)and there was no significant effect on interaction between fishmeal and krill meal levels. Shrimp fed 6% krill meal diet had the highest final body weight of 11.61 g, weight gain of 11.05 g, weight gain % of 1969.38%, specific growth rate of 5.41%/d and yield of 229.42 g/tank. The weight gain % and SGR showed non significant difference between 4 and 6% krill meal containing groups. Dietary change did not affect feed conversion ratio, protein efficiency ratio and apparent protein utilization(P > 0.05). Survival was significantly increased in the groups containing 6 and 4% krill meal diets compared to 0% krill meal diet (P < 0.05). Inclusion levels of krill meal showed non-significant differences in post-fed body composition except for crude lipid and crude fibre content. Fishmeal inclusion levels showed significant (P < 0.05) variation in C14:0, C16:0, C18:0, C16:1,C18:1n-9, C18:2n-6, C22:6n-3, n-3/n-6 ratio, whereas krill meal inclusion levels showed significant variation in the all n-3 fatty acids only. Immune-related gene expression was significantly (P < 0.05) upregulated in the shrimp fed high fishmeal diets (12%) for all the analyzed genes ProPhenoloxidase (ProPO), ProPhenoloxidase activating enzyme (PPAE), Serine Protease (SP), beta-1, 3-glucan-binding protein (BGBP), Superoxide dismutase (SOD), and Hemocyanin (HC). The dietary change led to a significant difference in both histology and haematology parameters (P < 0.05). The results inferred that krill meal could be used as a potential functional feed ingredient in Penaeus vannamei.The present study suggested beneficial effects of krill meal in shrimp diets. The levels of fishmeal inclusion (12 and 6%) also showed significant (P < 0.05) variations in various growth performance parameters. It is plausible that an inclusion level of 4% is the minimum for a measurable difference in growth performance.
+RI DAYAL, SYAMA/HKF-1551-2023; Panigrahi, Akshay/AAC-8096-2022
+SN 0044-8486
+EI 1873-5622
+PD MAY 15
+PY 2022
+VL 553
+AR 738069
+DI 10.1016/j.aquaculture.2022.738069
+EA MAR 2022
+UT WOS:000784134700008
+ER
+
+PT J
+AU Song, HM
+   Liang, YX
+   Yang, YX
+   Liu, C
+   Liu, Y
+   Mu, XD
+   Wang, XJ
+AF Song, Hongmei
+   Liang, Yixin
+   Yang, Yexin
+   Liu, Chao
+   Liu, Yi
+   Mu, Xidong
+   Wang, Xuejie
+TI Dietary Supplementation with Whole-Fat or Defatted Antarctic Krill
+   Powder Improves the Growth Performance, Body Coloration, and Immune
+   Capability of Red-White Koi Carp (Cyprinus carpio var. koi)
+SO ANIMALS
+AB This study was conducted to investigate the effects of replacing fish meal with either whole-fat or defatted krill powder on the growth, body color, immunity, and related gene expression of red-white koi carp. A total of 630 red-white koi carp with an initial body mass of 13.5 +/- 0.05 g were randomly divided into seven groups with three replicates per group and 30 fish per replicate. The control group was fed a basic diet (C0). The other six diets were supplemented with different levels of whole krill meal or defatted krill meal as replacements (10% whole fat, 20% whole fat, 30% whole fat, 10% defatted, 20% defatted, and 30% defatted) in the experimental groups, named W10, W20, W30, D10, D20, and D30, respectively, for a total duration of 60 days. The growth, body color, immunity and gene expression indexes were measured in the koi after completion. The results indicate the following. (1) Compared with C0, the experimental groups of koi showed a significant increase in the specific growth rate (SGR) (p < 0.05), while the hepatosomatic index (HSI) and viscerosomatic ratio (VSI) decreased. Additionally, there was a significant increase in the relative expression level of insulin-like growth factor (IGF-1) in both the liver and muscle (p < 0.05). (2) The experimental groups of koi carp exhibited a significant increase in the carotenoid content in the scales and skin, as well as an elevated relative expression level of the tyrosinase (TYR) gene in the muscle (p < 0.05). (3) The lysozyme (LZM) and superoxide dismutase (SOD) activities were significantly increased in the experimental groups compared to C0 (p < 0.05). Additionally, the SOD activity was significantly higher in the defatted groups than in the whole-fat groups (p < 0.05). Furthermore, the liver alkaline phosphatase (AKP) activity was significantly lower in the D20 and D30 groups compared to the other five groups. (4) The expression level of LPL was significantly lower in the liver and muscle of the whole-fat group compared to the defatted group (p < 0.05). Tissue section observation revealed that the hepatocytes in the W20 and W30 groups exhibited a reduced size and an increased lipid droplet count, while the vacuolar degeneration of the hepatocytes increased in the D30 group. In conclusion, replacing fish meal with whole-fat or defatted krill powder or defatted Antarctic krill meal significantly improves the growth performance, body color, and immunity of red-white koi carp. However, excessive addition of krill meal can easily cause liver damage. The recommended replacement level for whole krill powder is 20% to 30%, while defatted krill powder should be replaced at a level of 10% to 20%.
+OI Liang, Yixin/0009-0007-8699-0576; song, hongmei/0000-0002-8369-310X
+SN 2076-2615
+PD MAY 27
+PY 2025
+VL 15
+IS 11
+AR 1561
+DI 10.3390/ani15111561
+UT WOS:001506502200001
+PM 40509027
+ER
+
+EF

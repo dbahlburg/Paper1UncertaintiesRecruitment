@@ -1,0 +1,1465 @@
+﻿FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU David, CL
+   Schaafsma, FL
+   van Franeker, JA
+   Pakhomov, EA
+   Hunt, BPV
+   Lange, BA
+   Castellani, G
+   Brandt, A
+   Flores, H
+AF David, Carmen L.
+   Schaafsma, Fokje L.
+   van Franeker, Jan A.
+   Pakhomov, Evgeny A.
+   Hunt, Brian P. V.
+   Lange, Benjamin A.
+   Castellani, Giulia
+   Brandt, Angelika
+   Flores, Hauke
+TI Sea-ice habitat minimizes grazing impact and predation risk for larval
+   Antarctic krill
+SO POLAR BIOLOGY
+AB Survival of larval Antarctic krill (Euphausia superba) during winter is largely dependent upon the presence of sea ice as it provides an important source of food and shelter. We hypothesized that sea ice provides additional benefits because it hosts fewer competitors and provides reduced predation risk for krill larvae than the water column. To test our hypothesis, zooplankton were sampled in the Weddell-Scotia Confluence Zone at the ice-water interface (0-2 m) and in the water column (0-500 m) during August-October 2013. Grazing by mesozooplankton, expressed as a percentage of the phytoplankton standing stock, was higher in the water column (1.97 +/- 1.84%) than at the ice-water interface (0.08 +/- 0.09%), due to a high abundance of pelagic copepods. Predation risk by carnivorous macrozooplankton, expressed as a percentage of the mesozooplankton standing stock, was significantly lower at the ice-water interface (0.83 +/- 0.57%; main predators amphipods, siphonophores and ctenophores) than in the water column (4.72 +/- 5.85%; main predators chaetognaths and medusae). These results emphasize the important role of sea ice as a suitable winter habitat for larval krill with fewer competitors and lower predation risk. These benefits should be taken into account when considering the response of Antarctic krill to projected declines in sea ice. Whether reduced sea-ice algal production may be compensated for by increased water column production remains unclear, but the shelter provided by sea ice would be significantly reduced or disappear, thus increasing the predation risk on krill larvae.
+RI ; Castellani, Giulia/AAS-9298-2021; Flores, Hauke/ABD-1888-2020; Lange,
+   Benjamin/H-4733-2017
+OI David, Carmen-Lucia/0000-0002-4241-1284; Schaafsma,
+   Fokje/0000-0002-8945-2868
+SN 0722-4060
+EI 1432-2056
+PD JUN
+PY 2021
+VL 44
+IS 6
+BP 1175
+EP 1193
+DI 10.1007/s00300-021-02868-7
+EA MAY 2021
+UT WOS:000650122500001
+ER
+
+PT J
+AU Warwick-Evans, V
+   Fielding, S
+   Reiss, CS
+   Watters, GM
+   Trathan, PN
+AF Warwick-Evans, V
+   Fielding, S.
+   Reiss, C. S.
+   Watters, G. M.
+   Trathan, P. N.
+TI Estimating the average distribution of Antarctic krill Euphausia
+   superba at the northern Antarctic Peninsula during austral summer
+   and winter
+SO POLAR BIOLOGY
+AB This study was performed to aid the management of the fishery for Antarctic krill Euphausia superba. Krill are an important component of the Antarctic marine ecosystem, providing a key food source for many marine predators. Additionally, krill are the target of the largest commercial fishery in the Southern Ocean, for which annual catches have been increasing and concentrating in recent years. The krill fishery is managed by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR), which has endorsed a new management framework that requires information about the spatial distribution and biomass of krill. Here, we use krill density estimates from acoustic surveys and a GAMM framework to model habitat properties associated with high krill biomass during summer and winter in the northern Antarctic Peninsula region, an area important to the commercial fishery. Our models show elevated krill density associated with the shelf break, increased sea surface temperature, moderate chlorophyll-a concentration and increased salinity. During winter, our models show associations with shallow waters (< 1500 m) with low sea-ice concentration, medium sea-level anomaly and medium current speed. Our models predict temporal averages of the distribution and density of krill, which can be used to aid CCAMLR's revised ecosystem approach to fisheries management. Our models have the potential to help in the spatial and temporal design of future acoustic surveys that would preclude the need for modelled extrapolations. We highlight that the ecosystem approach to fisheries management of krill critically depends upon such field observations at relevant spatial and temporal scales.
+RI Watters, George/HPE-2184-2023; Fielding, Sophie/E-5137-2012
+OI Warwick-Evans, Victoria/0000-0002-0583-5504; 
+SN 0722-4060
+EI 1432-2056
+PD MAY
+PY 2022
+VL 45
+IS 5
+BP 857
+EP 871
+DI 10.1007/s00300-022-03039-y
+EA APR 2022
+UT WOS:000782742700001
+PM 35673679
+ER
+
+PT J
+AU Zhu, GP
+   Liu, JH
+AF Zhu, Guoping
+   Liu, Jinhui
+TI Total mercury accumulation in Antarctic krill (Euphausia
+   superba) in the northern Antarctic Peninsula during late autumn to
+   early winter
+SO ENVIRONMENTAL RESEARCH
+AB Antarctic krill (Euphausia superba) is a key species in the Antarctic marine ecosystem and also the largest fishery in terms of catch in the Southern Ocean. Bransfield Strait on the northern Antarctic Peninsula is a key fishing ground. Mercury is a globally recognized toxic element that can affect pelagic organisms through bioaccumulation and biomagnification. Understanding mercury dynamics in krill is crucial for understanding its impacts on Antarctic food webs and potential impacts on the uses of krill in the human food chain. However, the factors influencing Hg accumulation in krill remain unclear, especially in the autumn when there is a transition from an environment of abundant food to a period of lower abundance in winter. We therefore investigated the total mercury (THg) accumulation in krill using randomly collected samples (n = 60) from the krill fishery in the Bransfield Strait from 14 May to June 15, 2023. We further explored the potential drivers influencing THg accumulation in krill. The results indicated that THg levels in male krill (46.7 f 10.8 ng g-1) are comparable to those in females (40.0 f 7.8 ng g-1), and that krill THg levels in May (47.1 f 11.5 ng g-1) are significantly higher than in June (41.3 f 8.2 ng g-1), indicating seasonal variation in krill THg levels. Moreover, the THg concentration of krill showed a significant positive correlation with krill size, regardless of sex or month. Krill size and sex, slope, water mass at 100 m, and sea ice dynamics all affected THg accumulation. Briefly, the THg level decreased with the increases in seafloor slope, and krill accumulated higher level of THg in the open water compared to ice-covered regions, highlighting the importance of seafloor slope and sea ice dynamics in THg dynamics in krill.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0013-9351
+EI 1096-0953
+PD AUG 1
+PY 2025
+VL 278
+AR 121651
+DI 10.1016/j.envres.2025.121651
+EA APR 2025
+UT WOS:001479510200001
+PM 40258465
+ER
+
+PT J
+AU Bernard, KS
+   Steinke, KB
+   Fontana, JM
+AF Bernard, Kim S.
+   Steinke, Kirsten B.
+   Fontana, Julia M.
+TI Winter condition, physiology, and growth potential of juvenile Antarctic
+   krill
+SO FRONTIERS IN MARINE SCIENCE
+AB In recent years, substantial efforts have been made to understand the implications of climate change on Antarctic krill, Euphausia superba, because of their pivotal role in the Southern Ocean food web and in biogeochemical cycling. Winter is one of the least studied seasons in Antarctica and we have limited understanding about the strategies Antarctic krill use to survive the winter. In particular, data on the winter physiology and condition of juvenile Antarctic krill are severely lacking. From May to September (the austral autumn-winter) of 2019, we maintained juvenile Antarctic krill in large (1,330 L) aquarium tanks at Palmer Station, Antarctica and, at monthly time intervals, measured their physiology and condition. Each tank served as a "food environment scenario", representing possible food environments the krill may encounter during winter along the Western Antarctic Peninsula. We found that, unlike adults, juvenile krill maintain relatively high respiration rates through the winter and respond positively to increased food concentrations by increasing their ingestion rates. Unlike larval krill, juveniles use lipid stores accumulated during the summer and autumn to sustain themselves through periods of starvation in the winter. We used our empirically derived measurements of physiology and condition to estimate the energy budget and growth potential of juvenile krill during the winter. We found that, given their comparatively high respiration rates, small juvenile krill (20 mg dry weight) would need to encounter food at concentrations of similar to 0.15 mg C L-1 daily to avoid loss of body carbon. Without sufficient lipid reserves, this value increases to similar to 0.54 mg C L-1, daily. The health of juvenile krill in the wintertime is dependent on their ability to accumulate lipid stores in the summer and autumn and to find sufficient food during the winter. Changes in food availability to Antarctic krill throughout the year may become problematic to juvenile krill in the future. Understanding the variability in the winter energy budget of juvenile Antarctic krill will allow us to improve population models that make assumptions on seasonal growth patterns.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+EI 2296-7745
+PD SEP 23
+PY 2022
+VL 9
+AR 990853
+DI 10.3389/fmars.2022.990853
+UT WOS:000870274000001
+ER
+
+PT J
+AU Veytia, D
+   Bestley, S
+   Kawaguchi, S
+   Meiners, KM
+   Murphy, EJ
+   Fraser, AD
+   Kusahara, K
+   Kimura, N
+   Corney, S
+AF Veytia, Devi
+   Bestley, Sophie
+   Kawaguchi, So
+   Meiners, Klaus M.
+   Murphy, Eugene J.
+   Fraser, Alexander D.
+   Kusahara, Kazuya
+   Kimura, Noriaki
+   Corney, Stuart
+TI Overwinter sea-ice characteristics important for Antarctic krill
+   recruitment in the southwest Atlantic
+SO ECOLOGICAL INDICATORS
+AB Climate change alters the extent and structure of sea-ice environments, which affects how they function as a habitat for polar species. Identifying sea-ice characteristics that serve as indicators of habitat quality will be crucial to the monitoring and management of climate change impacts. In the Southern Ocean, Antarctic krill is a key prey species and fishery target. Krill larvae depend upon sea-ice habitats to survive the winter and recruit to the population in spring. Existing observations of sea-ice characteristics lack sufficient spatiotemporal coverage to quantify which ones contribute to favourable overwintering habitat, leading to uncertainties in how current and future changes in sea ice affect krill populations. Here, we derive regional-scale indices of annual krill recruitment spanning 35 years across the southwest Atlantic. To develop meaningful indicators of sea-ice habitat, we selected variables from a high-resolution sea-ice model that are hypothesized as relevant for larval habitat use. The resulting correlations between recruitment and sea-ice indicators vary by region and show remote connections to sea ice that correspond with established theories of larval transport. Through an improved representation of sea-ice habitat quality, as compared with using more traditional satellite-derived variables such as sea-ice extent and duration, we highlight plausible regions of overwintering habitat. Our findings improve current understanding of how krill are likely responding to changing sea ice and support emerging views that larval habitat use is complex. Furthermore, regional variation in larval dependence on sea ice may provide pockets of resilience to change for the broader krill population.
+RI Murphy, Eugene/GZL-1620-2022; Kawaguchi, So/N-1795-2017; Fraser,
+   Alexander/AFO-7186-2022; Bestley, Sophie/AAN-2483-2021
+OI Murphy, Eugene/0000-0002-7369-9196; Fraser,
+   Alexander/0000-0003-1924-0015; 
+SN 1470-160X
+EI 1872-7034
+PD OCT
+PY 2021
+VL 129
+AR 107934
+DI 10.1016/j.ecolind.2021.107934
+EA JUL 2021
+UT WOS:000681691400001
+ER
+
+PT J
+AU Germishuizen, M
+   Vichi, M
+   Vermeulen, E
+AF Germishuizen, Matthew
+   Vichi, Marcello
+   Vermeulen, Els
+TI Population changes in a Southern Ocean krill predator point towards
+   regional Antarctic sea ice declines
+SO SCIENTIFIC REPORTS
+AB While foraging, marine predators integrate information about the environment often across wide-ranging oceanic foraging grounds and reflect these in population parameters. One such species, the southern right whale (Eubalaena australis; SRW) has shown alterations to foraging behaviour, declines in body condition, and reduced reproductive rates after 2009 in the South African population. As capital breeders, these changes suggest decreased availability of their main prey at high-latitudes, Antarctic krill (Euphausia superba). This study analysed environmental factors affecting prey availability for this population over the past 40 years, finding a notable southward contraction in sea ice, a 15-30% decline in sea ice concentration, and a more than two-fold increase in primary production metrics after 2008. These environmental conditions are less supportive of Antarctic krill recruitment in known SRW foraging grounds. Additionally, marginal ice zone, sea ice concentration and two primary production metrics were determined to be either regionally significant or marginally significant predictors of calving interval length when analysed using a linear model. Findings highlight the vulnerability of recovering baleen whale populations to climate change and show how capital breeders serve as sentinels of ecosystem changes in regions that are difficult or costly to study.
+RI Vichi, Marcello/B-8719-2008; Germishuizen, Matthew/MTB-7771-2025;
+   Vermeulen, Els/AAW-2716-2020
+OI Vichi, Marcello/0000-0002-0686-9634; Vermeulen, Els/0000-0002-3667-1290
+SN 2045-2322
+PD OCT 28
+PY 2024
+VL 14
+IS 1
+AR 25820
+DI 10.1038/s41598-024-74007-1
+UT WOS:001345716800026
+PM 39468232
+ER
+
+PT J
+AU Czapanskiy, MF
+   Santora, JA
+   Dietrich, KS
+   Cimino, MA
+   Hazen, EL
+   Reiss, CS
+   Veit, RR
+AF Czapanskiy, Max F.
+   Santora, Jarrod A.
+   Dietrich, Kimberly S.
+   Cimino, Megan A.
+   Hazen, Elliott L.
+   Reiss, Christian S.
+   Veit, Richard R.
+TI Sea-ice and macrozooplankton distribution as determinants of top
+   predator community structure in Antarctic winter
+SO MARINE ECOLOGY PROGRESS SERIES
+AB The Antarctic Peninsula marine ecosystem is highly productive, with large populations of commercially and ecologically important species including Antarctic krill Euphausia superba, Ad & eacute;lie penguins Pygoscelis adeliae, and crabeater seals Lobodon carcinophagus. The ecology of the peninsula is rapidly changing due to accelerating climate change and fishing pressure. Systematic ecosystem surveys have focused on austral spring and summer, leaving an information gap on winter ecosystem dynamics. Using data from 5 consecutive ecosystem surveys, we quantified the composition and distribution of winter predator communities and investigated the physical and biological influences on community structure. Seabirds and marine mammals clustered into 3 communities: an ice-associated community represented by Ad & eacute;lie penguins and crabeater seals; a diverse marginal ice zone community dominated by fur seals and several species of seabirds including 3 petrels, kelp gulls Larus dominicanus, and Antarctic terns Sterna vittata; and an open water community consisting of southern fulmars Fulmarus glacialoides and 4 species of petrels. These communities were distributed along an environmental gradient ranging from ice-covered, cold, saline water to ice-free, warmer, and fresher water with greater chlorophyll concentrations. Predator communities were also associated with different communities of macrozooplankton: ice-associated predators with an extremely diverse assemblage of typically mesopelagic zooplankton; marginal ice zone predators with a community of large-bodied euphausiids (E. superba, E. crystallorophias); and open water predators with a community of small-bodied euphausiids (Thysanoessa macrura). Our synthesis of integrated winter predator and macrozooplankton communities relative to sea-ice concentration provides reference points for future ecosystem assessments within this rapidly changing region.
+RI Hazen, Elliott/G-4149-2014; Czapanskiy, Max/HLX-2992-2023
+OI Cimino, Megan/0000-0002-1715-2903; 
+SN 0171-8630
+EI 1616-1599
+PD JUN 20
+PY 2024
+VL 738
+BP 57
+EP 73
+DI 10.3354/meps14609
+UT WOS:001299520800013
+ER
+
+PT J
+AU Zhu, JY
+   Yang, QY
+   Xue, M
+   Yan, CB
+   Zhu, GP
+AF Zhu, Jiuyang
+   Yang, Qingyuan
+   Xue, Mei
+   Yan, Chenbing
+   Zhu, Guoping
+TI Fatty acid profiles of mackerel icefish Champsocephalus gunnari reflect
+   diet variability of its main prey, Antarctic krill Euphausia superba
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Understanding predator-prey interactions in Southern Ocean ecosystems is critical for assessing trophic dynamics. Antarctic krill Euphausia superba, a keystone species in the Southern Ocean ecosystem, supports numerous populations of higher trophic level predators. Despite a critical need to understand its feeding ecology, access limits direct studies, particularly during winter when extensive sea ice constrains sampling. This study therefore explores whether the fatty acids of mackerel icefish Champsocephalus gunnari, a key predator of krill, can provide insights into krill diet composition. By analyzing the fatty acids of C. gunnari and E. superba from South Georgia during winter and from the South Orkney Islands during the summer, we assessed differences in krill diets and the transfer of dietary signals from prey to predator. Stomach content analysis confirmed E. superba as the predominant prey of C. gunnari, whereas fatty acid analysis revealed significant differences between the South Georgia and South Orkney Islands samples. The fatty acid patterns of C. gunnari closely reflected those of E. superba, suggesting that prey diet composition drove predator fatty acid variations rather than dietary diversity of the predator. Calibration coefficients further highlighted consistent patterns of fatty acid transfer between regions. These findings demonstrate that C. gunnari can act as a natural sampler for E. superba, offering a novel approach to infer E. superba feeding ecology during periods of limited direct sampling. These insights enhance understanding of predator-prey interactions in the Southern Ocean ecosystem, where shifts in prey availability and composition could have cascading effects on higher trophic level predators.
+RI Zhu, Guoping/D-1002-2010; YANG, Qing-Yuan/AAJ-4989-2020
+OI Zhu, Guoping/0000-0001-6081-7811; 
+SN 0171-8630
+EI 1616-1599
+PD MAR 27
+PY 2025
+VL 757
+BP 145
+EP 160
+DI 10.3354/meps14816
+UT WOS:001473806800008
+ER
+
+PT J
+AU Owen, KA
+   Goggins, M
+   Black, A
+   Ashburner, J
+   Wilson, A
+   Hollyman, PR
+   Trathan, PN
+   Waluda, CM
+   Collins, MA
+AF Owen, Kate A.
+   Goggins, Meghan
+   Black, Andy
+   Ashburner, Jonathan
+   Wilson, Alastair
+   Hollyman, Philip R.
+   Trathan, Philip N.
+   Waluda, Claire M.
+   Collins, Martin A.
+TI At-sea distribution of marine predators around South Georgia during
+   austral winter, with implications for fisheries management
+SO POLAR BIOLOGY
+AB The sub-Antarctic island of South Georgia is surrounded by highly productive waters, supporting dense aggregations of Antarctic krill (Euphausia superba), a vital food source for globally important seabird and marine mammal populations. These waters also support a commercial fishery for Antarctic krill. Regular monitoring of key krill predator species is undertaken at South Georgia to detect any changes in the ecosystem in response to harvesting activities. This monitoring provides essential data but is focused on land-breeding animals during the austral summer, whilst the krill fishery operates exclusively in winter. Here, we report the results of at-sea surveys to investigate abundance and distribution of krill-dependent predators from winter 2010 and 2011, which represented a "poor" krill year and "good" krill year, respectively. Correspondingly in 2011 higher numbers of krill predators were observed; notably Antarctic fur seals (Arctocephalus gazella) across the northern shelf. Spatial overlap between fur seals and the krill fishery occurred mainly within the krill fishery hotspot to the north-east, highlighting the potential for locally high levels of competition. Cetaceans were observed during both survey years, but in low numbers compared to recent studies. Gentoo penguins (Pygoscelis papua) were the most frequently observed penguin species, showing an inshore distribution and almost no overlap with the krill fishery. Diving-petrels (Pelecanoides spp.) were the most abundant flying seabirds, observed across all transects, with particularly high densities to the south in early winter 2010. In conclusion, this survey provides valuable baseline data on the distribution of South Georgia's predators during the winter months.
+RI Collins, Martin/ABE-6728-2020; Wilson, Alastair/F-3118-2010
+OI Collins, Martin/0000-0001-7132-8650; 
+SN 0722-4060
+EI 1432-2056
+PD JUL
+PY 2024
+VL 47
+IS 7
+BP 663
+EP 679
+DI 10.1007/s00300-024-03257-6
+EA MAY 2024
+UT WOS:001226639200001
+ER
+
+PT J
+AU March, D
+   Drago, M
+   Gazo, M
+   Parga, M
+   Rita, D
+   Cardona, L
+AF March, David
+   Drago, Massimiliano
+   Gazo, Manel
+   Parga, Mariluz
+   Rita, Diego
+   Cardona, Luis
+TI Winter distribution of juvenile and sub-adult male Antarctic fur seals
+   (Arctocephalus gazella) along the western Antarctic Peninsula
+SO SCIENTIFIC REPORTS
+AB Detailed knowledge of habitat use by marine megafauna is critical to understand their ecological roles and for the adequate management of marine resources. Antarctic fur seals (Arctocephalus gazella) inhabiting the Atlantic sector of the Southern Ocean prey largely on Antarctic krill (Euphausia superba) and play a central role in managing the krill fishery. Here, we assessed the demographic structure of three post-mating, early moult male haul-outs in the South Shetland Islands in early March and calculated the relative contribution of juveniles (1-4 years old) and sub-adult males (5-6 years) to the population remaining in maritime Antarctica after the breeding season. We also satellite tagged 11 juvenile males and four sub-adult males to analyze their movements and develop a species distribution model including both age classes. Our results highlighted the dominance of young individuals in the male population, revealed that they do not behave as central place foragers and identified key environmental drivers that affected their distribution at-sea throughout winter. Predicted potential foraging habitat overlapped highly with the known distribution of Antarctic krill, and identified the waters off the western Antarctic Peninsula and the Scotia Sea as the core of the distribution area of juvenile and sub-adult male Antarctic fur seals in winter. This pattern is similar to that of adult males but totally different from that of adult females, as the latter overwinter in areas at latitude 45-55 degrees S. This segregation has implications for the ecology and management of the krill fishery.
+RI ago, Massimiliano/JAN-9491-2023; Cardona, Luis/L-1680-2014; Espada,
+   Diego/D-3047-2017; March, David/G-6489-2014; Drago,
+   Massimiliano/JAN-9491-2023; Rita Espada, Diego/D-3047-2017; Gazo,
+   Manel/F-6088-2012
+OI ago, Massimiliano/0000-0003-2764-9849; Cardona,
+   Luis/0000-0002-7892-1323; March, David/0000-0002-6118-761X; Rita Espada,
+   Diego/0000-0001-8358-6980; Parga, Mariluz/0000-0002-3259-5606; Gazo,
+   Manel/0000-0003-1159-322X
+SN 2045-2322
+PD NOV 15
+PY 2021
+VL 11
+IS 1
+AR 22234
+DI 10.1038/s41598-021-01700-w
+UT WOS:000720624200015
+PM 34782702
+ER
+
+PT J
+AU Steiner, NS
+   Bowman, J
+   Campbell, K
+   Chierici, M
+   Eronen-Rasimus, E
+   Falardeau, M
+   Flores, H
+   Fransson, A
+   Herr, H
+   Insley, SJ
+   Kauko, HM
+   Lannuzel, D
+   Loseto, L
+   Lynnes, A
+   Majewski, A
+   Meiners, KM
+   Miller, LA
+   Michel, LN
+   Moreau, S
+   Nacke, M
+   Nomura, D
+   Tedesco, L
+   van Franeker, JA
+   van Leeuwe, MA
+   Wongpan, P
+AF Steiner, Nadja S.
+   Bowman, Jeff
+   Campbell, Karley
+   Chierici, Melissa
+   Eronen-Rasimus, Eeva
+   Falardeau, Marianne
+   Flores, Hauke
+   Fransson, Agneta
+   Herr, Helena
+   Insley, Stephen J.
+   Kauko, Hanna M.
+   Lannuzel, Delphine
+   Loseto, Lisa
+   Lynnes, Amanda
+   Majewski, Andy
+   Meiners, Klaus M.
+   Miller, Lisa A.
+   Michel, Loic N.
+   Moreau, Sebastien
+   Nacke, Melissa
+   Nomura, Daiki
+   Tedesco, Letizia
+   van Franeker, Jan Andries
+   van Leeuwe, Maria A.
+   Wongpan, Pat
+TI Climate change impacts on sea-ice ecosystems and associated ecosystem
+   services
+SO ELEMENTA-SCIENCE OF THE ANTHROPOCENE
+AB A rigorous synthesis of the sea-ice ecosystem and linked ecosystem services highlights that the sea-ice ecosystem supports all 4 ecosystem service categories, that sea-ice ecosystems meet the criteria for ecologically or biologically significant marine areas, that global emissions driving climate change are directly linked to the demise of sea-ice ecosystems and its ecosystem services, and that the sea-ice ecosystem deserves specific attention in the evaluation of marine protected area planning. The synthesis outlines (1) supporting services, provided in form of habitat, including feeding grounds and nurseries for microbes, meiofauna, fish, birds and mammals (particularly the key species Arctic cod, Boreogadus saida, and Antarctic krill, Euphausia superba, which are tightly linked to the sea-ice ecosystem and transfer carbon from sea-ice primary producers to higher trophic level fish, mammal species and humans); (2) provisioning services through harvesting and medicinal and genetic resources; (3) cultural services through Indigenous and local knowledge systems, cultural identity and spirituality, and via cultural activities, tourism and research; (4) (climate) regulating services through light regulation, the production of biogenic aerosols, halogen oxidation and the release or uptake of greenhouse gases, for example, carbon dioxide. The ongoing changes in the polar regions have strong impacts on sea-ice ecosystems and associated ecosystem services. While the response of sea-ice-associated primary production to environmental change is regionally variable, the effect on iceassociated mammals and birds is predominantly negative, subsequently impacting human harvesting and cultural services in both polar regions. Conservation can help protect some species and functions. However, the key mitigation measure that can slow the transition to a strictly seasonal ice cover in the Arctic Ocean, reduce the overall loss of sea-ice habitats from the ocean, and thus preserve the unique ecosystem services provided by sea ice and their contributions to human well-being is a reduction in carbon emissions.
+RI ; Tedesco, Letizia/B-2884-2013; Loseto, Lisa/AAL-6661-2020; Herr,
+   Helena/JAC-6808-2023; Wongpan, Pat/AAX-6946-2020; vanLeeuwe,
+   Maria/MCK-3892-2025; Flores, Hauke/ABD-1888-2020; Lannuzel,
+   Delphine/J-7937-2014; Michel, Loïc/H-5830-2013
+OI Steiner, Nadja/0000-0001-7456-3437; Tedesco,
+   Letizia/0000-0001-9051-8177; Bowman, Jeff/0000-0002-8811-6280; Herr,
+   Helena/0000-0002-5028-2419; Moreau, Sebastien/0000-0001-9446-812X;
+   Wongpan, Pat/0000-0002-7113-8221; 
+SN 2325-1026
+PD OCT 13
+PY 2021
+VL 9
+IS 1
+AR 1
+DI 10.1525/elementa.2021.00007
+UT WOS:000711362300001
+ER
+
+PT J
+AU Gorman, KB
+   Ruck, KE
+   Williams, TD
+   Fraser, WR
+AF Gorman, Kristen B.
+   Ruck, Kate E.
+   Williams, Tony D.
+   Fraser, William R.
+TI Advancing the Sea Ice Hypothesis: Trophic Interactions Among Breeding
+   Pygoscelis Penguins With Divergent Population Trends Throughout
+   the Western Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB We evaluated annual and regional variation in the dietary niche of Pygoscelis penguins including the sea ice-obligate Adelie penguin (Pygoscelis adeliae), and sea ice-intolerant chinstrap (Pygoscelis antarcticus) and gentoo (Pygoscelis papua) penguins, three species that nest throughout the western Antarctic Peninsula (AP) to test the sea ice trophic interaction hypothesis, which posits that penguin breeding populations with divergent trends, i.e., declining or increasing, are reliant on differing food webs. Our study relies on values of naturally occurring carbon (C-13/C-12, delta C-13) and nitrogen (N-15/N-14, delta N-15) stable isotopes as integrated proxies of penguin food webs measured over three years at three different breeding colonies. At Anvers Island in the north, where reductions in sea ice and changes in breeding population trends among sympatric sea ice-obligate (Adelie) and sea ice-intolerant (chinstrap and gentoo) penguins have been most notable, our analyses show that all three species of Pygoscelis penguins became more similar isotopically over the reproductive period. By late chick-rearing at Anvers Island, creched chicks at 5-weeks-old for all species occupied similar trophic positions. Isotopic mixing models indicated that the proportions of prey provisioned by adult penguins to 5-week-old chicks at Anvers Island were generally similar across species within years, consisting primarily of Antarctic krill (Euphausia superba). Creched Adelie chicks had higher delta C-13 and delta N-15 values at Avian and Charcot Islands, southern breeding colonies where sea ice is more prominent and populations of Adelie penguins have increased or remain stable. Trophic position increased with latitude, while the proportions of prey provisioned by Adelie penguin adults to chicks at southern breeding colonies included species typical of high Antarctic marine food webs, especially crystal krill (Euphausia crystallorophias). A Bayesian metric for dietary niche width, standard ellipse area (SEA-B), indicated that Pygoscelis penguins with greater population changes in the north had more variability in dietary niche width than stable populations further south. Our results lend insight on marine food web drivers of Pygoscelis penguin reproduction at the regional scale and question the long-standing paradigm that Antarctic krill are the only food web component critical to penguin reproductive survival in this region of the Southern Ocean.</p>
+OI Gorman, Kristen B/0000-0002-0258-9264
+EI 2296-7745
+PD SEP 8
+PY 2021
+VL 8
+AR 526092
+DI 10.3389/fmars.2021.526092
+UT WOS:000697678100001
+ER
+
+PT J
+AU Swadling, KM
+   Constable, AJ
+   Fraser, AD
+   Massom, RA
+   Borup, MD
+   Ghigliotti, L
+   Granata, A
+   Guglielmo, L
+   Johnston, NM
+   Kawaguchi, S
+   Kennedy, F
+   Kiko, R
+   Koubbi, P
+   Makabe, R
+   Martin, A
+   McMinn, A
+   Moteki, M
+   Pakhomov, EA
+   Peeken, I
+   Reimer, J
+   Reid, P
+   Ryan, KG
+   Vacchi, M
+   Virtue, P
+   Weldrick, CK
+   Wongpan, P
+   Wotherspoon, SJ
+AF Swadling, Kerrie M.
+   Constable, Andrew J.
+   Fraser, Alexander D.
+   Massom, Robert A.
+   Borup, Melanie D.
+   Ghigliotti, Laura
+   Granata, Antonia
+   Guglielmo, Letterio
+   Johnston, Nadine M.
+   Kawaguchi, So
+   Kennedy, Fraser
+   Kiko, Rainer
+   Koubbi, Philippe
+   Makabe, Ryosuke
+   Martin, Andrew
+   McMinn, Andrew
+   Moteki, Masato
+   Pakhomov, Evgeny A.
+   Peeken, Ilka
+   Reimer, Jody
+   Reid, Phillip
+   Ryan, Ken G.
+   Vacchi, Marino
+   Virtue, Patti
+   Weldrick, Christine K.
+   Wongpan, Pat
+   Wotherspoon, Simon J.
+TI Biological responses to change in Antarctic sea ice habitats
+SO FRONTIERS IN ECOLOGY AND EVOLUTION
+AB Sea ice is a key habitat in the high latitude Southern Ocean and is predicted to change in its extent, thickness and duration in coming decades. The sea-ice cover is instrumental in mediating ocean-atmosphere exchanges and provides an important substrate for organisms from microbes and algae to predators. Antarctic krill, Euphausia superba, is reliant on sea ice during key phases of its life cycle, particularly during the larval stages, for food and refuge from their predators, while other small grazers, including copepods and amphipods, either live in the brine channel system or find food and shelter at the ice-water interface and in gaps between rafted ice blocks. Fish, such as the Antarctic silverfish Pleuragramma antarcticum, use platelet ice (loosely-formed frazil crystals) as an essential hatching and nursery ground. In this paper, we apply the framework of the Marine Ecosystem Assessment for the Southern Ocean (MEASO) to review current knowledge about relationships between sea ice and associated primary production and secondary consumers, their status and the drivers of sea-ice change in this ocean. We then use qualitative network modelling to explore possible responses of lower trophic level sea-ice biota to different perturbations, including warming air and ocean temperatures, increased storminess and reduced annual sea-ice duration. This modelling shows that pelagic algae, copepods, krill and fish are likely to decrease in response to warming temperatures and reduced sea-ice duration, while salp populations will likely increase under conditions of reduced sea-ice duration and increased number of days of >0 degrees C. Differences in responses to these pressures between the five MEASO sectors were also explored. Greater impacts of environmental pressures on ice-related biota occurring presently were found for the West and East Pacific sectors (notably the Ross Sea and western Antarctic Peninsula), with likely flow-on effects to the wider ecosystem. All sectors are expected to be impacted over coming decades. Finally, we highlight priorities for future sea ice biological research to address knowledge gaps in this field.
+RI ; Fraser, Alexander/AFO-7186-2022; Kennedy, Fraser/M-5145-2019; Reimer,
+   Jody/M-7256-2019; Wotherspoon, Simon/B-2390-2013; Wongpan,
+   Pat/AAX-6946-2020; Ghigliotti, Laura/AAN-6843-2021; Koubbi,
+   Philippe/D-5873-2015; Kawaguchi, So/N-1795-2017; Weldrick,
+   Christine/N-2617-2017
+OI GUGLIELMO, Letterio/0000-0001-7547-8058; Kiko,
+   Rainer/0000-0002-7851-9107; Constable, Anew John/0000-0002-4841-2296;
+   Fraser, Alexander/0000-0003-1924-0015; GRANATA,
+   Antonia/0000-0001-7016-6418; Peeken, Ilka/0000-0003-1531-1664; Kennedy,
+   Fraser/0000-0003-1796-0764; Johnston, Nadine M/0000-0003-2211-1492;
+   Reimer, Jody/0000-0001-7742-2728; 
+SN 2296-701X
+PD JAN 23
+PY 2023
+VL 10
+AR 1073823
+DI 10.3389/fevo.2022.1073823
+UT WOS:000926094800001
+ER
+
+PT J
+AU Zhu, JY
+   Zhu, GP
+AF Zhu, Jiuyang
+   Zhu, Guoping
+TI Trophic linkage between mackerel icefish (Champsocephalus
+   gunnari) and Antarctic krill (Euphausia superba) at
+   South Georgia
+SO FISHERIES RESEARCH
+AB Mackerel icefish, Champsocephalus gunnari, plays a vital role in the Antarctic marine ecosystem, not only because it is an important prey for higher predators but also because it is the primary predator of Antarctic krill (Euphausia superba), a keystone species in the Southern Ocean. Therefore, elucidating the trophic linkage between C. gunnari and its exclusive prey can provide a model for the trophic relationship between a predator and its prey in cold environments. Stomach contents analysis showed that E. superba was the predominant prey of C. gunnari in terms of quantity (99.3%) and quality (99.9%) during winter at South Georgia. E. superba had a similar fatty acid profile to that of C. gunnari, with a high proportion of short-chain monounsaturated fatty acids (MUFA) and a lower proportion of long-chain MUFA. However, C. gunnari was more likely to retain polyunsaturated fatty acids, especially docosahexaenoic; E. superba tended to accumulate saturated fatty acids and MUFA. This reflects the fact that fatty acids, when transferred from low trophic level to higher levels, are accumulated in the predator selectively, according to their relative content in the diet and their physiological and ecological function in the predator.
+RI Zhu, Guoping/D-1002-2010; ZHU, JIUYANG/S-1318-2019
+OI Zhu, Guoping/0000-0001-6081-7811; 
+SN 0165-7836
+EI 1872-6763
+PD SEP
+PY 2022
+VL 253
+AR 106366
+DI 10.1016/j.fishres.2022.106366
+EA MAY 2022
+UT WOS:000807100000002
+ER
+
+PT J
+AU Pietzsch, BW
+   Schmidt, A
+   Groeneveld, J
+   Bahlburg, D
+   Meyer, B
+   Berger, U
+AF Pietzsch, Bruno Walter
+   Schmidt, Aaron
+   Groeneveld, Juergen
+   Bahlburg, Dominik
+   Meyer, Bettina
+   Berger, Uta
+TI The impact of salps (Salpa thompsoni) on the Antarctic krill population
+   (Euphausia superba): an individual-based modelling study
+SO ECOLOGICAL PROCESSES
+AB Background Krill (Euphausia superba) and salps (Salpa thompsoni) are key macrozooplankton grazers in the Southern Ocean ecosystem. However, due to differing habitat requirements, both species previously exhibited little spatial overlap. With ongoing climate change-induced seawater temperature increase and regional sea ice loss, salps can now extend their spatial distribution into historically krill-dominated areas and increase rapidly due to asexual reproduction when environmental conditions are favorable. Understanding the potential effects on krill is crucial, since krill is a species of exceptional trophic significance in the Southern Ocean food web. Negative impacts on krill could trigger cascading effects on its predators and prey. To address this question, we combined two individual-based models on salps and krill, which describe the whole life cycle of salp individuals and the dynamic energy budget of individual krill. The resulting new model PEKRIS (PErformance of KRIll vs. Salps) simulates a krill population for 100 years under varying chlorophyll-a concentrations in the presence or absence of salps.Results All of the investigated krill population properties (abundance, mean length, and yearly egg production) were significantly impacted by the presence of salps. On the other hand, salp density was not impacted if krill were present. The medians of krill population properties deviated during variable maximum chlorophyll-a density per year when salps were introduced by - 99.9% (- 234 individuals per 1000 m3) for krill density, - 100% (- 22,062 eggs per 1000 m3) for krill eggs and - 0.9% (- 0.3 mm) for mean length of krill.Conclusions If both species compete for the same food resource in a closed space, salps seem to inhibit krill populations. Further simulation studies should investigate whether this effect prevails if different phytoplankton sizes and consumption preferences of krill are implemented. Furthermore, direct predation of the two species or consumption of krill fecal pellets by salps could change the impact size of the food competition.
+RI Groeneveld, Juergen/N-2420-2016
+OI Berger, Uta/0000-0001-6920-136X; Pietzsch, Bruno
+   Walter/0000-0002-1232-6062
+EI 2192-1709
+PD OCT 9
+PY 2023
+VL 12
+IS 1
+AR 50
+DI 10.1186/s13717-023-00462-9
+UT WOS:001092233900001
+ER
+
+PT J
+AU Ichii, T
+   Igarashi, H
+   Mori, M
+   Mahapatra, K
+   Nishikawa, H
+   Okuda, T
+AF Ichii, Taro
+   Igarashi, Hiromichi
+   Mori, Mao
+   Mahapatra, Kedarnath
+   Nishikawa, Haruka
+   Okuda, Takehiro
+TI Impact of the climate regime shift around 2000 on recruitment of
+   Antarctic krill at the Antarctic Peninsula and South Georgia
+SO PROGRESS IN OCEANOGRAPHY
+AB We examined how the climate regime shift around 2000 affected Antarctic krill recruitment variability at the North Antarctic Peninsula (NAP) and South Georgia (SG) during the period of 1990s through to 2000s. We used sea surface temperature (SST) as a proxy of the monthly sea ice extent and related it to the recruitment index (proportion of 1-year-old krill) of each succeeding year for NAP and SG by examining the correlation of the time series before and after 2000. For NAP, recruitment index was negatively correlated with winter SST at NAP in the 1990s but with autumn SST in the 2000s, suggesting that good recruitment was supported by extensive winter sea-ice in the 1990s but by extensive autumn sea-ice in the 2000s. This was attributed to the regime shift featured by winter warming and autumn cooling after 2000. For SG, recruitment was negatively correlated with winter SST at NAP in the 1990s but positively correlated with autumn SST in the southern Scotia Sea (SSS) in the 2000s. According to particle tracking experiment from NAP to SG in relation to the sea-ice extent and position of SACCF (Southern Antarctic Circumpolar Current Front), less sea-ice extent in 2000s meant less larvae distributing as north as SACCF, resulting in much fewer larval being transported to SG. Hence, we hypothesized that the regime shift weakened the connection between NAP and SG, but instead SSS became the main driver of recruitment at SG. We presume the krill population demonstrated adaptability to the regime shift by offsetting the unfavorable winter condition with the favorable autumn condition at NAP and for SG, replacing the source of recruits with those closer to it.
+RI Ichii, Taro/LRU-2814-2024
+SN 0079-6611
+EI 1873-4472
+PD APR-MAY
+PY 2023
+VL 213
+AR 103020
+DI 10.1016/j.pocean.2023.103020
+EA MAR 2023
+UT WOS:000972514700001
+ER
+
+PT J
+AU Cao, Z
+   Zhu, GP
+AF Cao, Zhi
+   Zhu, Guoping
+TI Using fatty acids and stable isotope analyses to elucidate ontogenetic
+   variations in diet of painted notothen Lepidonotothen
+   larseni during winter at the South Georgia shelf, Antarctic
+SO FISHERIES RESEARCH
+AB Fish belonging to the Nototheniidae family are considered to be the most significant members of the Notothenioids family and are essential to the Antarctic marine ecology. However, the trophic dynamics of some unexploited species, including semi-pelagic painted notothen Lepidonotothen larseni, remains unknown. This study used fatty acids (FAs) and stable isotope indicators to examine the shift in diet from early juvenile to adult stages at South Georgia throughout winter in order to improve our understanding of the dietary diversity and trophic niche of L. larseni. Thirty different types of fatty acids were found in the muscular tissues of early juveniles (4.10-4.85 cm) and adults (8.7-14.9 cm), yet there was a notable variation in the composition of FAs between the two groups. FAs including C22:6n3, C22:2n6, C16:1n7, and C20:5n3 were found in high amounts in both early juveniles and adults. Both the delta 15N and delta 13C values of adults were significantly higher than those of early juveniles, suggesting an ontogenetic shift in L. larseni's diet and trophic niche separation between the two stages of development. Significant separation in marker FAs was also observed between early juveniles and adults. Early juvenile L. larseni primarily fed on pelagic algae or copepods, whereas adults predominantly fed on Antarctic krill ( Euphausia superba) on the seafloor and in the water column.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0165-7836
+EI 1872-6763
+PD JAN
+PY 2025
+VL 281
+AR 107218
+DI 10.1016/j.fishres.2024.107218
+EA NOV 2024
+UT WOS:001349915000001
+ER
+
+PT J
+AU Abe, K
+   Matsukura, R
+   Yamamoto, N
+   Amakasu, K
+   Nagata, R
+   Murase, H
+AF Abe, Koki
+   Matsukura, Ryuichi
+   Yamamoto, Natsuki
+   Amakasu, Kazuo
+   Nagata, Reiko
+   Murase, Hiroto
+TI Biomass of Antarctic krill (Euphausia superba) in the eastern Indian
+   sector of the Southern Ocean (80-150°E) in the 2018-19 austral summer
+SO PROGRESS IN OCEANOGRAPHY
+AB Biomass of Antarctic krill (Euphausia superba) in the eastern Indian sector of the Southern Ocean (80-150 degrees E, corresponding to the longitudinal range of CCAMLR Division 58.4.1) in the austral summer of 2018-19 was estimated using data from a calibrated echosounder and biological sampling. This study was carried out as a part of the multidisciplinary ecosystem survey (KY1804) by Japanese research vessel Kaiyo-maru. The krill biomass was estimated using an up-to-date standard method of CCAMLR, the "swarm-based method". Biomass of krill in the area had not been estimated since 1996 (BROKE survey). KY1804 covered a total of 4680 km of the surveyed distance in the surveyed area of 0.909 million km2. Krill were mainly distributed between the Southern Antarctic Circumpolar Current Front and the Antarctic Slope Front. The krill biomass during KY1804 was estimated as 4.325 million tonnes (CV = 17.0%), comparable with the 1996 BROKE estimate (4.83 million tonnes, CV = 17.0%); however, direct comparison is difficult because of differences in (1) biomass estimation methods; (2) timing of the surveys (KY1804 commenced about 40 days earlier in the year than BROKE); and (3) areal coverage, primarily because of different positions of the sea ice edge, especially in the western part of the area. There was no noticeable difference of krill biomass between day and night. This study provides a 2018-19 biomass estimate for Antarctic krill in the eastern Indian sector of the Southern Ocean, which is a basis for studies of this species as well as the Southern Ocean ecosystem.
+RI AMAKASU, Kazuo/O-1857-2014; ABE, Koki/IXN-1647-2023; Murase,
+   Hiroto/W-3556-2019
+OI ABE, Koki/0000-0003-3979-7750; Murase, Hiroto/0000-0001-7784-6555
+SN 0079-6611
+EI 1873-4472
+PD NOV
+PY 2023
+VL 218
+AR 103107
+DI 10.1016/j.pocean.2023.103107
+EA SEP 2023
+UT WOS:001080411100001
+ER
+
+PT J
+AU Zhang, HT
+   Zhu, GP
+   Liu, H
+   Swadling, KM
+AF Zhang, Haiting
+   Zhu, Guoping
+   Liu, Hui
+   Swadling, Kerrie M.
+TI Autumn food availability in Bransfield Strait for Antarctic krill
+   Euphausia superba and the relationship between body size and fatty acid
+   content
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Bransfield Strait is an important spawning, feeding and overwintering ground for Antarctic krill. Increases in both the biomass of krill and the ice-free extent of the strait make this area of great interest for krill fisheries. While krill are known to have access to food supplies beyond summer, lipid accumulation plays a pivotal role in their ability to survive the food-limited winter. Understanding the condition and dietary habits of krill during the pre-winter season is important for assessing how they respond to this period that is often characterized by short-lived phytoplankton blooms. For 5 consecutive autumns, from 2015 to 2019, krill obtained from the fishery in Bransfield Strait were used to assess their diet and to evaluate the roles of individual body condition and habitat features in shaping krill fatty acid profiles. Analysis of dietary fatty acids in krill indicated that they were generally in an active feeding condition in autumn, showing significant levels of essential fatty acids such as eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). Fatty acid biomarkers displayed substantial inter-annual variation, with satellite data suggesting that sea surface temperature could be a potential factor contributing to this variation. Additionally, we observed strong correlations between krill body size and most of the fatty acid contents. There were positive correlations between size, EPA and DHA as well as negative correlations between size and a carnivorous diet. These findings suggest that krill exhibit differentiated feeding abilities and lipid retention based on their size.
+RI ; Zhu, Guoping/D-1002-2010
+OI Zhang, Haiting/0000-0002-4938-0900; Zhu, Guoping/0000-0001-6081-7811
+SN 0171-8630
+EI 1616-1599
+PD MAR 7
+PY 2024
+VL 730
+BP 31
+EP 42
+DI 10.3354/meps14517
+UT WOS:001204485700007
+ER
+
+PT J
+AU Sylvester, ZT
+   Veytia, D
+   Bahl, AA
+   Bahlburg, D
+   Benkort, D
+   Bestley, S
+   Cagdas, B
+   Cleary, AC
+   Constable, A
+   Corney, S
+   Fach, BA
+   Hellessey, N
+   Hill, SL
+   Johnston, NM
+   Labrousse, S
+   Merkel, B
+   Murphy, EJ
+   Subramaniam, RC
+   Thorpe, S
+   Raymond, B
+AF Sylvester, Zephyr T.
+   Veytia, Devi
+   Bahl, Alexis A.
+   Bahlburg, Dominik
+   Benkort, Deborah
+   Bestley, Sophie
+   Cagdas, Bulut
+   Cleary, Alison C.
+   Constable, Andrew
+   Corney, Stuart
+   Fach, Bettina A.
+   Hellessey, Nicole
+   Hill, Simeon L.
+   Johnston, Nadine M.
+   Labrousse, Sara
+   Merkel, Benjamin
+   Murphy, Eugene J.
+   Subramaniam, Roshni C.
+   Thorpe, Sally
+   Raymond, Ben
+TI Untangling the complexities of larval Antarctic krill overwintering
+   success under climate change
+SO ICES JOURNAL OF MARINE SCIENCE
+AB Antarctic krill (Euphausia superba) are integral to Southern Ocean pelagic ecosystems. Winters with extensive sea ice have been linked to high post-larval krill recruitment the following spring, suggesting that sea ice plays a critical role in larval overwinter survival. As the ocean warms and sea ice declines under climate change, understanding the mechanisms linking sea ice and krill recruitment is increasingly urgent. To address this, we developed a qualitative network model (QNM) that integrates evidence-based and hypothesized interactions to explore larval overwinter survival and growth under future climate scenarios in the southwest Atlantic sector. Our model highlights habitat-specific impacts, with substantial declines predicted for the North Antarctic Peninsula continental shelf due to reduced autumn primary productivity and warming. In contrast, survival may improve in open-ocean habitats under cooler scenarios that enhance sea-ice-associated processes, such as food availability and refuge. The inclusion of hypothesized mechanisms, such as sea-ice terraces providing refuge from predation, strengthened these conclusions and highlighted critical uncertainties, including the influence of glacial melt on food web dynamics. These findings demonstrate the value of QNMs in complementing quantitative approaches, offering a framework for identifying critical mechanisms, addressing knowledge gaps, and guiding future field and laboratory studies to improve predictions of krill responses to climate change.
+RI Bahl, Alexis/AAQ-6928-2021; Subramaniam, Roshni/ADZ-6878-2022; Simeon,
+   Hill/B-2307-2008; murphy, eugene/GZL-1620-2022; Bestley,
+   Sophie/AAN-2483-2021; Hellessey, Nicole/B-1695-2016; Fach,
+   Bettina/JCE-6687-2023
+OI Bahl, Alexis/0000-0002-8575-2679; Benkort, Déborah/0000-0002-0489-8191;
+   Hellessey, Nicole/0000-0002-3053-8720; Sylvester,
+   Zephyr/0000-0002-2057-3741; Fach, Bettina/0000-0003-4688-1918
+SN 1054-3139
+EI 1095-9289
+PD APR
+PY 2025
+VL 82
+IS 4
+AR fsaf049
+DI 10.1093/icesjms/fsaf049
+UT WOS:001469122800001
+ER
+
+PT J
+AU Kawaguchi, S
+   Atkinson, A
+   Bahlburg, D
+   Bernard, KS
+   Cavan, EL
+   Cox, MJ
+   Hill, SL
+   Meyer, B
+   Veytia, D
+AF Kawaguchi, So
+   Atkinson, Angus
+   Bahlburg, Dominik
+   Bernard, Kim S.
+   Cavan, Emma L.
+   Cox, Martin J.
+   Hill, Simeon L.
+   Meyer, Bettina
+   Veytia, Devi
+TI Climate change impacts on Antarctic krill behaviour and population
+   dynamics
+SO NATURE REVIEWS EARTH & ENVIRONMENT
+AB Krill habitats in the Southern Ocean are impacted by changing climate conditions, reduced sea ice and rising temperatures. These changes, in turn, affect krill occurrence, physiology and behaviour, which could have ecosystem impacts. In this Review, we examine climate change impacts on Antarctic krill and the potential implications for the Southern Ocean ecosystem. Since the 1970s, there have been apparent reductions in adult population density and the occurrence of very dense swarms in the northern Southwest Atlantic. These changes were associated with latitudinal and longitudinal rearrangement of population distribution - including a poleward contraction in the Southwest Atlantic - and were likely driven by ocean warming, sea-ice reductions and changes in the quality of larval habitats. As swarms are targeted by fishers and predators, this contraction could increase fishery-predator interactions, potentially exacerbating risk to already declining penguin populations and recovering whale populations. These risks require urgent mitigation measures to be developed. A circumpolar monitoring network using emerging technologies is needed to augment existing surveys and better record the shifts in krill distribution.
+   Krill are food sources for megafauna, are drivers of carbon export and are being impacted by sea-ice declines and changing climate conditions. This Review examines changes in krill populations, habitats and behaviour in the Southern Ocean, and discusses their potential drivers and implications for fishery management in the future.
+   The massive abundance and swarming behaviour of Antarctic krill makes them the primary prey for numerous Antarctic megafauna and important mediators of biogeochemical cycling in the Southern Ocean, particularly in processes that enhance carbon sequestration.Analyses of an existing dataset collectively support southward habitat contraction in the Southwest Atlantic sector, likely due to ocean warming and hence changing sea-ice dynamics, including the reduction of sea ice.Changes in habitat conditions affect krill physiology, which in turn could be accompanied by changes in their behaviour, such as changes in distribution and swarm size and frequency.Reduction in krill biomass is potentially associated with a reduction in the number of swarms. Such changes will have implications for predator-prey relationships and interactions with the fishery.An overall reduction in krill biomass and abundance could decrease the contribution of krill to the biological carbon pump in the region, with fewer faecal pellets, carcasses and moults sinking to the deep ocean, thereby reducing this important route of carbon sequestration.Future studies must aim for deeper understanding of the energy budget in krill as it pertains to their swarming behaviour, and should deepen our understanding of climate change impacts on the pelagic lifestyle of krill.
+RI Hill, Simeon/B-2307-2008; Bernard, Kim/J-2703-2013; Kawaguchi,
+   So/N-1795-2017; cavan, emma/AFY-2671-2022; Meyer, Bettina/ABB-5311-2020
+OI Hill, Simeon/0000-0003-1441-8769; Bernard, Kim/0000-0003-0509-2744;
+   Kawaguchi, So/0000-0002-2042-5095; cavan, emma/0000-0003-1099-6705; ,
+   Martin/0000-0002-9733-882X; Meyer, Bettina/0000-0001-6804-9896
+EI 2662-138X
+PD JAN
+PY 2024
+VL 5
+IS 1
+BP 43
+EP 58
+DI 10.1038/s43017-023-00504-y
+EA DEC 2023
+UT WOS:001129352500001
+ER
+
+PT J
+AU Liu, Y
+   Zhu, GP
+AF Liu, Yu
+   Zhu, Guoping
+TI Reproductive strategy of Antarctic krill (Euphausia superba) in
+   the south Scotia Sea: revisiting the oocyte development and
+   morphological changes with multiple seasonal analysis
+SO JOURNAL OF OCEANOLOGY AND LIMNOLOGY
+AB Antarctic krill (Euphausia superba) is a keystone species in the Southern Ocean; however, seasonal variations in reproductive development for krill are complex and remains unknown. A histological investigation with observations of external secondary sex features of krill in the south Scotia Sea region was carried out using a multi-seasonal dataset for detail reproductive descriptions for this commercially important species. The monthly development of secondary sexual characteristics, the thelycum, as well as of oocytes over a period of two years were described. It was observed that krill have diverse reproductive development characteristics within the ovary, and that this function differently between the juvenile, sub-adult, and adult stages. During the summer, adult krill ovaries are large and ripe with oocytes rich in yolk ready for release in late summer. Post spawning, the ovaries resorb, fragment, and regress throughout the autumn and winter. During reproductive diapause period, krill focus on absorbing nutrients. Un-released eggs are reabsorbed by the ovary, the permanent germinal zone is active, and early oocytes begin to develop in preparation for the egg production phase. Krill that are about to spawn have an ovary that fills the space between the digestive gland and muscle. The ovarian development of krill is divided into 10 sexual developmental stages. As a part of this study, data on the carapace thickness with similar development patterns in krill size and carapace width, was investigated for the first time to help understand krill growth and development.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 2096-5508
+EI 2523-3521
+PD SEP
+PY 2025
+VL 43
+IS 5
+BP 1596
+EP 1608
+DI 10.1007/s00343-025-4135-z
+EA APR 2025
+UT WOS:001463304700001
+ER
+
+PT J
+AU Salmerón, N
+   Belle, S
+   Cruz, FS
+   Alegria, N
+   Finger, JVG
+   Corá, DH
+   Petry, MV
+   Hernández, C
+   Cárdenas, CA
+   Krüger, L
+AF Salmeron, Nuria
+   Belle, Solenne
+   Cruz, Francisco Santa
+   Alegria, Nicolas
+   Finger, Julia Victoria Grohmann
+   Cora, Denyelle Hennayra
+   Petry, Maria Virginia
+   Hernandez, Cristina
+   Cardenas, Cesar A.
+   Kruger, Lucas
+TI Contrasting environmental conditions precluded lower availability of
+   Antarctic krill affecting breeding chinstrap penguins in the Antarctic
+   Peninsula
+SO SCIENTIFIC REPORTS
+AB Dramatic decreases of chinstrap penguin populations across the Antarctic Peninsula (AP) are thought to be influenced by climate-driven changes affecting its main prey, the Antarctic krill, however, empirical evidence supporting such hypotheses are scarce. By coupling data on breeding chinstrap penguins, environmental remote sensing and estimates of krill acoustic density, we were able to demonstrate that penguins substantially increased their foraging effort in a year of low krill availability, with consequent reduction in breeding success. A winter of low sea ice cover followed by a summer/spring with stronger wind and lower marine productivity explained the lower and deeper krill availability. Our results highlight the importance of environmental variability on penguin populations, as variability is expected to increase under climate change, affecting foraging behaviour responses.
+RI Grohmann Finger, Júlia/AAP-4653-2020; Santa Cruz,
+   Francisco/ABF-5001-2020; petry, maria/AAG-5333-2021; Cárdenas,
+   César/ABF-1664-2020; Krüger, Lucas/O-8912-2015; hernandez,
+   cristina/KGL-9001-2024
+OI Santa Cruz, Francisco/0000-0002-7894-0153; petry,
+   maria/0000-0002-7870-7394; Cárdenas, César/0000-0001-6662-6899; Krüger,
+   Lucas/0000-0003-4637-5302; Alegría, Nicolás/0000-0002-6406-8122; Corá,
+   Denyelle Hennayra/0000-0002-3175-6447; 
+SN 2045-2322
+PD MAR 31
+PY 2023
+VL 13
+IS 1
+AR 5265
+DI 10.1038/s41598-023-32352-7
+UT WOS:001001498900026
+PM 37002269
+ER
+
+PT J
+AU Young, EF
+   Thorpe, SE
+   Renner, AHH
+   Murphy, EJ
+AF Young, Emma F.
+   Thorpe, Sally E.
+   Renner, Angelika H. H.
+   Murphy, Eugene J.
+TI Environmental and behavioural drivers of Antarctic krill distribution at
+   the South Orkney Islands: A regional perspective
+SO JOURNAL OF MARINE SYSTEMS
+AB Antarctic krill (Euphausia superba) is a key species in the marine ecosystem of the Southern Ocean, but is also the target of a commercial fishery, with an important fishing ground in the South Orkney Islands region. The potential for competition for krill between predators and the fishery requires risk management strategies for the fishery, underpinned by an understanding of the key physical and behavioural drivers of krill movement and retention in target areas. Here, we present the results of a regional modelling study, combining a high-resolution ocean-sea ice model and an individual-based model parameterised for krill, to elucidate the roles of oceanographic variability and krill behaviour on patterns of transport and retention on and around the South Orkney Plateau. Simulations suggest that oceanic transport from sources around the Antarctic Peninsula is restricted by the northward flowing Antarctic Slope Current. Around the South Orkney Plateau, anticyclonic flows associated with the Weddell Front and the shelf edge transport krill rapidly towards the main fishing grounds to the northwest of the plateau. Transport onto the shelf and subsequent retention are influenced by the strength and direction of regional winds; weaker on-shelf transport and shorter retention times are associated with stronger westerly and northerly winds. The incorporation of sea-ice associated behaviour, whereby krill are moved with sea ice when sea ice is present, significantly modifies the patterns from purely oceanic transport; it reduces the influence of strong regional oceanic flows and increases transport of krill to the South Orkneys region from the Antarctic Peninsula. The inclusion of diel vertical migration also modifies predicted patterns from oceanic transport, but to a lesser extent, and moderates the impact of including sea-ice associated behaviour. We highlight the importance of understanding the behaviour of krill, including age-dependent behavioural changes in response to sea ice conditions, for modelling and management of Antarctic krill populations.
+RI Murphy, Eugene/GZL-1620-2022
+OI Murphy, Eugene/0000-0002-7369-9196; Young, Emma/0000-0002-7069-6109
+SN 0924-7963
+EI 1879-1573
+PD JAN
+PY 2024
+VL 241
+AR 103920
+DI 10.1016/j.jmarsys.2023.103920
+EA AUG 2023
+UT WOS:001068440200001
+ER
+
+PT J
+AU Green, DB
+   Titaud, O
+   Bestley, S
+   Corney, SP
+   Hindell, MA
+   Trebilco, R
+   Conchon, A
+   Lehodey, P
+AF Green, David B.
+   Titaud, Olivier
+   Bestley, Sophie
+   Corney, Stuart P.
+   Hindell, Mark A.
+   Trebilco, Rowan
+   Conchon, Anna
+   Lehodey, Patrick
+TI KRILLPODYM: a mechanistic, spatially resolved model of Antarctic krill
+   distribution and abundance
+SO FRONTIERS IN MARINE SCIENCE
+AB Robust prediction of population responses to changing environments requires the integration of factors controlling population dynamics with processes affecting distribution. This is true everywhere but especially in polar pelagic environments. Biological cycles for many polar species are synchronised to extreme seasonality, while their distributions may be influenced by both the prevailing oceanic circulation and sea-ice distribution. Antarctic krill (krill, Euphausia superba) is one such species exhibiting a complex life history that is finely tuned to the extreme seasonality of the Southern Ocean. Dependencies on the timing of optimal seasonal conditions have led to concerns over the effects of future climate on krill's population status, particularly given the species' important role within Southern Ocean ecosystems. Under a changing climate, established correlations between environment and species may breakdown. Developing the capacity for predicting krill responses to climate change therefore requires methods that can explicitly consider the interplay between life history, biological conditions, and transport. The Spatial Ecosystem And Population Dynamics Model (SEAPODYM) is one such framework that integrates population and general circulation modelling to simulate the spatial dynamics of key organisms. Here, we describe a modification to SEAPODYM, creating a novel model - KRILLPODYM - that generates spatially resolved estimates of krill biomass and demographics. This new model consists of three major components: (1) an age-structured population consisting of five key life stages, each with multiple age classes, which undergo age-dependent growth and mortality, (2) six key habitats that mediate the production of larvae and life stage survival, and (3) spatial dynamics driven by both the underlying circulation of ocean currents and advection of sea-ice. We present the first results of KRILLPODYM, using published deterministic functions of population processes and habitat suitability rules. Initialising from a non-informative uniform density across the Southern Ocean our model independently develops a circumpolar population distribution of krill that approximates observations. The model framework lends itself to applied experiments aimed at resolving key population parameters, life-stage specific habitat requirements, and dominant transport regimes, ultimately informing sustainable fishery management.
+RI Lehodey, Patrick/KPY-7728-2024; Hindell, Mark/K-1131-2013; Green,
+   David/U-5570-2019; Trebilco, Rowan/I-5311-2012; Bestley,
+   Sophie/AAN-2483-2021
+OI Green, David/0000-0002-0346-3129; 
+EI 2296-7745
+PD JUL 25
+PY 2023
+VL 10
+AR 1218003
+DI 10.3389/fmars.2023.1218003
+UT WOS:001043893700001
+ER
+
+PT J
+AU Tan, YY
+   Bai, Y
+AF Tan, Yiyang
+   Bai, Yan
+TI Antarctic krill habitat suitability variation in the Southern Ocean over
+   20 years
+SO FRONTIERS IN MARINE SCIENCE
+AB Antarctic krill (Euphausia superba) is a key species that sustains the biodiversity of the Southern Ocean and is a protected and restricted fishing target in this region. Considering the significant impacts of climate change on the ecological environment of the Southern Ocean, it is critical to understand the long-term spatio-temporal habitat distribution of Antarctic krill. This study integrates remote sensing and reanalysis data with Antarctic krill survey records to evaluate krill habitat suitability in the Southern Ocean. A novel habitat suitability model was developed using phytoplankton phenology and sea ice dynamics as key timing parameters, employing the Categorical Boosting (CatBoost) algorithm. This is the first time interannual variation in krill habitat distribution, spanning over 20 years (1997-2019), has been analyzed in relation to environmental parameters. Results show that the ice-free period in the Amundsen Sea has extended annually, while phytoplankton blooms have occurred earlier, lasted longer, and exhibited increasing chlorophyll a concentration (CHL), particularly in coastal regions. Additionally, the CatBoost model outperformed traditional species distribution models (SDMs) in handling large-scale presence-absence data (GCV = 0.16), demonstrating that bloom peak CHL and sea ice retreat timing are more effective indicators of krill habitat suitability than single-time environmental parameters. Based on long-term changes in highly suitable habitat areas for Antarctic krill and synchronized trends with the Southern Annular Mode (SAM) index, the overall area of suitable habitat for Antarctic krill in the Prydz sector has declined, likely linked to surface cooling caused by climate change. In contrast, the coastal region of the Atlantic sector, particularly the Western Antarctic Peninsula, a rapid warming area, has experienced an increase in krill habitat suitability. However, habitat suitability in the Weddell Sea has shown a marked decrease. Although climate change has produced mixed effects on krill habitats due to the varying responses of krill different life stages to environmental parameters, this study overall highlights a degradation of krill habitat in the Southern Ocean over the past two decades. These findings provide new insights into Antarctic krill habitat modeling and offer a long-term perspective on the climate change impacts, emphasizing the need for future under-ice investigations.
+EI 2296-7745
+PD FEB 21
+PY 2025
+VL 12
+AR 1513013
+DI 10.3389/fmars.2025.1513013
+UT WOS:001438267800001
+ER
+
+PT J
+AU Feng, JL
+   Liu, LL
+   Liu, QL
+   Zhao, L
+AF Feng, Jianlong
+   Liu, Lulu
+   Liu, Qiulin
+   Zhao, Liang
+TI The potential distribution of adult Antarctic krill in the Amundsen Sea
+SO JOURNAL OF OCEANOLOGY AND LIMNOLOGY
+AB Antarctic krill is the key species of ecological system in the Amundsen Sea. At present, the suitable distribution is unobtainable by scientific surveys or data from the fishery. In this paper, the maximum entropy algorithm (Maxent) was used to obtain the potential distribution of adult Antarctic krill in order to provide useful information and reasonable reference for the policy on protecting potential krill habitats around the Amundsen Sea. Occurrence points and 17 environmental variables were used to simulate the distributions. Results show that the high and moderate suitable habitats lie between 65 degrees S and 72 degrees S in the Amundsen Sea. The high suitable habitat accounts for 8.1% of the total area of the Amundsen Sea. The sea ice persistence (ICE), total phytoplankton (PHYC), and the minimum value of dissolved iron (Fe_min) are the three dominant contributors to the model. Results from the response curves show that Antarctic krill preferred habitats with ICE of 0.42-0.93, PHYC of 2.48-2.77 mmol/m(3) and Fe_min of (7.10x10(-5))-(9.45x10(-5)) mmol/m(3). Positive trends existed in the PHYC of the high and moderate suitable habitat, and a positive trend existed in the Fe_min of moderate suitable habitat. However, the probability of presence of Antarctic krill will decrease if the increase of the PHYC and Fe_min continues.
+RI Liu, Qiulin/M-4021-2014
+OI Liu, Qiulin/0000-0002-2423-4472
+SN 2096-5508
+EI 2523-3521
+PD JUL
+PY 2022
+VL 40
+IS 4
+BP 1566
+EP 1577
+DI 10.1007/s00343-021-1181-z
+EA APR 2022
+UT WOS:000788455800003
+ER
+
+PT J
+AU Ryabov, A
+   Berger, U
+   Blasius, B
+   Meyer, B
+AF Ryabov, Alexey
+   Berger, Uta
+   Blasius, Bernd
+   Meyer, Bettina
+TI Driving forces of Antarctic krill abundance
+SO SCIENCE ADVANCES
+AB Antarctic krill, crucial to the Southern Ocean ecosystem and a vital fisheries resource, is endangered by climate change. Identifying drivers of krill biomass is therefore essential for determining catch limits and designating protection zones. We present a modeling approach to pinpointing effects of sea surface temperature, ice cover, chlorophyll levels, climate indices, and intraspecific competition. Our study reveals that larval recruitment is driven by both competition among age classes and chlorophyll levels. In addition, while milder ice and temperature in spring and summer favor reproduction and early larval survival, both larvae and juveniles strongly benefit from heavier ice and colder temperatures in winter. We conclude that omitting top-down control of resources by krill is only acceptable for retrospective or single-year prognostic models that use field chlorophyll data but that incorporating intraspecific competition is essential for longer-term forecasts. Our findings can guide future krill modeling strategies, reinforcing the sustainability of this keystone species.
+RI Ryabov, Alexey/I-1008-2019; Blasius, Bernd/AAH-1897-2019; Meyer,
+   Bettina/ABB-5311-2020
+OI Ryabov, Alexey/0000-0002-1595-6940; Blasius, Bernd/0000-0002-6558-1462;
+   Meyer, Bettina/0000-0001-6804-9896; Berger, Uta/0000-0001-6920-136X
+SN 2375-2548
+PD DEC 15
+PY 2023
+VL 9
+IS 50
+AR eadh4584
+DI 10.1126/sciadv.adh4584
+UT WOS:001142514700007
+PM 38100594
+ER
+
+PT J
+AU Pinkerton, MH
+   Hayward, A
+AF Pinkerton, Matthew H.
+   Hayward, Alexander
+TI Estimating variability and long-term change in sea ice primary
+   productivity using a satellite-based light penetration index
+SO JOURNAL OF MARINE SYSTEMS
+AB Sea ice algae in the Southern Ocean have strong ecological and biogeochemical significance, providing a lipidrich food-resource to keystone species such as Antarctic krill. Despite their ecological importance, estimating seasonal or interannual changes in ice algal production at the Antarctic circumpolar scale is not presently possible. We show that the product of ice concentration and irradiance penetrating into sea ice (Eice) explains 69% of the variability in ice algal production at the sector and seasonal scale estimated from two respected sea ice algae models. After allowing for a greater quantum yield of sea ice algae in summer than in other seasons we estimated a simple light-based index of potential ice algal production (Pice) and this explained 91% of the variability in modelled ice algal production. Our results suggest that between 1987 and 2017, ice algal production has generally increased with the largest increases seen off East Antarctica, the Weddell Sea, and the western Ross Sea.
+SN 0924-7963
+EI 1879-1573
+PD SEP
+PY 2021
+VL 221
+AR 103576
+DI 10.1016/j.jmarsys.2021.103576
+EA JUN 2021
+UT WOS:000658513500001
+ER
+
+PT J
+AU Hoering, F
+   Biscontin, A
+   Harms, L
+   Sales, G
+   Reiss, CS
+   De Pittà, C
+   Meyer, B
+AF Hoering, Flavia
+   Biscontin, Alberto
+   Harms, Lars
+   Sales, Gabriele
+   Reiss, Christian S.
+   De Pitta, Cristiano
+   Meyer, Bettina
+TI Seasonal gene expression profiling of Antarctic krill in three different
+   latitudinal regions
+SO MARINE GENOMICS
+AB The Antarctic krill, Euphausia superba, has evolved seasonal rhythms of physiology and behaviour to survive under the extreme photoperiodic conditions in the Southern Ocean. However, the molecular mechanisms generating these rhythms remain far from understood. The aim of this study was to investigate seasonal differences in gene expression in three different latitudinal regions (South Georgia, South Orkneys/Bransfield Strait, Lazarev Sea) and to identify genes with potential regulatory roles in the seasonal life cycle of Antarctic krill. The RNA-seq data were analysed (a) for seasonal differences between summer and winter krill sampled from each region, and (b) for regional differences within each season. A large majority of genes showed an up-regulation in summer krill in all regions with respect to winter krill. However, seasonal differences in gene expression were less pronounced in Antarctic krill from South Georgia, most likely due to the milder seasonal conditions of the lower latitudes of this region, with a less extreme light regime and food availability between summer and winter. Our results suggest that in the South Orkneys/Bransfield Strait and Lazarev Sea region, Antarctic krill entered a state of metabolic depression and regressed development (winter quiescence) in winter. Moreover, seasonal gene expression signatures seem to be driven by a photoperiodic timing system that may adapt the flexible behaviour and physiology of Antarctic krill to the highly seasonal environment according to the latitudinal region. However, at the lower latitude South Georgia region, food availability might represent the main environmental cue influencing seasonal physiology.
+RI ; Meyer, Bettina/ABB-5311-2020; Sales, Gabriele/K-5065-2016; De Pitta,
+   Cristiano/AAY-7302-2020
+OI Biscontin, Alberto/0000-0003-1492-7715; Meyer,
+   Bettina/0000-0001-6804-9896; Sales, Gabriele/0000-0003-2078-5661;
+   Höring, Flavia/0000-0002-0618-7481; De Pitta,
+   Cristiano/0000-0001-8013-8162
+SN 1874-7787
+EI 1876-7478
+PD APR
+PY 2021
+VL 56
+AR 100806
+DI 10.1016/j.margen.2020.100806
+EA FEB 2021
+UT WOS:000668992200006
+PM 32773253
+ER
+
+PT J
+AU de Lima, RC
+   Félix, F
+   Haase, B
+   Secchi, ER
+AF de Lima, Renan C.
+   Felix, Fernando
+   Haase, Ben
+   Secchi, Eduardo R.
+TI Antarctic sea ice as a driver of humpback whale migration timing in the
+   southeast Pacific
+SO POLAR BIOLOGY
+AB Understanding the drivers behind shifts in migration patterns is crucial for managing human activities that may affect whale populations and for assessing the ecological impacts of climate change on migratory species. This study investigates environmental factors influencing the migratory timing of humpback whales (Megaptera novaeangliae) in the Eastern Tropical Pacific (Breeding Stock G), using systematic shore-based observations from Ecuador between 2010 and 2023. We analyzed variables including Antarctic sea ice extent (SIE) and chlorophyll-a concentration (as a proxy for Antarctic krill density), the Oceanic Ni & ntilde;o Index, Southern Annular Mode Index, and the Peruvian Coastal Thermal Index to assess their relationship with whale arrival dates and residency at the breeding grounds. Our findings show significant interannual variability in migration timing. For both with-calf and non-calf groups, SIE during the previous winter was positively correlated with arrival dates, onset of calving, and time spent at the breeding area. Broader sea ice extent likely enhances krill recruitment, increasing prey availability and allowing whales to build sufficient energy reserves to support longer stays at reproductive sites. This study highlights the potential negative effects of Antarctic sea ice loss on whale migration patterns. Krill fisheries should adopt precautionary strategies that account for year-to-year variability in prey availability to avoid disrupting whale foraging. Moving forward, it is vital to monitor these changes continuously and to evaluate their broader ecological consequences to ensure the long-term viability of migratory marine species in a changing climate.
+RI Félix, Fernando/AGM-2677-2022; Secchi, Eduardo/D-5038-2013; Lima,
+   Renan/ISS-9775-2023
+SN 0722-4060
+EI 1432-2056
+PD JUL 28
+PY 2025
+VL 48
+IS 3
+AR 92
+DI 10.1007/s00300-025-03410-9
+UT WOS:001538286500001
+ER
+
+PT J
+AU Bahlburg, D
+   Meyer, B
+   Berger, U
+AF Bahlburg, Dominik
+   Meyer, Bettina
+   Berger, Uta
+TI The impact of seasonal regulation of metabolism on the life history of
+   Antarctic krill
+SO ECOLOGICAL MODELLING
+AB Antarctic krill up- and down-regulate their metabolism as a strategy to cope with the strong seasonal environmental fluctuations in the Southern Ocean. In this study, we investigate the impact of this light- and temperature dependent metabolic regulation on growth, reproduction and winter survival of krill. Therefore, we advance a bioenergetic growth model of krill by adding a data-derived scaling function of krill activity. With SERBIK (SEasonally Regulated BIoenergetic Krill growth model), we conduct a numerical experiment which tests the impact of such scaling on krill life history under two different winter food conditions: In the first scenario, we simulate life history of krill when winter food availability is low; in the second scenario, winter food availability is increased within realistic ranges. The results demonstrate that the scaling of metabolism is especially important during low food winters. Reducing metabolism during winter permits individuals to grow to larger body length, reproduce successfully and release a greater number of eggs. It further significantly reduces within-year size fluctuations caused by starvation during months with low food availability. Finally, SERBIK can be used in future spatial modelling studies which include movement of krill along latitudinal gradients and thus spatiotemporal gradients in light- and temperature.
+RI Meyer, Bettina/ABB-5311-2020
+OI Meyer, Bettina/0000-0001-6804-9896; Berger, Uta/0000-0001-6920-136X;
+   Bahlburg, Dominik/0000-0003-0210-0649
+SN 0304-3800
+EI 1872-7026
+PD FEB 15
+PY 2021
+VL 442
+AR 109427
+DI 10.1016/j.ecolmodel.2021.109427
+EA JAN 2021
+UT WOS:000637743200001
+ER
+
+PT J
+AU Steinke, KB
+   Bernard, KS
+   Fontana, JM
+   Copeman, LA
+   Garcia, LM
+AF Steinke, Kirsten B.
+   Bernard, Kim S.
+   Fontana, Julia M.
+   Copeman, Louise A.
+   Garcia, Lani M.
+TI The energetic cost of early reproductive development in juvenile
+   Antarctic krill at the Western Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB The overwinter survival mechanisms of Antarctic krill, Euphausia superba, are poorly characterized, especially for juveniles. It has been suggested that juveniles adopt a mix of strategies characteristic of both larvae and adults. Like larvae, they may feed opportunistically throughout winter when food is available, and like adults they may be able to suppress their metabolism when food is scarce. In this study we look at the overwinter strategies of juvenile krill and how their reproductive development changes when energy input exceeds what is necessary for survival. We take a closer look at how the sexual maturation of juvenile krill progresses in response to different environmental conditions throughout the fall and winter. We exposed juvenile Antarctic krill to four different "food environment scenarios", supplementing them with various diets from May to September 2019 that were representative of environmental conditions that they may encounter in different regions of the Western Antarctic Peninsula during autumn and winter. Each month, we measured the physiology and condition of the krill, and assessed the reproductive development of females. We found that when female juvenile krill have greater energy reserves than what is needed to survive the winter, they will begin to sexually mature. Further, when there are sufficient levels of the fatty acids eicosapentaenoic acid (EPA), docosahexaenoic acid (DHA) and 16:4 (n-1), krill are likely to be in a more reproductive advanced stage. However, when lipids, EPA, DHA and 16:4 (n-1) are depleted throughout the winter, juvenile female krill lose their ability to develop reproductively. We also found that sexual development is an energy intensive process that requires high respiration rates in juvenile krill. Furthermore, when juvenile females expend energy maturing, their physiological condition declines. This trade-off between early reproductive development and condition in juvenile female krill has important implications for individual health and population fecundity. Gaining a better understanding of the mechanisms behind juvenile krill winter survival strategies and their consequences will allow us to predict how future change at the western Antarctic Peninsula may affect krill population dynamics, especially in light of a warming climate.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+EI 2296-7745
+PD DEC 9
+PY 2022
+VL 9
+AR 1009385
+DI 10.3389/fmars.2022.1009385
+UT WOS:000902904400001
+ER
+
+PT J
+AU Rowlands, E
+   Galloway, T
+   Cole, M
+   Lewis, C
+   Peck, V
+   Thorpe, S
+   Manno, C
+AF Rowlands, Emily
+   Galloway, Tamara
+   Cole, Matthew
+   Lewis, Ceri
+   Peck, Victoria
+   Thorpe, Sally
+   Manno, Clara
+TI The Effects of Combined Ocean Acidification and Nanoplastic Exposures on
+   the Embryonic Development of Antarctic Krill
+SO FRONTIERS IN MARINE SCIENCE
+AB In aquatic environments, plastic pollution occurs concomitantly with anthropogenic climate stressors such as ocean acidification. Within the Southern Ocean, Antarctic krill (Euphausia Superba) support many marine predators and play a key role in the biogeochemical cycle. Ocean acidification and plastic pollution have been acknowledged to hinder Antarctic krill development and physiology in singularity, however potential multi-stressor effects of plastic particulates coupled with ocean acidification are unexplored. Furthermore, Antarctic krill may be especially vulnerable to plastic pollution due to their close association with sea-ice, a known plastic sink. Here, we investigate the behaviour of nanoplastic [spherical, aminated (NH2), and yellow-green fluorescent polystyrene nanoparticles] in Antarctic seawater and explore the single and combined effects of nanoplastic (160 nm radius, at a concentration of 2.5 mu g ml(-1)) and ocean acidification (pCO(2) similar to 900, pH(T) 7.7) on the embryonic development of Antarctic krill. Gravid female krill were collected in the Atlantic sector of the Southern Ocean (North Scotia Sea). Produced eggs were incubated at 0.5 degrees C in four treatments (control, nanoplastic, ocean acidification and the multi-stressor scenario of nanoplastic presence, and ocean acidification) and their embryonic development after 6 days, at the incubation endpoint, was determined. We observed that negatively charged nanoplastic particles suspended in seawater from the Scotia Sea aggregated to sizes exceeding the nanoscale after 24 h (1054.13 +/- 53.49 nm). Further, we found that the proportion of embryos developing through the early stages to reach at least the limb bud stage was highest in the control treatment (21.84%) and lowest in the multi-stressor treatment (13.17%). Since the biological thresholds to any stressors can be altered by the presence of additional stressors, we propose that future nanoplastic ecotoxicology studies should consider the changing global ocean under future climate scenarios for assessments of their impact and highlight that determining the behaviour of nanoplastic particles used in incubation studies is critical to determining their toxicity.
+RI Cole, Matthew/KHZ-6806-2024; Galloway, Tamara/C-1662-2009; Rowlands,
+   Emily/OSI-2488-2025
+OI Cole, Matthew/0000-0001-5910-1189; Rowlands, Emily/0000-0001-8307-6008; 
+EI 2296-7745
+PD AUG 3
+PY 2021
+VL 8
+AR 709763
+DI 10.3389/fmars.2021.709763
+UT WOS:000686142500001
+ER
+
+PT J
+AU Steinke, KB
+   Bernard, KS
+   Reiss, CS
+   Walsh, J
+   Correa, GM
+   Stammerjohn, SE
+AF Steinke, Kirsten B.
+   Bernard, Kim S.
+   Reiss, Christian S.
+   Walsh, Jennifer
+   Correa, Giancarlo M.
+   Stammerjohn, Sharon E.
+TI Factors impacting the timing of reproductive development in female
+   Antarctic krill at the northwestern Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB The northwestern Antarctic Peninsula is an important spawning, recruitment, and overwintering ground for Antarctic krill. The region is warming rapidly, and the current impacts of climate and environmental variability on the reproductive cycle of krill remain unclear. Here, we examine the reproductive stage of female krill in the austral winter from 2012 to 2016 in relation to climate and environmental data to assess what factors influence the timing of reproductive development. We observed significant interannual variability in the degree of maturation in female krill, ranging from 48% of female krill measured at a station in 2016 to a maximum of 94% of female krill measured at a station in 2014. On average, across all five years, three-quarters of the female krill sampled were in the stage known as previtellogenesis, the point at which the onset of sexual maturity begins. The preceding spring, summer, and autumn Southern Annular Mode and the Multivariate El Ni & ntilde;o Index explained most of the variance in the data and indicated a strong, preconditioning storm-related effect on environmental conditions leading up to winter, affecting krill maturation status at the end of the winter season. Results from our study can be used to improve krill population models that are necessary for the management of the krill fishery and for conservation at the northwestern Antarctic Peninsula.
+RI M Correa, Giancarlo/AEW-8260-2022; Bernard, Kim/J-2703-2013
+OI M Correa, Giancarlo/0000-0003-0682-1152; Bernard,
+   Kim/0000-0003-0509-2744
+EI 2296-7745
+PD JUL 1
+PY 2024
+VL 11
+AR 1383175
+DI 10.3389/fmars.2024.1383175
+UT WOS:001267398000001
+ER
+
+PT J
+AU Zhang, H
+   Sun, YY
+   Zhu, HJ
+   Xiang, DL
+   Wang, JH
+   Zhang, FM
+   Huang, SS
+   Li, Y
+AF Zhang, Heng
+   Sun, Yuyan
+   Zhu, Hanji
+   Xiang, Delong
+   Wang, Jianhua
+   Zhang, Famou
+   Huang, Sisi
+   Li, Yang
+TI Simulation and Identification of the Habitat of Antarctic Krill Based on
+   Vessel Position Data and Integrated Species Distribution Model: A Case
+   Study of Pumping-Suction Beam Trawl Fishing Vessels
+SO ANIMALS
+AB This study, based on the vessel position data of pump-suction beam trawlers and the integrated species distribution model (ISDM), deeply analyzes the spatio-temporal distribution characteristics of the habitat of Antarctic krill and the contributions of key environmental factors. The Convolutional Neural Network-attention model (CNN-attention model) was used to identify the fishing status of the vessel position data of Norwegian pump-suction beam trawlers for Antarctic krill during the fishing seasons from 2021 to 2023. Variables of marine environment, including sea surface temperature (SST), sea surface height (SSH), chlorophyll concentration (CHL), sea ice concentration (SIC), sea surface salinity (SSS), and spatial factor Geographical Offshore Linear Distance (GLD) were combined and input into the ISDM for simulating and predicting the spatial distribution of the habitat. The model results show that the Area Under the Curve (AUC) and True Skill Statistic (TSS) indices for all months exceed 0.9, with an average AUC of 0.997 and a TSS of 0.973, indicating extremely high accuracy of the model in habitat prediction. Further analysis of environmental factors reveals that Geographical Offshore Linear Distance (GLD) and chlorophyll concentration (CHL) are the main factors affecting habitat suitability, contributing 34.9% and 25.2%, respectively, and their combined contribution exceeds 60%. In addition, factors such as sea surface height (SSH), sea surface temperature (SST), sea ice concentration (SIC), and sea surface salinity (SSS) have impacts on the habitat distribution to varying degrees, and each factor exhibits different suitability response characteristics in different seasons and sub-regions. There is no significant correlation between the habitat area of Antarctic krill and catch (p > 0.05), while there is a significant positive correlation between the fishing duration and the catch (p < 0.001), indicating that a longer fishing duration can effectively increase the Antarctic krill catch.
+RI ; Zhu, Hanji/NWH-6105-2025
+OI 相, 相德龙/0000-0002-2928-0726; , yang li/0009-0007-0892-1399; Zhu,
+   Hanji/0009-0005-4102-285X
+SN 2076-2615
+PD MAY 27
+PY 2025
+VL 15
+IS 11
+AR 1557
+DI 10.3390/ani15111557
+UT WOS:001506502900001
+PM 40509023
+ER
+
+PT J
+AU Steinke, LKB
+   Bernardi, KS
+   Ross, RM
+   Quetin, LB
+AF Steinke, K. B. L.
+   Bernardi, K. S.
+   Ross, R. M.
+   Quetin, L. B.
+TI Environmental drivers of the physiological condition of mature female
+   Antarctic krill during the spawning season: implications for krill
+   recruitment
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Southern Ocean pelagic productivity relies on the abundance of Antarctic krill Euphausia superba, which fluctuates on a 5-7 yr cycle and is driven by interannual variability in recruitment. The western Antarctic Peninsula (wAP) is home to a significant proportion of the circum-Antarctic krill biomass and is the focus of the krill fishery. The wAP is warming at a rate quicker than most other places on Earth, with notable regional changes in the pelagic ecosystem. There is a major gap in our understanding of how environmental variability affects the reproductive success of krill. We used historical krill population data collected at the wAP (January 1993-2008, Palmer Antarctica Long Term Ecological Research) to assess the effects of environmental variability on the condition of mature female krill during the spawning season and its relationship with krill recruitment. Mature female krill condition during the spawning season was positively correlated with recruitment the subsequent year. Results of generalized additive models indicated that the predominant drivers of krill condition during the spawning season were climatological (Southern Annular Mode and Multivariate El Nino Southern Oscillation Index), though the timing of sea ice advance and retreat, and diatom concentrations were also important Gaining a better understanding of the oceanographic and climatological factors that affect the physiological condition of mature female krill is critical for predicting future demographic patterns and responses to change. Results from our study emphasize the importance of including the effects of climate change in the management models for the Antarctic krill fishery.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+SN 0171-8630
+EI 1616-1599
+PD JUL 8
+PY 2021
+VL 669
+BP 65
+EP 82
+DI 10.3354/meps13720
+UT WOS:000672774400005
+ER
+
+PT J
+AU Zhong, CY
+   Chen, P
+   Zhang, ZH
+   Xie, CS
+   Zhang, SQ
+   Sun, M
+   Wu, DC
+AF Zhong, Chunyi
+   Chen, Peng
+   Zhang, Zhenhua
+   Xie, Congshuang
+   Zhang, Siqi
+   Sun, Miao
+   Wu, Danchen
+TI The use of spaceborne lidar to map Antarctic krill distributions and
+   biomass in the Southern Ocean
+SO FRONTIERS IN MARINE SCIENCE
+AB The Antarctic krill is a pivotal species in the Southern Ocean ecosystem, primarily due to its extraordinary nutritional content and plentiful resources. Studying the distribution of these resources and their environmental impact factors is crucial for the successful development of Antarctic krill fisheries. Traditional methodologies such as acoustic measurements, however, often face limitations in their capacity to provide a comprehensive and uninterrupted assessment. Moreover, the six-month duration of polar nights in polar regions presents significant challenges for traditional satellite observations. In this context, LiDAR, an active remote sensing observation method, offers a promising alternative. Known for their high resolution, flexibility, and efficiency, LiDAR systems can obtain detailed information on diurnal ocean parameters in polar regions on a vast scale and in a systematic way. Our study utilizes the spaceborne LiDAR system, CALIPSO, to successfully attain continuous Antarctic krill CPUE over the past decade, using various models such as the generalized linear model (GLM), artificial neural network (ANN), and support vector machine (SVM). A comparative analysis of the prediction results reveals that while both ANN and SVM models outperform the GLM, the SVM's prediction capabilities are somewhat unstable. Our findings reveal CALIPSO's potential in overcoming challenges associated with traditional satellite observations during polar winters. In addition, we found no obvious pattern of interannual variation in krill CPUE, with high values predominantly occurring from February to May. This suggests that krill is mainly located around the South Shetland Islands during January-April, before moving offshore towards South Georgia in May-June. A substantial krill aggregation community is found in the South Atlantic waters, indicating high potential for krill fishing. The optimum mix layer depth range for high krill CPUE is 270-390 m, with a chlorophyll concentration of approximately 0.1 mg m-3. The optimum sea surface temperature range is between -1.4-5.5 degrees C, and the sea ice coverage range is approximately 0-0.1x106 km2. The predicted Antarctic krill bioresource has risen from 2.4x108 tons in 2011 to 2.8x108 tons in 2020. This increase in krill biomass aligns with the biomass of krill assessed by CCAMLR.
+RI CHEN, Peng/AAV-4065-2021; Zhang, Zhenhua/AAQ-8317-2020
+OI CHEN, Peng/0000-0002-0635-9220; 
+EI 2296-7745
+PD FEB 27
+PY 2024
+VL 11
+AR 1287229
+DI 10.3389/fmars.2024.1287229
+UT WOS:001180568800001
+ER
+
+PT J
+AU Santa Cruz, F
+   Krüger, L
+   Cárdenas, CA
+AF Santa Cruz, Francisco
+   Kruger, Lucas
+   Cardenas, Cesar A.
+TI Spatial and temporal catch concentrations for Antarctic krill:
+   Implications for fishing performance and precautionary management in the
+   Southern Ocean
+SO OCEAN & COASTAL MANAGEMENT
+AB The undergoing rapid climate changes recorded along the Western Antarctic Peninsula (WAP) in combination with the increasing seasonal catches reported by the krill fishery have raised concerns as to whether the management strategy established by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR) is effectively avoiding impacts on the krill stock and related ecosystem.Despite the current fixed catch limit being spread across fishing areas to reduce spatial catches concentrations, our 38-year analysis revealed the highest historical spatial (ton/km2) and temporal (ton/day) fishing concentration levels across the WAP and South Orkney Islands. Higher seasonal catches in recent decades removed persistently within the same small fishing areas and during shorter fishing seasons are key factors influencing this situation.We used the catch per unit effort (CPUE) as a measure of fishing performance. CPUE was standardized using a GAMM model taking into account operational factors such as fleet composition, trawling methods, seasonality and daily catches, and we detected negative CPUE trends over time and across the different fishing areas. Our results suggest that the fishing performance have responded to the elevated spatio-temporal fishing concentration and changes in sea-ice. We discuss whether the negative CPUE trends are caused by fishing-induced depletion or driven by other factors such as krill flux, reduction and contraction of krill abundance and increased cetacean foraging (due recovery of whale populations). Finally, we also highlight the need to expand the survey's coverage (by acoustic or net-based methods) to the new, highly fished, and non-monitored areas such as Gerlache Strait, which is an important area for krill and dependent predators.
+RI Cárdenas, César/ABF-1664-2020; Santa Cruz, Francisco/ABF-5001-2020;
+   Krüger, Lucas/O-8912-2015
+OI Cárdenas, César/0000-0001-6662-6899; Santa Cruz,
+   Francisco/0000-0002-7894-0153; Krüger, Lucas/0000-0003-4637-5302
+SN 0964-5691
+EI 1873-524X
+PD MAY 15
+PY 2022
+VL 223
+AR 106146
+DI 10.1016/j.ocecoaman.2022.106146
+EA APR 2022
+UT WOS:000793283100004
+ER
+
+PT J
+AU Freer, JJ
+   Warwick-Evans, V
+   Skaret, G
+   Krafft, BA
+   Fielding, S
+   Trathan, PN
+AF Freer, Jennifer J.
+   Warwick-Evans, Victoria
+   Skaret, Georg
+   Krafft, Bjorn A.
+   Fielding, Sophie
+   Trathan, Philip N.
+TI A new dynamic distribution model for Antarctic krill reveals
+   interactions with their environment, predators, and the commercial
+   fishery in the south Scotia Sea region
+SO LIMNOLOGY AND OCEANOGRAPHY
+AB The management strategy for the Antarctic krill (Euphausia superba) fishery is being revised. A key aim is to spatially and temporally allocate catches in a manner that minimizes impacts to both the krill stock and dependent predators. This process requires spatial information on the distribution and abundance of krill, yet gaps exist for an important fishing area surrounding the South Orkney Islands in the south Scotia Sea. To fill this need, we create a dynamic distribution model for krill in this region. We used data from a spatially and temporally consistent acoustic survey (2011-2020) and year-specific environmental covariates within a two-part hurdle model. The model successfully captured observed spatial and temporal patterns in krill density. The covariates found to be most important included distance from shelf break, distance from summer sea ice extent, and salinity. The northern and eastern shelf edges of the South Orkney Islands were areas of consistently high krill density and displayed strong spatial overlap between intense fishing activity and foraging chinstrap penguins. High mean krill density was also linked to oceanographic features located within the Weddell Sea. Our data suggest that years in which these features were closer to the South Orkney shelf were also years of positive Southern Annular Mode and higher observed krill densities. Our findings highlight existing fishery-predator-prey overlap in the region and support the hypothesis that Weddell Sea oceanography may play a role in transporting krill into this region. These results will feed into the next phase of krill fisheries management assessment.
+RI Fielding, Sophie/E-5137-2012
+OI Freer, Jennifer/0000-0002-3947-9261
+SN 0024-3590
+EI 1939-5590
+PD APR
+PY 2025
+VL 70
+IS 4
+BP 833
+EP 849
+DI 10.1002/lno.12809
+EA FEB 2025
+UT WOS:001410417800001
+ER
+
+PT J
+AU Trathan, PN
+   Fielding, S
+   Hollyman, PR
+   Murphy, EJ
+   Warwick-Evans, 
+   Collins, MA
+AF Trathan, P. N.
+   Fielding, S.
+   Hollyman, P. R.
+   Murphy, E. J.
+   Warwick-Evans, V
+   Collins, M. A.
+TI Enhancing the ecosystem approach for the fishery for Antarctic krill
+   within the complex, variable, and changing ecosystem at South Georgia
+SO ICES JOURNAL OF MARINE SCIENCE
+AB The objective of the ecosystem approach to fisheries management is to sustain healthy marine ecosystems and the fisheries they support. One of the earliest implementations was in the Southern Ocean, where decision rules and stock reference points were developed for managing the Antarctic krill fishery, together with an ecosystem-monitoring programme intended to aid management decisions. This latter component has not been incorporated directly into management, so here, we consider variability in the krill fishery at South Georgia, relating it to physical and biological monitoring indices, finding sea surface temperature to be a key correlate with both annual catch and long-term biological indices. Some indices from krill predators showed significant positive relationships with krill harvesting in the preceding winter, presumably indicative of the importance of winter foraging conditions. We explore how ecological structure affects results, examining two monitoring sites 100km apart. Results suggest different biological conditions at the two sites, probably reflecting different scales of ecosystem operation, emphasizing that an appreciation of scale will enhance krill fishery management. Finally, in reviewing different drivers of ecological change, we identify important additional monitoring that would help better reflect ecosystem status, improve the utility of CEMP, providing information necessary for the ecosystem approach at South Georgia.
+RI ; Hollyman, Philip/AAR-9679-2020; Murphy, Eugene/GZL-1620-2022; Collins,
+   Martin/ABE-6728-2020; Fielding, Sophie/E-5137-2012
+OI Warwick-Evans, Victoria/0000-0002-0583-5504; Hollyman,
+   Philip/0000-0003-2665-5075; Murphy, Eugene/0000-0002-7369-9196; 
+SN 1054-3139
+EI 1095-9289
+PD SEP
+PY 2021
+VL 78
+IS 6
+BP 2065
+EP 2081
+DI 10.1093/icesjms/fsab092
+EA JUN 2021
+UT WOS:000705457300011
+ER
+
+PT J
+AU Dietrich, KS
+   Santora, JA
+   Reiss, CS
+AF Dietrich, Kimberly S.
+   Santora, Jarrod A.
+   Reiss, Christian S.
+TI Winter and summer biogeography of macrozooplankton community structure
+   in the northern Antarctic Peninsula ecosystem
+SO PROGRESS IN OCEANOGRAPHY
+AB Climate forcing is impacting polar marine ecosystems through increased variability of winter sea-ice dynamics, which likely influences the distribution, abundance and structure of zooplankton assemblages, and thereby trophodynamics of marine food webs. Due to the challenges of working in polar marine ecosystems, most knowledge on polar zooplankton community structure is derived from summer surveys. Here we examine the spatial distribution, abundance and community structure of macrozooplankton in relation to sea-ice and oceanclimate dynamics within the Antarctic Peninsula marine ecosystem over five consecutive winters. We compare the patterns revealed during winter with historical data collected in the same region during austral summer. Hydrographic and macrozooplankton data were collected from >100 standard stations off the northern Antarctic Peninsula during summer (2003-2011) and winter (2012-2016). Using multivariate methods, the environmental drivers and geographic structuring of the macrozooplankton community during winter and summer were investigated. Eight taxa made up 90% of total macrozooplankton abundance in winter including Metridia species, post-larval and larval Euphausia superba, post-larval Thysanoessa macrura, Limacina helicina, Chaetognatha, Ostracoda and Radiozoa. Eight slightly different taxa including Calanoides acutus, Salpa thompsoni, T. macrura (post-larvae and larvae), Metridia spp., E. superba larvae, Chaetognatha, and Rhincalanus spp. made up 87% of the total abundance in summer. Macrozooplankton clustered into five groups in winter and seven groups in summer. Winter macrozooplankton structure was more spatially consistent among years compared to summer regardless of sea-ice conditions. Salinity, chlorophyll a biomass, upper mixed layer depth and time of day were most strongly correlated with the multivariate ordination in winter whereas salinity, phaeopigment biomass and year had the highest correlations for summer, indicating the importance of similar physical features in both seasons. However, the importance of time scales differed among seasons. Although environmental determinants of summer and winter macrozooplankton community structure indicate that community structure and occurrence were strongly tied to regional variability of salinity and primary productivity gradients, macrozooplankton community structure is likely much more complex than only a few hydrographic variables can explain. Cluster boundaries are likely driven by dynamic locations of currents, fronts and localized eddies in any given season or year.
+SN 0079-6611
+EI 1873-4472
+PD AUG
+PY 2021
+VL 196
+AR 102610
+DI 10.1016/j.pocean.2021.102610
+EA JUN 2021
+UT WOS:000677549200001
+ER
+
+PT J
+AU Bahlburg, D
+   Hueppe, L
+   Böhrer, T
+   Thorpe, SE
+   Murphy, EJ
+   Berger, U
+   Meyer, B
+AF Bahlburg, Dominik
+   Hueppe, Lukas
+   Boehrer, Thomas
+   Thorpe, Sally E.
+   Murphy, Eugene J.
+   Berger, Uta
+   Meyer, Bettina
+TI Plasticity and seasonality of the vertical migration behaviour of
+   Antarctic krill using acoustic data from fishing vessels
+SO ROYAL SOCIETY OPEN SCIENCE
+AB Understanding the vertical migration behaviour of Antarctic krill is important for understanding spatial distribution, ecophysiology, trophic interactions and carbon fluxes of this Southern Ocean key species. In this study, we analysed an eight-month continuous dataset recorded with an ES80 echosounder on board a commercial krill fishing vessel in the southwest Atlantic sector of the Southern Ocean. Our analysis supports the existing hypothesis that krill swarms migrate into deeper waters during winter but also reveals a high degree of variability in vertical migration behaviour within seasons, even at small spatial scales. During summer, we found that behaviour associated with prolonged surface presence primarily occurred at low surface chlorophyll a concentrations whereas multiple ascent-descent cycles per day occurred when surface chlorophyll a concentrations were elevated. The high plasticity, with some krill swarms behaving differently in the same location at the same time, suggests that krill behaviour is not a purely environmentally driven process. Differences in life stage, physiology and type of predator are likely other important drivers. Finally, our study demonstrates new ways of using data from krill fishing vessels, and with the routine collection of additional information in potential future projects, they have great potential to significantly advance our understanding of krill ecology.
+RI murphy, eugene/GZL-1620-2022
+OI Berger, Uta/0000-0001-6920-136X; Bahlburg, Dominik/0000-0003-0210-0649;
+   Hüppe, Lukas/0000-0002-7793-9046; Thorpe, Sally/0000-0002-5193-6955
+SN 2054-5703
+PD SEP 27
+PY 2023
+VL 10
+IS 9
+AR 230520
+DI 10.1098/rsos.230520
+UT WOS:001074333300004
+PM 37771962
+ER
+
+PT J
+AU Juáres, MA
+   Santos, MM
+   Perchivale, PJ
+   Sia, MGR
+   Sandler, R
+   Pereira, A
+   Blanco, G
+   Campana, GL
+   Moreira, E
+   Casaux, R
+   Libertelli, M
+AF Juares, Mariana A.
+   Santos, M. Mercedes
+   Perchivale, Pablo J.
+   Rozas Sia, Mauro G.
+   Sandler, Rosana
+   Pereira, Ariel
+   Blanco, Gabriel
+   Campana, Gabriela L.
+   Moreira, Eugenia
+   Casaux, Ricardo
+   Libertelli, Marcela
+TI The importance of Antarctic krill in the non-breeding and breeding diet
+   of gentoo penguins at a colony of the South Shetland Islands
+SO POLAR BIOLOGY
+AB Understanding predator-prey relationships is essential to monitor Antarctic marine ecosystem structure and function, assess changes in prey and predator abundances, and provide tools for effective conservation measures. Despite this, diet studies of Antarctic predators conducted with traditional methods are limited outside the breeding period mainly due to constraints associated with the life-history strategies of the predators and the sampling logistics and operability. At Stranger Point/Cabo Funes (25 de Mayo/King George Island), the diet composition of gentoo penguins (Pygoscelis papua) was characterized during four stages of the annual cycle (i.e. non-breeding and pre-breeding stages of 2022, and guard and cr & egrave;che stages of the 2022/2023 breeding season) by the analysis of stomach contents obtained by using the water-offloading technique. Antarctic krill (Euphausia superba) dominated the diet of gentoo penguins in terms of frequency of occurrence and percentage in mass, followed by fish and amphipods. However, the diet composition changed seasonally, with a decrease in the contribution of fish and amphipods as the year progressed. Furthermore, higher individual variability was observed outside the breeding period than during the chick-rearing period. Our results indicate that krill was an important fraction of the non-breeding and breeding diet. However, outside the breeding period, the mean krill size consumed was smaller and the proportion of juvenile krill was higher than that recorded in the chick-rearing period. Thus, sampling the diet of the gentoo penguin outside the breeding period could provide valuable information on the krill size composition during the austral autumn and winter.
+OI Rozas Sia, Mauro Gabriel/0009-0009-8681-792X; Santos, Maria
+   Mercedes/0009-0000-1175-2628; Perchivale, Pablo
+   José/0000-0002-4717-381X; Campana, Gabriela Laura/0000-0002-6507-2369;
+   Juáres, Mariana A/0000-0002-6763-0416; MOREIRA,
+   EUGENIA/0000-0002-3704-1696
+SN 0722-4060
+EI 1432-2056
+PD JUN 23
+PY 2025
+VL 48
+IS 3
+AR 83
+DI 10.1007/s00300-025-03402-9
+UT WOS:001513559900001
+ER
+
+PT J
+AU Belonenko, TV
+   Travkin, VS
+   Kochnev, AV
+AF Belonenko, T. V.
+   Travkin, V. S.
+   Kochnev, A. V.
+TI Review of studies on the distribution of Antarctic krill accumulations
+   in the Scotia Sea and analysis of mesoscale dynamics of its habitat
+SO VESTNIK OF SAINT PETERSBURG UNIVERSITY EARTH SCIENCES
+AB This article studies the mesoscale dynamics of the waters of the Scotia Sea, located at the northern tip of the Southern Ocean on its border with the Southern Atlantic Ocean. The Scotia Sea is one of the most promising fishing areas where the industrial catch of Antarctic krill (Euphausia superba) is produced. Since the distribution of commercial krill accumulations is largely determined by oceanological conditions, this paper analyzes mesoscale vortex dynamics, frontal zones, and topography in the Scotia Sea, affecting the creation of favorable oceanological conditions for the formation of commercial krill accumulations. The study is conducted using satellite and model data. It is shown that the distribution of sea level according to the GLORYS12v1 reanalysis data in the Scotia Sea has a zonal character. In winter and spring, sea level anomalies are positive (up to 20 cm), and in summer and autumn, they are negative (up to -180 cm). In the northwestern part of the Scotia Sea, according to the data of the GLORYS12v1 reanalysis for 1993-2020, thermal frontal zones with high repeatability (>80 %) are distinguished. Dynamic frontal zones are also distinguished in the northwestern part of the water area and have a repeatability reaching 100 %. This area in the Scotia Sea is the most dynamically active: increased kinetic energy values are observed here. The increased dynamic activity in the northwestern part of the Scotia Sea, considered above by the average and average seasonal distributions of characteristics, is also confirmed in the synoptic range of periods. Spatial distributions of long-lived mesoscale vortices according to META 3.2 data for 1993-2021 show the localization areas of these vortices, with cyclones forming significantly more than anticyclones. Analysis of the trajectories of these vortices showed that the direction of their propagation is mainly eastern. The intense vortex dynamics in the Scotia Sea is also confirmed by reconstructed altimetric data for 1970-1992.
+RI Belonenko, Tatyana/K-2162-2013
+SN 2541-9668
+EI 2587-585X
+PY 2024
+VL 69
+IS 1
+BP 108
+EP 127
+DI 10.21638/spbu07.2024.106
+UT WOS:001343460200006
+ER
+
+EF

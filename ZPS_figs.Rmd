@@ -1,0 +1,160 @@
+---
+title: "ZPS_figs"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r}
+library(readxl)
+library(dplyr)
+library(tidyverse)
+library(openxlsx)
+library(scico)
+library(flextable)
+library(janitor)
+
+# import table which contains information about the parameter IDs
+mechanismMeta <- read.xlsx('ICEDPaper1_ModelParams.xlsx') %>%
+  rename(submechanism = `sub-mechanism`)
+
+# import the new dataset
+parameterClassification <- read_csv('parameterClassifications20231109.csv') %>%
+  mutate(parameterID = row_number())
+```
+
+
+```{r}
+year_data <- parameterClassification |> 
+  dplyr::select(`author et al. (YEAR)_CHARACTER`, `paper title_CHARACTER`, `year(s)_STARTYEAR_DASH_ENDYEAR`,
+                `type of study_CHOICE`) |> 
+  rename(study_type = `type of study_CHOICE`) |> 
+  mutate(study_type = if_else(study_type == "experiment, observation", "observation", study_type)) |> 
+  unique() |> 
+  drop_na() |> 
+  mutate(cleaned_years = gsub("[,;_-].*", "", `year(s)_STARTYEAR_DASH_ENDYEAR`),
+         cleaned_years = sub("(\\d+)-(\\d+).*", "\\1", cleaned_years),
+         cleaned_years = ifelse(nchar(cleaned_years) == 4, cleaned_years, NA)) %>%
+  drop_na() |> 
+  dplyr::select(-`year(s)_STARTYEAR_DASH_ENDYEAR`) |> 
+  distinct() |> 
+  rename(paper_title = `paper title_CHARACTER`,
+         author = `author et al. (YEAR)_CHARACTER`) |> 
+  group_by(cleaned_years, study_type) |> 
+  summarize(N = n(), .groups = "keep") 
+  #mutate(cleaned_years = year(as.Date(cleaned_years, format = "%Y")))
+
+## gganimate years and number of studies
+library(gganimate)
+library(lubridate)
+
+plot_year <- year_data |> 
+  ggplot(aes(cleaned_years, N, group = study_type, fill = factor(study_type))) +
+  #geom_line() +
+  geom_col()+
+  coord_flip()+
+  #scale_x_reverse(expand = c(0,0), trans = "discrete")+
+  #geom_col(position = "dodge") +
+  labs(x = "", y = "Total number of studies") +
+  ggthemes::theme_few() +
+  theme(
+    axis.text.x = element_text(size = 11, colour = "black", angle = 90),
+    axis.title.x = element_blank(),
+    axis.title.y = element_text(size = 12, colour = "black"),
+    axis.text.y = element_text(size = 11, colour = "black"),
+    legend.title = element_text(size = 10, colour = "black"),
+    legend.key.size = unit(0.9, "cm"),
+    legend.title.align= 0.5, 
+    legend.key.height = unit(0.5, "cm"),
+    legend.key.width = unit(0.5, "cm"),
+    legend.text = element_text(size = 10),
+    legend.position = "bottom",
+    legend.background = element_rect(fill = "white",
+                                     linewidth = 0.4, linetype = "solid",
+                                     colour = "black"),
+    
+    legend.margin = margin(0.2, 0, 0.2, 0),
+    panel.spacing.x = unit(0.35, "lines"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(hjust = 0.5, size = 14),
+    strip.text.x = element_text(size = 12, color = "black"),
+    strip.text.y = element_text(size = 12, color = "black"),
+    strip.background = element_rect(fill = "darkgray", 
+                                    linewidth = 0.4, linetype = "solid",
+                                    colour = "black")) 
+  #transition_reveal(cleaned_years)
+plot_year
+
+
+```
+
+# Further cetagorizing parameter origin
+```{r}
+origin_data <- parameterClassification |> 
+  dplyr::select(`author et al. (YEAR)_CHARACTER`, `paper title_CHARACTER`,
+                `type of study_CHOICE`, `parameter value origin_CHARACTER`) |> 
+  rename(study_type = `type of study_CHOICE`) |> 
+  distinct()
+  
+categorize_parameter <- function(parameter_value_origin, study_type) {
+  # Convert to lowercase for case-insensitive matching
+  parameter_value_origin <- tolower(parameter_value_origin)
+  
+  # Categorize based on keywords
+  if (grepl("net|nets|SUIT|ADCP|MOCNESS|trawl|acoustic|acoustics|survey|sampling|sample|samples|transect|trawl|video plankton recorder|field|depth|survey|echosounder|Bioacoustic|tow|tows|camera|diver|visual observation|measurement", 
+            parameter_value_origin, ignore.case = TRUE)) {
+    return("field observation")
+  } else if (grepl("regression|statistics|stats|mixed model|von|anova|functions|Kolmogorov-Smirnov|t-test|ANOVA|sigmoid|function|correlation|Fisher's|Chi-squared|GAM|Pearson's|multivariate|Spearman|maximum likelihood|Principle component analysis|linear mixed effects model", 
+                  parameter_value_origin, ignore.case = TRUE)) {
+    return("statistical tests and modelling")
+  } else if (grepl("feeding|incubation|diet|Instantaneous Growth Rate|stomach|Holling|sinking|measurement|laboratory|starvation", 
+                  parameter_value_origin, ignore.case = TRUE)) {
+    return("lab observation")
+  } else if (grepl("mechanistic|predictive|bioenergetic model|lagrangian|growth model|habitat model", parameter_value_origin, ignore.case = TRUE)) {
+    return("predictive modelling")
+  } else {
+    return(study_type)
+  }
+}
+
+# Apply the function to the parameter_value_origin column
+origin_data$slimmer_category <- mapply(categorize_parameter, origin_data$`parameter value origin_CHARACTER` , origin_data$study_type)
+
+origin_data |> dplyr::select()
+
+```
+
+
+
+```{r}
+# select(parameterID, dominikMechanism = 21, informationCategory = 22) %>%
+  # mutate(mechanismID = str_split(dominikMechanism, pattern = ',')) %>%
+  # unnest(mechanismID) %>%
+  # mutate(mechanismID = str_replace_all(mechanismID, " ", ""),
+  #        mechanismID = ifelse(mechanismID == '-', NA, mechanismID),
+  #        classifier = 'dominik') %>%
+  # select(-dominikMechanism)
+
+# bind additional info to parameter classification table
+parameterClassification <- parameterClassification |> 
+  left_join(mechanismMeta, by = join_by(mechanismID)) |> 
+  mutate(informationCategory = ifelse(informationCategory == '-' |
+                                        informationCategory == ' ',
+                                      NA, informationCategory),
+         informationCategory = ifelse(is.na(informationCategory), 'not assigned', informationCategory),
+         informationCategory = factor(informationCategory, levels = c('parameter', 'parameter, validation',
+                                                                      'correlation','validation','not assigned')),
+         submechanism = ifelse(is.na(submechanism), 'not assigned',
+                               ifelse(submechanism == 'egg_larval', 'egg and larval development', submechanism)),
+         submechanism = factor(submechanism, levels = c('not assigned','mortality','overwintering','egg and larval development', 'spawning')))
+
+colourKey <- tibble(informationCategory = c('parameter', 'parameter, validation','correlation','validation','not assigned'),
+                    label = informationCategory,
+                    colour = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5E5E5E'))
+
+parameterClassification <- parameterClassification %>%
+  left_join(colourKey) %>%
+  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5E5E5E')))
+
+```
+

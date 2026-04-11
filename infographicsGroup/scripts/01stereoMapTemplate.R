@@ -83,7 +83,7 @@ faoAreasPlot <- ggplot() +
                linetype = '82') +
   geom_path(data = circles, aes(x = lon, y = lat, group = dist),
             size = 0.5, colour = '#808080', linetype = '82', alpha = 0.2)+
-  geom_polygon(data = world, aes(long, lat,group=group), 
+  geom_polygon(data = world, aes(long, lat, group=group), 
                fill="#949494",color= '#bababa', size = 0.01) +
   coord_map("ortho",orientation = c(-110, 10, 0)) +
   theme(panel.grid.major = element_blank(),
@@ -94,6 +94,7 @@ faoAreasPlot <- ggplot() +
         axis.title = element_blank(),
         axis.ticks = element_blank(),
         legend.position = 'none')
+faoAreasPlot
 
 #save plot
 ggsave(here('infographicsGroup','graphics','SouthernOceanStereoTemplate.png'), plot = faoAreasPlot, bg = 'transparent', width = 6, height = 6)

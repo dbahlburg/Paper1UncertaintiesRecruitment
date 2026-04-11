@@ -1,0 +1,133 @@
+---
+title: "Untitled"
+output: html_document
+date: "2024-01-04"
+---
+
+```{r}
+library(psych)
+library(glue)
+library(knitr)
+library(rmarkdown)
+library(kableExtra)
+library(splitstackshape)
+library(RColorBrewer)
+library(plotly)
+library(cowplot)
+library(flextable)
+library(officer)
+library(data.table)
+library(magrittr)
+library(ggpubr)
+library(purrr)
+library(lazyeval)
+library(tidyverse)
+library(ggalt)
+library(hrbrthemes)
+library(markdown)
+library(see)
+library(readxl)
+library(dplyr)
+
+
+lit_list <- read_excel("/Users/alexisbahl/Desktop/Paper 1 literature review.xlsx", sheet = "LiteratureList")
+
+D <- read_excel("/Users/alexisbahl/Desktop/Paper 1 literature review.xlsx", sheet = "DB_allData")
+```
+
+Combine from seperate sheets
+```{r}
+overwint <- read_excel("/Users/alexisbahl/Desktop/Paper 1 literature review.xlsx", sheet = "overwintering_litResults", skip = 1)
+build_up <- read_excel("/Users/alexisbahl/Desktop/Paper 1 literature review.xlsx", sheet = "buildUpOfBodyReserves_litResult", skip = 1)
+spawn <- read_excel("/Users/alexisbahl/Desktop/Paper 1 literature review.xlsx", sheet = "spawning_litResults", skip = 1)
+egg <- read_excel("/Users/alexisbahl/Desktop/Paper 1 literature review.xlsx", sheet = "eggAndLarvalDevelopment_litResu", skip = 1)
+
+# Merge all dataframes into a single dataframe
+merged_data <- bind_rows(overwint, build_up, spawn, egg)
+
+# Extract unique titles
+merged_data |> dplyr::select(`author et al. (YEAR)_CHARACTER`, `paper title_CHARACTER`) |> unique()
+
+D |> dplyr::select(`author et al. (YEAR)_CHARACTER`, `paper title_CHARACTER`) |> unique()
+```
+
+
+```{r}
+library(stringdist)
+
+# Extracting unique titles from each dataframe
+unique_titles_D <- unique(D$`paper title_CHARACTER`)
+unique_titles_merge <- unique(merged_data$`paper title_CHARACTER`)
+unique_titles_lit_list <- unique(lit_list$title)
+
+# Finding titles in lit_list that are missing from D
+missing_titles <- setdiff(unique_titles_lit_list, unique_titles_merge)
+
+# Displaying missing titles
+print(missing_titles)
+
+```
+
+# type of study
+```{r}
+model_D <- D |> dplyr::select(`author et al. (YEAR)_CHARACTER`,`paper title_CHARACTER`,`type of study_CHOICE`, 
+                              region_CHARACTER, 
+                              `individual parameter name_CHARACTER`, `parameter value origin_CHARACTER`,
+                              `parameter value_NUMERIC`, `parameter unit_CHARACTER`) |> 
+  dplyr::rename(author = `author et al. (YEAR)_CHARACTER`,
+         title = `paper title_CHARACTER`,
+         study_type = `type of study_CHOICE`,
+         region = region_CHARACTER,
+         parameter = `individual parameter name_CHARACTER`,
+         parameter_origin = `parameter value origin_CHARACTER`,
+         parameter_value = `parameter value_NUMERIC`,
+         parameter_unit = `parameter unit_CHARACTER`) |> 
+  filter(study_type %in% c("model", "hybrid")) |> 
+  #dplyr::select(- parameter, - region, - parameter_origin, - parameter_value, - parameter_unit ) |> 
+  unique()
+
+unique_values <- c(unique(model_D$parameter_origin))
+
+# Function to categorize unique values
+categorize_parameter_origin <- function(value) {
+  if (is.na(value)) {
+    return("Unknown/NA")
+  } else if (grepl("ANOVA|anova|t-test|Linear regression|regression|function|functional|correlation|matrix analysis|multidimensional scaling|
+                   Kendall's tau|Principle component analysis|Fisher's|Chi-squared|bootstrap|maximum likelihood|multivariate|fittedSplineModel", 
+                   value)) {return("Statistical Analysis")
+  } else if (grepl("model|regression|GAM|fitting procedure|generalized linear mixed model|multivariate analysis", 
+                   value, ignore.case = TRUE)) {return("Models")
+  } else if (grepl("measurement|calculation|observation|experimental|empirical", 
+                   value, ignore.case = TRUE)) {return("Experimental Methods")
+  } else if (grepl("literature|review|derived from reference", value, ignore.case = TRUE)) {
+    return("Literature Review")
+  } else if (grepl("tow|tows|net|nets|acoustic|MOCNESS|echosounder|field|observations", value, ignore.case = TRUE)) {
+    return("Field Methods")
+  } else {
+    return("Other")
+  }
+}
+
+# Apply categorization function
+categories <- sapply(unique_values, categorize_parameter_origin)
+
+# Display categorized values
+result <- data.frame(Unique_Values = unique_values, Category = as.character(categories), stringsAsFactors = FALSE)
+
+print(result)
+
+
+model_D |> 
+  dplyr::select(author, title, study_type) |> 
+  unique() |> 
+  tabyl(study_type) |> 
+  adorn_percentages("col") |> 
+  #adorn_totals(c("row"))  |> 
+  adorn_pct_formatting() |> 
+  adorn_ns() |> 
+  flextable() |>  
+  autofit()
+
+
+```
+

@@ -1,0 +1,587 @@
+﻿FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU Cleary, AC
+   Perry, F
+   Tarling, GA
+AF Cleary, Alison C.
+   Perry, Frances
+   Tarling, Geraint A.
+TI Influence of parasites on spawning success and egg quality in Antarctic
+   krill Euphausia superba
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Antarctic krill Euphausia superba are key components of Southern Ocean ecosystems and biogeochemical cycles, as well as the target of a growing commercial fishery. Understanding the drivers of variability in krill recruitment is key to managing this fishery sustainably. One potential driver which has received little attention is the role of parasites. We investigated the impact of natural parasite infestations in adult female krill on egg production and egg quality around South Georgia. DNA metabarcode sequencing was used to detect all eukaryotic parasites within krill bodies, while spawning success was determined through incubation experiments, and egg quality was assessed by quantifying key elements within each egg (carbon, nitrogen, hydrogen). E. superba in this area were infested with suctorian ciliates, eugregarine apicomplexans, and, less frequently, ellobiopsids. Parasite load was not associated with a reduced likelihood of producing eggs, but high parasite loads were associated with lower-quality eggs. This reduction in egg quality may reflect an energetic cost to parasite infestation, with implications for larval development and recruitment.
+SN 0171-8630
+EI 1616-1599
+PD JUL 4
+PY 2024
+VL 739
+BP 1
+EP 14
+DI 10.3354/meps14617
+UT WOS:001400979700006
+ER
+
+PT J
+AU Steinke, LKB
+   Bernardi, KS
+   Ross, RM
+   Quetin, LB
+AF Steinke, K. B. L.
+   Bernardi, K. S.
+   Ross, R. M.
+   Quetin, L. B.
+TI Environmental drivers of the physiological condition of mature female
+   Antarctic krill during the spawning season: implications for krill
+   recruitment
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Southern Ocean pelagic productivity relies on the abundance of Antarctic krill Euphausia superba, which fluctuates on a 5-7 yr cycle and is driven by interannual variability in recruitment. The western Antarctic Peninsula (wAP) is home to a significant proportion of the circum-Antarctic krill biomass and is the focus of the krill fishery. The wAP is warming at a rate quicker than most other places on Earth, with notable regional changes in the pelagic ecosystem. There is a major gap in our understanding of how environmental variability affects the reproductive success of krill. We used historical krill population data collected at the wAP (January 1993-2008, Palmer Antarctica Long Term Ecological Research) to assess the effects of environmental variability on the condition of mature female krill during the spawning season and its relationship with krill recruitment. Mature female krill condition during the spawning season was positively correlated with recruitment the subsequent year. Results of generalized additive models indicated that the predominant drivers of krill condition during the spawning season were climatological (Southern Annular Mode and Multivariate El Nino Southern Oscillation Index), though the timing of sea ice advance and retreat, and diatom concentrations were also important Gaining a better understanding of the oceanographic and climatological factors that affect the physiological condition of mature female krill is critical for predicting future demographic patterns and responses to change. Results from our study emphasize the importance of including the effects of climate change in the management models for the Antarctic krill fishery.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+SN 0171-8630
+EI 1616-1599
+PD JUL 8
+PY 2021
+VL 669
+BP 65
+EP 82
+DI 10.3354/meps13720
+UT WOS:000672774400005
+ER
+
+PT J
+AU Green, DB
+   Bestley, S
+   Corney, SP
+   Trebilco, R
+   Lehodey, P
+   Hindell, MA
+AF Green, David B.
+   Bestley, Sophie
+   Corney, Stuart P.
+   Trebilco, Rowan
+   Lehodey, Patrick
+   Hindell, Mark A.
+TI Modeling Antarctic Krill Circumpolar Spawning Habitat Quality to
+   Identify Regions With Potential to Support High Larval Production
+SO GEOPHYSICAL RESEARCH LETTERS
+AB Antarctic krill (krill) are important within Southern Ocean ecosystems and support an expanding fishery. Toward understanding krill's response to environmental change, it is necessary to identify regions that support high krill larval production (spawning habitat). We develop a mechanistic model combining thermal and food requirements for krill egg production, with predation pressure post-spawning, to predict regions of high-quality spawning habitat. We optimize our model regionally and generate circumpolar predictions of spawning habitat quality. Our results indicate the southwest Atlantic accounts for almost half of all predicted high-quality spawning habitat. Small-scale management units (SSMUs) around the Antarctic Peninsula had high coverage of high-quality spawning habitat. In contrast, the remaining SSMUs (except around South Georgia) were poorly covered, suggestive of population sinks reliant on input from external sources upstream. This implies strong potential for downstream impacts of fishing in key spawning areas, with implications for management of SSMUs and the krill fishery.
+RI Green, David/U-5570-2019; Lehodey, Patrick/KPY-7728-2024; Bestley,
+   Sophie/AAN-2483-2021; Hindell, Mark/K-1131-2013; Trebilco,
+   Rowan/I-5311-2012
+OI Green, David/0000-0002-0346-3129; Lehodey, Patrick/0000-0002-2753-4796;
+   Bestley, Sophie/0000-0001-9342-669X; Corney, Stuart/0000-0002-8293-0863;
+   Hindell, Mark/0000-0002-7823-7185; Trebilco, Rowan/0000-0001-9712-8016
+SN 0094-8276
+EI 1944-8007
+PD JUN 28
+PY 2021
+VL 48
+IS 12
+AR e2020GL091206
+DI 10.1029/2020GL091206
+UT WOS:000668622800027
+ER
+
+PT J
+AU Wang, R
+   Song, PQ
+   Li, Y
+   Lin, LS
+AF Wang, Rui
+   Song, Puqing
+   Li, Yuan
+   Lin, Longshan
+TI An Integrated, Size-Structured Stock Assessment of Antarctic Krill,
+   Euphausia superba
+SO FRONTIERS IN MARINE SCIENCE
+AB The Antarctic krill (Euphausia superba) fishery is the largest fishery in the Southern Ocean, and it has been operating for over 45 years. In the past decade, the spatial distribution of the krill fishery has focused on the Bransfield Strait off the Antarctic Peninsula (subarea 48.1). However, the high fishing effort and climate change have placed great pressure on krill resources in this region, and conservation concerns have been raised. Because aging krill is difficult and uncertain, we developed an integrated size-structured model to estimate the fishing mortality, recruitment and spawning biomass of krill. The results indicated that in 1992-2011, the average spawning biomass of krill ranged from 1.14 x 10(6) to 1.45 x 10(6) tons, the estimated biomass of the maximum sustainable yield (BMSY) ranged from 3.96 x 10(5) to 4.90 x 10(5) tons and the estimated average recruitment ranged from 2.3 x 10(12) to 5.03 x 10(12) individuals in the research area. We explored the effect of different data weighting schemes for the length data on the assessment output. However, our estimates also have uncertainties. In addition, an attempt was made to analyze the correlation between model-estimated recruitment and mature biomass with climate change. Future stock assessments of krill resources should be comprehensive and multimethod, and the management of krill resources should be based on science that considers the demand of fishing communities and ecosystem protection.
+RI Wang, Rui/JWA-4726-2024
+EI 2296-7745
+PD NOV 9
+PY 2021
+VL 8
+AR 710544
+DI 10.3389/fmars.2021.710544
+UT WOS:000726250800001
+ER
+
+PT J
+AU Liu, Y
+   Zhu, GP
+AF Liu, Yu
+   Zhu, Guoping
+TI Reproductive strategy of Antarctic krill (Euphausia superba) in
+   the south Scotia Sea: revisiting the oocyte development and
+   morphological changes with multiple seasonal analysis
+SO JOURNAL OF OCEANOLOGY AND LIMNOLOGY
+AB Antarctic krill (Euphausia superba) is a keystone species in the Southern Ocean; however, seasonal variations in reproductive development for krill are complex and remains unknown. A histological investigation with observations of external secondary sex features of krill in the south Scotia Sea region was carried out using a multi-seasonal dataset for detail reproductive descriptions for this commercially important species. The monthly development of secondary sexual characteristics, the thelycum, as well as of oocytes over a period of two years were described. It was observed that krill have diverse reproductive development characteristics within the ovary, and that this function differently between the juvenile, sub-adult, and adult stages. During the summer, adult krill ovaries are large and ripe with oocytes rich in yolk ready for release in late summer. Post spawning, the ovaries resorb, fragment, and regress throughout the autumn and winter. During reproductive diapause period, krill focus on absorbing nutrients. Un-released eggs are reabsorbed by the ovary, the permanent germinal zone is active, and early oocytes begin to develop in preparation for the egg production phase. Krill that are about to spawn have an ovary that fills the space between the digestive gland and muscle. The ovarian development of krill is divided into 10 sexual developmental stages. As a part of this study, data on the carapace thickness with similar development patterns in krill size and carapace width, was investigated for the first time to help understand krill growth and development.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 2096-5508
+EI 2523-3521
+PD SEP
+PY 2025
+VL 43
+IS 5
+BP 1596
+EP 1608
+DI 10.1007/s00343-025-4135-z
+EA APR 2025
+UT WOS:001463304700001
+ER
+
+PT J
+AU Atkinson, A
+   Hill, SL
+   Reiss, CS
+   Pakhomov, EA
+   Beaugrand, G
+   Tarling, GA
+   Yang, G
+   Steinberg, DK
+   Schmidt, K
+   Edwards, M
+   Rombolá, E
+   Perry, FA
+AF Atkinson, Angus
+   Hill, Simeon L.
+   Reiss, Christian S.
+   Pakhomov, Evgeny A.
+   Beaugrand, Gregory
+   Tarling, Geraint A.
+   Yang, Guang
+   Steinberg, Deborah K.
+   Schmidt, Katrin
+   Edwards, Martin
+   Rombola, Emilce
+   Perry, Frances A.
+TI Stepping stones towards Antarctica: Switch to southern spawning grounds
+   explains an abrupt range shift in krill
+SO GLOBAL CHANGE BIOLOGY
+AB Poleward range shifts are a global-scale response to warming, but these vary greatly among taxa and are hard to predict for individual species, localized regions or over shorter (years to decadal) timescales. Moving poleward might be easier in the Arctic than in the Southern Ocean, where evidence for range shifts is sparse and contradictory. Here, we compiled a database of larval Antarctic krill, Euphausia superba and, together with an adult database, it showed how their range shift is out of step with the pace of warming. During a 70-year period of rapid warming (1920s-1990s), distribution centres of both larvae and adults in the SW Atlantic sector remained fixed, despite warming by 0.5-1.0 degrees C and losing sea ice. This was followed by a hiatus in surface warming and ice loss, yet during this period the distributions of krill life stages shifted greatly, by similar to 1000 km, to the south-west. Understanding the mechanism of such step changes is essential, since they herald system reorganizations that are hard to predict with current modelling approaches. We propose that the abrupt shift was driven by climatic controls acting on localized recruitment hotspots, superimposed on thermal niche conservatism. During the warming hiatus, the Southern Annular Mode index continued to become increasingly positive and, likely through reduced feeding success for larvae, this led to a precipitous decline in recruitment from the main reproduction hotspot along the southern Scotia Arc. This cut replenishment to the northern portion of the krill stock, as evidenced by declining density and swarm frequency. Concomitantly, a new, southern reproduction area developed after the 1990s, reinforcing the range shift despite the lack of surface warming. New spawning hotspots may provide the stepping stones needed for range shifts into polar regions, so planning of climate-ready marine protected areas should include these key areas of future habitat.
+RI ; BEAUGRAND, GREGORY/LWI-2327-2024; Hill, Simeon/B-2307-2008; Atkinson,
+   Angus/HOH-3417-2023
+OI Steinberg, Deborah K/0000-0001-9884-4655; Tarling,
+   Geraint/0000-0002-3753-5899; Yang, Guang/0000-0002-9410-0189; Edwards,
+   Martin/0000-0002-5716-4714; Hill, Simeon/0000-0003-1441-8769; Schmidt,
+   Katrin/0000-0002-6488-623X; 
+SN 1354-1013
+EI 1365-2486
+PD FEB
+PY 2022
+VL 28
+IS 4
+BP 1359
+EP 1375
+DI 10.1111/gcb.16009
+EA DEC 2021
+UT WOS:000731293400001
+PM 34921477
+ER
+
+PT J
+AU Pietzsch, BW
+   Schmidt, A
+   Groeneveld, J
+   Bahlburg, D
+   Meyer, B
+   Berger, U
+AF Pietzsch, Bruno Walter
+   Schmidt, Aaron
+   Groeneveld, Juergen
+   Bahlburg, Dominik
+   Meyer, Bettina
+   Berger, Uta
+TI The impact of salps (Salpa thompsoni) on the Antarctic krill population
+   (Euphausia superba): an individual-based modelling study
+SO ECOLOGICAL PROCESSES
+AB Background Krill (Euphausia superba) and salps (Salpa thompsoni) are key macrozooplankton grazers in the Southern Ocean ecosystem. However, due to differing habitat requirements, both species previously exhibited little spatial overlap. With ongoing climate change-induced seawater temperature increase and regional sea ice loss, salps can now extend their spatial distribution into historically krill-dominated areas and increase rapidly due to asexual reproduction when environmental conditions are favorable. Understanding the potential effects on krill is crucial, since krill is a species of exceptional trophic significance in the Southern Ocean food web. Negative impacts on krill could trigger cascading effects on its predators and prey. To address this question, we combined two individual-based models on salps and krill, which describe the whole life cycle of salp individuals and the dynamic energy budget of individual krill. The resulting new model PEKRIS (PErformance of KRIll vs. Salps) simulates a krill population for 100 years under varying chlorophyll-a concentrations in the presence or absence of salps.Results All of the investigated krill population properties (abundance, mean length, and yearly egg production) were significantly impacted by the presence of salps. On the other hand, salp density was not impacted if krill were present. The medians of krill population properties deviated during variable maximum chlorophyll-a density per year when salps were introduced by - 99.9% (- 234 individuals per 1000 m3) for krill density, - 100% (- 22,062 eggs per 1000 m3) for krill eggs and - 0.9% (- 0.3 mm) for mean length of krill.Conclusions If both species compete for the same food resource in a closed space, salps seem to inhibit krill populations. Further simulation studies should investigate whether this effect prevails if different phytoplankton sizes and consumption preferences of krill are implemented. Furthermore, direct predation of the two species or consumption of krill fecal pellets by salps could change the impact size of the food competition.
+RI Groeneveld, Juergen/N-2420-2016
+OI Berger, Uta/0000-0001-6920-136X; Pietzsch, Bruno
+   Walter/0000-0002-1232-6062
+EI 2192-1709
+PD OCT 9
+PY 2023
+VL 12
+IS 1
+AR 50
+DI 10.1186/s13717-023-00462-9
+UT WOS:001092233900001
+ER
+
+PT J
+AU Zhang, HT
+   Zhu, GP
+   Liu, H
+   Swadling, KM
+AF Zhang, Haiting
+   Zhu, Guoping
+   Liu, Hui
+   Swadling, Kerrie M.
+TI Autumn food availability in Bransfield Strait for Antarctic krill
+   Euphausia superba and the relationship between body size and fatty acid
+   content
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Bransfield Strait is an important spawning, feeding and overwintering ground for Antarctic krill. Increases in both the biomass of krill and the ice-free extent of the strait make this area of great interest for krill fisheries. While krill are known to have access to food supplies beyond summer, lipid accumulation plays a pivotal role in their ability to survive the food-limited winter. Understanding the condition and dietary habits of krill during the pre-winter season is important for assessing how they respond to this period that is often characterized by short-lived phytoplankton blooms. For 5 consecutive autumns, from 2015 to 2019, krill obtained from the fishery in Bransfield Strait were used to assess their diet and to evaluate the roles of individual body condition and habitat features in shaping krill fatty acid profiles. Analysis of dietary fatty acids in krill indicated that they were generally in an active feeding condition in autumn, showing significant levels of essential fatty acids such as eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA). Fatty acid biomarkers displayed substantial inter-annual variation, with satellite data suggesting that sea surface temperature could be a potential factor contributing to this variation. Additionally, we observed strong correlations between krill body size and most of the fatty acid contents. There were positive correlations between size, EPA and DHA as well as negative correlations between size and a carnivorous diet. These findings suggest that krill exhibit differentiated feeding abilities and lipid retention based on their size.
+RI ; Zhu, Guoping/D-1002-2010
+OI Zhang, Haiting/0000-0002-4938-0900; Zhu, Guoping/0000-0001-6081-7811
+SN 0171-8630
+EI 1616-1599
+PD MAR 7
+PY 2024
+VL 730
+BP 31
+EP 42
+DI 10.3354/meps14517
+UT WOS:001204485700007
+ER
+
+PT J
+AU Huang, XR
+   Tan, R
+   Geng, Z
+   Zhang, T
+   Feng, GP
+   Yang, G
+   Zhao, F
+   Zhuang, P
+AF Huang, Xiaorong
+   Tan, Ru
+   Geng, Zhi
+   Zhang, Tao
+   Feng, Guangpeng
+   Yang, Gang
+   Zhao, Feng
+   Zhuang, Ping
+TI Effects of Antarctic Krill Meal in Diet on Reproductive Performance and
+   Embryo Quality of Eriocheir sinensis
+SO AQUACULTURE NUTRITION
+AB A 60-day feeding trial was conducted to evaluate the impact of dietary Antarctic krill meal on the reproductive performance and embryo quality of the Chinese mitten crab, Eriocheir sinensis. Three diets were formulated, incorporating varying levels of Antarctic krill meal at 0% (Diet K0), 10% (Diet K10), and 20% (Diet K20), with a control group fed razor clam Sinonovacula constricta. Each diet was randomly assigned to three replicate tanks, each stocked with 5 males and 10 females. Male and female weights were 145.38 +/- 8.01 and 102.57 +/- 9.73 g, respectively. The results revealed no significant differences in weight gain rate, specific growth rate, and survival rate. However, the hepatopancreatic weight and hepatopancreas index of female crabs in each group decreased, while gonadal weight and gonadosomatic index increased significantly after 60 days, with Diet K20 showing the highest values. Egg production and fecundity of female crabs reached their peak in Diet K20, with no significant differences in reproductive indices among all groups. The phospholipid content in Diet K20 was significantly higher than in the other groups (P<0.05). Cholesterol contents in Diet K0 and the control group were significantly higher than in Diet K10 and K20 (P<0.05). No significant differences were observed in egg diameter, egg weight, moisture, crude protein, and crude fat between the groups. The content of C20 : 2 and C20 : 4n6 was highest in Diet K0, with a significant difference compared to Diet K10 (P<0.05). However, no significant differences were found in the total content of saturated fatty acids, monounsaturated fatty acids, and polyunsaturated fatty acids among all groups. Based on the research findings, it is recommended that the optimal level of Antarctic krill meal in diets is 20%.
+SN 1353-5773
+EI 1365-2095
+PD JAN 31
+PY 2024
+VL 2024
+AR 9936529
+DI 10.1155/2024/9936529
+UT WOS:001160425600002
+PM 38328024
+ER
+
+PT J
+AU Schaafsma, FL
+   Driscoll, R
+   Matsuno, K
+   Sugioka, R
+   Driscoll, S
+   van Regteren, M
+   Sasaki, H
+   Matsukura, R
+   van Franeker, JA
+   Murase, H
+AF Schaafsma, Fokje L.
+   Driscoll, Ryan
+   Matsuno, Kohei
+   Sugioka, Rikuto
+   Driscoll, Sara
+   van Regteren, Marin
+   Sasaki, Hiroko
+   Matsukura, Ryuichi
+   van Franeker, Jan Andries
+   Murase, Hiroto
+TI Demography of Antarctic krill (Euphausia superba) from the KY1804
+   austral summer survey in the eastern Indian sector of the Southern Ocean
+   (80 to 150˚E), including specific investigations of the upper surface
+   waters
+SO FRONTIERS IN MARINE SCIENCE
+AB Antarctic krill (Euphausia superba) is a harvested species that has an important role in the Southern Ocean food web. Knowledge on the demography of Antarctic krill is necessary for a better understanding of the distribution of life stages and their relation with predator species. In addition, such information is essential for krill fisheries management by CCAMLR (Commission on the Conservation of Antarctic Marine Living Resources). A large part of the Indian sector of the Southern Ocean is understudied and large-scale krill surveys of this region are scarce. Therefore, a survey was carried out during the austral summer of 2018/2019 on board RV Kaiyo-maru in the region from 80 to 150 & ring;E. Krill was collected using a Rectangular Midwater Trawl (RMT). Previous studies suggest that part of the Antarctic krill population resides in the upper surface of the water column, but traditional trawls and echosounders have not been able to fully investigate this stratum due to sampling constraints. To overcome this knowledge gap, the upper surface (0-2 m) was sampled using a Surface and Under Ice Trawl (SUIT) in addition to the standard survey net. Results show that there were differences in the horizontal and vertical distribution of post-larval krill between the area west and east of approximately 120 & ring;E. These differences coincided with variation in environmental properties. Early calyptopis larvae were found throughout the survey area. Their relatively low numbers suggested ongoing spawning that started early in the season. Juveniles were found mainly in the western side of the sampling area and large densities of this developmental stage were found to reside in the upper two meters of the water column. The quantitative estimation of krill in the upper surface indicated that undersampling this part of the population may influence estimates of, for example, recruitment.
+RI ; Matsukura, Ryuichi/S-1094-2019; Matsuno, Kohei/AAJ-6510-2021; Murase,
+   Hiroto/W-3556-2019
+OI Schaafsma, Fokje/0000-0002-8945-2868; 
+EI 2296-7745
+PD AUG 23
+PY 2024
+VL 11
+AR 1411130
+DI 10.3389/fmars.2024.1411130
+UT WOS:001308055000001
+ER
+
+PT J
+AU Zheng, XC
+   Yang, J
+   Liu, X
+   Sun, CX
+   Zhou, QL
+   Wang, AM
+   Chen, JM
+   Liu, B
+AF Zheng, Xiaochuan
+   Yang, Jie
+   Liu, Xin
+   Sun, Cunxin
+   Zhou, Qunlan
+   Wang, Aimin
+   Chen, Jianming
+   Liu, Bo
+TI Effects of Different Levels of Antarctic Krill Oil on the Ovarian
+   Development of Macrobrachium rosenbergii
+SO ANIMALS
+AB The lack of in-depth research and development on specialized functional feedfor broodstock gonad maturation represents a significant obstacle to the industrialization ofMacro-brachium rosenbergiibreeding. The potential of Antarctic krill oil to promote ovarian development incrustaceans has been established; however, the optimal application dose and potential regulatorymechanism inM. rosenbergiiremain unclear. This study established a gradient addition of Antarctickrill oil (0%, 1.5%, 3%, 4.5%, and 6%) for a period of eight weeks. Antarctic krill oil supplementationin the range of 3-4.5% resulted in a significant promotion of ovarian development, vitellogenesis,and reproductive hormone synthesis. The retinol metabolic signaling pathway, methyl farnesoate(MF) signaling pathway, steroid hormone signaling pathway, and ecdysone signaling pathway alongwith their specific molecules were found to be involved in the regulation of ovarian development ofM. rosenbergiiwith the use of Antarctic krill oil. The results demonstrate that the 4.5% supplementa-tion Antarctic krill oil in the diet is optimal for stimulating the secretion of reproductive hormones infemaleM. rosenbergii, thereby promoting vitellogenesis and ovarian development. Antarctic krill oil has been proven to be able to promote the ovarian development of crustaceans, but its optimal application dose and potential regulatory mechanism in Macrobrachium rosenbergii are still unclear. In this study, five isonitrogenous and isolipidic diets with gradient additions of Antarctic krill oil (0%, 1.5%, 3%, 4.5%, and 6%) were served exposed to 8 weeks of feeding. The results show that 3-4.5% Antarctic krill oil supplementation significantly increases the weight gain rate and specific growth rate of M. rosenbergii (p < 0.05). In addition, 3-4.5% Antarctic krill oil supplementation significantly increased the content of hemolymph vitellogenin (VTG) and the levels of reproductive hormones, including methyl farnesoate (MF), estradiol (E2), and progesterone (P4) (p < 0.05). The differences in ovarian index, oocyte volume, yolk granule deposition in oocytes, and the transcription levels of VTG genes in hepatopancreas and ovarian tissues demonstrated that the addition of Antarctic krill oil significantly promoted ovarian development and vitellogenesis, especially at the 4.5% addition level. In terms of molecular signaling, this study confirms that the retinol metabolic signaling pathway, MF signaling pathway, steroid hormone signaling pathway, and ecdysone signaling pathway, along with their specific molecules, such as Farnesoic acid-O-methyltransferase (FAMeT), retinoid x receptor (RXR), ecdysone receptor (EcR), and estrogen-related receptor (ERR), are involved in the regulation of the ovarian development of M. rosenbergii by adding Antarctic krill oil at appropriate doses. The findings indicate that the supplementation of 4.5% Antarctic krill oil in the diet is optimal for stimulating the secretion of reproductive hormones in female M. rosenbergii, thereby promoting vitellogenesis and ovarian development.
+OI Liu, Bo/0000-0002-9537-4552; Zhou, Qun-Lan/0000-0003-4751-3703
+SN 2076-2615
+PD NOV
+PY 2024
+VL 14
+IS 22
+AR 3313
+DI 10.3390/ani14223313
+UT WOS:001364612800001
+PM 39595365
+ER
+
+PT J
+AU Dong, SS
+   Zhang, F
+   Zhu, GP
+AF Dong, Sisong
+   Zhang, Fan
+   Zhu, Guoping
+TI Temporal variability in mortality and recruitment jointly influence the
+   periodic fluctuations in Antarctic krill populations
+SO MARINE ENVIRONMENTAL RESEARCH
+AB Antarctic krill (Euphausia superba) is a key part of the food web in the Southern Ocean ecosystem. Significant inter-annual fluctuations in population dynamics make stock assessment and management of its population a significant challenge. To better understand the population dynamics and fluctuation of krill, a survey-based agestructured catch-at-length model (ACL) is used to estimate the periodic fluctuations, based on length data collected from scientific surveys under the US Antarctic Marine Living Resources (AMLR) Program between 1992 and 2011. Spectral analysis of the model estimates revealed periodic fluctuations of 5-6 years in the recruitment, total abundance, and total biomass of krill in the Antarctic Peninsula, while spawning stock biomass exhibited periodic fluctuations of both 5-6 years and 2-3 years. The variations in krill total abundance and total biomass were mainly driven by recruitment, but the variation in spawning stock biomass was likely driven by both recruitment and time-varying, age-specific mortality. Our study contributes to a better understanding of the patterns and drivers of the periodic dynamics of Antarctic krill, which may help lead to improved assessments and fishery management for this important stock.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 0141-1136
+EI 1879-0291
+PD FEB
+PY 2025
+VL 204
+AR 106923
+DI 10.1016/j.marenvres.2024.106923
+EA DEC 2024
+UT WOS:001403426100001
+PM 39724803
+ER
+
+PT J
+AU Perry, FA
+   Sailley, SF
+   Atkinson, A
+   Mayor, DJ
+   Lucas, CH
+   Tarling, GA
+AF Perry, F. A.
+   Sailley, S. F.
+   Atkinson, A.
+   Mayor, D. J.
+   Lucas, C. H.
+   Tarling, G. A.
+TI Seasonal and spatial patterns of adult Antarctic krill at the Antarctic
+   Peninsula: insights from a 41 year data analysis
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Locating the spawning grounds of Antarctic krill Euphausia superba is key to understanding their population dynamics and managing the commercial krill fishery. In the shelf waters of the Antarctic Peninsula where krill and their fishery are concentrated, a recent relaxation of fishing quotas has meant that locally successful spawning grounds could become increasingly targeted. This study revisits the existing paradigm that in summer, larger adult krill migrate away from these shelf-based fishing grounds, out towards oceanic waters to spawn off the shelf break (>1000 m). Our findings support a seasonal on-shelf division of adult krill, with smaller krill closer inshore. However, contrary to current understanding, our results suggest that 85% of the largest and most fecund >50 mm krill remain on-shelf during the summer spawning season. All adults (>30 mm) were strongly concentrated over the shelf throughout the whole spring-summer-autumn transition, with no evidence for any summer redistribution off-shelf. The Western Antarctic Peninsula (WAP) has strong on-shelf-off-shelf gradients in chlorophyll a and sea surface temperature, and based on generalised additive models, our study suggests that the high food requirement of adult krill, coupled with an oligotrophic off-shelf environment, contributes to the distribution of krill observed at the Antarctic Peninsula. The concentration of large, nutritious krill over the shelf throughout the season may be advantageous to land-based predators but raises concern for the management of fisheries that are becoming increasingly concentrated within the key adult krill habitat along the northern shelf of the WAP.
+RI Mayor, Daniel/HDN-8520-2022; Lucas, Cathy/N-1230-2013
+OI Tarling, Geraint/0000-0002-3753-5899; Lucas, Cathy/0000-0002-5929-7481
+SN 0171-8630
+EI 1616-1599
+PD JUL 24
+PY 2025
+VL 765
+BP 1
+EP 16
+DI 10.3354/meps14899
+UT WOS:001538021500004
+ER
+
+PT J
+AU Li, S
+   Yang, JL
+   Zhao, GQ
+   Huang, HL
+   Rao, X
+   Chen, S
+   Li, LZ
+AF Li, Shuai
+   Yang, Jialiang
+   Zhao, Guoqing
+   Huang, Hongliang
+   Rao, Xin
+   Chen, Shuai
+   Li, Lingzhi
+TI Analysis of the population characteristics of Antarctic krill in the
+   Amundsen Sea
+SO POLAR BIOLOGY
+AB The fluctuations in the krill population profoundly impact marine ecosystems and are key indicators of ecosystems in the Southern Ocean. In this paper, we analyzed the basic biological characteristics of Antarctic krill in the Amundsen Sea and studied its age structure using the Bhattacharya's method based on the 38th-39th Chinese National Antarctic Research Expeditions. The results revealed that the Antarctic krill in the Amundsen Sea may have been a spawning population during the survey period. The mean length (total length, AT) and weight were 42.38 mm and 0.72 g, respectively, and the length-weight relationship was W = 9.62966E-6L(2.95612) (R-2 = 0.92769, N = 921). The diameter of the compound eye varied from 0.29 mm to 1.23 mm, and the mean was 0.78 mm. A Pearson correlation test revealed a strong correlation between length and compound eye diameter (P < 0.001, N = 802). The proportions of juveniles and adults were 15.96% and 84.04%, respectively; the female-to-male ratio among adults was 2.69:1; the gravid female group was 23.76%, and the non-gravid female group was 76.24%. There was a significant difference in the relationship between length and weight among the juvenile, adult female and male groups and between the gravid female and non-gravid female groups. The results of the age structure composition of Antarctic krill based on length mixture distribution analysis is superior to those based on compound eye diameter mixture distribution analysis. The age group of the Antarctic krill ranged from 0 to 4(+) years old, and the majority were 3(+) to 4(+) years old (63.96%). The age groups of the adult females ranged from 1(+) to 4(+) years old, with 3(+) to 4(+)years old predominating (81.99%), and the adult males were 1(+) and 3(+) to 4(+) years old, which included mainly groups that were 3(+) to 4(+) years old (86.60%).
+RI Zhao, Guoqing/JVO-3829-2024
+OI Yang, Jialiang/0000-0002-2589-566X
+SN 0722-4060
+EI 1432-2056
+PD OCT 30
+PY 2025
+VL 48
+IS 4
+AR 113
+DI 10.1007/s00300-025-03431-4
+UT WOS:001606410900001
+ER
+
+PT J
+AU Steinke, KB
+   Bernard, KS
+   Reiss, CS
+   Walsh, J
+   Correa, GM
+   Stammerjohn, SE
+AF Steinke, Kirsten B.
+   Bernard, Kim S.
+   Reiss, Christian S.
+   Walsh, Jennifer
+   Correa, Giancarlo M.
+   Stammerjohn, Sharon E.
+TI Factors impacting the timing of reproductive development in female
+   Antarctic krill at the northwestern Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB The northwestern Antarctic Peninsula is an important spawning, recruitment, and overwintering ground for Antarctic krill. The region is warming rapidly, and the current impacts of climate and environmental variability on the reproductive cycle of krill remain unclear. Here, we examine the reproductive stage of female krill in the austral winter from 2012 to 2016 in relation to climate and environmental data to assess what factors influence the timing of reproductive development. We observed significant interannual variability in the degree of maturation in female krill, ranging from 48% of female krill measured at a station in 2016 to a maximum of 94% of female krill measured at a station in 2014. On average, across all five years, three-quarters of the female krill sampled were in the stage known as previtellogenesis, the point at which the onset of sexual maturity begins. The preceding spring, summer, and autumn Southern Annular Mode and the Multivariate El Ni & ntilde;o Index explained most of the variance in the data and indicated a strong, preconditioning storm-related effect on environmental conditions leading up to winter, affecting krill maturation status at the end of the winter season. Results from our study can be used to improve krill population models that are necessary for the management of the krill fishery and for conservation at the northwestern Antarctic Peninsula.
+RI M Correa, Giancarlo/AEW-8260-2022; Bernard, Kim/J-2703-2013
+OI M Correa, Giancarlo/0000-0003-0682-1152; Bernard,
+   Kim/0000-0003-0509-2744
+EI 2296-7745
+PD JUL 1
+PY 2024
+VL 11
+AR 1383175
+DI 10.3389/fmars.2024.1383175
+UT WOS:001267398000001
+ER
+
+PT J
+AU Meyer, B
+   Arata, JA
+   Atkinson, A
+   Bahlburg, D
+   Bernard, K
+   Cárdenas, CA
+   Grant, SM
+   Hill, SL
+   Hüppe, L
+   Ichii, T
+   Kawaguchi, S
+   Krafft, BA
+   Labrousse, S
+   Maschette, D
+   Piñones, A
+   Reiss, C
+   Siebenhüner, B
+   Sylvester, Z
+   Ziegler, P
+AF Meyer, Bettina
+   Arata, Javier A.
+   Atkinson, Angus
+   Bahlburg, Dominik
+   Bernard, Kim
+   Cardenas, Cesar A.
+   Grant, Susie M.
+   Hill, Simeon L.
+   Huppe, Lukas
+   Ichii, Taro
+   Kawaguchi, So
+   Krafft, Bjorn A.
+   Labrousse, Sara
+   Maschette, Dale
+   Pinones, Andrea
+   Reiss, Christian
+   Siebenhuner, Bernd
+   Sylvester, Zephyr
+   Ziegler, Philippe
+TI Adjusting the management of the Antarctic krill fishery to meet the
+   challenges of the 21st century
+SO PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF
+   AMERICA
+AB Antarctic krill (Euphausiasuperba) is the central prey species in the Southern Ocean food web, supporting the largest and fastest-growing fishery in the region, managed by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR). Climate change is threatening krill populations and their predators, while current catch limits do not take into account climate variability or krill population dynamics. In 2024, CCAMLR was unable to renew its spatial catch limits, highlighting the urgent need for improved management of the krill fishery to prevent any harm to the Southern Ocean ecosystem. To address this, we propose a management framework that integrates variability in krill recruitment and key pathways between spawning and nursery areas-a krill stock hypothesis-to inform decisions on catch limits and conservation measures. Implementing this approach will require targeted data collection, which we propose can be achieved through a multisector collaborative network that combines traditional and new technologies, including the use of fishing vessels as data collection platforms. We use case studies to demonstrate how fisheries can contribute to data collection while promoting sustainable management. A major challenge in this effort is securing long-term funding for data collection, which is critical for managing climate-sensitive populations of high commercial interest. We therefore recommend using the industry as a source of funding, research platform and data provider, alongside national research funding opportunities. Given the fundamental role of krill in the Southern Ocean ecosystem, its decline would have cascading effects on predators and essential ecosystem services.
+RI Kawaguchi, So/N-1795-2017; Simeon, Hill/B-2307-2008; Arata, Javier
+   A/ABH-9557-2020; Cárdenas, César/ABF-1664-2020; Bernard, Kim/J-2703-2013
+OI Arata, Javier A/0000-0001-7320-0511; Bahlburg,
+   Dominik/0000-0003-0210-0649; Labrousse, Sara/0000-0002-8099-3254;
+   Cárdenas, César/0000-0001-6662-6899; Sylvester,
+   Zephyr/0000-0002-2057-3741; Bernard, Kim/0000-0003-0509-2744; Maschette,
+   Dale/0000-0003-2590-8544; Siebenhüner, Bernd/0000-0002-0444-5889; Grant,
+   Susie/0000-0001-7941-3948; Meyer, Bettina/0000-0001-6804-9896; Hüppe,
+   Lukas/0000-0002-7793-9046
+SN 0027-8424
+EI 1091-6490
+PD SEP 16
+PY 2025
+VL 122
+IS 37
+AR 2412624122
+DI 10.1073/pnas.2412624122
+UT WOS:001576690600001
+PM 40920918
+ER
+
+PT J
+AU Steinke, KB
+   Bernard, KS
+   Fontana, JM
+   Copeman, LA
+   Garcia, LM
+AF Steinke, Kirsten B.
+   Bernard, Kim S.
+   Fontana, Julia M.
+   Copeman, Louise A.
+   Garcia, Lani M.
+TI The energetic cost of early reproductive development in juvenile
+   Antarctic krill at the Western Antarctic Peninsula
+SO FRONTIERS IN MARINE SCIENCE
+AB The overwinter survival mechanisms of Antarctic krill, Euphausia superba, are poorly characterized, especially for juveniles. It has been suggested that juveniles adopt a mix of strategies characteristic of both larvae and adults. Like larvae, they may feed opportunistically throughout winter when food is available, and like adults they may be able to suppress their metabolism when food is scarce. In this study we look at the overwinter strategies of juvenile krill and how their reproductive development changes when energy input exceeds what is necessary for survival. We take a closer look at how the sexual maturation of juvenile krill progresses in response to different environmental conditions throughout the fall and winter. We exposed juvenile Antarctic krill to four different "food environment scenarios", supplementing them with various diets from May to September 2019 that were representative of environmental conditions that they may encounter in different regions of the Western Antarctic Peninsula during autumn and winter. Each month, we measured the physiology and condition of the krill, and assessed the reproductive development of females. We found that when female juvenile krill have greater energy reserves than what is needed to survive the winter, they will begin to sexually mature. Further, when there are sufficient levels of the fatty acids eicosapentaenoic acid (EPA), docosahexaenoic acid (DHA) and 16:4 (n-1), krill are likely to be in a more reproductive advanced stage. However, when lipids, EPA, DHA and 16:4 (n-1) are depleted throughout the winter, juvenile female krill lose their ability to develop reproductively. We also found that sexual development is an energy intensive process that requires high respiration rates in juvenile krill. Furthermore, when juvenile females expend energy maturing, their physiological condition declines. This trade-off between early reproductive development and condition in juvenile female krill has important implications for individual health and population fecundity. Gaining a better understanding of the mechanisms behind juvenile krill winter survival strategies and their consequences will allow us to predict how future change at the western Antarctic Peninsula may affect krill population dynamics, especially in light of a warming climate.
+RI Bernard, Kim/J-2703-2013
+OI Bernard, Kim/0000-0003-0509-2744
+EI 2296-7745
+PD DEC 9
+PY 2022
+VL 9
+AR 1009385
+DI 10.3389/fmars.2022.1009385
+UT WOS:000902904400001
+ER
+
+PT J
+AU Zhang, B
+   Guo, X
+   Lin, JX
+   Sun, PZ
+   Ren, X
+   Xu, W
+   Tong, Y
+   Li, DM
+AF Zhang, Biao
+   Guo, Xuan
+   Lin, Junxin
+   Sun, Peizi
+   Ren, Xiang
+   Xu, Wei
+   Tong, Yi
+   Li, Dongmei
+TI Effect and synergy of different exogenous additives on gel properties of
+   the mixed shrimp surimi (Antarctic krill and white shrimp)
+SO INTERNATIONAL JOURNAL OF FOOD SCIENCE AND TECHNOLOGY
+AB The object of this study was a high-protein Antarctic krill ball which was made of mixed shrimp surimi (Antarctic krill and white shrimp). The effects of four different exogenous additives on gel properties and spatial structure of mixed shrimp surimi systems during processing were investigated by texture profile analysis, low-field nuclear magnetic resonance, magnetic resonance imaging, Fourier-transform infrared spectroscopy, scanning electron microscopy and rheology analysis, according to product formulation and processing conditions. Different exogenous additives improved distinctly the mixed shrimp surimi system. The use of the four exogenous additives combined had a synergistic promotional effect. Acetylated distarch adipate, egg white powder and soy protein isolate played a vital role in producing high-protein Antarctic krill balls. The relatively limited improvement of transglutaminase could be attributed to processing temperature and the presence of autolytic enzymes originated intrinsically from Antarctic krill surimi.
+RI ren, xiang/HLQ-5068-2023; Li, Dongmei/ADM-7209-2022
+SN 0950-5423
+EI 1365-2621
+PD AUG
+PY 2022
+VL 57
+IS 8
+SI SI
+BP 5338
+EP 5348
+DI 10.1111/ijfs.15864
+EA JUN 2022
+UT WOS:000806721100001
+ER
+
+EF

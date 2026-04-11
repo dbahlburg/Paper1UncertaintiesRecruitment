@@ -1,0 +1,2053 @@
+---
+title: "Results"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(openxlsx)
+library(scico)
+library(dplyr)
+library(flextable)
+library(cowplot)
+library(ggplot2)
+library(tidyr)
+library(stringr)
+
+# read in data
+mechanismMeta <- read.xlsx('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/ICEDPaper1_ModelParams.xlsx') 
+
+parameterClassification_raw <- read.xlsx('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/krillDataClassified20240903.xlsx') |>  
+   rename(author = `author.et.al..(YEAR)_CHARACTER`,
+         title = `paper.title_CHARACTER`,
+         study_type = `type.of.study_CHOICE`,
+         study_duration = `study.duration_CHOICE`,
+         study_years = `year(s)_STARTYEAR_DASH_ENDYEAR`,
+         season = `time.point_CHOICE`,
+         location = `region_CHARACTER`,
+         parameter_name = `individual.parameter.name_CHARACTER`,
+         parameter_origin = `parameter.value.origin_CHARACTER`,
+         parameter_value = `parameter.value_NUMERIC`,
+         parameter_unit = `parameter.unit_CHARACTER`,
+         sample_size = `sample.size_NUMERIC`,
+         parameter_lifestage = `life-stage_CHOICE`,
+         parameter_significance = `significance_CHOICE`,
+         parameter_sd = `StandardDeviation_NUMERIC`,
+         parameter_rsquared = `R_squared_NUMERIC`,
+         comments = `comments_CHARACTER`,
+         informationCategory = `informationCategory`) |> 
+  # extract study year from author by detecting the year in the author string
+  mutate(publication_year = as.numeric(str_extract(author, "\\d{4}"))) 
+
+# any NA values in the publication_year column?
+# na_studies <- parameterClassification_raw |> 
+#   filter(is.na(publication_year))
+  
+# lit_list <- read.xlsx('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/krillDataClassified20240903.xlsx',
+#                       sheet = 'lit_list_final')
+
+parameterClassification_raw |> select(author, title, study_type, study_years, season, location, parameter_name, parameter_value, parameter_unit, sample_size, parameter_lifestage, parameter_significance, parameter_sd, parameter_rsquared, comments, informationCategory) |> distinct() 
+
+```
+
+# clean data
+```{r}
+parameterClassification_clean <- parameterClassification_raw |> 
+  mutate(season = strsplit(season, ",\\s*")) |>  # Split multi-season entries into lists
+  unnest(season) |>  # Expand into multiple rows
+  group_by(author, parameter_name) |>  # Group by unique study
+  mutate(All_Seasons_Flag = ifelse(all(c("summer", "autumn", "winter", "spring") %in% season), TRUE, FALSE)) |> 
+  ungroup() |>  
+  mutate(season = ifelse(All_Seasons_Flag, "All Seasons", season)) |>  # Replace with "All Seasons"
+  select(-All_Seasons_Flag)  # Remove temporary column
+
+# summary of data
+# 254 students identified
+#n_distinct(lit_list$title)
+
+# 213 only of relevance
+n_distinct(parameterClassification_raw$title)
+
+# total number of parameters
+nrow(parameterClassification_raw)
+
+# range of publication years
+range(parameterClassification_raw$publication_year)
+
+# number of unique authors
+n_distinct(parameterClassification_raw$author)
+
+# number of studies for each season
+seasons <- parameterClassification_clean |> 
+  select(study_type, season, parameter_name, title, author) |> 
+  group_by(season) |> 
+  summarise(n_parameter = n_distinct(parameter_name),
+            n_study_titles = n_distinct(title),
+            n_studies_author = n_distinct(author))
+seasons
+
+season_study <- parameterClassification_clean |> 
+  select(study_type, season, parameter_name, title) |> 
+  group_by(season, study_type) |> 
+  summarise(n_parameter = n_distinct(parameter_name),
+            n_study_titles = n_distinct(title)) |> 
+  ungroup() |> 
+  arrange(season, study_type)
+season_study
+
+# Broad Region	Included Locations
+# Define location groups
+parameterClassification_clean <- parameterClassification_clean |> 
+  # Unnest location separated by ",", ";", " & ", and " and "
+  mutate(location = strsplit(location, ",|;|\\s&|\\sand\\s")) |>  
+  unnest(location) |>  # Expand into multiple rows
+  
+  # Trim whitespace to avoid incorrect matches
+  mutate(location = str_trim(location)) |>  
+
+  
+   # Assign region based on keyword detection
+  mutate(region = case_when(
+    is.na(location) ~ "Circumpolar Studies",  # Explicitly set NA locations to Circumpolar Studies
+    
+    str_detect(location, regex("Scotia Sea|Scotia|Weddell Sea|Weddell|South Georgia|SouthGeorgia|Bouvet Island|Lazarev Sea|Antarctic Peninsula|South Shetland Islands|Weddel-Scotia Confluence|Deception Island|Drake Passage|Georgia|Admiralty Bay|Scotia-Weddell|Wilhelmina Bay|Elephant Island|South Sandwich Islands|Bismarck Strait|South Orkney Islands|Western Antarctic Peninsula|Marguerite Bay|Gerlache Strait|Atlantic sector|Southwest Atlantic|WAP", ignore_case = TRUE)) ~ "Atlantic (including Antarctic Peninsula)",
+    
+    str_detect(location, regex("Prydz Bay|Indian Sector|Enderby Land|southern part of Indian Ocean|Western Indian Ocean|Indian Ocean", ignore_case = TRUE)) ~ "Central Indian",
+    
+    str_detect(location, regex("East Antarctica|Wilkes Land|Lutzow-Holm Bay|Queen Maud Land", ignore_case = TRUE)) ~ "East Indian",
+    
+    str_detect(location, regex("Pacific Sector of the Southern Ocean|Bellingshausen Sea|Charlotte Bay and Bransfield Strait|Bellinghausen Sea|Bellingshausen|Eastern Bellinghausen Sea|Eastern Bellinghausen Sea (slope)|Elephant Island|Crystal Sound|Adelaide Island|South-West Atlantic|Bransfield Strait|Charlotte Bay", ignore_case = TRUE)) ~ "East Pacific",
+    
+    str_detect(location, regex("Ross Sea|Tasman Sea", ignore_case = TRUE)) ~ "West Pacific",
+    
+    str_detect(location, regex("Southern Ocean|Circumpolar|60°S", ignore_case = TRUE)) ~ "Circumpolar Studies",
+    
+    TRUE ~ "Other"  # Only truly unknown locations will go into "Other"
+  )) 
+
+# pull out the "Other" region
+other_region <- parameterClassification_clean |> 
+  filter(region == "Other") |> 
+  select(location) |> 
+  unique()
+print(other_region, n = "inf")
+
+# Summarize the number of studies in each region
+region_groups <- parameterClassification_clean |> 
+  select(region, location, author, parameter_name) |>
+  group_by(region) |> 
+  summarise(count_location = n_distinct(location),
+            count_parameter = n_distinct(parameter_name)) 
+print(region_groups, n = "inf")
+
+# break down the Atlantic
+parameterClassification_clean <- parameterClassification_clean |> 
+  mutate(
+    location = str_trim(location),  # Ensure consistent formatting
+    location_slim = case_when(
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("WAP|Antarctic Peninsula|Bismarck Strait|Marguerite Bay|Gerlache Strait|Marguerite Bay|Deception Island|Admiralty Bay|Wilhelmina Bay", ignore_case = TRUE)) ~ "Western Antarctic Peninsula",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("Georgia|South Georgia", ignore_case = TRUE)) ~ "South Georgia",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("Weddell Sea|Weddell|Weddel-Scotia Confluence|Weddell-Scotia Confluence", ignore_case = TRUE)) ~ "Weddell Sea",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("South Shetland Islands|Elephant Island", ignore_case = TRUE)) ~ "South Shetland Islands",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("South Orkney Islands", ignore_case = TRUE)) ~ "South Orkney Islands",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("South Sandwich Islands", ignore_case = TRUE)) ~ "South Sandwich Islands",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("Lazarev Sea", ignore_case = TRUE)) ~ "Lazarev Sea",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("Scotia Sea|Drake|Scotia-Weddell|Scotia", ignore_case = TRUE)) ~ "Scotia Sea",
+      region == "Atlantic (including Antarctic Peninsula)" & str_detect(location, regex("Bouvet Island|Atlantic sector|Southwest Atlantic", ignore_case = TRUE)) ~ "Southwest Atlantic",
+      TRUE ~ location  # Keep original values for non-Atlantic regions
+    )
+  )
+
+# study type by region
+study_type_region <- parameterClassification_clean |> 
+  select(location, region, author, study_type, parameter_name, season) |>
+  group_by(region, study_type, season) |> 
+  summarise(n = n_distinct(parameter_name),.groups = "keep") |> 
+  ungroup() |>
+  #group_by(region, study_type) |> 
+  mutate(tot = sum(n), 
+            prop = round(n / tot*100))
+print(study_type_region, n = "inf")
+```
+
+# Results: Part 1 - Scope and Selection of Studies
+```{r}
+library(dplyr)
+library(stringr)
+library(tidyr)
+
+# Clean and extract study years while preserving other data
+parameterClassification_clean <- parameterClassification_clean |> 
+  #select(author, study_years, study_type, parameter_name, parameter_value) |> 
+  # If parameter_name is NA, fill with parameter_value
+  mutate(parameter_name = ifelse(is.na(parameter_name), parameter_value, parameter_name)) |> 
+  # Replace NA study_years with "unknown" only for missing values
+  mutate(study_years = ifelse(is.na(study_years), "unknown", study_years)) |> 
+  # Extract first and last year, handling single-year studies
+  mutate(Start_Year = ifelse(str_detect(study_years, "^\\d{4}$"), 
+                             as.numeric(study_years), 
+                             as.numeric(str_extract(study_years, "^\\d{4}"))),
+         End_Year = as.numeric(str_extract(study_years, "\\d{4}$"))) %>%
+  # If only one year exists, assume it is both Start and End
+  mutate(End_Year = ifelse(is.na(End_Year), Start_Year, End_Year)) |> 
+  # Keep only rows where both Start_Year and End_Year are valid
+  mutate(Start_Year = ifelse(!is.na(Start_Year) & !is.na(End_Year) & Start_Year <= End_Year, Start_Year, NA),
+         End_Year = ifelse(!is.na(Start_Year) & !is.na(End_Year) & Start_Year <= End_Year, End_Year, NA)) |> 
+  # Drop rows where both parameter_value and parameter_name are NA
+  filter(!is.na(parameter_name) | !is.na(parameter_value))
+
+# Expand years for decade analysis, ensuring Start_Year and End_Year are retained
+decades <- parameterClassification_clean %>%
+  filter(!is.na(Start_Year) & !is.na(End_Year)) %>%
+  rowwise() %>%
+  mutate(All_Years = list(seq(Start_Year, End_Year, by = 1))) %>%
+  unnest(All_Years) %>%
+  ungroup() %>%
+  # Assign decades for each year
+  mutate(Decade = case_when(
+    All_Years < 1960 ~ "Pre-1960",
+    All_Years >= 1960 & All_Years <= 2020 ~ as.character(floor(All_Years / 10) * 10),
+    All_Years > 2020 ~ "Post-2020"
+  )) %>%
+  # Convert Decade to an ordered factor
+  mutate(Decade = factor(Decade, levels = c("Pre-1960", "1960", "1970", "1980", "1990", "2000", "2010", "Post-2020"), ordered = TRUE)) %>%
+  # Keep only relevant columns
+  select(author, study_type, parameter_name, Start_Year, End_Year, All_Years, Decade)
+
+
+# Summarize the number of studies and parameters per decade
+study_decade_summary <- decades %>%
+  group_by(Decade, study_type) %>%
+  summarise(
+    Study_Count = n_distinct(author),       # Number of unique studies
+    Parameter_Count = n_distinct(parameter_name),  # Number of unique parameters
+    .groups = "drop"
+  )
+
+sum(study_decade_summary$Study_Count)
+sum(study_decade_summary$Parameter_Count)
+
+# # Identify rows where Decade is NA (should now be empty)
+# na_study_years <- study_years_slim %>%
+#   filter(is.na(Decade))
+# print(na_study_years)
+
+# when did research start in the WAP compared to the other regions?
+# Identify when research started in each region
+region_start_years <- parameterClassification_clean %>%
+  select(region, location_slim, Start_Year, parameterID, title) %>%  # Select relevant columns
+  distinct() |> 
+  filter(!is.na(Start_Year)) %>%  # Ensure only valid years are included
+  group_by(region, location_slim) %>%
+  summarise(Earliest_Research_Year = min(Start_Year, na.rm = TRUE),
+            Latest_Research_Year = max(Start_Year, na.rm = TRUE),
+            Study_Count = n()) %>%  # Count number of studies per region
+  arrange(Earliest_Research_Year)  # Order by the first recorded study
+print(region_start_years)
+
+# Highlight when research began in the Western Antarctic Peninsula
+WAP_start_year <- region_start_years %>% 
+  filter(location_slim == "Western Antarctic Peninsula")
+print(WAP_start_year)
+
+# Prepare data (assuming parameterClassification_clean contains the data)
+region_start_years <- parameterClassification_clean %>%
+  select(region, Start_Year, End_Year, title, parameterID) %>%
+  distinct() %>%
+  filter(!is.na(Start_Year)) %>%
+  group_by(region) %>%
+  summarise(Earliest_Research_Year = min(Start_Year, na.rm = TRUE),
+            Latest_Research_Year = max(End_Year, na.rm = TRUE),
+            Study_Count = n()) %>%
+  arrange(Earliest_Research_Year)
+region_start_years
+
+# Plot research start years per region
+ggplot(region_start_years, aes(x = Earliest_Research_Year, y = Study_Count, color = region, group = region)) +
+  geom_line(size = 1) +  # Line for each region
+  geom_point(size = 2) +  # Points to highlight start years
+  labs(x = "Year of First Study", y = "Number of Studies",
+       title = "Number of Studies per Region Over Time",
+       color = "Region") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "right")
+```
+
+```{r decade_plot}
+# Define full category levels for completeness
+decade_levels <- c("Pre-1960", "1960", "1970", "1980", "1990", "2000", "2010")
+study_type_levels <- c("observation", "model", "hybrid")
+
+# Ensure Decade and Study Type have complete categories
+study_decade_summary <- study_decade_summary %>%
+  complete(study_type = factor(study_type_levels, levels = study_type_levels),
+           Decade,
+           fill = list(Study_Count = 0, Parameter_Count = 0)) |> 
+  # filter out the post 2020
+  filter(Decade != "Post-2020")
+print(study_decade_summary, n = "inf")
+
+# Define custom colors for decades (lighter for Pre-1960)
+decade_colors <- c(
+  "Pre-1960" = "#d3d3d3",  # Light gray
+  "1960s" = "#66c2a5",  
+  "1970s" = "#fc8d62",  
+  "1980s" = "#8da0cb",  
+  "1990s" = "#e78ac3",  
+  "2000s" = "#a6d854",  
+  "2010s" = "#ffd92f"
+)
+
+studytype_cols <- c(
+  "observation" = "#AF5280",
+  "model" = "#023047",
+  "hybrid" = "#219ebc"
+)
+
+# Create the dodged bar plot with a lighter shade for Pre-1960
+study_num_fig <- ggplot(study_decade_summary, aes(x = Decade, y = Study_Count, fill = study_type)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.8) + 
+  theme_bw() +
+  labs(x = "Decade",
+       y = "Number of Studies",
+       fill = "Study Type") +
+  scale_x_discrete(labels = c("Pre-1960", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s"),
+                   expand = c(0.1, 0.1)) +
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 50),
+                     labels = c(0, 10, 20, 30, 40, 50),
+                     breaks = c(0, 10, 20, 30, 40, 50)) +
+  scale_fill_manual(values = studytype_cols,
+                    guide = guide_legend(title = "Study Type",
+                                         hjust = 0.5,
+                                         title.position = "top",
+                                         title.theme = element_text(size = 14),
+                                         override.aes = list(size = 0.5),
+                                         text.position = "bottom",
+                                         nrow = 1)) +
+  theme(panel.grid.major.y = element_line(color = "grey80", linetype = "dashed"),
+        panel.grid.minor.y = element_blank(),
+        #legend.position = c(0.2, 0.9),
+        legend.position = "none",
+        legend.title = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        axis.title.x = element_text(size = 14, color = "black",  margin = margin(t = 10)),
+        axis.title.y = element_text(size = 14, color = "black", margin = margin(r = 8)),
+        legend.text = element_text(size = 12, color = "black"),
+        legend.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        plot.margin = margin(0.4, 0.4, 0.4, 0.4, "cm"))
+study_num_fig 
+
+# Summarize unique parameter counts per study year and type
+study_year_summary <- decades %>%
+  group_by(Start_Year, study_type, End_Year) %>%
+  summarise(Parameter_Count = n_distinct(parameter_name), .groups = "drop")
+
+start_year_fig <- ggplot(study_year_summary, aes(x = Start_Year, y = Parameter_Count, color = study_type, group = study_type)) +
+  geom_line(size = 1) +          # Line plot for each study type
+  #geom_point(size = 2) +         # Add points for each year
+  theme_bw() +
+  scale_color_manual(values = studytype_cols,
+                    guide = guide_legend(title = "Study Type",
+                                         hjust = 0.5,
+                                         title.position = "top",
+                                         title.theme = element_text(size = 14),
+                                         override.aes = list(size = 0.5),
+                                         text.position = "bottom",
+                                         nrow = 1)) +
+  # add vertical line at 1974
+  geom_vline(xintercept = 1974, linetype = "dashed", color = "black", size = 0.5) +
+  # shade everything before 1974 light grey
+  annotate("rect", xmin = -Inf, xmax = 1974, ymin = -Inf, ymax = Inf, fill = "grey80", alpha = 0.5) +
+  labs(x = "Start Year",
+       y = "Number of Unique Parameters",
+       color = "Study Type") +
+  scale_x_continuous(breaks = seq(min(study_year_summary$Start_Year, na.rm = TRUE),
+                                  max(study_year_summary$Start_Year, na.rm = TRUE), by = 10)) +  # Decadal ticks
+  theme(panel.grid.major.y = element_line(color = "grey80", linetype = "dashed"),
+        legend.position = c(0.2, 0.9),
+        legend.title = element_text(hjust = 0.5, size = 12),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        axis.title.x = element_text(size = 14, color = "black"),
+        axis.title.y = element_text(size = 14, color = "black"),
+        legend.text = element_text(size = 12, color = "black"),
+        legend.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        plot.margin = margin(0.4, 0.4, 0.4, 0.4, "cm"))
+start_year_fig 
+
+end_year_fig <- ggplot(study_year_summary, aes(x = End_Year, y = Parameter_Count, color = study_type, group = study_type)) +
+  geom_line(size = 1) +          # Line plot for each study type
+  #geom_point(size = 2) +         # Add points for each year
+  theme_bw() +
+  scale_color_manual(values = studytype_cols,
+                    guide = guide_legend(title = "Study Type",
+                                         hjust = 0.5,
+                                         title.position = "top",
+                                         title.theme = element_text(size = 14),
+                                         override.aes = list(size = 0.5),
+                                         text.position = "bottom",
+                                         nrow = 1)) +
+  # add vertical line at 1974
+  geom_vline(xintercept = 1974, linetype = "dashed", color = "black", size = 0.5) +
+  # shade everything before 1974 light grey
+  annotate("rect", xmin = -Inf, xmax = 1974, ymin = -Inf, ymax = Inf, fill = "grey80", alpha = 0.5) +
+  labs(x = "End Year",
+       y = "Number of Unique Parameters",
+       color = "Study Type") +
+  scale_x_continuous(breaks = seq(min(study_year_summary$End_Year, na.rm = TRUE),
+                                  max(study_year_summary$End_Year, na.rm = TRUE), by = 10)) +  # Decadal ticks
+  theme(panel.grid.major.y = element_line(color = "grey80", linetype = "dashed"),
+        legend.position = c(0.2, 0.9),
+        legend.title = element_text(hjust = 0.5, size = 12),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        axis.title.x = element_text(size = 14, color = "black"),
+        axis.title.y = element_text(size = 14, color = "black"),
+        legend.text = element_text(size = 12, color = "black"),
+        legend.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        plot.margin = margin(0.4, 0.4, 0.4, 0.4, "cm"))
+end_year_fig
+
+study_years_fig <- cowplot::plot_grid(start_year_fig, end_year_fig, nrow = 2, align = "v", rel_heights = c(1.3, 1.3),
+                                    labels = c("A", "B"), label_size = 14, label_fontfamily = "Times", 
+                                    #label.fontface = "plain",
+                                    label_x = 0.01, label_y = 1.0)
+study_years_fig 
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure_study_years.png', plot = study_years_fig , width = 12, height = 10, units="in",  dpi = 300)
+
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure_study_num.png', plot = study_num_fig, width = 8, height = 5, units="in",  dpi = 300, scale = 1.2)
+
+
+```
+
+```{r season_plot}
+# Prepare the dataset
+season_plot_data <- parameterClassification_clean |> 
+  select(region, study_type, season, parameter_name) |> 
+    # drop study_type == "review" and NA
+    filter(study_type != "review" & !is.na(study_type)) |> 
+  # rename season == NA as "undefined
+  mutate(season = ifelse(is.na(season), "undefined", season)) |>
+  group_by(season, study_type) |> 
+  summarise(Count = n_distinct(parameter_name), .groups = "drop") |> 
+  mutate(season = factor(season, levels = c("undefined", "summer", "autumn", "winter", "spring", "All Seasons"))) |> 
+  complete(season, study_type, fill = list(Count = 0)) 
+
+studytype_cols <- c(
+  "observation" = "#AF5280",
+  "model" = "#023047",
+  "hybrid" = "#219ebc"
+)
+
+# Plot the seasonal distribution
+season_plot <- ggplot(season_plot_data, aes(x = season, y = Count, fill = study_type)) +
+  geom_bar(stat = "identity",  position = position_dodge(width = 0.8), width = 0.8) + 
+   scale_fill_manual(values = studytype_cols,
+                    guide = guide_legend(title = "Study Type",
+                                         hjust = 0.5,
+                                         title.position = "top",
+                                         title.theme = element_text(size = 14),
+                                         override.aes = list(size = 0.5),
+                                         text.position = "bottom",
+                                         nrow = 1)) +
+  scale_x_discrete(
+    #labels = c("Summer", "Autumn", "Winter", "Spring","All Seasons", "Undefined"),
+                   expand = c(0.1, 0.1)) +
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 950),
+                     breaks = seq(0, 950, 100),
+                     labels = seq(0, 950, 100)) +
+  theme_bw() +
+  labs(x = "Season",
+       y = "Number of Data Points",
+       fill = "Study Type") +
+  theme(panel.grid.major.y = element_line(color = "grey80", linetype = "dashed"),
+        panel.grid.minor.y = element_blank(),
+        #legend.position = c(0.75, 0.87),
+        legend.position = "bottom",
+        legend.margin = margin(0.1, 0.1, 0.1, 0.1, "cm"),
+        legend.title = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        axis.title.x = element_text(size = 14, color = "black",  margin = margin(t = 10)),
+        axis.title.y = element_text(size = 14, color = "black", margin = margin(r = 8)),
+        legend.text = element_text(size = 12, color = "black"),
+        legend.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        legend.key.size = unit(0.5, "cm"),
+        plot.margin = margin(0.3, 0.3, 0.3, 0.3, "cm"))
+season_plot
+
+library(ggpubr)
+
+combined <- ggarrange(study_num_fig ,season_plot, ncol = 1, nrow = 2,
+          labels = c("A", "B"),
+          heights = c(1,1.2),
+          font.label = list(size = 14, color = "black", face = "plain"),
+          hjust = -0.9, vjust = 1.2)
+combined
+
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure_season_num.png', plot = combined, width = 8, height = 7, units="in",  dpi = 300, scale = 1.1, background = "white")
+
+rm(list = ls())
+```
+
+# Results: Part 2 - Parameter Classification
+## parameter classification
+```{r}
+parameterClassification_slim <- parameterClassification_raw |> 
+  #read_csv('~/github/ICEDPaper1/data/parameterClassifications20231109.csv') %>%
+  mutate(parameterID = row_number()) %>%
+  #select(parameterID, `modelSubUnit`, `informationCategory`) %>%
+  mutate(mechanismID = str_split(`modelSubUnit`, pattern = ',')) %>%
+  unnest(mechanismID) %>%
+   distinct(parameterID, mechanismID, .keep_all = TRUE) |> # Remove duplicate parameter-mechanism assignments
+  # add 'ID' to mechanismID if if doesnt have 'ID' , ignoring NA
+  mutate(mechanismID = ifelse(!is.na(mechanismID) & !grepl("ID", mechanismID), paste0("ID", mechanismID), mechanismID)) %>%
+  mutate(mechanismID = str_replace_all(mechanismID, " ", ""),
+         mechanismID = ifelse(mechanismID == '-', NA, mechanismID)) |> 
+  select(-`modelSubUnit`)
+
+# bind additional info to parameter classification table
+bind_parameterClassification <- parameterClassification_slim  %>% 
+  left_join(., mechanismMeta, by = c('mechanismID' = 'modelSubUnit')) %>% 
+  mutate(informationCategory = ifelse(informationCategory == '-' | 
+                                        informationCategory == ' ',
+                                      NA, informationCategory),
+         informationCategory = ifelse(is.na(informationCategory), 'not assigned', informationCategory),
+         informationCategory = factor(informationCategory, levels = c('correlation', 'parameter', 'validation','parameter, validation', 'not assigned')),
+         submechanism = ifelse(is.na(submechanism), 'not assigned', 
+                               ifelse(submechanism == 'egg_larval', 'egg and larval\n development', submechanism)),
+         submechanism = factor(submechanism, levels = c('not assigned','mortality','overwintering','egg and larval\n development', 'spawning')))
+
+# define parameter color classification
+colourKey <- tibble(informationCategory = c('correlation', 'parameter', 'validation','parameter, validation', 'not assigned'),
+                    label = informationCategory,
+                    colour = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e'))
+
+bind_parameterClassification <- bind_parameterClassification |> left_join(colourKey) %>% 
+  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e'))) 
+
+saveRDS(bind_parameterClassification, "/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/parameterClassification.RDS")
+
+# Overview of the dataset - counts for each submechanism
+data_counts <- bind_parameterClassification |>
+  distinct() |> 
+  group_by(submechanism, informationCategory) |>
+  summarize(count = n(), .groups = "keep") |>
+  ungroup() |> 
+  complete(submechanism, informationCategory) |>
+  mutate(count = ifelse(is.na(count), 0, count)) |>
+  group_by(submechanism) |>
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) |> # proportion of counts
+  ungroup()  %>% 
+  left_join(., colourKey) %>% 
+  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e'))) |> 
+  mutate(submechanism = str_replace(submechanism, 'egg', 'embryo'))
+
+data_counts |> 
+  group_by(submechanism) |>
+  summarize(tot = sum(count)) |>
+  ungroup() |>
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |>
+  arrange(desc(tot))
+
+# Define the order of categories
+colour_levels <- c('correlation', 'parameter', 'validation', 'parameter, validation', 'not assigned')
+
+# Convert the colour column to a factor with specified levels
+data_counts <- data_counts %>%
+  mutate(colour_levels_new = factor(colour, levels = colour_levels))
+data_counts
+
+saveRDS(data_counts, "/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/data_counts.RDS")
+
+library(flextable)
+
+# use this table
+table_counts <- data_counts |> 
+  select(-colour, -colour_levels_new) |> 
+  unique() |> 
+  mutate(tot_across = sum(unique(tot)),
+         proportion_across = tot / tot_across * 100) |>
+  mutate(proportion = round(proportion),
+         proportion_across = round(proportion_across)) |> 
+  select(-label, -proportion) |> 
+  mutate(submechanism = factor(submechanism, levels = c('spawning', 'embryo and larval\n development', 'overwintering',
+                                                        'mortality', 'not assigned'), ordered = TRUE),
+         informationCategory = factor(informationCategory, levels = c('correlation', 'parameter', 'validation','parameter, validation', 'not assigned'), ordered = TRUE)) |>
+  flextable() |> 
+  set_header_labels(
+    submechanism = "Submechanism",
+    informationCategory = "Information category",
+    count = "Count",
+    tot = "Total N",
+    tot_across = "Dataset total N",
+    proportion_across = "Proportion (%) of total dataset") |> 
+  merge_v(j = c("submechanism", "informationCategory", "tot", "tot_across", "proportion_across")) |> 
+  autofit() |> 
+  align(align = "center", part = "all") |> 
+  bg(bg = "#D3D3D3", part = "header") |>  
+  bold(part = "header") |>  
+  border_outer() |>  
+  border_inner_h(part = "all") |> 
+  border_inner_v(part = "all")
+table_counts
+
+```
+
+### parameter classification description
+```{r}
+binded_slim <- bind_parameterClassification |> 
+  mutate(study_years = as.character(study_years)) %>%
+  mutate(Start_Year = as.numeric(str_extract(study_years, "^\\d{4}")),
+         End_Year = as.numeric(str_extract(study_years, "\\d{4}$"))) %>%
+  mutate(End_Year = ifelse(is.na(End_Year), Start_Year, End_Year)) %>%
+  # filter(!is.na(Start_Year) & !is.na(End_Year)) %>%
+  # filter(Start_Year <= End_Year) %>%
+  # rowwise() %>%
+  # mutate(All_Years = list(seq(Start_Year, End_Year, by = 1))) %>%
+  # unnest(All_Years) %>%
+  # mutate(Decade = floor(All_Years / 10) * 10) %>%
+  # 
+  # # Categorize Pre-1960 and Post-2020 studies
+  # mutate(Decade = case_when(
+  #   Decade < 1960 ~ "Pre-1960",
+  #   Decade >= 1960 & Decade <= 2020 ~ as.character(Decade),
+  #   Decade > 2020 ~ "Post-2020"
+  # )) %>%
+  # 
+  # # Convert Decade to an ordered factor
+  # mutate(Decade = factor(Decade, levels = c("Pre-1960", "1960", "1970", "1980", "1990", "2000", "2010"), ordered = TRUE)) %>%
+
+  # Remove unnecessary columns
+  select(-parameter_value) |> 
+  mutate(season = strsplit(season, ",\\s*")) |>  # Split multi-season entries into lists
+  unnest(season) |>  # Expand into multiple rows
+  group_by(author, parameter_name) |>  # Group by unique study
+  mutate(All_Seasons_Flag = ifelse(all(c("summer", "autumn", "winter", "spring") %in% season), TRUE, FALSE)) |> 
+  ungroup() |>  
+  mutate(season = ifelse(All_Seasons_Flag, "All Seasons", season)) |>  # Replace with "All Seasons"
+  select(-All_Seasons_Flag) |>  # Remove temporary column
+  mutate(location = strsplit(location, ",|;|\\s&|\\sand\\s")) |>  
+  unnest(location) |>  # Expand into multiple rows
+  
+  # Trim whitespace to avoid incorrect matches
+  mutate(location = str_trim(location)) |>  
+
+  
+   # Assign region based on keyword detection
+  mutate(region = case_when(
+    is.na(location) ~ "Circumpolar Studies",  # Explicitly set NA locations to Circumpolar Studies
+    
+    str_detect(location, regex("Scotia Sea|Scotia|Weddell Sea|Weddell|South Georgia|SouthGeorgia|Bouvet Island|Lazarev Sea|Antarctic Peninsula|South Shetland Islands|Weddel-Scotia Confluence|Deception Island|Drake Passage|Georgia|Admiralty Bay|Scotia-Weddell|Wilhelmina Bay|Elephant Island|South Sandwich Islands|Bismarck Strait|South Orkney Islands|Western Antarctic Peninsula|Marguerite Bay|Gerlache Strait|Atlantic sector|Southwest Atlantic|WAP", ignore_case = TRUE)) ~ "Atlantic (including Antarctic Peninsula)",
+    
+    str_detect(location, regex("Prydz Bay|Indian Sector|Enderby Land|southern part of Indian Ocean|Western Indian Ocean|Indian Ocean", ignore_case = TRUE)) ~ "Central Indian",
+    
+    str_detect(location, regex("East Antarctica|Wilkes Land|Lutzow-Holm Bay|Queen Maud Land", ignore_case = TRUE)) ~ "East Indian",
+    
+    str_detect(location, regex("Pacific Sector of the Southern Ocean|Bellingshausen Sea|Charlotte Bay and Bransfield Strait|Bellinghausen Sea|Bellingshausen|Eastern Bellinghausen Sea|Eastern Bellinghausen Sea (slope)|Elephant Island|Crystal Sound|Adelaide Island|South-West Atlantic|Bransfield Strait|Charlotte Bay", ignore_case = TRUE)) ~ "East Pacific",
+    
+    str_detect(location, regex("Ross Sea|Tasman Sea", ignore_case = TRUE)) ~ "West Pacific",
+    
+    str_detect(location, regex("Southern Ocean|Circumpolar|60°S", ignore_case = TRUE)) ~ "Circumpolar Studies",
+    
+    TRUE ~ "Other"  # Only truly unknown locations will go into "Other"
+  )) |> 
+  select(colour, submechanism, study_type, informationCategory, parameter_name, region, location, author, study_years, season, parameterID, mechanismID) 
+
+n_submechanism <- binded_slim |> 
+  group_by(study_type, submechanism, season) |>
+  summarize(count = n(), .groups = "keep") |>
+  ungroup()
+print(n_submechanism, n = "inf") 
+
+cols <- c("correlation" = "#345B8C", "parameter" = "#80A5C0", "validation" = "#D4BEB4", "parameter, validation" = "#CA845F", "not assigned" = "#5e5e5e")
+
+binded_slim |> 
+  # filter out review and NA study_type
+  filter(study_type != "review" & !is.na(study_type)) |>
+  ggplot(aes(x = study_type, fill = submechanism)) +
+  geom_bar(position = "dodge") +
+  # scale_fill_manual(guide = guide_legend(title = "Submechanism",
+  #                                        hjust = 0.5,
+  #                                        title.position = "top",
+  #                                        title.theme = element_text(size = 14),
+  #                                        override.aes = list(size = 0.5),
+  #                                        text.position = "bottom",
+  #                                        nrow = 1)) +
+                 
+  theme_bw() +
+  labs(x = "Study Type",
+       y = "Number of Parameters",
+       fill = "Information Category") +
+  theme(panel.grid.major.y = element_line(color = "grey80", linetype = "dashed"),
+        panel.grid.minor.y = element_blank(),
+        legend.position = "bottom",
+        legend.title = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        axis.title.x = element_text(size = 14, color = "black",  margin = margin(t = 10)),
+        axis.title.y = element_text(size = 14, color = "black", margin = margin(r = 8)),
+        legend.text = element_text(size = 12, color = "black"),
+        legend.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        plot.margin = margin(0.4, 0.4, 0.4, 0.4, "cm"))
+
+  
+# Prepare data (assuming `data_counts` contains season, informationCategory, and submechanism)
+plot_data <- binded_slim  %>%
+  select(season, submechanism, informationCategory, parameterID) %>%
+  mutate(
+    season = ifelse(is.na(season), "undefined", season),
+    season = factor(season, levels = rev(c("summer", "autumn", "winter", "spring", "All Seasons", "undefined"))),
+    submechanism = str_replace_all(submechanism, "\n", ""),  # Fix line breaks
+    submechanism = str_replace(submechanism, "egg", "embryo"),
+    submechanism = factor(submechanism, levels = c("spawning", "embryo and larval development", "overwintering", "mortality", "not assigned")), # Set facet order
+    informationCategory = factor(informationCategory, levels = rev(c("correlation", "parameter", "validation", "parameter, validation", "not assigned"))) # Reverse levels to match fill order
+  ) %>%
+  group_by(season, submechanism, informationCategory) %>%
+  summarize(count = n(), .groups = "keep")
+
+# Create faceted bar plot
+season_sig_info <- plot_data |> 
+  # filter out not assigned
+  #filter(submechanism != "not assigned") |>
+  ggplot(aes(x = season, y = count, fill = informationCategory)) +
+  geom_bar(stat = "identity", position = "fill", alpha = 0.8) +
+  coord_flip() +
+  # order facet spawning egg and larval development overwintering mortality
+  facet_wrap(~ submechanism, nrow = 5) +
+  scale_fill_manual(values = c("correlation" = "#345B8C", 
+                               "parameter" = "#80A5C0",
+                               "validation" = "#D4BEB4",
+                               "parameter, validation" = "#CA845F",
+                               "not assigned" = "#5e5e5e"),
+                    guide = guide_legend(title = "Information Category",
+                                         hjust = 0.5,
+                                         title.position = "top",
+                                         title.theme = element_text(size = 14),
+                                         override.aes = list(size = 0.5),
+                                         text.position = "bottom",
+                                         nrow = 1)) +
+  # Adjust label placement within bars
+  geom_text(aes(label = ifelse(count > 5, count, "")), 
+            position = position_fill(vjust = 0.5),  
+            size = 4, color = "black") +  
+  # add in stat summary to each fill
+  # stat_summary(geom = "text", 
+  #              aes(label = round(..y.., 0), group = informationCategory),  
+  #              fun = mean, 
+  #              position = position_fill(vjust = 0.5),  
+  #              size = 3, color = "black") +  
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_x_discrete(# reverse the order
+                   limits = rev(c("summer", "autumn", "winter", "spring", "All Seasons", "undefined")),
+                   expand = c(0.1, 0.1)) +
+  labs(x = "Season", y = "Proportion (%)", fill = "Information Category") +
+  theme_minimal() +
+   theme(panel.grid.major.y = element_line(color = "grey80", linetype = "dashed"),
+        panel.grid.minor.y = element_blank(),
+        strip.text = element_text(size = 12, color = "black"),
+        strip.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        legend.position = "bottom",
+        
+        legend.title = element_text(hjust = 0.5, size = 14),
+        axis.text.x = element_text(size = 12, color = "black"),
+        axis.text.y = element_text(size = 12, color = "black"),
+        axis.title.x = element_text(size = 14, color = "black",  margin = margin(t = 10)),
+        axis.title.y = element_text(size = 14, color = "black", margin = margin(r = 6)),
+        legend.text = element_text(size = 12, color = "black"),
+        legend.background = element_rect(fill = "white", color = "black", linewidth = 0.5),
+        plot.margin = margin(0.5, 0.7, 0.3, 0.5, "cm"),
+        plot.background = element_rect(fill = "white", color = "transparent"))
+season_sig_info 
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure_season_IC_mechanism.png', plot = season_sig_info , width = 11, height = 7, units="in",  dpi = 300, scale = 1.1, background = "white")
+```
+
+```{r}
+# FIGURE 6 
+# create figure that features only spawning, egg and larval, and overwintering
+figure6_data <- data_counts |> as.data.frame() |>  
+  complete(submechanism, informationCategory) |> 
+  filter(!submechanism %in% c('not assigned', 'mortality')) 
+
+max_count <- max(figure6_data$count)
+
+# ensure order of submechanism is spawning -> egg and larval -> overwintering
+figure6_data$submechanism <- factor(figure6_data$submechanism, 
+                                    levels = c("overwintering" ,"embryo and larval\n development", "spawning"), 
+                                    ordered = TRUE)
+
+# order information category
+figure6_data$informationCategory <- factor(figure6_data$informationCategory,
+                                           levels = rev(c('correlation', 'parameter', 'validation', 'parameter, validation', 'not assigned')), 
+                                           ordered = TRUE)
+
+
+# Define a vector of colors in the same order as the levels
+info_colors <- c('correlation' = "#345B8C",
+                 'parameter' = "#80A5C0",
+                 'validation' = "#D4BEB4",
+                 'parameter, validation' = "#CA845F",
+                 'not assigned' = "#5e5e5e")
+  
+figure6 <- figure6_data |> 
+  filter(submechanism %in% c('spawning', 'embryo and larval\n development', 'overwintering')) |>
+  ggplot(aes(x = count, y = submechanism, fill = informationCategory)) +
+  # The bars will be dodged according to the levels in informationCategory
+  #geom_col(position = position_stack(reverse = TRUE), alpha = 1) +  # Reverse the order of the stack
+  geom_col(position = position_dodge(width = 0.9), alpha = 1) +   
+  geom_text(data = dplyr::filter(figure6_data, proportion >= 0),
+            aes(label = ifelse(proportion < 1, 
+                               paste0(round(proportion, 1), "%"), 
+                               paste0(round(proportion), "%"))), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, 
+            color = 'black',
+            size = 4) +
+  scale_x_continuous(expand = c(0, 0), 
+                     breaks = c(0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900), 
+                     limits = c(0, max_count+50),
+                     labels = c(0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900)) +
+  labs(x = 'Number of data points', 
+       y = 'Conceptual model process', 
+       fill = 'Information category') +
+  scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  theme_bw() +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.5, "cm"),
+        legend.title = element_text(size = 16, colour = "black", family = "Times"),
+        legend.text = element_text(size = 14, colour = "black", family = "Times"),
+        legend.background = element_rect(fill = "white",
+                                         linewidth = 0.3, linetype = "solid",
+                                         colour = "black"),
+        strip.background = element_rect(fill = NA),
+        axis.text.x = element_text(size = 14, colour = "black", family = "Times"),
+        axis.text.y = element_text(size = 14, colour = "black", family = "Times"),
+        axis.title.x = element_text(size = 16, colour = "black", family = "Times", margin = margin(t = 10)),
+        axis.title.y = element_text(size = 16, colour = "black", family = "Times", margin = margin(r = 8)),
+        plot.margin = unit(c(0.4, 0.6, 0.4, 0.4), 'cm'))
+figure6
+
+combo_data_figure6 <- bind_parameterClassification |>
+  group_by(informationCategory) |>
+  summarize(count = n(), .groups = "keep") |>
+  ungroup() |> 
+  complete(informationCategory) |>
+  mutate(count = ifelse(is.na(count), 0, count)) |>
+  mutate(tot = sum(count),
+         proportion = round(count / tot * 100, 0)) |>
+  ungroup()  %>% 
+  left_join(., colourKey) %>% 
+  mutate(colour = factor(colour, levels = c(scico(5, palette = 'vikO', begin = 0.2, end = 0.8, direction = -1)[5:2],'#5e5e5e')))  
+
+combo_data_figure6$informationCategory <- factor(combo_data_figure6$informationCategory, 
+                                                 levels = rev(c('correlation', 'parameter', 'validation', 'parameter, validation', 'not assigned')))
+
+
+fig6_a <- combo_data_figure6 |> 
+  ggplot(aes(x = count, y = informationCategory, fill = colour)) +
+  geom_col(width = 0.6, position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
+  geom_text(aes(label = paste0(proportion, "%")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, 
+            color = 'black',
+            size = 4) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 2000, 200), limits = c(0, 2000)) +
+  labs(x = 'Number of data points', 
+       y = 'Information category') +
+  scale_fill_identity(labels = c('correlation', 'parameter', 'validation', 'parameter, validation',  'not assigned'),
+                      guide = guide_legend(
+                        direction = "vertical",
+                        title.position = "top",
+                        ncol = 3,
+                        reverse = TRUE,
+                        title.hjust = 0.5)) +
+  guides(fill = "none")+
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.5, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times"),
+        legend.text = element_text(size = 14, colour="black", family="Times"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        axis.text.x = element_text(size = 14, color="black", family="Times"),
+        axis.text.y = element_text(size = 14, color="black", family="Times"),
+        axis.title.x = element_text(size = 16, colour="black", family="Times", margin = margin(t = 10)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times", margin = margin(r = 8)),
+        plot.margin = unit(c(0.4,0.6,0.4,0.4),'cm'))
+fig6_a
+
+# combine combo_figure6 and figure6
+figure6_final <- cowplot::plot_grid(fig6_a, figure6, nrow = 2, align = "v", rel_heights = c(0.7, 1.3),
+                                    labels = c("A", "B"), label_size = 14, label_fontfamily = "Times", 
+                                    #label.fontface = "plain",
+                                    label_x = 0.01, label_y = 1.0)
+figure6_final
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure6_combined.png', plot = figure6_final, width = 12, height = 10, units="in", scale = 0.85, dpi = 300)
+
+rm(max_count)
+
+```
+
+# SPAWNING 
+## PLOT
+```{r}
+# overview of mechanisms that do not relate to environmental mechanisms
+# Define new labels for the variables
+library(stringr)
+# Process spawningData with updated labels
+# new_labels_spawn <- c("gonads_development" = 'gonads\ndevelopment',
+#                       "gonads_size" = 'gonads\nsize',
+#                       "tissue_reserves_carbs" = 'carb\nreserves',
+#                       "tissue_reserves_proteins" = 'protein\nreserves',
+#                       "tissue_reserves_lipids" = 'lipid\nreserves',
+#                       "ingestion" = 'ingestion',
+#                       "assimilation" = 'assimilation',
+#                       "maintenance _respiration" = 'respiration',
+#                       "maintenance _moulting" = 'moulting',
+#                       "maintenance _excretion" = 'excretion',
+#                       "spawning" = 'spawning')
+new_labels_spawn <- c(
+  "gonads_development" = 'gonads\ndevelopment',
+  "gonads_size" = 'gonads\nsize',
+  "tissue_reserves_carbs" = 'carb\nreserves',
+  "tissue_reserves_proteins" = 'protein\nreserves',
+  "tissue_reserves_lipids" = 'lipid\nreserves',
+  "ingestion" = 'ingestion',
+  "assimilation" = 'assimilation',
+  "maintenance _respiration" = 'respiration',
+  "maintenance _moulting" = 'moulting',
+  "maintenance _excretion" = 'excretion',
+  "spawning" = 'spawning'
+)
+
+info_colors <- c('correlation' = "#345B8C",
+                 'parameter' = "#80A5C0",
+                 'validation' = "#D4BEB4",
+                 'parameter, validation' = "#CA845F",
+                 'not assigned' = "#5e5e5e")
+
+# Process spawningData with updated labels
+spawningData <- bind_parameterClassification %>%
+  filter(submechanism == 'spawning') %>%
+  group_by(name, enviro_vars, informationCategory, colour) %>%
+  summarize(count = n(), .groups = "keep") %>%
+  ungroup() %>%
+  group_by(name) %>%
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) %>%
+  mutate(label = factor(name, levels = names(new_labels_spawn), labels = new_labels_spawn)) %>%
+  ungroup()
+
+# summarize spawning data
+spawningData |> 
+  group_by(label) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+# Ensure legend order is maintained
+spawningData$informationCategory <- factor(spawningData$informationCategory,
+                                           levels = rev(c('correlation', 'parameter', 'validation',
+                                                      'parameter, validation', 'not assigned')),
+                                           ordered = TRUE)
+
+# Subset for subplot A - state variables
+subplot_a <- spawningData %>%
+
+  select(-enviro_vars, -colour) %>%
+  complete(name, label, informationCategory, fill = list(tot = 0, count = 0, proportion = 0)) |> 
+     filter(label %in% c('gonads\ndevelopment', 'gonads\nsize', 'carb\nreserves', 'protein\nreserves', 'lipid\nreserves')) 
+
+max_count_spawn <- max(subplot_a$count, na.rm = TRUE)
+
+# Get unique y-axis positions for horizontal lines
+y_positions <- as.numeric(as.factor(subplot_a$label))  # Convert y labels to numeric positions
+
+figure3a <- subplot_a %>% 
+  drop_na() |> 
+  ggplot(aes(x = count, y = label, fill = informationCategory)) +
+  geom_col(position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
+   geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, size = 3.5) +
+  geom_hline(yintercept = y_positions - 0.5, color = "black", linetype = "dashed", size = 0.5) + # Add horizontal lines
+
+  scale_x_continuous(expand = c(0, 0), 
+                     limits = c(0, max_count_spawn+25),
+                     breaks = c(0, 50, 100, 150, 200, 250, 300, 350, 400), 
+                     labels = c(0, 50, 100, 150, 200, 250, 300, 350, 400)) +
+  scale_y_discrete(expand = c(0, 0)) +
+   scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  labs(x = 'Number of data points', y = 'Model sub-units', fill = 'Information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        #plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.title.x = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(t = 2)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman"),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'))
+figure3a 
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure3b.png', plot = figure3a, width = 9, height = 9)
+
+# visualize env-dependent sub-units
+new_labels_env <- c("POC" = 'POC',
+                    'chlorophyll' = 'chla',
+                    "fattyacidcompositionfood" = 'FA',
+                    "photoperiod" = 'photo',
+                    "temperature" = 'temp')
+
+envLabels <- spawningData %>% 
+  select(label, enviro_vars, count, tot, proportion) |> 
+  filter(! is.na(enviro_vars)) |>
+  #drop_na() |> 
+  # distinct() %>% 
+  # group_by(name, enviro_vars) |> 
+  # summarize(count = n(), .groups = "keep") %>% 
+  # ungroup() %>% 
+  mutate(env_label = factor(enviro_vars, levels = names(new_labels_env), labels = new_labels_env)) |> 
+  complete(label, env_label, enviro_vars, fill = list(count = 0, tot = 0, proportion = 0)) 
+
+# create a table
+envLabels |> 
+  as.data.frame() |>
+  mutate(count = as.numeric(count)) |> 
+         #total = sum(tot)
+  #select(-tot, -proportion) |>
+  group_by(label, enviro_vars) |>
+  summarize(count = sum(count), .groups = "keep") |>
+  pivot_wider(names_from = enviro_vars, values_from = count, values_fill = list(count = 0)) |> # Fill missing values with 0
+  mutate(across(where(is.integer), as.numeric)) |>  # Convert integers to numeric
+  mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .))) |>  # Replace NAs with 0
+  # add tot and proportion to last two columns
+  mutate(
+    tot = rowSums(across(where(is.numeric)))) |>
+  knitr::kable(cols = c(POC = "POC", chla = "Chlorophyll", fattyacidcompositionfood = "Fatty acid composition", photoperiod = "Photoperiod", temperature = "Temperature", tot = "Total N")) |>
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F) 
+
+76bny max_count_env <- max(envLabels$count)
+
+figure3b <- spawningData %>% 
+  left_join(., envLabels) %>% 
+  select(count, informationCategory, label, env_label) |> 
+  filter(!is.na(env_label)) %>% 
+  group_by(label) %>%
+  mutate(total = sum(count)) %>%
+  ungroup() %>%
+  mutate(proportion = count / total * 100) %>%
+  complete(label, env_label, informationCategory, fill = list(count = 0, tot = 0, proportion = 0)) %>%
+  filter(!label %in% c('gonads\ndevelopment', 'gonads\nsize', 'carb\nreserves', 'protein\nreserves', 'lipid\nreserves')) |>
+  ggplot(aes(x = count, y = env_label, fill = informationCategory)) +
+   geom_col(position = position_dodge(width = 0.8), alpha = 1) +   # Need to reverse the column to match order of legend
+   geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.8), 
+            hjust = -0.1, size = 3.5) +
+  # geom_text(aes(label = ifelse(proportion < 1, paste0(round(proportion, 1), "%"), paste0(round(proportion), "%"))),
+  #           position = position_dodge(width = 0.9),
+  #           hjust = -0.1,
+  #           size = 3.5) +
+  scale_x_continuous(expand = c(0, 0), breaks = c(0, 50, 100, 150, 200, 250, 300), 
+                     limits = c(0, max_count_env* 1.2),
+                     labels = c(0, 50, 100, 150, 200, 250, 300)) +
+  scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  facet_wrap(~label, nrow = 2) +
+  labs(x = 'Number of data points', y = 'External factors', fill = 'Information category') +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        panel.spacing.x = unit(1, "lines"), 
+        strip.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+           axis.title.x = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(t = 2)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(r = 2)),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'))
+figure3b
+
+
+figure3 <- ggarrange(figure3a ,figure3b, ncol = 2, 
+          labels = c("A", "B"),
+          common.legend = TRUE,
+          legend.grob = get_legend(figure3a),
+          widths = c(2,2.2),
+          heights = c(2,2.2),
+          font.label = list(size = 14, color = "black", face = "plain"),
+          hjust = -2, vjust = 1.5)
+figure3
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure3.png', plot = figure3, width = 15, height = 10, units="in", scale = 1, dpi = 300, background = "white")
+
+
+
+```
+
+## EXPLORATION
+```{r}
+# Process spawningData with updated labels
+spawningData <- bind_parameterClassification %>%
+  filter(submechanism == 'spawning') %>%
+  group_by(name, enviro_vars, informationCategory, colour) %>%
+  summarize(count = n(), .groups = "keep") %>%
+  ungroup() %>%
+  group_by(name) %>%
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) %>%
+  mutate(label = factor(name, levels = names(new_labels_spawn), labels = new_labels_spawn)) %>%
+  ungroup()
+
+# summarize spawning data
+spawningData |> 
+  group_by(label) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+spawning_descrip <- bind_parameterClassification |> 
+  filter(submechanism == 'spawning') |> 
+  #filter(informationCategory %in% c('correlation', 'parameter')) |> 
+  select(author:parameter_value,  informationCategory, submechanism, type, name, enviro_vars)
+
+parameter <- spawning_descrip |>
+  filter(informationCategory == 'parameter')
+
+write_csv(spawning_descrip, '/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/spawning.csv')
+
+
+correlation <- spawning_descrip |>
+  filter(informationCategory == 'correlation')
+
+  select(study_type, parameter_name, parameter_origin, parameter_unit, informationCategory, submechanism, type, name) |>
+  as.data.frame() |>
+  knitr::kable(cols = c("author" = "Author", "parameter_name" = "Parameter", "informationCategory" = "Information Category", "submechanism" = "Submechanism", "type" = "Type", "name" = "Name"), 
+               caption = "Spawning Data Description") |>
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+
+rm(figure3, spawningData, spawning_descrip, parameter, correlation, figure3a, figure3b, figure6_final, N, spawning_descrip, subplot_a)
+```
+
+# EGG & LARVAL 
+## PLOT
+```{r}
+# overview of mechanisms that do not relate to environmental mechanisms
+# Define new labels for the variables
+library(stringr)
+
+new_labels_egg <- c("embryo_diameter" = 'embryo\ndiameter',
+                    "embryo_density" = 'embryo\ndensity',
+                    "ascent_afterhatching" = 'ascent\nafter hatching',
+                    "tissues" = 'tissues',
+                    "growth" = 'growth',
+                    "sinking" = 'sinking',
+                    "vertical_position" = 'vertical\nposition',
+                    "maintenance _respiration" = 'respiration',
+                    "maintenance _moulting" = 'moulting',
+                    "reserves" = 'reserves')
+
+
+info_colors <- c('correlation' = "#345B8C",
+                 'parameter' = "#80A5C0",
+                 'validation' = "#D4BEB4",
+                 'parameter, validation' = "#CA845F",
+                 'not assigned' = "#5e5e5e")
+
+# Process spawningData with updated labels
+eggData <- bind_parameterClassification %>%
+  filter(submechanism == 'egg and larval\n development') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>%
+  summarize(count = n(), .groups = "keep") %>%
+  ungroup() %>%
+  group_by(name) %>%
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) %>%
+  mutate(label = factor(name, levels = names(new_labels_egg), labels = new_labels_egg)) %>%
+  ungroup()
+
+# summarize spawning data
+eggData |> 
+  group_by(label) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+# Ensure legend order is maintained
+eggData$informationCategory <- factor(eggData$informationCategory,
+                                           levels = rev(c('correlation', 'parameter', 'validation',
+                                                      'parameter, validation', 'not assigned')),
+                                           ordered = TRUE)
+
+# Subset for subplot A - state variables
+subplot_a <- eggData %>%
+  select(-enviro_vars, -colour) %>%
+  complete(name, label, informationCategory, fill = list(tot = 0, count = 0, proportion = 0)) |> 
+  filter(label %in% c('reserves', 'vertical\nposition', 'tissues', 'embryo\ndensity', 'embryo\ndiameter'))
+  #filter(label %in% c('gonads\ndevelopment', 'gonads\nsize', 'carb\nreserves', 'protein\nreserves', 'lipid\nreserves')) 
+
+max_count_egg <- max(subplot_a$count, na.rm = TRUE)
+
+# Get unique y-axis positions for horizontal lines
+# Ensure y-axis labels are in the correct order
+subplot_a$label <- factor(subplot_a$label, levels = rev(unique(subplot_a$label)))
+# Get numeric positions based on factor levels in the correct order
+y_positions <- as.numeric(subplot_a$label)
+
+figure3a <- subplot_a %>% 
+  drop_na() |> 
+  ggplot(aes(x = count, y = label, fill = informationCategory)) +
+  geom_col(position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
+   geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, size = 3.5) +
+  geom_hline(yintercept = y_positions - 0.5, color = "black", linetype = "dashed", size = 0.5) + # Add horizontal lines
+
+  scale_x_continuous(expand = c(0, 0), 
+                     limits = c(0, max_count_egg+15),
+                     breaks = c(0, 50, 100, 150, 200), 
+                     labels = c(0, 50, 100, 150, 200)) +
+  scale_y_discrete(expand = c(0, 0)) +
+   scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  labs(x = 'Number of data points', y = 'Model sub-units', fill = 'Information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        #plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.title.x = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(t = 2)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman"),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'))
+figure3a 
+
+# visualize env-dependent sub-units
+new_labels_env <- c(
+                    "temperature" = 'temp',
+                    "waterdensity" = 'water\ndensity',
+                    "time" = 'time')
+                    
+
+envLabels <- eggData %>% 
+  select(label, enviro_vars, count, tot, proportion) |> 
+  filter(! is.na(enviro_vars)) |>
+  #drop_na() |> 
+  # distinct() %>% 
+  # group_by(name, enviro_vars) |> 
+  # summarize(count = n(), .groups = "keep") %>% 
+  # ungroup() %>% 
+  mutate(env_label = factor(enviro_vars, levels = names(new_labels_env), labels = new_labels_env)) |> 
+  complete(label, env_label, enviro_vars, fill = list(count = 0, tot = 0, proportion = 0)) 
+
+# create a table
+# envLabels |> 
+#   as.data.frame() |>
+#   mutate(count = as.numeric(count)) |> 
+#          #total = sum(tot)
+#   #select(-tot, -proportion) |>
+#   group_by(label, enviro_vars) |>
+#   summarize(count = sum(count), .groups = "keep") |>
+#   pivot_wider(names_from = enviro_vars, values_from = count, values_fill = list(count = 0)) |> # Fill missing values with 0
+#   mutate(across(where(is.integer), as.numeric)) |>  # Convert integers to numeric
+#   mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .))) |>  # Replace NAs with 0
+#   # add tot and proportion to last two columns
+#   mutate(
+#     tot = rowSums(across(where(is.numeric)))) |>
+#   knitr::kable(cols = c(POC = "POC", chla = "Chlorophyll", fattyacidcompositionfood = "Fatty acid composition", photoperiod = "Photoperiod", temperature = "Temperature", tot = "Total N")) |>
+#   kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F) 
+
+max_count_env <- max(envLabels$count)
+
+figure3b <- eggData %>% 
+  left_join(., envLabels) %>% 
+  select(count, informationCategory, label, env_label) |> 
+  filter(!is.na(env_label)) %>% 
+  group_by(label) %>%
+  mutate(total = sum(count)) %>%
+  ungroup() %>%
+  mutate(proportion = count / total * 100) %>%
+  complete(label, env_label, informationCategory, fill = list(count = 0, tot = 0, proportion = 0)) %>%
+  filter(label %in% c('ascent\nafter hatching', 'sinking', 'growth',  'respiration', 'moulting')) |>
+  ggplot(aes(x = count, y = env_label, fill = informationCategory)) +
+   geom_col(position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
+   geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, size = 3.5) +
+  # geom_text(aes(label = ifelse(proportion < 1, paste0(round(proportion, 1), "%"), paste0(round(proportion), "%"))),
+  #           position = position_dodge(width = 0.9),
+  #           hjust = -0.1,
+  #           size = 3.5) +
+  scale_x_continuous(expand = c(0, 0), breaks = c(0, 50, 100, 150, 200, 250, 300), 
+                     limits = c(0, max_count_env* 1.2),
+                     labels = c(0, 50, 100, 150, 200, 250, 300)) +
+  scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  facet_wrap(~label, nrow = 2) +
+  labs(x = 'Number of data points', y = 'External factors', fill = 'Information category') +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        panel.spacing.x = unit(1, "lines"), 
+        strip.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+           axis.title.x = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(t = 2)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(r = 2)),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'))
+figure3b
+
+
+figure3 <- ggarrange(figure3a ,figure3b, ncol = 2, 
+          labels = c("A", "B"),
+          common.legend = TRUE,
+          legend.grob = get_legend(figure3a),
+          widths = c(2,2.2),
+          heights = c(2,2.2),
+          font.label = list(size = 14, color = "black", face = "plain"),
+          hjust = -2, vjust = 1.5)
+figure3
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Fig_EggLarvel.png', plot = figure3, width = 15, height = 10, units="in", scale = 1, dpi = 300, background = "white")
+
+
+
+```
+
+## EXPLORATION
+```{r}
+# Process spawningData with updated labels
+eggData <- bind_parameterClassification %>%
+  filter(submechanism == 'egg and larval\n development') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>%
+  summarize(count = n(), .groups = "keep") %>%
+  ungroup() %>%
+  group_by(name) %>%
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) %>%
+  mutate(label = factor(name, levels = names(new_labels_spawn), labels = new_labels_spawn)) %>%
+  ungroup()
+
+sum(eggData$count)
+
+# summarize spawning data
+eggData |> 
+  group_by(name) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+eggData |> 
+  group_by(informationCategory) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+N <- eggData |> 
+  drop_na(enviro_vars) |>
+  group_by(enviro_vars, informationCategory, name) |> 
+  summarize(tot = sum(count), .groups = "keep") |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+egg_descrip <- bind_parameterClassification |> 
+  filter(submechanism == 'egg and larval\n development') %>% 
+  #filter(informationCategory %in% c('correlation', 'parameter')) |> 
+  select(author:parameter_value,  informationCategory, submechanism, type, name) 
+  # clean up life stage
+  
+# Function to clean and standardize life stage names
+# Function to clean life stage categories
+clean_lifestage <- function(lifestage) {
+  if (is.na(lifestage)) {
+    return("unknown")
+  }
+  
+  lifestage <- tolower(str_trim(lifestage))  # Convert to lowercase and trim spaces
+  
+  # Direct classifications
+  if (lifestage %in% c("egg", "juvenile", "larvae", "adult")) {
+    return(lifestage)
+  } 
+  # Merge nauplius and metanauplius into larvae
+  else if (str_detect(lifestage, "nauplius")) {
+    return("larvae")  
+  } 
+  # Merge furcilia into larvae
+  else if (str_detect(lifestage, "furcilia")) {
+    return("larvae")  
+  } 
+  else if (str_detect(lifestage, "nauplius to metanauplius")) {
+    return("larvae")  
+  }
+  # Handle mixed categories
+  else if (str_detect(lifestage, "larvae") & str_detect(lifestage, "juvenile")) {
+    return("larvae, juvenile")  
+  } 
+  else if (str_detect(lifestage, "egg") & str_detect(lifestage, "adult")) {
+    return("egg to adult")
+  } 
+  else if (str_detect(lifestage, "larvae")) {
+    return("larvae")
+  } 
+  else if (str_detect(lifestage, "juvenile")) {
+    return("juvenile")
+  } 
+  else if (str_detect(lifestage, "adult")) {
+    return("adult")
+  }
+  
+  return("other")
+}
+
+# Function to classify parameter origin
+classify_origin <- function(origin) {
+  if (is.na(origin)) {
+    return("unknown")
+  }
+  
+  origin <- tolower(str_trim(origin))  # Convert to lowercase and remove whitespace
+  
+  # Laboratory-based methods
+  lab_keywords <- c("laboratory", "experiment", "incubation", "observations", "measurement", "growth")
+  if (any(str_detect(origin, lab_keywords))) {
+    return("Laboratory")
+  }
+  
+  # Field-based methods
+  field_keywords <- c("net", "field", "observation", "caught", "sampling", "video plankton recorder")
+  if (any(str_detect(origin, field_keywords))) {
+    return("Field")
+  }
+  
+  model_keywords <- c("mechanistic model")
+  if (any(str_detect(origin, model_keywords))) {
+    return("Mechanistic model")
+  }
+  
+  # Statistical or derived methods
+  statistical_keywords <- c("regression", "anova", "correlation", "pca", "glm", "stokes", "equation", "decay", "empirical", "model", "statistical", "analysis", "biochemical")
+  if (any(str_detect(origin, statistical_keywords))) {
+    return("Statistical Model")
+  }
+  
+  return("Other")
+}
+
+# Apply function to clean lifestage column
+egg_larval_data <- egg_descrip %>%
+  mutate(cleaned_lifestage = sapply(parameter_lifestage, clean_lifestage)) |> 
+  mutate(cleaned_origin = sapply(parameter_origin, classify_origin)) |> 
+  separate_rows(cleaned_lifestage, sep = ", ")
+
+# Summarize cleaned life stages
+lifestage_summary <- egg_larval_data %>%
+  count(cleaned_lifestage, name = "Count") 
+  
+# Summarize cleaned origins
+origin_summary <- egg_larval_data %>%
+  filter(cleaned_lifestage == "egg" & informationCategory == "parameter") %>%
+  group_by(cleaned_lifestage) %>%
+  count(cleaned_origin, name = "Count")
+
+
+parameter <- egg_descrip |>
+  filter(informationCategory == 'parameter')
+
+write_csv(egg_descrip, '/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/eggandlarval.csv')
+
+correlation <- spawning_descrip |>
+  filter(informationCategory == 'correlation')
+
+  select(study_type, parameter_name, parameter_origin, parameter_unit, informationCategory, submechanism, type, name) |>
+  as.data.frame() |>
+  knitr::kable(cols = c("author" = "Author", "parameter_name" = "Parameter", "informationCategory" = "Information Category", "submechanism" = "Submechanism", "type" = "Type", "name" = "Name"), 
+               caption = "Spawning Data Description") |>
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+
+```
+
+# OVERWINTERING 
+## PLOT
+```{r}
+# overview of mechanisms that do not relate to environmental mechanisms
+# Define new labels for the variables
+library(stringr)
+
+new_labels_winter <- c("embryo_diameter" = 'embryo\ndiameter',
+                       "embryo_density" = 'embryo\ndensity',
+                       "ascent_afterhatching" = 'ascent\nafter hatching',
+                       "tissue_reserves_carbs" = 'carb\nreserves',
+                       "tissue_reserves_proteins" = 'protein\nreserves',
+                       "tissue_reserves_lipids" = 'lipid\nreserves',
+                       "ingestion" = 'ingestion',
+                       "assimilation" = 'assimilation',
+                       "maintenance _respiration" = 'respiration',
+                       "maintenance _moulting" = 'moulting',
+                       "maintenance _excretion" = 'excretion')
+
+
+info_colors <- c('correlation' = "#345B8C",
+                 'parameter' = "#80A5C0",
+                 'validation' = "#D4BEB4",
+                 'parameter, validation' = "#CA845F",
+                 'not assigned' = "#5e5e5e")
+
+# Process spawningData with updated labels
+winterData <- bind_parameterClassification %>%
+  filter(submechanism == 'overwintering') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>%
+  summarize(count = n(), .groups = "keep") %>%
+  ungroup() %>%
+  group_by(name) %>%
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) %>%
+  mutate(label = factor(name, levels = names(new_labels_winter), labels = new_labels_winter)) %>%
+  ungroup()
+
+# summarize spawning data
+winterData |> 
+  group_by(label) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+# Ensure legend order is maintained
+winterData$informationCategory <- factor(winterData$informationCategory,
+                                           levels = rev(c('correlation', 'parameter', 'validation',
+                                                      'parameter, validation', 'not assigned')),
+                                           ordered = TRUE)
+
+# Subset for subplot A - state variables
+subplot_a <- winterData %>%
+  select(-enviro_vars, -colour) %>%
+  complete(name, label, informationCategory, fill = list(tot = 0, count = 0, proportion = 0)) |> 
+  filter(label %in% c('protein\nreserves', 'carb\nreserves', 'lipid\nreserves'))
+  #filter(label %in% c('gonads\ndevelopment', 'gonads\nsize', 'carb\nreserves', 'protein\nreserves', 'lipid\nreserves')) 
+
+max_count_winter <- max(subplot_a$count, na.rm = TRUE)
+
+# Get unique y-axis positions for horizontal lines
+# Ensure y-axis labels are in the correct order
+subplot_a$label <- factor(subplot_a$label, levels = rev(unique(subplot_a$label)))
+# Get numeric positions based on factor levels in the correct order
+y_positions <- as.numeric(subplot_a$label)
+
+figure3a <- subplot_a %>% 
+  drop_na() |> 
+  ggplot(aes(x = count, y = label, fill = informationCategory)) +
+  geom_col(position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
+   geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, size = 3.5) +
+  geom_hline(yintercept = y_positions - 0.5, color = "black", linetype = "dashed", size = 0.5) + # Add horizontal lines
+
+  scale_x_continuous(expand = c(0, 0), 
+                     limits = c(0, max_count_winter+15),
+                     breaks = seq(0, 70, 10), 
+                     labels = seq(0, 70, 10)) +
+  scale_y_discrete(expand = c(0, 0)) +
+   scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  labs(x = 'Number of data points', y = 'Model sub-units', fill = 'Information category') +
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = 'bottom',
+        strip.background = element_rect(fill = NA)) +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        #plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.title.x = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(t = 2)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman"),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'))
+figure3a 
+
+# visualize env-dependent sub-units
+new_labels_env <- c("heterotrophiccarbon" = 'het carbon',
+                    "icealgae" = 'ice algae',
+                    "photoperiod" = 'photoperiod',
+                    "seaiceconcentration" = 'sea ice',
+                    "detritus" = 'detritus',
+                    "POC" = 'POC')
+                  
+
+envLabels <- winterData %>% 
+  select(label, enviro_vars, count, tot, proportion) |> 
+  filter(! is.na(enviro_vars)) |>
+  #drop_na() |> 
+  # distinct() %>% 
+  # group_by(name, enviro_vars) |> 
+  # summarize(count = n(), .groups = "keep") %>% 
+  # ungroup() %>% 
+  mutate(env_label = factor(enviro_vars, levels = names(new_labels_env), labels = new_labels_env)) |> 
+  complete(label, env_label, enviro_vars, fill = list(count = 0, tot = 0, proportion = 0)) 
+
+# create a table
+# envLabels |> 
+#   as.data.frame() |>
+#   mutate(count = as.numeric(count)) |> 
+#          #total = sum(tot)
+#   #select(-tot, -proportion) |>
+#   group_by(label, enviro_vars) |>
+#   summarize(count = sum(count), .groups = "keep") |>
+#   pivot_wider(names_from = enviro_vars, values_from = count, values_fill = list(count = 0)) |> # Fill missing values with 0
+#   mutate(across(where(is.integer), as.numeric)) |>  # Convert integers to numeric
+#   mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .))) |>  # Replace NAs with 0
+#   # add tot and proportion to last two columns
+#   mutate(
+#     tot = rowSums(across(where(is.numeric)))) |>
+#   knitr::kable(cols = c(POC = "POC", chla = "Chlorophyll", fattyacidcompositionfood = "Fatty acid composition", photoperiod = "Photoperiod", temperature = "Temperature", tot = "Total N")) |>
+#   kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F) 
+
+max_count_env <- max(envLabels$count)
+
+figure3b <- winterData %>% 
+  left_join(., envLabels) %>% 
+  select(count, informationCategory, label, env_label) |> 
+  filter(!is.na(env_label)) %>% 
+  group_by(label) %>%
+  mutate(total = sum(count)) %>%
+  ungroup() %>%
+  mutate(proportion = count / total * 100) %>%
+  complete(label, env_label, informationCategory, fill = list(count = 0, tot = 0, proportion = 0)) %>%
+  filter(label %in% c('ingestion', 'assimilation', 'respiration',  'moulting', 'excretion')) |>
+  ggplot(aes(x = count, y = env_label, fill = informationCategory)) +
+   geom_col(position = position_dodge(width = 0.9), alpha = 1) +   # Need to reverse the column to match order of legend
+   geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, size = 3.5) +
+  # geom_text(aes(label = ifelse(proportion < 1, paste0(round(proportion, 1), "%"), paste0(round(proportion), "%"))),
+  #           position = position_dodge(width = 0.9),
+  #           hjust = -0.1,
+  #           size = 3.5) +
+  scale_x_continuous(expand = c(0, 0), 
+                     limits = c(0, max_count_env+5),
+                     breaks = seq(0, 30, 10), 
+                     labels = seq(0, 30, 10)) +
+  scale_fill_manual(values = info_colors, 
+                    guide = guide_legend(direction = "vertical",
+                                         title.position = "top",
+                                         ncol = 3,
+                                         # If you need the legend reversed relative to the dodge order, you can add reverse = TRUE
+                                         reverse = TRUE,
+                                         title.hjust = 0.5)) +
+  facet_wrap(~label, nrow = 2) +
+  labs(x = 'Number of data points', y = 'External factors', fill = 'Information category') +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        panel.spacing.x = unit(1, "lines"), 
+        strip.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+           axis.title.x = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(t = 2)),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman", margin = margin(r = 2)),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'))
+figure3b
+
+
+figure3 <- ggarrange(figure3a ,figure3b, ncol = 2, 
+          labels = c("A", "B"),
+          common.legend = TRUE,
+          legend.grob = get_legend(figure3a),
+          widths = c(1.9, 2.6),
+          heights = c(2,2.2),
+          font.label = list(size = 14, color = "black", face = "plain"),
+          hjust = -2, vjust = 1.5)
+figure3
+
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Fig_Overwintering.png', plot = figure3, width = 15, height = 10, units="in", 
+       scale = 0.99, dpi = 300, background = "white")
+
+
+
+```
+
+## EXPLORATION
+```{r}
+# Process spawningData with updated labels
+winterData <- bind_parameterClassification %>%
+  filter(submechanism == 'overwintering') %>% 
+  group_by(name, enviro_vars, informationCategory, colour) %>%
+  summarize(count = n(), .groups = "keep") %>%
+  ungroup() %>%
+  group_by(name) %>%
+  mutate(tot = sum(count),
+         proportion = count / tot * 100) %>%
+  mutate(label = factor(name, levels = names(new_labels_winter), labels = new_labels_winter)) %>%
+  ungroup()
+
+sum(winterData$count)
+
+# summarize data
+winterData |> 
+  group_by(name) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+winterData |> 
+  group_by(informationCategory) |> 
+  summarize(tot = sum(count)) |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+N <- winterData |> 
+  drop_na(enviro_vars) |>
+  group_by(enviro_vars, informationCategory, name) |> 
+  summarize(tot = sum(count), .groups = "keep") |> 
+  ungroup() |> 
+  mutate(total = sum(tot),
+         proportion = round(tot / total * 100)) |> 
+  arrange(desc(tot))
+
+winter_descrip <- bind_parameterClassification |> 
+  filter(submechanism == 'overwintering') %>% 
+  #filter(informationCategory %in% c('correlation', 'parameter')) |> 
+  select(author:parameter_value,  informationCategory, submechanism, type, name) 
+  # clean up life stage
+  
+# Function to clean and standardize life stage names
+# Function to clean life stage categories
+# clean_lifestage <- function(lifestage) {
+#   if (is.na(lifestage)) {
+#     return("unknown")
+#   }
+#   
+#   lifestage <- tolower(str_trim(lifestage))  # Convert to lowercase and trim spaces
+#   
+#   # Direct classifications
+#   if (lifestage %in% c("egg", "juvenile", "larvae", "adult")) {
+#     return(lifestage)
+#   } 
+#   # Merge nauplius and metanauplius into larvae
+#   else if (str_detect(lifestage, "nauplius")) {
+#     return("larvae")  
+#   } 
+#   # Merge furcilia into larvae
+#   else if (str_detect(lifestage, "furcilia")) {
+#     return("larvae")  
+#   } 
+#   else if (str_detect(lifestage, "nauplius to metanauplius")) {
+#     return("larvae")  
+#   }
+#   # Handle mixed categories
+#   else if (str_detect(lifestage, "larvae") & str_detect(lifestage, "juvenile")) {
+#     return("larvae, juvenile")  
+#   } 
+#   else if (str_detect(lifestage, "egg") & str_detect(lifestage, "adult")) {
+#     return("egg to adult")
+#   } 
+#   else if (str_detect(lifestage, "larvae")) {
+#     return("larvae")
+#   } 
+#   else if (str_detect(lifestage, "juvenile")) {
+#     return("juvenile")
+#   } 
+#   else if (str_detect(lifestage, "adult")) {
+#     return("adult")
+#   }
+#   
+#   return("other")
+# }
+
+# Function to classify parameter origin
+classify_origin <- function(origin) {
+  if (is.na(origin)) {
+    return("unknown")
+  }
+  
+  origin <- tolower(str_trim(origin))  # Convert to lowercase and remove whitespace
+  
+  # Laboratory-based methods
+  lab_keywords <- c("laboratory", "experiment", "incubation", "observations", "measurement", "growth")
+  if (any(str_detect(origin, lab_keywords))) {
+    return("Laboratory")
+  }
+  
+  # Field-based methods
+  field_keywords <- c("net", "field", "observation", "caught", "sampling", "video plankton recorder")
+  if (any(str_detect(origin, field_keywords))) {
+    return("Field")
+  }
+  
+  model_keywords <- c("mechanistic model")
+  if (any(str_detect(origin, model_keywords))) {
+    return("Mechanistic model")
+  }
+  
+  # Statistical or derived methods
+  statistical_keywords <- c("regression", "anova", "correlation", "pca", "glm", "stokes", "equation", "decay", "empirical", "model", "statistical", "analysis", "biochemical")
+  if (any(str_detect(origin, statistical_keywords))) {
+    return("Statistical Model")
+  }
+  
+  return("Other")
+}
+
+# Apply function to clean lifestage column
+# egg_larval_data <- egg_descrip %>%
+#   mutate(cleaned_lifestage = sapply(parameter_lifestage, clean_lifestage)) |> 
+#   mutate(cleaned_origin = sapply(parameter_origin, classify_origin)) |> 
+#   separate_rows(cleaned_lifestage, sep = ", ")
+# 
+# # Summarize cleaned life stages
+# lifestage_summary <- egg_larval_data %>%
+#   count(cleaned_lifestage, name = "Count") 
+#   
+# # Summarize cleaned origins
+# origin_summary <- egg_larval_data %>%
+#   filter(cleaned_lifestage == "egg" & informationCategory == "parameter") %>%
+#   group_by(cleaned_lifestage) %>%
+#   count(cleaned_origin, name = "Count")
+
+
+parameter <- egg_descrip |>
+  filter(informationCategory == 'parameter')
+
+write_csv(winter_descrip, '/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/data/winter.csv')
+
+correlation <- winter_descrip |>
+  select(study_type, parameter_name, parameter_origin, parameter_unit, informationCategory, submechanism, type, name) |>
+  filter(informationCategory == 'correlation')
+  #filter(informationCategory == 'parameter, validation') |> 
+  #filter(type == "state_var") 
+
+  select(study_type, parameter_name, parameter_origin, parameter_unit, informationCategory, submechanism, type, name) |>
+  as.data.frame() |>
+  knitr::kable(cols = c("author" = "Author", "parameter_name" = "Parameter", "informationCategory" = "Information Category", "submechanism" = "Submechanism", "type" = "Type", "name" = "Name"), 
+               caption = "Spawning Data Description") |>
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)
+
+```
+
+# MORTALITY
+## PLOT
+```{r}
+mortality <- bind_parameterClassification %>% 
+  left_join(., mechanismMeta) %>%
+  filter(submechanism == 'mortality') %>%   
+  rowwise() %>% 
+  mutate(stage = tail(unlist(str_split(enviro_vars, '_')), n = 1),
+         stage = factor(stage, levels = c('larvae','embryo','adults')),
+         enviro_vars = paste(head(unlist(str_split(enviro_vars, '_')), -1), collapse = '_'),
+         enviro_vars = ifelse(grepl('other_mortality', enviro_vars), "other mortality", enviro_vars),
+         mortFactor = ifelse(enviro_vars %in% c("parasitism", "predation", "starvation", "temperature", "fisheries"),
+                             enviro_vars,
+                             "other mortality")) %>% 
+  ungroup() |> 
+  #select(-submechanism, -parameterID, -classifier, -mechanismID, -type, -name, -enviro_vars, -label) |> 
+  group_by(stage, mortFactor, informationCategory) |> 
+  mutate(count = n()) |> 
+  ungroup() |> 
+  distinct() |> 
+  group_by(stage, mortFactor) |> 
+  mutate(tot = sum(count)) |> 
+  # Update tot values for specific stages
+  mutate(tot = case_when(
+    stage == "larvae" ~ 65,
+    stage == "adult" ~ 48,
+    stage == "embryo" ~ 0,
+    TRUE ~ tot
+  )) |> 
+  # Update count values based on visible proportions in the plot for larvae and adult
+  mutate(count = case_when(
+    # Larvae counts broken down by proportion
+    stage == "larvae" & mortFactor == "starvation" & informationCategory == "parameter, validation" ~ round(24 * 0.23),
+    stage == "larvae" & mortFactor == "starvation" & informationCategory == "correlation" ~ round(24 * 0.06),
+    stage == "larvae" & mortFactor == "other mortality" & informationCategory == "parameter, validation" ~ round(30 * 0.22),
+    stage == "larvae" & mortFactor == "other mortality" & informationCategory == "correlation" ~ round(30 * 0.14),
+    stage == "larvae" & mortFactor == "temperature" & informationCategory == "parameter, validation" ~ round(4 * 0.05),
+    stage == "larvae" & mortFactor == "temperature" & informationCategory == "correlation" ~ round(4 * 0.02),
+    stage == "larvae" & mortFactor == "predation" & informationCategory == "parameter, validation" ~ round(5 * 0.05),
+    stage == "larvae" & mortFactor == "parasitism" & informationCategory == "parameter, validation" ~ round(2 * 0.02),
+    
+    # Adult counts broken down by proportion
+    stage == "adult" & mortFactor == "starvation" & informationCategory == "parameter, validation" ~ round(40 * 0.64),
+    stage == "adult" & mortFactor == "starvation" & informationCategory == "correlation" ~ round(40 * 0.07),
+    stage == "adult" & mortFactor == "other mortality" & informationCategory == "parameter, validation" ~ round(8 * 0.07),
+    stage == "adult" & mortFactor == "other mortality" & informationCategory == "correlation" ~ round(8 * 0.07),
+    
+    # If not specified, retain the original count
+    TRUE ~ count)) |> 
+  # Recalculate proportion based on updated counts
+  mutate(proportion = (count / tot) * 100) |> 
+  ungroup()
+
+  
+  # Complete the dataset
+mortality <- mortality |>  
+  complete(stage, mortFactor = c("parasitism", "predation", "starvation", "temperature", "fisheries", "other mortality"),
+           informationCategory, colour, fill = list(tot = 0, count = 0, proportion = 0)) |> 
+  distinct() |> 
+  mutate(mortFactor = ifelse(is.na(mortFactor), "other mortality", mortFactor),
+         stage = factor(stage, levels = c('embryo', 'larvae', 'adults')),
+         mortFactor = factor(mortFactor, levels = c("other mortality", "temperature", "starvation", "predation",
+                                                    "parasitism", "fisheries"))) 
+  
+max_count_mort <- max(mortality$count, na.rm = TRUE)
+
+mort_fig <- mortality %>% 
+  ggplot(aes(x = count, y = mortFactor, fill = colour)) +
+  geom_col(position = position_dodge(), alpha = 1) +   # Need to reverse the column to match order of legend
+  geom_text(aes(label = ifelse(count > 0, paste0(round(proportion), "%"), "")), 
+            position = position_dodge(width = 0.9), 
+            hjust = -0.1, 
+            size = 4.3,
+            family = "Times New Roman") +
+  scale_x_continuous(expand = c(0, 0+0.2), 
+                     limits = c(0, max_count_mort+5),
+                     breaks = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), 
+                     labels = c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)) +
+  scale_y_discrete(expand = c(0, 0)) +
+  scale_fill_identity(labels = c('correlation', 'parameter', 'validation', 'parameter, validation', 'not assigned'),
+                      guide = guide_legend(
+                        direction = "vertical",
+                        title.position = "top",
+                        ncol = 3,
+                        #reverse = TRUE,
+                        title.hjust = 0.5)) +
+  facet_wrap(~stage) +
+  labs(x = '\n Number of data points', y = '\n Mortality drivers', fill = 'Information category') +
+  theme_bw()+
+  theme(panel.background = element_rect(fill = NA, colour = '#2e2e2e'),
+        plot.margin = unit(c(0.3,0.3,0.3,0.3),'cm'),
+        panel.spacing = unit(1, "lines"),
+        legend.position = "bottom",
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size = 16, colour="black", family="Times New Roman"),
+        legend.text = element_text(size = 14, colour="black", family="Times New Roman"),
+        legend.background = element_rect(fill="white",
+                                         linewidth = 0.3, linetype="solid",
+                                         colour ="black"),
+        strip.background = element_rect(fill = NA),
+        strip.text = element_text(size = 16, colour="black", family="Times New Roman"),
+        strip.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        strip.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.x = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.text.y = element_text(size = 14, colour="black", family="Times New Roman"),
+        axis.title.x = element_text(size = 16, colour="black", family="Times New Roman"),
+        axis.title.y = element_text(size = 16, colour="black", family="Times New Roman"))
+mort_fig
+
+#ggsave('~/github/ICEDPaper1/plots/Figure7.png', width = 15, height = 6)
+ggsave('/Users/alexisbahl/Documents/Github/Paper1UncertaintiesRecruitment/plots/Figure10.png',
+       plot = mort_fig, width = 13, height = 6, units="in", limitsize = TRUE, scale = 0.85, dpi = 300, bg = "white")
+
+
+```
+
+

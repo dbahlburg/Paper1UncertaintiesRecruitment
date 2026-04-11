@@ -1,0 +1,223 @@
+﻿FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU Cleary, AC
+   Perry, F
+   Tarling, GA
+AF Cleary, Alison C.
+   Perry, Frances
+   Tarling, Geraint A.
+TI Influence of parasites on spawning success and egg quality in Antarctic
+   krill Euphausia superba
+SO MARINE ECOLOGY PROGRESS SERIES
+AB Antarctic krill Euphausia superba are key components of Southern Ocean ecosystems and biogeochemical cycles, as well as the target of a growing commercial fishery. Understanding the drivers of variability in krill recruitment is key to managing this fishery sustainably. One potential driver which has received little attention is the role of parasites. We investigated the impact of natural parasite infestations in adult female krill on egg production and egg quality around South Georgia. DNA metabarcode sequencing was used to detect all eukaryotic parasites within krill bodies, while spawning success was determined through incubation experiments, and egg quality was assessed by quantifying key elements within each egg (carbon, nitrogen, hydrogen). E. superba in this area were infested with suctorian ciliates, eugregarine apicomplexans, and, less frequently, ellobiopsids. Parasite load was not associated with a reduced likelihood of producing eggs, but high parasite loads were associated with lower-quality eggs. This reduction in egg quality may reflect an energetic cost to parasite infestation, with implications for larval development and recruitment.
+SN 0171-8630
+EI 1616-1599
+PD JUL 4
+PY 2024
+VL 739
+BP 1
+EP 14
+DI 10.3354/meps14617
+UT WOS:001400979700006
+ER
+
+PT J
+AU Huang, XR
+   Tan, R
+   Geng, Z
+   Zhang, T
+   Feng, GP
+   Yang, G
+   Zhao, F
+   Zhuang, P
+AF Huang, Xiaorong
+   Tan, Ru
+   Geng, Zhi
+   Zhang, Tao
+   Feng, Guangpeng
+   Yang, Gang
+   Zhao, Feng
+   Zhuang, Ping
+TI Effects of Antarctic Krill Meal in Diet on Reproductive Performance and
+   Embryo Quality of Eriocheir sinensis
+SO AQUACULTURE NUTRITION
+AB A 60-day feeding trial was conducted to evaluate the impact of dietary Antarctic krill meal on the reproductive performance and embryo quality of the Chinese mitten crab, Eriocheir sinensis. Three diets were formulated, incorporating varying levels of Antarctic krill meal at 0% (Diet K0), 10% (Diet K10), and 20% (Diet K20), with a control group fed razor clam Sinonovacula constricta. Each diet was randomly assigned to three replicate tanks, each stocked with 5 males and 10 females. Male and female weights were 145.38 +/- 8.01 and 102.57 +/- 9.73 g, respectively. The results revealed no significant differences in weight gain rate, specific growth rate, and survival rate. However, the hepatopancreatic weight and hepatopancreas index of female crabs in each group decreased, while gonadal weight and gonadosomatic index increased significantly after 60 days, with Diet K20 showing the highest values. Egg production and fecundity of female crabs reached their peak in Diet K20, with no significant differences in reproductive indices among all groups. The phospholipid content in Diet K20 was significantly higher than in the other groups (P<0.05). Cholesterol contents in Diet K0 and the control group were significantly higher than in Diet K10 and K20 (P<0.05). No significant differences were observed in egg diameter, egg weight, moisture, crude protein, and crude fat between the groups. The content of C20 : 2 and C20 : 4n6 was highest in Diet K0, with a significant difference compared to Diet K10 (P<0.05). However, no significant differences were found in the total content of saturated fatty acids, monounsaturated fatty acids, and polyunsaturated fatty acids among all groups. Based on the research findings, it is recommended that the optimal level of Antarctic krill meal in diets is 20%.
+SN 1353-5773
+EI 1365-2095
+PD JAN 31
+PY 2024
+VL 2024
+AR 9936529
+DI 10.1155/2024/9936529
+UT WOS:001160425600002
+PM 38328024
+ER
+
+PT J
+AU Pietzsch, BW
+   Schmidt, A
+   Groeneveld, J
+   Bahlburg, D
+   Meyer, B
+   Berger, U
+AF Pietzsch, Bruno Walter
+   Schmidt, Aaron
+   Groeneveld, Juergen
+   Bahlburg, Dominik
+   Meyer, Bettina
+   Berger, Uta
+TI The impact of salps (Salpa thompsoni) on the Antarctic krill population
+   (Euphausia superba): an individual-based modelling study
+SO ECOLOGICAL PROCESSES
+AB Background Krill (Euphausia superba) and salps (Salpa thompsoni) are key macrozooplankton grazers in the Southern Ocean ecosystem. However, due to differing habitat requirements, both species previously exhibited little spatial overlap. With ongoing climate change-induced seawater temperature increase and regional sea ice loss, salps can now extend their spatial distribution into historically krill-dominated areas and increase rapidly due to asexual reproduction when environmental conditions are favorable. Understanding the potential effects on krill is crucial, since krill is a species of exceptional trophic significance in the Southern Ocean food web. Negative impacts on krill could trigger cascading effects on its predators and prey. To address this question, we combined two individual-based models on salps and krill, which describe the whole life cycle of salp individuals and the dynamic energy budget of individual krill. The resulting new model PEKRIS (PErformance of KRIll vs. Salps) simulates a krill population for 100 years under varying chlorophyll-a concentrations in the presence or absence of salps.Results All of the investigated krill population properties (abundance, mean length, and yearly egg production) were significantly impacted by the presence of salps. On the other hand, salp density was not impacted if krill were present. The medians of krill population properties deviated during variable maximum chlorophyll-a density per year when salps were introduced by - 99.9% (- 234 individuals per 1000 m3) for krill density, - 100% (- 22,062 eggs per 1000 m3) for krill eggs and - 0.9% (- 0.3 mm) for mean length of krill.Conclusions If both species compete for the same food resource in a closed space, salps seem to inhibit krill populations. Further simulation studies should investigate whether this effect prevails if different phytoplankton sizes and consumption preferences of krill are implemented. Furthermore, direct predation of the two species or consumption of krill fecal pellets by salps could change the impact size of the food competition.
+RI Groeneveld, Juergen/N-2420-2016
+OI Berger, Uta/0000-0001-6920-136X; Pietzsch, Bruno
+   Walter/0000-0002-1232-6062
+EI 2192-1709
+PD OCT 9
+PY 2023
+VL 12
+IS 1
+AR 50
+DI 10.1186/s13717-023-00462-9
+UT WOS:001092233900001
+ER
+
+PT J
+AU Liu, Y
+   Zhu, GP
+AF Liu, Yu
+   Zhu, Guoping
+TI Reproductive strategy of Antarctic krill (Euphausia superba) in
+   the south Scotia Sea: revisiting the oocyte development and
+   morphological changes with multiple seasonal analysis
+SO JOURNAL OF OCEANOLOGY AND LIMNOLOGY
+AB Antarctic krill (Euphausia superba) is a keystone species in the Southern Ocean; however, seasonal variations in reproductive development for krill are complex and remains unknown. A histological investigation with observations of external secondary sex features of krill in the south Scotia Sea region was carried out using a multi-seasonal dataset for detail reproductive descriptions for this commercially important species. The monthly development of secondary sexual characteristics, the thelycum, as well as of oocytes over a period of two years were described. It was observed that krill have diverse reproductive development characteristics within the ovary, and that this function differently between the juvenile, sub-adult, and adult stages. During the summer, adult krill ovaries are large and ripe with oocytes rich in yolk ready for release in late summer. Post spawning, the ovaries resorb, fragment, and regress throughout the autumn and winter. During reproductive diapause period, krill focus on absorbing nutrients. Un-released eggs are reabsorbed by the ovary, the permanent germinal zone is active, and early oocytes begin to develop in preparation for the egg production phase. Krill that are about to spawn have an ovary that fills the space between the digestive gland and muscle. The ovarian development of krill is divided into 10 sexual developmental stages. As a part of this study, data on the carapace thickness with similar development patterns in krill size and carapace width, was investigated for the first time to help understand krill growth and development.
+RI Zhu, Guoping/D-1002-2010
+OI Zhu, Guoping/0000-0001-6081-7811
+SN 2096-5508
+EI 2523-3521
+PD SEP
+PY 2025
+VL 43
+IS 5
+BP 1596
+EP 1608
+DI 10.1007/s00343-025-4135-z
+EA APR 2025
+UT WOS:001463304700001
+ER
+
+PT J
+AU Rowlands, E
+   Galloway, T
+   Cole, M
+   Lewis, C
+   Hacker, C
+   Peck, VL
+   Thorpe, S
+   Blackbird, S
+   Wolff, GA
+   Manno, C
+AF Rowlands, Emily
+   Galloway, Tamara
+   Cole, Matthew
+   Lewis, Ceri
+   Hacker, Christian
+   Peck, Victoria L.
+   Thorpe, Sally
+   Blackbird, Sabena
+   Wolff, George A.
+   Manno, Clara
+TI Scoping intergenerational effects of nanoplastic on the lipid reserves
+   of Antarctic krill embryos
+SO AQUATIC TOXICOLOGY
+AB Antarctic krill (Euphausia superba) plays a central role in the Antarctic marine food web and biogeochemical cycles and has been identified as a species that is potentially vulnerable to plastic pollution. While plastic pollution has been acknowledged as a potential threat to Southern Ocean marine ecosystems, the effect of nanoplastics (<1000 nm) is poorly understood. Deleterious impacts of nanoplastic are predicted to be higher than that of larger plastics, due to their small size which enables their permeation of cell membranes and potentially provokes toxicity. Here, we investigated the intergenerational impact of exposing Antarctic krill to nanoplastics. We focused on whether embryonic energy resources were affected when gravid female krill were exposed to nanoplastic by determining lipid and fatty acid compositions of embryos produced in incubation. Embryos were collected from females who had spawned under three different exposure treatments (control, nanoplastic, nanoplastic + algae). Embryos collected from each maternal treatment were incubated for a further 6 days under three nanoplastic exposure treatments (control, low concentration nanoplastic, and high concentration nanoplastic). Nanoplastic additions to seawater did not impact lipid metabolism (total lipid or fatty acid composition) across the maternal or direct embryo treatments, and no interactive effects were observed. The provision of a food source during maternal exposure to nanoplastic had a positive effect on key fatty acids identified as important during embryogenesis, including higher total polyunsaturated fatty acids (PUFA), eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA) when compared to the control and nanoplastic treatments. Whilst the short exposure time was ample for lipids from maternally digested algae to be incorporated into embryos, we discuss why the nanoplastic-fatty acid relationship may be more complex. Our study is the first to scope intergeneration effects of nanoplastic on Antarctic krill lipid and fatty acid reserves. From this, we suggest directions for future research including long term exposures, multi-stressor scenarios and exploring other critical energy reserves such as proteins.
+RI ; Galloway, Tamara/C-1662-2009; Rowlands, Emily/OSI-2488-2025; Wolff,
+   George/B-7982-2018; Cole, Matthew/KHZ-6806-2024
+OI Rowlands, Emily/0000-0001-8307-6008; Blackbird,
+   Sabena/0000-0003-0942-6836; Cole, Matthew/0000-0001-5910-1189
+SN 0166-445X
+EI 1879-1514
+PD AUG
+PY 2023
+VL 261
+AR 106591
+DI 10.1016/j.aquatox.2023.106591
+EA JUN 2023
+UT WOS:001020454900001
+PM 37329636
+ER
+
+PT J
+AU Green, DB
+   Bestley, S
+   Corney, SP
+   Trebilco, R
+   Lehodey, P
+   Hindell, MA
+AF Green, David B.
+   Bestley, Sophie
+   Corney, Stuart P.
+   Trebilco, Rowan
+   Lehodey, Patrick
+   Hindell, Mark A.
+TI Modeling Antarctic Krill Circumpolar Spawning Habitat Quality to
+   Identify Regions With Potential to Support High Larval Production
+SO GEOPHYSICAL RESEARCH LETTERS
+AB Antarctic krill (krill) are important within Southern Ocean ecosystems and support an expanding fishery. Toward understanding krill's response to environmental change, it is necessary to identify regions that support high krill larval production (spawning habitat). We develop a mechanistic model combining thermal and food requirements for krill egg production, with predation pressure post-spawning, to predict regions of high-quality spawning habitat. We optimize our model regionally and generate circumpolar predictions of spawning habitat quality. Our results indicate the southwest Atlantic accounts for almost half of all predicted high-quality spawning habitat. Small-scale management units (SSMUs) around the Antarctic Peninsula had high coverage of high-quality spawning habitat. In contrast, the remaining SSMUs (except around South Georgia) were poorly covered, suggestive of population sinks reliant on input from external sources upstream. This implies strong potential for downstream impacts of fishing in key spawning areas, with implications for management of SSMUs and the krill fishery.
+RI Green, David/U-5570-2019; Lehodey, Patrick/KPY-7728-2024; Bestley,
+   Sophie/AAN-2483-2021; Hindell, Mark/K-1131-2013; Trebilco,
+   Rowan/I-5311-2012
+OI Green, David/0000-0002-0346-3129; Lehodey, Patrick/0000-0002-2753-4796;
+   Bestley, Sophie/0000-0001-9342-669X; Corney, Stuart/0000-0002-8293-0863;
+   Hindell, Mark/0000-0002-7823-7185; Trebilco, Rowan/0000-0001-9712-8016
+SN 0094-8276
+EI 1944-8007
+PD JUN 28
+PY 2021
+VL 48
+IS 12
+AR e2020GL091206
+DI 10.1029/2020GL091206
+UT WOS:000668622800027
+ER
+
+PT J
+AU Zhang, B
+   Guo, X
+   Lin, JX
+   Sun, PZ
+   Ren, X
+   Xu, W
+   Tong, Y
+   Li, DM
+AF Zhang, Biao
+   Guo, Xuan
+   Lin, Junxin
+   Sun, Peizi
+   Ren, Xiang
+   Xu, Wei
+   Tong, Yi
+   Li, Dongmei
+TI Effect and synergy of different exogenous additives on gel properties of
+   the mixed shrimp surimi (Antarctic krill and white shrimp)
+SO INTERNATIONAL JOURNAL OF FOOD SCIENCE AND TECHNOLOGY
+AB The object of this study was a high-protein Antarctic krill ball which was made of mixed shrimp surimi (Antarctic krill and white shrimp). The effects of four different exogenous additives on gel properties and spatial structure of mixed shrimp surimi systems during processing were investigated by texture profile analysis, low-field nuclear magnetic resonance, magnetic resonance imaging, Fourier-transform infrared spectroscopy, scanning electron microscopy and rheology analysis, according to product formulation and processing conditions. Different exogenous additives improved distinctly the mixed shrimp surimi system. The use of the four exogenous additives combined had a synergistic promotional effect. Acetylated distarch adipate, egg white powder and soy protein isolate played a vital role in producing high-protein Antarctic krill balls. The relatively limited improvement of transglutaminase could be attributed to processing temperature and the presence of autolytic enzymes originated intrinsically from Antarctic krill surimi.
+RI ren, xiang/HLQ-5068-2023; Li, Dongmei/ADM-7209-2022
+SN 0950-5423
+EI 1365-2621
+PD AUG
+PY 2022
+VL 57
+IS 8
+SI SI
+BP 5338
+EP 5348
+DI 10.1111/ijfs.15864
+EA JUN 2022
+UT WOS:000806721100001
+ER
+
+EF

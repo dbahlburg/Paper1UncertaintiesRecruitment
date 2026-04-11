@@ -37,6 +37,9 @@ scopusSpawningResults <- read_csv(here('queryResults','scopusSpawning.csv'), col
 #Merge scopus and web of science results
 spawningResults <- wosSpawningResults %>% 
   bind_rows(scopusSpawningResults)
+
+n_spawning_original <- nrow(spawningResults)
+
 #-------------------------------------------------------------------------------------#
 #Define selection criteria:
 #The title or abstract must include "Euphausia superba" OR "Antarctic krill"
@@ -93,6 +96,8 @@ winterResultsFiltered <- winterResults %>%
   distinct(title, .keep_all = T) %>% 
   mutate(topic = 'overwintering')
 
+n_winter_original <- nrow(winterResults)
+
 #-------------------------------------------------------------------------------------#
 #-------------------------------------------------------------------------------------#
 # Now we repeat the same steps for embryo and larval development literature:
@@ -120,6 +125,8 @@ scopusDevelopmentResults <- read_csv(here('queryResults','scopusLarvae.csv'), co
 developmentResults <- wosDevelopmentResults %>% 
   bind_rows(scopusDevelopmentResults) %>% 
   mutate_all(tolower)
+
+n_development_original <- nrow(developmentResults)
 #----------------------------------------
 #Define selection criteria:
 #The title or abstract must include "Euphausia superba" OR "Antarctic krill"
@@ -169,6 +176,8 @@ scopusAutumnResults <- read_csv(here('queryResults','scopusAutumn.csv'), col_typ
 autumnResults <- wosAutumnResults %>% 
   bind_rows(scopusAutumnResults) %>% 
   mutate_all(tolower)
+
+n_autumn_original <- nrow(autumnResults)
 #----------------------------------------
 #Define selection criteria:
 #The title or abstract must include "Euphausia superba" OR "Antarctic krill"
@@ -177,7 +186,7 @@ canWordsAutumn <- c('fall|autumn|lipid')
 
 #Filter the results according to the criteria above
 #Also: remove duplicates that have been found in scopus and web of science
-autumnResultsFiltered <- developmentResults %>% 
+autumnResultsFiltered <- autumnResults %>% 
   mutate(mustWordsIncluded = str_detect(title, pattern = mustWords) + str_detect(abstract, pattern = mustWords),
          canWordsIncluded = str_detect(title, pattern = canWordsAutumn) + str_detect(abstract, pattern = canWordsAutumn)) %>% 
   filter(mustWordsIncluded > 0 & canWordsIncluded > 0) %>% 
@@ -198,10 +207,77 @@ literatureList <- spawningResultsFiltered %>%
   distinct(title, .keep_all = T) %>% 
   arrange(topic, -mustWordsIncluded, -canWordsIncluded)
 
+topic_original_counts <- tibble(
+  topic = c("spawning", "overwintering", "development", "autumn"),
+  n_original = c(
+    n_spawning_original,
+    n_winter_original,
+    n_development_original,
+    n_autumn_original
+  )
+)
 
+print(topic_original_counts)
 
 #save the selected studies as an excel sheet
 write.xlsx(literatureList, here('selectedPapers','paper1LiteratureListPreliminary.xlsx'))
 
+topic_counts <- tibble(
+  topic = c("spawning", "overwintering", "development", "autumn"),
+  initial = c(
+    n_spawning_original,
+    n_winter_original,
+    n_development_original,
+    n_autumn_original
+  ),
+  keyword_match = c(
+    nrow(spawningResults %>%
+           mutate(
+             mustWordsIncluded = str_detect(title, pattern = mustWords) + str_detect(abstract, pattern = mustWords),
+             canWordsIncluded = str_detect(title, pattern = canWords) + str_detect(abstract, pattern = canWords)
+           ) %>%
+           filter(mustWordsIncluded > 0 & canWordsIncluded > 0)),
+    
+    nrow(winterResults %>%
+           mutate(
+             mustWordsIncluded = str_detect(title, pattern = mustWords) + str_detect(abstract, pattern = mustWords),
+             canWordsIncluded = str_detect(title, pattern = canWordsWinter) + str_detect(abstract, pattern = canWordsWinter)
+           ) %>%
+           filter(mustWordsIncluded > 0 & canWordsIncluded > 0)),
+    
+    nrow(developmentResults %>%
+           mutate(
+             mustWordsIncluded = str_detect(title, pattern = mustWords) + str_detect(abstract, pattern = mustWords),
+             canWordsIncluded = str_detect(title, pattern = canWordsDevelopment) + str_detect(abstract, pattern = canWordsDevelopment)
+           ) %>%
+           filter(mustWordsIncluded > 0 & canWordsIncluded > 0)),
+    
+    nrow(autumnResults %>%
+           mutate(
+             mustWordsIncluded = str_detect(title, pattern = mustWords) + str_detect(abstract, pattern = mustWords),
+             canWordsIncluded = str_detect(title, pattern = canWordsAutumn) + str_detect(abstract, pattern = canWordsAutumn)
+           ) %>%
+           filter(mustWordsIncluded > 0 & canWordsIncluded > 0))
+  ),
+  deduplicated = c(
+    nrow(spawningResultsFiltered),
+    nrow(winterResultsFiltered),
+    nrow(developmentResultsFiltered),
+    nrow(autumnResultsFiltered)
+  ),
+  final = c(
+    nrow(spawningResultsFiltered),
+    nrow(winterResultsFiltered),
+    nrow(developmentResultsFiltered),
+    nrow(autumnResultsFiltered)
+  )
+)
 
-
+print(topic_counts)
+# # A tibble: 4 × 5
+# topic         initial keyword_match deduplicated final
+# <chr>           <int>         <int>        <int> <int>
+# 1 spawning         3058           177          136   136
+# 2 overwintering    2401           493          334   334
+# 3 development      4466           565          260   260
+# 4 autumn           6814           967          336   336

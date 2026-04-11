@@ -19,7 +19,7 @@ parameterClassification <- read_csv('~/github/ICEDPaper1/data/parameterClassific
 
 # bind additional info to parameter classification table
 parameterClassification <- parameterClassification %>% 
-  left_join(., mechanismMeta) %>% 
+  left_join(., mechanismMeta) %>%
   mutate(informationCategory = ifelse(informationCategory == '-' | 
                                         informationCategory == ' ',
                                       NA, informationCategory),
